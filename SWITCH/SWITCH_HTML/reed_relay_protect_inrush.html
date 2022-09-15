@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0114)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/reed_relay_protect_inrush.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./reed_relay_protect_inrush_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./reed_relay_protect_inrush_files/variables.js.&#19979;&#36733;"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./reed_relay_protect_inrush_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./reed_relay_protect_inrush_files/extra.css">
+
+
+<title>Inrush Current</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./reed_relay_protect_inrush_files/translateelement.css"></head>
+
+
+<body bgcolor="#ffffff">
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">浪涌电流</font></font></h1>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">当电流流过继电器时，触点会消耗功率，如下式所示：</font></font></p>
+<p class="Indent1"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">P=I </font></font><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">2</font></font></sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> R</font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">contact(触点)</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+I </font></font><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">2</font></font></sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> R</font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">arc(电弧)</font></font></sub></em></p>
+<p class="Indent1"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在哪里</font></font></p>
+ 
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">P</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> = 
+  继电器触点吸收的功率</font></font></p>
+ 
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">I</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> = 
+  通过模块的浪涌电流</font></font></p>
+
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">R </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">arc</font></font></sub></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> = 
+    反弹期间继电器触点之间存在的电弧电阻</font></font></p>
+ 
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">R</font></font></em> <sub><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">contact（继电器触点）</font></font></em></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">= 
+ 继电器触点之间的电阻</font></font><br>
+</p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">R</font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">arc（电弧）</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以热量的形式消散，从而提高了触点的温度。</font><font style="VERTICAL-ALIGN: inherit">浪涌电流会瞬间将触点暴露在非常高的功率水平下。</font><font style="VERTICAL-ALIGN: inherit">与浪涌电流相关的能量可能足以在</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/reed_relay_protect_bounce.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">弹跳</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和焊接闭合的继电器触点之后熔化触点表面。</font><font style="VERTICAL-ALIGN: inherit">浪涌电流通常迅速下降到稳态水平。</font><font style="VERTICAL-ALIGN: inherit">然而，触点弹跳会使继电器在每次激活时遭受多次浪涌，从而造成进一步的损坏。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图显示了开关模块内连接到电压源和负载的继电器。</font><font style="VERTICAL-ALIGN: inherit">C </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">int1</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">、C </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">int2</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和 R</font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">contact（触点）</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">始终产生与输入电压成比例的浪涌电流。</font><font style="VERTICAL-ALIGN: inherit">随着负载外部电容的增加，浪涌电流的持续时间会增加（接触加热也会增加）。</font><font style="VERTICAL-ALIGN: inherit">浪涌电流在负载电容 C </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">int2</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和 C </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ext</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">充电时流动。</font></font></p>
+
+
+
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./reed_relay_protect_inrush_files/loc_eps_reed_protection_12.gif"></td>
+</tr>
+</tbody></table>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">其中</font></font><IMG alt="" src="./reed_relay_protect_inrush_files/tau.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">= 时间常数</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在该图中，C </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">int 2</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> + C </font></font><sub><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">external</font></font></em></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> = C and </font></font><IMG alt="" src="./reed_relay_protect_inrush_files/tau.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">= R </font></font><sub><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">contact</font></font></em></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> C &gt; R </font></font><sub><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">contact</font></font></em></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> C </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">int 2</font></font></sub></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">当 C int 2</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">两端的电压</font><font style="VERTICAL-ALIGN: inherit">与 (C </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">int 2</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> + C </font></font><sub><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">external</font></font></em></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> ) 不同时，闭合继电器会导致瞬时浪涌电流等于继电器两端的电压差除以继电器和相关接线的电阻。</font></font></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">容性负载开关（</font></font><IMG src="./reed_relay_protect_inrush_files/tau.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">=R</font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">contact触点</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">C）</font></font></h3>
+
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./reed_relay_protect_inrush_files/loc_eps_reed_protection_11.gif"></td>
+</tr>
+</tbody></table>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为防止损坏这些模块，请在负载串联一个电阻器，详见</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/switching_capacitive_loads.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">开关电容负载
+</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关话题</font></font></h2>
+<p class="Body"><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/switching_capacitive_loads.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">开关电容负载
+</font></font></a></p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./reed_relay_protect_inrush_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Freed_relay_protect_inrush.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Freed_relay_protect_inrush.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./reed_relay_protect_inrush_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

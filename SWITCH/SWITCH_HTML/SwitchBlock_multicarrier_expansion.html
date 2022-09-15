@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0123)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_multicarrier_expansion.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./SwitchBlock_multicarrier_expansion_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./SwitchBlock_multicarrier_expansion_files/variables.js.&#19979;&#36733;"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./SwitchBlock_multicarrier_expansion_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./SwitchBlock_multicarrier_expansion_files/extra.css">
+
+<title>Expanding Multiple NI SwitchBlock Carriers</title>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./SwitchBlock_multicarrier_expansion_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扩展多个 NI SwitchBlock 载波</font></font></h1>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">您可以将多个相邻 NI SwitchBlock 载体的模拟总线与 NI SwitchBlock 的 NI 2806 扩展桥连接起来。</font></font></p>
+
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_multicarrier_expansion_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;如果您使用扩展桥连接多个运营商，则在系统加载所有连接运营商的驱动程序之前，您无法连接到任何已连接运营商上的模拟总线。</font><font style="VERTICAL-ALIGN: inherit">这可以防止模拟总线上的通道之间出现意外短路。</font><font style="VERTICAL-ALIGN: inherit">您仍然可以使用</font></font><A href="switchviref.chm::/niSwitch_Relay_Control.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Relay Control</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 或</font></font><A href="switchcref.chm::/c_nisw_relaycontrol.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_RelayControl</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数直接操作继电器，但存在模拟总线短路的风险。</font></font></td>
+</tr>
+</tbody></table>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图显示了 NI 2806 扩展桥的插入位置。</font></font></p>
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./SwitchBlock_multicarrier_expansion_files/noloc_SwitchBlock_expansion_bridge_install.gif"> </td>
+</tr>
+<tr>
+<td class="frame">
+	<table class="legend">
+	<tbody><tr>
+		<td class="column">
+		<table class="callouts">
+		<tbody><tr class="callout">
+			<td class="number"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">1</font></font></td>
+			<td class="description"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI PXI/PXI Express 机箱</font></font></td>
+		</tr>
+		<tr class="callout">
+			<td class="number"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">2</font></font></td>
+			<td class="description"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI PXI-2800 载体</font></font></td>
+		</tr>
+		</tbody></table>
+		</td>
+		<td class="column">
+		<table class="callouts">
+		<tbody><tr class="callout">
+			<td class="number"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">3</font></font></td>
+			<td class="description"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI 2806 扩展桥</font></font></td>
+		</tr>
+		</tbody></table>
+		</td>
+	</tr>
+	</tbody></table>
+	</td>
+</tr>
+</tbody></table>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果已连接多个相邻运营商的模拟总线，您可以</font><font style="VERTICAL-ALIGN: inherit">使用</font><A href="switchpropref.chm::/pniSwitch_AnalogBusSharingEnable.html"><font style="VERTICAL-ALIGN: inherit">模拟总线共享启用</font></a><font style="VERTICAL-ALIGN: inherit">属性或</font><A href="switchcref.chm::/c_nisw_attr_analogbussharingenable.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">NISWITCH_ATTR_ANALOG_BUS_SHARING_ENABLE</font></span></a></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_analog_bus_reservation.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性使两个运营商中的设备同时连接到同一条模拟总线</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">线路。</font></font><A href="switchpropref.chm::/pniSwitch_AnalogBusSharingEnable.html"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"></font><A href="switchcref.chm::/c_nisw_attr_analogbussharingenable.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span></a><font style="VERTICAL-ALIGN: inherit"></font></p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_multicarrier_expansion_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;NI 建议使用 NI Switch Executive 来操作系统包含多个载波的系统。</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI Switch Executive 帮助</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">包含有关使用 NI Switch Executive 创建跨多个运营商的虚拟设备的信息</font><font style="VERTICAL-ALIGN: inherit">。</font></font></td>
+</tr>
+</tbody></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./SwitchBlock_multicarrier_expansion_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2FSwitchBlock_multicarrier_expansion.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2FSwitchBlock_multicarrier_expansion.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./SwitchBlock_multicarrier_expansion_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

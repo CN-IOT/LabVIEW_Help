@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0101)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/synchronousg.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./synchronousg_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./synchronousg_files/variables.js.&#19979;&#36733;"></script>
+
+ 
+ 
+ 
+ <link rel="STYLESHEET" type="text/css" href="./synchronousg_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./synchronousg_files/extra.css">
+
+ <title>Synchronous Scanning</title><link type="text/css" rel="stylesheet" charset="UTF-8" href="./synchronousg_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+  
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">同步扫描</font></font></h1>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI 建议</font><font style="VERTICAL-ALIGN: inherit">在使用 NI 开关和 DMM 产品时使用</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/handshakingg.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">握手。</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果使用没有触发输入的其他品牌硬件，NI 建议使用同步模式。</font></font></p>
+
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通过同步扫描，数字万用表进行测量并生成数字脉冲——测量完成 (MC) 信号。</font><font style="VERTICAL-ALIGN: inherit">当开关接收到这个数字脉冲时，它会前进到其扫描列表中的下一个条目。</font><font style="VERTICAL-ALIGN: inherit">DMM 在一个时间间隔后进行下一次测量。</font><font style="VERTICAL-ALIGN: inherit">您必须通过配置间隔采样触发器来编程 DMM 间隔时间。</font><font style="VERTICAL-ALIGN: inherit">将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">间隔</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+参数设置为开关激活和稳定所需的时间。</font><font style="VERTICAL-ALIGN: inherit">在启动 DMM 进行首次测量之前启动开关。</font><font style="VERTICAL-ALIGN: inherit">下图表示同步扫描操作。</font></font></p>
+
+  <table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./synchronousg_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;某些设备可能不支持扫描。</font><font style="VERTICAL-ALIGN: inherit">有关支持的功能的更多信息，请参阅您的设备手册。</font></font></td>
+</tr>
+</tbody></table>
+
+ 
+<p class="Anchor"><IMG src="./synchronousg_files/loc_eps_synchronous.gif"></p>
+ 
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图为同步扫描时序图。</font></font></p>
+ 
+<p class="Anchor"><IMG src="./synchronousg_files/loc_eps_synchronous-timing.gif"> </p>
+ 
+<p class="Indent1"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在哪里</font></font></p>
+ 
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">M</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> = 测量</font></font></p>
+ 
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">WFT</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> = 等待触发</font></font></p>
+ 
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">S&amp;S</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> = 切换和稳定</font></font><br>
+</p>
+
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./synchronousg_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fsynchronousg.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fsynchronousg.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./synchronousg_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

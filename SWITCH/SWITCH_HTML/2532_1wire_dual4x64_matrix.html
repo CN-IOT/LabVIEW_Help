@@ -1,0 +1,573 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI/PXIe-2532/2532B 1-Wire Dual 4&#215;64 Matrix Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2532/2532B 1-Wire Dual 4&#215;64 Matrix Topology</H1>
+
+<p class="Body">The NI TB-2643 terminal block creates a <a href="xwire.html#1wire">1-wire</a> dual 4&#215;64 <a href="matrix.html">matrix</a> topology with the NI PXI/PXIe-2532 (NI&#160;2532). The NI TB-2643B terminal block creates a <a href="xwire.html#1wire">1-wire</a> dual 4&#215;64 <a href="matrix.html">matrix</a> topology with the NI PXI/PXIe-2532B (NI&#160;2532B). The following figure represents the NI&#160;2532/2532B in the 1-wire dual 4&#215;64 matrix topology.</p>
+
+<p class="Anchor"><img src="noloc_2532_1wire_dual_4x64_matrix.gif"></p>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">For bank 0, both the scanning command, <span class="Monospace">b0r2-&gt;b0c1;</span>, and the immediate operation,  <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function   with parameters <span class="Monospace">b0r2</span> and <span class="Monospace">b0c1</span>, result in the following connection:</p>
+<p class="Body">signal connected to B0R2 is routed to B0C1</p>
+
+<p class="Body">For bank 1, both the scanning command, <span class="Monospace">b1r2-&gt;b1c1;</span>, and the immediate operation,  <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function   with parameters <span class="Monospace">b1r2</span> and <span class="Monospace">b1c1</span>, result in the following connection:</p>
+<p class="Body">signal connected to B1R2 is routed to B1C1</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;While you can, for example, connect B0R1 to B0C0, you cannot connect B0R1 directly to B1C1 in this topology.</td></tr></table>
+
+<h2>Terminal Block Connections</h2>
+<p class="Body">The NI TB-2643 terminal block connects banks of the NI&#160;2532 to create the 1-wire dual 4&#215;64 matrix topology. The NI TB-2643B terminal block connects banks of the NI&#160;2532B to create the 1-wire dual 4&#215;64 matrix topology. The following figure illustrates how the native banks of the NI&#160;2532/2532B connect using the NI TB-2643/2643B to create the 1-wire dual 4&#0215;64 matrix topology.</p>
+
+<h3>Bank Connection Diagram</h3>
+<p class="Anchor"><img src="loc_eps_2532-4x64-1-wire-bank-colla.gif"></p>
+
+<p class="Body">The following tables list the pin assignments for the NI TB-2643/2643B column ribbon cable headers.</p>
+
+<h3>Column Pin Connections</h3>
+
+<p class="Body">The following table refers to the J3 connector on the upper column connection board of the NI TB-2643 and the J13 connector on the NI TB-2643B.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 1</td>
+<td class="Bordered" align="center">B1C63</td>
+<td class="Bordered" align="center"> Pin 9</td>
+<td class="Bordered" align="center">B1C59</td>
+<td class="Bordered" align="center"> Pin 17</td>
+<td class="Bordered" align="center">B1C55</td>
+<td class="Bordered" align="center"> Pin 25</td>
+<td class="Bordered" align="center">B1C51</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 2</td>
+<td class="Bordered" align="center">B0C63</td>
+<td class="Bordered" align="center"> Pin 10</td>
+<td class="Bordered" align="center">B0C59</td>
+<td class="Bordered" align="center"> Pin 18</td>
+<td class="Bordered" align="center">B0C55</td>
+<td class="Bordered" align="center"> Pin 26</td>
+<td class="Bordered" align="center">B0C51</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 3</td>
+<td class="Bordered" align="center">B1C62</td>
+<td class="Bordered" align="center"> Pin 11</td>
+<td class="Bordered" align="center">B1C58</td>
+<td class="Bordered" align="center"> Pin 19</td>
+<td class="Bordered" align="center">B1C54</td>
+<td class="Bordered" align="center"> Pin 27</td>
+<td class="Bordered" align="center">B1C50</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 4</td>
+<td class="Bordered" align="center">B0C62</td>
+<td class="Bordered" align="center"> Pin 12</td>
+<td class="Bordered" align="center">B0C58</td>
+<td class="Bordered" align="center"> Pin 20</td>
+<td class="Bordered" align="center">B0C54</td>
+<td class="Bordered" align="center"> Pin 28</td>
+<td class="Bordered" align="center">B0C50</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 5</td>
+<td class="Bordered" align="center">B1C61</td>
+<td class="Bordered" align="center"> Pin 13</td>
+<td class="Bordered" align="center">B1C57</td>
+<td class="Bordered" align="center"> Pin 21</td>
+<td class="Bordered" align="center">B1C53</td>
+<td class="Bordered" align="center"> Pin 29</td>
+<td class="Bordered" align="center">B1C49</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 6</td>
+<td class="Bordered" align="center">B0C61</td>
+<td class="Bordered" align="center"> Pin 14</td>
+<td class="Bordered" align="center">B0C57</td>
+<td class="Bordered" align="center"> Pin 22</td>
+<td class="Bordered" align="center">B0C53</td>
+<td class="Bordered" align="center"> Pin 30</td>
+<td class="Bordered" align="center">B0C49</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 7</td>
+<td class="Bordered" align="center">B1C60</td>
+<td class="Bordered" align="center"> Pin 15</td>
+<td class="Bordered" align="center">B1C56</td>
+<td class="Bordered" align="center"> Pin 23</td>
+<td class="Bordered" align="center">B1C52</td>
+<td class="Bordered" align="center"> Pin 31</td>
+<td class="Bordered" align="center">B1C48</td>
+</tr>
+<tr>
+
+<td class="Bordered" align="center"> Pin 8</td>
+<td class="Bordered" align="center">B0C60</td>
+<td class="Bordered" align="center"> Pin 16</td>
+<td class="Bordered" align="center">B0C56</td>
+<td class="Bordered" align="center"> Pin 24</td>
+<td class="Bordered" align="center">B0C52</td>
+<td class="Bordered" align="center"> Pin 32</td>
+<td class="Bordered" align="center">B0C48</td>
+</tr>
+</table>
+
+<br><br>
+<p class="Body">The following table refers to the J2 connector on the upper column connection board of the NI TB-2643 and the J12 connector on the NI TB-2643B.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 1</td>
+<td class="Bordered" align="center">B1C47</td>
+<td class="Bordered" align="center"> Pin 9</td>
+<td class="Bordered" align="center">B1C43</td>
+<td class="Bordered" align="center"> Pin 17</td>
+<td class="Bordered" align="center">B1C39</td>
+<td class="Bordered" align="center"> Pin 25</td>
+<td class="Bordered" align="center">B1C35</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 2</td>
+<td class="Bordered" align="center">B0C47</td>
+<td class="Bordered" align="center"> Pin 10</td>
+<td class="Bordered" align="center">B0C43</td>
+<td class="Bordered" align="center"> Pin 18</td>
+<td class="Bordered" align="center">B0C39</td>
+<td class="Bordered" align="center"> Pin 26</td>
+<td class="Bordered" align="center">B0C35</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 3</td>
+<td class="Bordered" align="center">B1C46</td>
+<td class="Bordered" align="center"> Pin 11</td>
+<td class="Bordered" align="center">B1C42</td>
+<td class="Bordered" align="center"> Pin 19</td>
+<td class="Bordered" align="center">B1C38</td>
+<td class="Bordered" align="center"> Pin 27</td>
+<td class="Bordered" align="center">B1C34</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 4</td>
+<td class="Bordered" align="center">B0C46</td>
+<td class="Bordered" align="center"> Pin 12</td>
+<td class="Bordered" align="center">B0C42</td>
+<td class="Bordered" align="center"> Pin 20</td>
+<td class="Bordered" align="center">B0C38</td>
+<td class="Bordered" align="center"> Pin 28</td>
+<td class="Bordered" align="center">B0C34</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 5</td>
+<td class="Bordered" align="center">B1C45</td>
+<td class="Bordered" align="center"> Pin 13</td>
+<td class="Bordered" align="center">B1C41</td>
+<td class="Bordered" align="center"> Pin 21</td>
+<td class="Bordered" align="center">B1C37</td>
+<td class="Bordered" align="center"> Pin 29</td>
+<td class="Bordered" align="center">B1C33</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 6</td>
+<td class="Bordered" align="center">B0C45</td>
+<td class="Bordered" align="center"> Pin 14</td>
+<td class="Bordered" align="center">B0C41</td>
+<td class="Bordered" align="center"> Pin 22</td>
+<td class="Bordered" align="center">B0C37</td>
+<td class="Bordered" align="center"> Pin 30</td>
+<td class="Bordered" align="center">B0C33</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 7</td>
+<td class="Bordered" align="center">B1C44</td>
+<td class="Bordered" align="center"> Pin 15</td>
+<td class="Bordered" align="center">B1C40</td>
+<td class="Bordered" align="center"> Pin 23</td>
+<td class="Bordered" align="center">B1C36</td>
+<td class="Bordered" align="center"> Pin 31</td>
+<td class="Bordered" align="center">B1C32</td>
+</tr>
+<tr>
+
+<td class="Bordered" align="center"> Pin 8</td>
+<td class="Bordered" align="center">B0C44</td>
+<td class="Bordered" align="center"> Pin 16</td>
+<td class="Bordered" align="center">B0C40</td>
+<td class="Bordered" align="center"> Pin 24</td>
+<td class="Bordered" align="center">B0C36</td>
+<td class="Bordered" align="center"> Pin 32</td>
+<td class="Bordered" align="center">B0C32</td>
+</tr>
+</table>
+
+<p class="Body">The following table refers to the J3 connector on the lower column connection board of the NI TB-2643 and the J3 connector on the NI TB-2643B.</p>
+
+<table class="Bordered">
+<tr>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 1</td>
+<td class="Bordered" align="center">B0C0</td>
+<td class="Bordered" align="center"> Pin 9</td>
+<td class="Bordered" align="center">B0C4</td>
+<td class="Bordered" align="center"> Pin 17</td>
+<td class="Bordered" align="center">B0C8</td>
+<td class="Bordered" align="center"> Pin 25</td>
+<td class="Bordered" align="center">B0C12</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 2</td>
+<td class="Bordered" align="center">B1C0</td>
+<td class="Bordered" align="center"> Pin 10</td>
+<td class="Bordered" align="center">B1C4</td>
+<td class="Bordered" align="center"> Pin 18</td>
+<td class="Bordered" align="center">B1C8</td>
+<td class="Bordered" align="center"> Pin 26</td>
+<td class="Bordered" align="center">B1C12</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 3</td>
+<td class="Bordered" align="center">B0C1</td>
+<td class="Bordered" align="center"> Pin 11</td>
+<td class="Bordered" align="center">B0C5</td>
+<td class="Bordered" align="center"> Pin 19</td>
+<td class="Bordered" align="center">B0C9</td>
+<td class="Bordered" align="center"> Pin 27</td>
+<td class="Bordered" align="center">B0C13</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 4</td>
+<td class="Bordered" align="center">B1C1</td>
+<td class="Bordered" align="center"> Pin 12</td>
+<td class="Bordered" align="center">B1C5</td>
+<td class="Bordered" align="center"> Pin 20</td>
+<td class="Bordered" align="center">B1C9</td>
+<td class="Bordered" align="center"> Pin 28</td>
+<td class="Bordered" align="center">B1C13</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 5</td>
+<td class="Bordered" align="center">B0C2</td>
+<td class="Bordered" align="center"> Pin 13</td>
+<td class="Bordered" align="center">B0C6</td>
+<td class="Bordered" align="center"> Pin 21</td>
+<td class="Bordered" align="center">B0C10</td>
+<td class="Bordered" align="center"> Pin 29</td>
+<td class="Bordered" align="center">B0C14</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 6</td>
+<td class="Bordered" align="center">B1C2</td>
+<td class="Bordered" align="center"> Pin 14</td>
+<td class="Bordered" align="center">B1C6</td>
+<td class="Bordered" align="center"> Pin 22</td>
+<td class="Bordered" align="center">B1C10</td>
+<td class="Bordered" align="center"> Pin 30</td>
+<td class="Bordered" align="center">B1C14</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 7</td>
+<td class="Bordered" align="center">B0C3</td>
+<td class="Bordered" align="center"> Pin 15</td>
+<td class="Bordered" align="center">B0C7</td>
+<td class="Bordered" align="center"> Pin 23</td>
+<td class="Bordered" align="center">B0C11</td>
+<td class="Bordered" align="center"> Pin 31</td>
+<td class="Bordered" align="center">B0C15</td>
+</tr>
+<tr>
+
+<td class="Bordered" align="center"> Pin 8</td>
+<td class="Bordered" align="center">B1C3</td>
+<td class="Bordered" align="center"> Pin 16</td>
+<td class="Bordered" align="center">B1C7</td>
+<td class="Bordered" align="center"> Pin 24</td>
+<td class="Bordered" align="center">B1C11</td>
+<td class="Bordered" align="center"> Pin 32</td>
+<td class="Bordered" align="center">B1C15</td>
+</tr>
+</table>
+
+<br><br>
+<p class="Body">The following table refers to the J2 connector on the lower column connection board of the NI TB-2643 and the J2 connector on the NI TB-2643B.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Column</th>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 1</td>
+<td class="Bordered" align="center">B0C16</td>
+<td class="Bordered" align="center"> Pin 9</td>
+<td class="Bordered" align="center">B0C20</td>
+<td class="Bordered" align="center"> Pin 17</td>
+<td class="Bordered" align="center">B0C24</td>
+<td class="Bordered" align="center"> Pin 25</td>
+<td class="Bordered" align="center">B0C28</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 2</td>
+<td class="Bordered" align="center">B1C16</td>
+<td class="Bordered" align="center"> Pin 10</td>
+<td class="Bordered" align="center">B1C20</td>
+<td class="Bordered" align="center"> Pin 18</td>
+<td class="Bordered" align="center">B1C24</td>
+<td class="Bordered" align="center"> Pin 26</td>
+<td class="Bordered" align="center">B1C28</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 3</td>
+<td class="Bordered" align="center">B0C17</td>
+<td class="Bordered" align="center"> Pin 11</td>
+<td class="Bordered" align="center">B0C21</td>
+<td class="Bordered" align="center"> Pin 19</td>
+<td class="Bordered" align="center">B0C25</td>
+<td class="Bordered" align="center"> Pin 27</td>
+<td class="Bordered" align="center">B0C29</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 4</td>
+<td class="Bordered" align="center">B1C17</td>
+<td class="Bordered" align="center"> Pin 12</td>
+<td class="Bordered" align="center">B1C21</td>
+<td class="Bordered" align="center"> Pin 20</td>
+<td class="Bordered" align="center">B1C25</td>
+<td class="Bordered" align="center"> Pin 28</td>
+<td class="Bordered" align="center">B1C29</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 5</td>
+<td class="Bordered" align="center">B0C18</td>
+<td class="Bordered" align="center"> Pin 13</td>
+<td class="Bordered" align="center">B0C22</td>
+<td class="Bordered" align="center"> Pin 21</td>
+<td class="Bordered" align="center">B0C26</td>
+<td class="Bordered" align="center"> Pin 29</td>
+<td class="Bordered" align="center">B0C30</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 6</td>
+<td class="Bordered" align="center">B1C18</td>
+<td class="Bordered" align="center"> Pin 14</td>
+<td class="Bordered" align="center">B1C22</td>
+<td class="Bordered" align="center"> Pin 22</td>
+<td class="Bordered" align="center">B1C26</td>
+<td class="Bordered" align="center"> Pin 30</td>
+<td class="Bordered" align="center">B1C30</td>
+</tr>
+<tr>
+<td class="Bordered" align="center"> Pin 7</td>
+<td class="Bordered" align="center">B0C19</td>
+<td class="Bordered" align="center"> Pin 15</td>
+<td class="Bordered" align="center">B0C23</td>
+<td class="Bordered" align="center"> Pin 23</td>
+<td class="Bordered" align="center">B0C27</td>
+<td class="Bordered" align="center"> Pin 31</td>
+<td class="Bordered" align="center">B0C31</td>
+</tr>
+<tr>
+
+<td class="Bordered" align="center"> Pin 8</td>
+<td class="Bordered" align="center">B1C19</td>
+<td class="Bordered" align="center"> Pin 16</td>
+<td class="Bordered" align="center">B1C23</td>
+<td class="Bordered" align="center"> Pin 24</td>
+<td class="Bordered" align="center">B1C27</td>
+<td class="Bordered" align="center"> Pin 32</td>
+<td class="Bordered" align="center">B1C31</td>
+</tr>
+</table>
+
+<h3>Row Pin Connections</h3>
+<p class="Body">The NI TB-2643 and NI TB-2643B provide two ribbon cable headers for row connection. Use one cable header to connect to your application. Use the other cable header for <a href="2532_matrix_expansion.html">column expansion</a>.</p>
+<p class="Body">The following table lists the pin assignments for row connection.</p>
+
+<table class="Bordered">
+<tr>
+<th class="Bordered">Pin Number</th>
+<th class="Bordered">Row</th>
+</tr>
+<tr>
+<td class="Bordered" align="center">1</td>
+<td class="Bordered" align="center">B0R0</td>
+</tr>
+<tr>
+<td class="Bordered" align="center">2</td>
+<td class="Bordered" align="center">B1R0</td>
+</tr>
+<tr>
+<td class="Bordered" align="center">3</td>
+<td class="Bordered" align="center">B0R1</td>
+</tr>
+<tr>
+<td class="Bordered" align="center">4</td>
+<td class="Bordered" align="center">B1R1</td>
+</tr>
+<tr>
+<td class="Bordered" align="center">5</td>
+<td class="Bordered" align="center">B0R2</td>
+</tr>
+<tr>
+<td class="Bordered" align="center">6</td>
+<td class="Bordered" align="center">B1R2</td>
+</tr>
+<tr>
+<td class="Bordered" align="center">7</td>
+<td class="Bordered" align="center">B0R3</td>
+</tr>
+<tr>
+<td class="Bordered" align="center">8</td>
+<td class="Bordered" align="center">B1R3</td>
+</tr>
+<tr>
+<td class="Bordered" align="center">9&#8211;16</td>
+<td class="Bordered" align="center">&#8212;</td>
+</tr>
+</table>
+
+<h3>Row Protection Bypass Header</h3>
+<p class="Body">Each row signal is isolated from the reed relays through a 100 &#937; resistor.  To bypass this resistor, install a jumper on the appropriate pins of the header indicated in the table below.  The following table lists the appropriate jumper position for bypassing the resistor on each row signal.</p>
+
+<table class="Bordered">
+	<tr>
+		<th class="Bordered" rowspan="2">Bypassed Row</th>
+		<th class="Bordered" colspan="2">NI TB-2643 Module Interface Board</th>
+			<th colspan="2">NI TB-2643B</th>
+	
+	</tr>
+	<tr>
+		<th class="Bordered">Header</th>
+		<th class="Bordered">Pins Connected</th>
+		<th class="Bordered">Header</th>
+		<th class="Bordered">Pins Connected</th></tr>
+<tr>
+		<td class="Bordered">B0R0</td>
+		<td class="Bordered">J5</td>
+		<td class="Bordered">1-2</td>
+		<td class="Bordered">J14</td>
+		<td class="Bordered">1-2</td>
+	</tr>
+	<tr>
+		<td class="Bordered">B1R0</td>
+		<td class="Bordered">J5</td>
+		<td class="Bordered">3-4</td>
+		<td class="Bordered">J14</td>
+		<td class="Bordered">3-4</td>
+	</tr>
+	<tr>
+		<td class="Bordered">B0R1</td>
+		<td class="Bordered">J5</td>
+		<td class="Bordered">5-6</td>
+		<td class="Bordered">J14</td>
+		<td class="Bordered">5-6</td>
+	</tr>
+	<tr>
+		<td class="Bordered">B1R1</td>
+		<td class="Bordered">J5</td>
+		<td class="Bordered">7-8</td>
+		<td class="Bordered">J14</td>
+		<td class="Bordered">7-8</td>
+	</tr>
+	<tr>
+		<td class="Bordered">B0R2</td>
+		<td class="Bordered">J5</td>
+		<td class="Bordered">9-10</td>
+		<td class="Bordered">J14</td>
+		<td class="Bordered">9-10</td>
+	</tr>
+	<tr>
+		<td class="Bordered">B1R2</td>
+		<td class="Bordered">J5</td>
+		<td class="Bordered">11-12</td>
+		<td class="Bordered">J14</td>
+		<td class="Bordered">11-12</td>
+	</tr>
+	<tr>
+		<td class="Bordered">B0R3</td>
+		<td class="Bordered">J5</td>
+		<td class="Bordered">13-14</td>
+		<td class="Bordered">J14</td>
+		<td class="Bordered">13-14</td>
+	</tr>
+	<tr>
+		<td class="Bordered">B1R3</td>
+		<td class="Bordered">J5</td>
+		<td class="Bordered">15-16</td>
+		<td class="Bordered">J14</td>
+		<td class="Bordered">15-16</td>
+	</tr>
+</table>
+
+<h2><a name="pinout">Pinout</a></H2>
+<P class="Body" >The following figure identifies the pins for the NI&#160;2532.</P>
+ 
+<p class="Anchor"><img src="loc_eps_2532_pinout.gif"></p>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins. Keep low-voltage pins isolated from row and column channels when high voltage is present.</span></td></tr></table>
+<P class="Body" >The following figure identifies the pins for the NI&#160;2532B.</P>
+<p class="Anchor"><img src="loc_eps_2532b_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins.</span></td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

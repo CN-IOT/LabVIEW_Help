@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0134)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_programming_routing_signals_multi.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./SwitchBlock_programming_routing_signals_multi_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./SwitchBlock_programming_routing_signals_multi_files/variables.js.&#19979;&#36733;"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./SwitchBlock_programming_routing_signals_multi_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./SwitchBlock_programming_routing_signals_multi_files/extra.css">
+
+ <title>Routing Signals Between Multiple NI SwitchBlock Devices</title>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./SwitchBlock_programming_routing_signals_multi_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+ 
+  
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在多个 NI SwitchBlock 设备之间路由信号</font></font></h1>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">您可以在同一载波中的多个 NI SwitchBlock 设备之间或在两个或多个 NI SwitchBlock 载波中的多个 NI SwitchBlock 设备之间路由信号。</font></font></p>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在多个 SwitchBlock 设备之间共享信号</font></font></h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+按照以下步骤在多个 NI SwitchBlock 设备之间共享信号：
+
+</font></font><ol><li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果存在多个托架，请在两个 NI SwitchBlock 托架之间安装 NI 2806 扩展桥。</font><font style="VERTICAL-ALIGN: inherit">一旦安装了 NI 2806 扩展桥，单个载体中的多个 NI SwitchBlock 设备与多个载体中的多个 NI SwitchBlock 设备之间没有区别。</font><font style="VERTICAL-ALIGN: inherit">有关详细信息，请参阅</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_multicarrier_expansion.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扩展多个 NI SwitchBlock Carriers</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。
+</font></font>
+
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在用于在多个 NI SwitchBlock 设备之间共享信号的每条模拟总线上启用模拟总线共享。</font><font style="VERTICAL-ALIGN: inherit">启用模拟总线共享会删除限制两个 NI SwitchBlock 设备同时连接到同一模拟总线线路的默认软件设置。</font><font style="VERTICAL-ALIGN: inherit">有关详细信息，请参阅</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_analog_bus_reservation.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 NI SwitchBlock Carrier 上使用模拟总线</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></li></ol>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_programming_routing_signals_multi_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;如果两个 NI SwitchBlock 设备在没有启用模拟总线共享的情况下同时连接到同一条模拟总线，NI-DAQmx 和 NI-SWITCH 将返回错误，并且不会将第二个 NI SwitchBlock 设备连接到模拟总线。</font></font></td>
+</tr>
+</tbody></table>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在不同类型的 NI SwitchBlock 设备之间共享模拟总线</font></font></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">不同类型的 NI SwitchBlock 中继卡之间的模拟总线线路可以共享，如果它们具有相同的接线方式。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">例如，NI 2815 是一个四行单线模块，连接到模拟总线 ab0-3。</font><font style="VERTICAL-ALIGN: inherit">NI 2816 是一个八行单线模块，连接到模拟总线 ab0-7。</font><font style="VERTICAL-ALIGN: inherit">前四条模拟总线 (ab0-3) 可在 NI 2815 和 NI 2816 之间共享，用于在它们之间路由信号。</font><font style="VERTICAL-ALIGN: inherit">但是，模拟总线 ab4-7 只能与 NI 2816 或其他至少 8 行的 1-wire NI SwitchBlock 继电器卡共享。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">不同连线模式的NI SwitchBlock设备不能共享模拟总线。</font><font style="VERTICAL-ALIGN: inherit">例如，NI 2816 是 8 行 1 线继电器卡，不能与 NI 2813 4 行 2 线继电器卡共享模拟总线。</font><font style="VERTICAL-ALIGN: inherit">虽然这两款设备都使用 8 条模拟总线，但 NI-DAQmx 和 NI-SWITCH 不允许在这些设备之间启用模拟总线共享。</font></font></p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_programming_routing_signals_multi_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;在具有不同接线模式的 NI SwitchBlock 继电器卡之间共享模拟总线可以通过使用较低级别的继电器控制功能来实现。</font><font style="VERTICAL-ALIGN: inherit">这些功能绕过所有自动软件设置。</font><font style="VERTICAL-ALIGN: inherit">有关详细信息，请参阅</font><em><font style="VERTICAL-ALIGN: inherit">NI-SWITCH LabVIEW 参考中的</font></em></font><A href="switchviref.chm::/Relay_pal.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI-SWITCH 中继 VIs</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">书和</font><em><font style="VERTICAL-ALIGN: inherit">LabVIEW 帮助</font></em><font style="VERTICAL-ALIGN: inherit">中的</font><em><font style="VERTICAL-ALIGN: inherit">DAQmx 中继操作 VIs</font></em><font style="VERTICAL-ALIGN: inherit">书</font><font style="VERTICAL-ALIGN: inherit">。</font></font><em><font style="VERTICAL-ALIGN: inherit"></font></em><font style="VERTICAL-ALIGN: inherit"></font><em><font style="VERTICAL-ALIGN: inherit"></font></em><font style="VERTICAL-ALIGN: inherit"></font><em><font style="VERTICAL-ALIGN: inherit"></font></em><font style="VERTICAL-ALIGN: inherit"></font></td>
+</tr>
+</tbody></table>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">启用模拟总线共享后，有两种方法可以对多个 NI SwitchBlock 设备进行编程：端点编程和显式路径编程。</font></font></p>
+ 
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">端点编程</font></font></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">端点编程使用 NI-DAQmx 或 NI-SWITCH 自动确定两列之间的最佳路径。</font><font style="VERTICAL-ALIGN: inherit">无论 NI SwitchBlock 设备中有多少个 NI SwitchBlock 中继卡，这种编程技术都非常简单。  </font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">按照以下步骤使用端点编程：</font></font></p>
+
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为每个设备上的所有模拟总线线路启用模拟总线共享。</font><font style="VERTICAL-ALIGN: inherit">要启用模拟总线共享，请将 NI-DAQmx Switch Channel 属性</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Analog Bus Sharing Enable</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为 True，或将 NI-SWITCH Channel Configuration </font></font><A href="switchpropref.chm::/pniSwitch_AnalogBusSharingEnable.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Analog Bus Sharing Enable</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性设置为 True。</font></font>
+
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将 NI SwitchBlock 设备中的所有行设置为预留路由。</font><font style="VERTICAL-ALIGN: inherit">要在 NI-DAQmx 中为路由保留一条线路，请将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Channel Usage</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性设置为 Reserved For Routing。</font><font style="VERTICAL-ALIGN: inherit">在 NI-SWITCH 中，将 Channel Configuration 属性</font></font><A href="switchpropref.chm::/pniSwitch_IsConfigurationChannel.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Is Configuration Channel</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为 True。</font><font style="VERTICAL-ALIGN: inherit">NI-DAQmx 和 NI-SWITCH 使用为路由保留的行的任意组合自动确定列之间的最佳路由。</font><font style="VERTICAL-ALIGN: inherit">如果没有可用路径或没有为路由保留线路，NI-DAQmx 和 NI-SWITCH 将返回错误。</font></font>
+
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">指定要在每个 NI SwitchBlock 设备上连接的列和模拟总线。</font><font style="VERTICAL-ALIGN: inherit">这将需要为每个 NI SwitchBlock 设备提供单独的 NI-DAQmx Connect 命令或 NI-SWITCH Connect Channels 命令。</font><font style="VERTICAL-ALIGN: inherit">NI-DAQmx 和 NI-SWITCH 将使用为路由保留的行之一自动确定列和模拟总线之间的路由。</font><font style="VERTICAL-ALIGN: inherit">如果没有可用的路径或没有为路由保留线路，NI-DAQmx 和 NI-SWITCH 将返回错误。</font></font></li></ol>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_programming_routing_signals_multi_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;必须为路由和必须共享的模拟总线保留的行的编号和名称将根据所使用的继电器卡的拓扑结构而变化。</font><font style="VERTICAL-ALIGN: inherit">有关正确的行和模拟总线名称，请参阅</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI Switches Help</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">中的设备信息。</font></font></td>
+</tr>
+</tbody></table>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以下示例展示了如何使用端点编程在两个 NI SwitchBlock 设备之间路由信号，每个设备包含三个 NI 2810 继电器卡。</font><font style="VERTICAL-ALIGN: inherit">这些示例包含一个子VI，该子VI可以自动确定必须为布线保留的所有行和必须共享的模拟总线的正确命名。</font><font style="VERTICAL-ALIGN: inherit">该 VI 可用于任何 NI SwitchBlock 设备。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">有关使用 NI-DAQmx 进行多设备端点连接的示例，请访问</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/info</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">并输入信息代码</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">excjkx</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">有关使用 NI-SWITCH 进行多设备端点连接的示例，请访问</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/info</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">并输入信息代码</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ex6dte</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">显式路径编程</font></font></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">显式路径编程需要显式关闭每个单独的路径。</font><font style="VERTICAL-ALIGN: inherit">此方法通过允许选择用于连接信号的行和模拟总线来提供额外的定制。</font><font style="VERTICAL-ALIGN: inherit">由于路径中需要额外的模块，显式路径编程变得更加复杂。</font><font style="VERTICAL-ALIGN: inherit">显式路径编程不需要为路由保留任何路径。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">按照以下步骤使用显式路径编程来连接同一中继卡 (CardM) 上的两列（cX 和 cY）：</font></font></p>
+
+<ol><li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将 cX 列连接到 CardMrN 行。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将 cY 连接到行 CardMrN。</font></font></li></ol> 
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">按照以下步骤使用显式路径编程连接不同 NI SwitchBlock 设备中不同继电器卡（CardM 和 CardK）上的两列（cX 和 cY）：</font></font></p>
+
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为每个设备上的所有模拟总线线路启用模拟总线共享。</font><font style="VERTICAL-ALIGN: inherit">要启用模拟总线共享，请将 NI-DAQmx Switch Channel 属性</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Analog Bus Sharing Enable</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为 True，或将 NI-SWITCH Channel Configuration </font></font><A href="switchpropref.chm::/pniSwitch_AnalogBusSharingEnable.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Analog Bus Sharing Enable</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性设置为 True。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将 cX 列连接到第一个中继卡上的 CardMrN 行。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将行 CardMrN 连接到第一个继电器卡上的模拟总线 abZ。</font></font> 
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将模拟总线 abZ 连接到第二个继电器卡上的 CardKrN 行。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将行 CardKrN 连接到第二个中继卡上的 cY 列。</font></font></li></ol>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_programming_routing_signals_multi_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;如果两个 NI SwitchBlock 设备同时连接到同一条模拟总线而没有启用模拟总线共享，则 NI-DAQmx 和 NI-SWITCH 会返回错误并且不会将第二个 NI SwitchBlock 设备连接到模拟总线。</font></font></td>
+</tr>
+</tbody></table>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以下示例显示了如何在两个 NI SwitchBlock 设备之间路由信号，每个设备包含三个 NI 2810 继电器卡。</font><font style="VERTICAL-ALIGN: inherit">这些示例可用于任意两个 NI SwitchBlock 设备。</font><font style="VERTICAL-ALIGN: inherit">这些示例包含一个子VI，它自动确定所有必须共享的模拟总线的正确命名。</font><font style="VERTICAL-ALIGN: inherit">该 VI 可用于任何 NI SwitchBlock 设备。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">有关使用 NI-DAQmx 进行多设备显式路径连接的示例，请访问</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/info</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">并输入信息代码</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ex5z4m</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">有关使用 NI-SWITCH 进行多设备显式路径连接的示例，请访问</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/info</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">并输入信息代码</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">exmpji</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+	 
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./SwitchBlock_programming_routing_signals_multi_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2FSwitchBlock_programming_routing_signals_multi.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2FSwitchBlock_programming_routing_signals_multi.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./SwitchBlock_programming_routing_signals_multi_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

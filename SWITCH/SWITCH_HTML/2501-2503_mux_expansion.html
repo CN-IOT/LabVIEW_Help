@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>Multiplexer Expansion</TITLE>
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>Multiplexer Expansion</h1>
+
+<p class="Body">If you need to multiplex through more channels than the number present on your NI PXI-2501/2503, you can expand the size of the multiplexer. The NI TB-2605 terminal block has two analog bus connectors that allow analog bus sharing between two other NI PXI-2501/2503s. Each NI TB-2605 comes with a plug to share this analog bus between modules.</p>
+
+<p class="Body">Refer to the NI PXI-2501/2503 hardware diagrams to see the analog bus relay that connects the multiplexer COM lines to an analog bus.  This analog bus relay must be closed for multiplexer expansion. When this analog bus is shared between NI PXI-2501/2503 modules, a single larger multiplexer is formed. For example, connecting two NI PXI-2501/2503 modules using their analog bus in 2-wire 24&#0215;1 multiplexer topology, creates a 2-wire 48&#0215;1 multiplexer. </p>
+
+<p class="Body">You can also use the LV6-BAN4 cable to connect a DMM directly to the analog bus that acts as the COM of the expanded multiplexer. </p>
+
+<h2>Related Topics</h2>
+<p class="Body"><a href="2501_hw_diagram.html">NI PXI-2501 Hardware Diagram</a></p>
+<p class="Body"><a href="2503_hw_diagram.html">NI PXI-2503 Hardware Diagram</a></p>
+
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0113)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/reed_relay_protect_board.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./reed_relay_protect_board_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./reed_relay_protect_board_files/variables.js.&#19979;&#36733;"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./reed_relay_protect_board_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./reed_relay_protect_board_files/extra.css">
+
+
+<title>Board Layout and Topology</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./reed_relay_protect_board_files/translateelement.css"></head>
+
+
+<body bgcolor="#ffffff">
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">电路板布局和拓扑</font></font></h1>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">单</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/reed_relays.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">干簧片继电器</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的开路电容通常非常低（&lt; 1 pF），并且在额定电压下切换时无法存储足够的能量来损坏继电器。</font><font style="VERTICAL-ALIGN: inherit">开路继电器的电容大小与开关的拓扑结构、PCB 的布局以及连接到开关模块的负载直接相关。</font></font></p>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">具有长走线和许多连接继电器的拓扑（例如矩阵）具有比简单拓扑更高的电容。</font></font></p>
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">矩阵拓扑</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_board_files/noloc_reed_protection_15.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">多路复用器拓扑</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_board_files/noloc_reed_protection_16.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">等效电路</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_board_files/noloc_reed_protection_17.gif"></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">大多数仪表开关在电路板上都有继电器阵列，一侧有连接器。</font><font style="VERTICAL-ALIGN: inherit">所有走线都必须路由到连接器。</font><font style="VERTICAL-ALIGN: inherit">PCB 上密集的平行布线会增加走线之间的电容。</font></font></p>
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">密集信号路由增加寄生电容</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_board_files/loc_eps_reed_protection_18.gif"></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将大电容负载直接连接到开关端子或将多个端子连接在一起可以显着增加负载电容。</font></font></p>
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接到多路复用器通道的容性负载</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_board_files/noloc_reed_protection_19.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">2 个输入连接在一起的多路复用器</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_board_files/noloc_reed_protection_20.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接在一起的 2 个多路复用器通道的等效电路</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_board_files/noloc_reed_protection_21.gif"></p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./reed_relay_protect_board_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Freed_relay_protect_board.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Freed_relay_protect_board.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./reed_relay_protect_board_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI-2567 Independent Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2567 Independent Topology</h1>
+
+<p class="Body">The following figure is a representation of the NI PXI-2567 topology.</p>
+<p class="Anchor"><img src="loc_eps_1167-independent.gif"></p>
+
+
+
+<h2>Making a Connection</h2>
+
+<p class="Body">To drive your relay,  use  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function.</p>
+
+<p class="Body">For example, to actuate a relay connected to channel 7, you can connect the positive terminal of your voltage source to one side of the relay coil, and connect the other relay coil terminal to pin 44 of the front connector.  Then connect the negative terminal of your voltage source to the common ground return of channel 7 (pin 42).  Closing the channel 7 driver completes the circuit, driving your relay. The following figure illustrates how to actuate a relay connected to channel 7.</p>
+
+<p class="Anchor"><img src="loc_eps_2567_example.gif"></p>
+
+<p class="Body">To close the channel 7 relay, call <span class="Monospace">niSwitch_Connect(vi, &quot;ch7&quot;, &quot;com7&quot;)</span>.</p>
+
+<p class="Body">Alternatively, you can open and close relays by calling  the <a href="switchviref.chm::/niSwitch_Relay_Control.html">niSwitch Relay Control</a> VI or the <a href="switchCRef.chm::/c_nisw_relaycontrol.html"><span class="Monospace">niSwitch_RelayControl</span></a> function.  For the relay name, enter K0 for channel 0, K1 for channel 1, and so on.</p>
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI PXI-2567, a typical <a href="scan_list.html">scan list</a> entry could be <span class="Monospace">ch2-&gt;com2;</SPAN>. This entry drives the relay connected to channel 2.</P>
+
+<h3>Driving 2-Coil Relays</h3>
+
+<p class="Body">The following figure shows an example of a configuration using the NI&nbsp;PXI-2567 to drive a 2-coil relay.</p>
+
+<p class="Anchor"><img src="loc_eps_2567_2_coil_example.gif"></p>
+
+<p class="Body">To close the relay in this example, you would call <span class="Monospace">niSwitch_Connect(vi, &quot;ch7&quot;, &quot;com7&quot;)</span>. To open the relay, then you would call <span class="Monospace">niSwitch_Disconnect(vi, &quot;ch7&quot;, &quot;com7&quot;)</span> and then <span class="Monospace">niSwitch_Connect(vi, &quot;ch6&quot;, &quot;com6&quot;)</span>.</p>
+
+<p class="Body">Alternatively, you can actuate the relay by calling  the <a href="switchviref.chm::/niSwitch_Relay_Control.html">niSwitch Relay Control</a> VI or the <a href="switchCRef.chm::/c_nisw_relaycontrol.html"><span class="Monospace">niSwitch_RelayControl</span></a> function.  To close the relay in this example, you would call <span class="Monospace">niSwitch_RelayControl(vi, K7, NISWITCH_VAL_CLOSE_RELAY)</span> to power on the lower coil in the diagram.  Then call <span class="Monospace">niSwitch_RelayControl(vi, K7, NISWITCH_VAL_OPEN_RELAY)</span> to power off the lower coil, and call <span class="Monospace">niSwitch_RelayControl(vi, K6, NISWITCH_VAL_CLOSE_RELAY)</span> power on the other coil and open the relay.</p>
+
+
+ <h2>Pinout</h2>
+<p class="Body">The following figure identifies the pins for the NI PXI-2567.</p>
+
+<p class="Anchor"><img src="loc_eps_xx67_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins.</span></td></tr></table>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

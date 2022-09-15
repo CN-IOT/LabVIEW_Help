@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI-2584 Relay Replacement</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2584 Relay Replacement</h1>
+<p class="Body">The NI PXI-2584 uses reed relays.</p>
+
+<p class="Body">Refer to the following table for information about ordering replacement relays.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part </th>
+</tr>
+<tr>
+<td class="Bordered">Coto Technology</td>
+<td class="Bordered">9104-05-11</td>
+</tr>
+</table>
+
+<p class="Body">Complete the following sets of steps to disassemble your switch module, replace a failed relay, and reassemble your switch module.</p>
+<h2><a name="disassemble">Disassemble the Switch Module</a></h2><br>
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to your PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to your switch module from electrostatic discharge.</td></tr></table></li>
+<li>Remove the four screws that secure the plastic cover on the top and plastic lead cover on the bottom of the switch assembly.<br><br>
+
+<table class="figure">
+<tr>
+<td class="frame"><img src="noloc_2584_exploded.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Screws</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Plastic Cover</td>
+</tr>
+
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">Plastic Lead Cover</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</li>
+<li>Carefully separate the adhered top cover absorber from the relays by slowly prying up on the cover. (Note: some metal relay caps might come loose during this process and can be put back onto the relays after you have completed relay replacement.)</li>
+
+<li>Locate the relay you want to replace. Refer to the following figure and table for relay locations.<br><br>
+
+<table class="figure">
+<tr>
+<td><img src="noloc_2584_relays.gif"></td>
+</tr>
+</table>
+
+<table class="Bordered">
+<tr>
+<th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+</tr>
+<tr>
+<td class="Bordered">CH0</td>
+<td class="Bordered">K0</td>
+</tr>
+<tr>
+<td class="Bordered">CH1</td>
+<td class="Bordered">K1</td>
+</tr>
+<tr>
+<td class="Bordered">CH2</td>
+<td class="Bordered">K2</td>
+</tr>
+<tr>
+<td class="Bordered">CH3</td>
+<td class="Bordered">K3</td>
+</tr>
+<tr>
+<td class="Bordered">CH4</td>
+<td class="Bordered">K4</td>
+</tr>
+<tr>
+<td class="Bordered">CH5</td>
+<td class="Bordered">K5</td>
+</tr>
+<tr>
+<td class="Bordered">CH6</td>
+<td class="Bordered">K6</td>
+</tr>
+<tr>
+<td class="Bordered">CH7</td>
+<td class="Bordered">K7</td>
+</tr>
+<tr>
+<td class="Bordered">CH8</td>
+<td class="Bordered">K8</td>
+</tr>
+<tr>
+<td class="Bordered">CH9</td>
+<td class="Bordered">K9</td>
+</tr>
+<tr>
+<td class="Bordered">CH10</td>
+<td class="Bordered">K10</td>
+</tr>
+<tr>
+<td class="Bordered">CH11</td>
+<td class="Bordered">K11</td>
+</tr>
+</table>
+</li>
+<li>Locate the assembly and serial number labels on the board with the relay you want to replace. White labels indicate the board was assembled using lead solder (Sn 63 Pb 37). Green labels indicate the board was assembled using lead-free solder (Sn 96.5 Ag 3.0 Cu 0.5). Lead-free assemblies have assembly numbers ending in L. The different label types are shown in the following figure.
+<p class="Anchor"><img src="loc_eps_lead_free_labels.gif"></p>
+</li>
+
+</ol>
+
+<h2><a name="replace">Replace the Relay</a></h2>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies, and lead solder for relay replacement on lead assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this condition. This rework can prevent the same unit from being reworked later on a lead-free solder station, because it could contaminate the station.</span></td>
+</tr>
+</table>
+
+<p class="Body">Make sure you have the following items:</p>
+<ul>
+<li>Temperature-regulated soldering iron set to 316 &#0176;C (600 &#0176;F) for lead solder rework or 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>63/37 Tin/Lead solder (flux core) for lead solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Solder wick</li>
+<li>Isopropyl alcohol</li>
+<li>Cotton swabs</li>
+</ul>
+
+<p class="Body">Replace the relay as you would any other through-hole part. Trim the replaced relay leads to under 1.2 mm (0.05 inch) protrusion.</p>
+<h2>Reassemble the Switch Module</h2><br>
+
+<p class="Body">
+Replace the top cover while carefully aligning the standoffs with the mounting holes in the module. Secure the bottom cover using the four screws removed in <a href="#disassemble">Disassemble the Module</a>, step 2. 
+</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td><strong>Tip</strong>&nbsp;&nbsp;In NI-SWITCH 3.1 or later, you can use the Switch Soft Front Panel  to reset the relay count after you have replaced a failed relay. Refer to the <em>Switch Soft Front Panel Help</em> for more information.</td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

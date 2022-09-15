@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXIe-2790 Independent Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXIe-2790 Independent Topology</h1>
+
+<p class="Body">The following figure represents the NI&nbsp;PXIe-2790 in the independent topology.</p>
+
+<p class="Anchor"><img src="loc_eps_2790_independent.gif"></p>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Call the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function to connect channels in this topology. If applicable, you must call the <a href="switchviref.chm::/niSwitch_Disconnect_Channels.html">niSwitch Disconnect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_disconnect.html"><span class="Monospace">niSwitch_Disconnect</span></a> function to disconnect an existing connection <em>before</em> you call the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function. </p>
+
+<p class="Body">The initially connected channels on the NI 2790 are sumAB to comA and sumAB to comB. To connect ch1A to comA, disconnect sumAB from comA and connect ch1A to comA. To connect ch1B to comB, disconnect sumAB from comB and connect ch1B to comB. Banks A and B operate independently.</p>
+
+
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2566 16-SPDT Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2566 16-SPDT Topology</h1>
+
+<p class="Body">The following figure represents the NI PXI-2566 in the 16-SPDT topology.</p>
+<p class="Anchor"><img src="noloc_2566_16_spdt.gif"></p>
+
+
+
+<h2>Making a Connection</h2>
+
+<p class="Body">You can control the channels using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function.</p>
+
+<p class="Body">To connect the NO terminal to the COM terminal of that channel, disconnect the NC terminal from the COM of that channel.</p>
+
+<p class="Body">For example, to connect NO2 to COM2, use the following code:</p>
+
+<p class="Indent1"><span class="Monospace">niSwitch_Disconnect(vi, &quot;nc2&quot;, &quot;com2&quot;)</span></p>
+
+<p class="Indent1"><span class="Monospace">niSwitch_Connect(vi, &quot;no2&quot;, &quot;com2&quot;) </span></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;To connect NO to COM you do not need to disconnect NC from COM after the module has been reset or a call to the <a href="switchviref.chm::/niSwitch_Disconnect_All_Channels.html">niSwitch Disconnect All Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_disconnectall.html"><span class="Monospace">niSwitch_DisconnectAll</span></a> function has been made.</td></tr></table> 
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;<span class="Monospace">niSwitch_Disconnect(vi, &quot;nc2&quot;, &quot;com2&quot;)</span> does not activate the relay until <span class="Monospace">niSwitch_Connect(vi, &quot;no2&quot;, &quot;com2&quot;)</span> is executed.</td></tr></table>
+
+<p class="Body">To connect the NC terminal to the COM terminal of that channel, disconnect the NO terminal from the COM of that channel.</p>
+
+<p class="Body">For example, to connect NC2 to COM2, use the following code:</p>
+
+<p class="Indent1"><span class="Monospace">niSwitch_Disconnect(vi, &quot;no2&quot;, &quot;com2&quot;)</span></p>
+
+<p class="Indent1"><span class="Monospace">niSwitch_Connect(vi, &quot;nc2&quot;, &quot;com2&quot;) </span></p>
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI PXI-2566, a typical <a href="scan_list.html">scan list</a> entry could be <span class="Monospace">nc2-&gt;com2;</SPAN>. This entry routes the signal connected to NC2 to COM2.</P>
+
+<h2>Pinout</h2>
+<p class="Body">The following figure identifies the pins for the NI PXI-2566 in the 16-SPDT topology.</p>
+<p class="Anchor"><img src="loc_eps_2566_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins. Keep low-voltage pins isolated from row and column channels when high voltage is present.</span></td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

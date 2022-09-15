@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0110)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/handshakingg_multiple.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./handshakingg_multiple_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./handshakingg_multiple_files/variables.js.&#19979;&#36733;"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./handshakingg_multiple_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./handshakingg_multiple_files/extra.css">
+
+
+<title>Handshaking</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./handshakingg_multiple_files/translateelement.css"></head>
+
+
+<body bgcolor="#ffffff">
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">多模块扫描 - 握手</font></font></h1>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">有关可能的</font><strong><font style="VERTICAL-ALIGN: inherit">触发输入</font></strong><font style="VERTICAL-ALIGN: inherit">位置，请参阅</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/devices.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设备</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">中开关模块的触发主题。</font></font><strong><font style="VERTICAL-ALIGN: inherit"></font></strong><font style="VERTICAL-ALIGN: inherit"></font></p>
+
+<ul>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/handshakingg_multiple.html#uiptl"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置 3—使用内部 PXI 触发线</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/handshakingg_multiple.html#uatcctfops"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置 4 — 使用连接到 PXI/PXI Express 开关前面的 AUX 触发电缆</font></font></a></li>
+</ul>
+
+<h3><a name="uiptl"></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置 3—使用内部 PXI 触发线</font></font></h3>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">要与多个 PXI/PXI Express 开关握手，您可以使用内部 PXI 触发线。</font><font style="VERTICAL-ALIGN: inherit">在此设置中，DMM 和 PXI/PXI Express 开关之间不需要触发电缆。</font></font></p> 
+
+<p class="Anchor"><IMG alt="使用 PXI 触发线与多个 PXI/PXI Express 开关握手" src="./handshakingg_multiple_files/loc_eps_handshakingg_multiple_1.gif" ></p>
+
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">打开</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scanning_multiple_mod.html#tip"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Multi Switch Hand Int</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list_multiple.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">根据多模块扫描列表</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">中描述的过程创建扫描列表</font><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将所有开关的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触发输入</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为相同的 PXI 触发线。</font><font style="VERTICAL-ALIGN: inherit">该输入线应与 DMM MC 信号的目的地一致。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描高级输出</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为所有开关的相同 PXI 触发线。</font><font style="VERTICAL-ALIGN: inherit">该输出必须与 DMM 的触发源一致。</font></font></li>
+</ol>
+
+<p class="Anchor"><IMG alt="使用 NI-SWITCH 中的 PXI 触发线进行多 PXI/PXI Express 开关配置，用于握手" src="./handshakingg_multiple_files/noloc_handshakingg_multiple_2.gif" ></p>
+
+<h3><a name="uatcctfops"></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置 4 — 使用连接到 PXI/PXI Express 开关前面的 AUX 触发电缆</font></font></h3>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">一些 PXI/PXI Express 开关可以从前面板或接线端子接收/发送触发信号。</font><font style="VERTICAL-ALIGN: inherit">此设置使用 AUX 触发电缆来触发开关。</font></font></p>
+
+  
+
+<p class="Anchor"><IMG alt="使用 AUX 触发电缆与多个 PXI/PXI Express 开关握手" src="./handshakingg_multiple_files/loc_eps_handshakingg_multiple_3.gif" ></p>
+
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将来自 DMM 的 MC 信号连接到前面板上的外部触发输入端子或一个 PXI/PXI Express 开关的接线盒中。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将 DMM 的 Ext Trig In 信号连接到前面板上的 Scanner Advanced 端子或同一 PXI/PXI Express 开关的接线盒中。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">打开</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scanning_multiple_mod.html#tip"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Multi Switch Hand Ext</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list_multiple.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">根据多模块扫描列表</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">中描述的过程创建扫描列表</font><font style="VERTICAL-ALIGN: inherit">。</font></font> 
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在连接来自 DMM 的 AUX 触发电缆的开关的</font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">niSwitch Commit</font></span><font style="VERTICAL-ALIGN: inherit">之前  </font><font style="VERTICAL-ALIGN: inherit">添加</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Route Trigger Input</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Route Scan Advanced Output 。</font></font></span><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span><font style="VERTICAL-ALIGN: inherit"></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触发输入连接器</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">前连接器</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描高级输出连接器</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">前连接器</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Trigger Input Bus Line</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为 PXI 触发线。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将所有开关的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Trigger Input设置为</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Trigger Input Bus Line</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的同一条 PXI 触发线</font><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Scan Advanced Output Bus Line</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为不同的 PXI 触发线。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将所有开关的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Scan Advanced Output设置为</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Scan Advanced Output Bus Line</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的同一条 PXI 触发线</font><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 DMM 配置中将测量完成目标</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置</font><font style="VERTICAL-ALIGN: inherit">为</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">外部</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 DMM 配置中将触发源</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置</font><font style="VERTICAL-ALIGN: inherit">为</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">外部</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></li>
+</ol>
+
+<p class="Anchor"><IMG alt="使用 NI-SWITCH 中的 AUX 触发电缆进行多 PXI/PXI Express 开关配置以进行握手" src="./handshakingg_multiple_files/noloc_handshakingg_multiple_4.gif" ></p><!-- breaks are added to allow bookmarks to link nicely -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./handshakingg_multiple_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fhandshakingg_multiple.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fhandshakingg_multiple.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./handshakingg_multiple_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

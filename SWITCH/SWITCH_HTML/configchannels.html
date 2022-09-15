@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0103)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/configchannels.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./configchannels_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./configchannels_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./configchannels_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./configchannels_files/extra.css">
+
+
+<title>Setting Source and Configuration Channels</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./configchannels_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置源和配置通道</font></font></h1>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">您可以使用 NI-SWITCH 设置通道类型。</font><font style="VERTICAL-ALIGN: inherit">将通道设置为</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">源通道</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，以提供额外的软件保护，防止对您的系统造成意外损坏。</font><font style="VERTICAL-ALIGN: inherit">将通道设置为</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">配置通道</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，完成交换机架构支持但软件不支持的连接。</font></font></p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./configchannels_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;：当您使用</font></font><A href="switch.chm::/immediate.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">即时</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">VI/函数或</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scanning_overview.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描VI/函数时，源通道类型提供额外的软件保护，但当您直接使用</font></font></a><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Relay_Control.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Relay Control</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI或</font></font><A href="switchcref.chm::/c_nisw_relaycontrol.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_RelayControl</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数</font><font style="VERTICAL-ALIGN: inherit">操作继电器时，它不提供额外的保护。</font><font style="VERTICAL-ALIGN: inherit">NI 不建议组合这些类型的 VI/函数调用。
+</font></font></td></tr></tbody></table>
+
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">要编辑通道类型，请使用</font></font><A href="switchviref.chm::/niSwitch_Property_Node.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 属性节点</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">或</font></font><A href="switchcref.chm::/c_nisw_setattrviboolean.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_SetAttribute</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数之一。</font></font></p>
+
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图表示 niSwitch 属性节点中的一个源通道（</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ab0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">）和一个配置通道（</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">）。</font></font></p>
+
+<p class="Anchor"><IMG src="./configchannels_files/loc_bmp_usagetype.gif"></p>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">来源渠道</font></font></h2>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置源通道以向驱动程序指示信号源已连接到该通道。</font><font style="VERTICAL-ALIGN: inherit">NI-SWITCH 不允许直接或间接连接两个用户定义的源通道。</font></font></p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./configchannels_files/note.gif"></td>
+<td>
+<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意带有</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/relay_forms.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">C 型</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">继电器的&nbsp;&nbsp;开关模块</font><font style="VERTICAL-ALIGN: inherit">在公共 (COM) 和常开 (NO) 或常闭 (NC) 通道之间始终存在物理连接。</font><font style="VERTICAL-ALIGN: inherit">NI-SWITCH 可能不会在所有情况下都反映该连接，并且可能会创建危险或不需要的连接。</font><font style="VERTICAL-ALIGN: inherit">例如，如果您调用将 COM 通道连接到 NO 或 NC 通道，NI-SWITCH 会验证没有源冲突。</font><font style="VERTICAL-ALIGN: inherit">但是，</font></font><A href="switchviref.chm::/niSwitch_Disconnect_Channels.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Disconnect Channels</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 或</font></font><A href="switchcref.chm::/c_nisw_disconnect.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_Disconnect</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数或</font></font><A href="switchviref.chm::/niSwitch_Disconnect_All_Channels.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Disconnect All Channels</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 或</font></font><A href="switchcref.chm::/c_nisw_disconnectall.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_DisconnectAll</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数等操作可能会创建未反映在软件中的连接。</font></font></td></tr></tbody></table>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">配置通道</font></font></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置配置通道以允许 NI-SWITCH 使用该通道来创建内部路径。</font><font style="VERTICAL-ALIGN: inherit">如果未将行通道设置为配置通道，则在矩阵中创建列到列连接将失败。</font></font></p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./configchannels_files/note.gif"></td>
+<td>
+<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;配置通道在其他交换机 API 中也可能被称为“保留用于路由”。</font></font></td></tr></tbody></table>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">创建路由示例</font></font></h3>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">参考下图中的矩阵，完成以下步骤，创建连接 C0 和 C2 的路由。
+</font></font></p><p class="Anchor"><IMG alt=完成路由路径矩阵示例 src="./configchannels_files/noloc_graphette.gif"></p>
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 C0 和 C2 之间创建一条路径——使用 niSwitch 属性节点或适当的</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_SetAttribute</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数将</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">r0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置为配置通道。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">创建路由—运行 niSwitch Connect Channels VI 或</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_Connect</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数，</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通道 1</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通道 2</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">分别设置为</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c2</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">对作为配置通道  的行</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">r1</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">r2</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">重复步骤 1 和 2 。</font></font></li>
+</ol>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图分别代表您可以使用 R0、R1 和 R2 作为配置通道创建的路由。</font></font></p>
+<p class="Anchor"><IMG alt="RO 作为配置通道" src="./configchannels_files/noloc_matrixexpc0.gif" ></p>
+<p class="Anchor"><IMG alt="R1 作为配置通道" src="./configchannels_files/noloc_matrixexpc1.gif" ></p>
+<p class="Anchor"><IMG alt="R2 作为配置通道" src="./configchannels_files/noloc_matrixexpc2.gif" ></p>
+
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./configchannels_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fconfigchannels.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fconfigchannels.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./configchannels_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

@@ -1,0 +1,996 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+ <link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+ <title>NI PXI/PXIe-2515 Independent Topology</title>
+</head>
+<body bgcolor="#ffffff">
+ 
+  
+<h1>NI PXI/PXIe-2515 Independent Topology</h1>
+
+<p class="Body">Use the NI&#160;PXI/PXIe-2515 (NI&#160;2515) independent topology to connect a single pin of a DUT to a supported NI high-speed DIO device and parametric measurement devices. Refer to the following sections for more information about the intended use of the NI&#160;2515.</p>
+
+<ul>
+<li><a href="#HWDiagram">Hardware Diagram</a></li>
+<li><a href="#MakingAConnection">Making a Connection</a></li>
+<li><a href="#Pinout">Pinout</a></li>
+<li><a href="#PinAssociations">Pin Associations</a></li>
+</ul>
+
+<h2><a name="HWDiagram">Hardware Diagram</a></h2>
+
+<p class="body">The following figure represents the NI&#160;2515 in the independent topology.</p>
+
+<p class="Anchor"><img src="noloc_2515_hw_diagram.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;ctrl0, ctrl2, and ctrl3 do not route through relays, but rather pass through from the left connector to the right connector. These channels cannot be connected to the analog bus channels, busa and busb.</td>
+</tr>
+</table>
+
+
+<h2><a name="MakingAConnection">Making a Connection</a></h2>
+
+<p class="Body">With the independent topology, you can let NI-SWITCH determine the path between two specified channels by setting the intermediate channels as reserved for routing and using the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function, or you can control individual relays using the <a href="switchviref.chm::/niSwitch_Relay_Control.html">niSwitch Relay Control</a> VI or the <a href="switchCRef.chm::/c_nisw_relaycontrol.html"><span class="Monospace">niSwitch_RelayControl</span></a> function.</p>
+
+<h2><a name="Pinout">Pinout</a></h2>
+<p class="Body">The following figure identifies the pins for the NI&#160;2515 in the independent topology.</p>
+
+<p class="Anchor"><img src="loc_eps_2515_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do <em>not</em> connect to Res0. Res0 is reserved for future use.</span></td>
+</tr>
+</table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Use only the NI&#160;SHC68-C68-D5 cable to connect the supported NI high-speed DIO device
+to the NI&#160;2515. The cable translates the pinout of the supported NI&#160;high-speed DIO device to the
+<em>HSDIO</em> connector on the NI&#160;2515 so that the pinout of the DUT connector on the NI&#160;2515 matches
+that of the supported NI&#160;high-speed DIO device.</span></td>
+</tr>
+</table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;ctrl0, ctrl2, and ctrl3 do not route through relays, but rather pass through from the left connector to the right connector. These channels cannot be connected to the analog bus channels, busa and busb.</td>
+</tr>
+</table>
+
+<h2><a name="PinAssociations">Pin Associations</a></h2>
+
+<p class="body">The NI&#160;2515 is recommended for use with the NI&#160;6535/6536/6537, the NI&#160;654<em>x</em>, the NI&#160;655<em>x</em>, and the NI&#160;6581 high-speed DIO devices, using the designated cable for connection between the NI&#160;2515 and the supported NI&#160;high-speed DIO device. Refer to the following table for corresponding signals on the NI&#160;2515 and supported NI&#160;high-speed DIO devices.</p>
+
+<h3>Using the NI&#160;2515 Pin Associations Table</h3>
+
+<p class="body">To use the following table, first find the high-speed DIO signal you want to route to your DUT. Look across the table row that contains the high-speed DIO signal to find the NI&#160;2515 right connector and left connector channels necessary to route that signal. For cables recommended to connect the NI&#160;2515 to your system, refer to <a href="2515_intended_use.html#Connections">NI&#160;2515 Signal Connections</a>.</p>
+
+<table class="bordered">
+<tr>
+<th class="bordered" rowspan="2">Pin</th>
+<th class="bordered" colspan="5">High-speed DIO Channel</th>
+<th class="bordered" rowspan="70">   </th>
+<th class="bordered" colspan="2">NI&#160;2515 <br>Left Connector</th>
+<th class="bordered" rowspan="70">   </th>
+
+<th class="bordered" colspan="2">NI&#160;2515 <br>Right Connector</th>
+</tr>
+
+<tr>
+<th class="bordered">NI&#160;6535/6536/6537</th>
+<th class="bordered">NI&#160;654<em>x</em></th>
+<th class="bordered">NI&#160;6551/6552</th>
+<th class="bordered">NI&#160;6555/6556</th>
+<th class="bordered">NI&#160;6581</th>
+<th class="bordered">Pin</th>
+<th class="bordered">Channel</th>
+<th class="bordered">Pin</th>
+<th class="bordered">Channel</th>
+</tr>
+
+<tr>
+<td class="bordered">1</td>
+<td class="bordered">P3.7</td>
+<td class="bordered">DIO 31</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">PFI 31</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">34</td>
+<td class="bordered">ch31</td>
+<td class="bordered">1</td>
+<td class="bordered">dut31</td>
+</tr>
+
+<tr>
+<td class="bordered">2</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">33</td>
+<td class="bordered">GND</td>
+<td class="bordered">2</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">3</td>
+<td class="bordered">P3.5</td>
+<td class="bordered">DIO 29</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">PFI 29</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">32</td>
+<td class="bordered">ch29</td>
+<td class="bordered">3</td>
+<td class="bordered">dut29</td>
+</tr>
+
+<tr>
+<td class="bordered">4</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">31</td>
+<td class="bordered">GND</td>
+<td class="bordered">4</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">5</td>
+<td class="bordered">P3.3</td>
+<td class="bordered">DIO 27</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">PFI 27</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">30</td>
+<td class="bordered">ch27</td>
+<td class="bordered">5</td>
+<td class="bordered">dut27</td>
+</tr>
+
+<tr>
+<td class="bordered">6</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">29</td>
+<td class="bordered">GND</td>
+<td class="bordered">6</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">7</td>
+<td class="bordered">P3.1</td>
+<td class="bordered">DIO 25</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">PFI 25</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">28</td>
+<td class="bordered">ch25</td>
+<td class="bordered">7</td>
+<td class="bordered">dut25</td>
+</tr>
+
+<tr>
+<td class="bordered">8</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">27</td>
+<td class="bordered">NO CONNECT</td>
+<td class="bordered">8</td>
+<td class="bordered">NO CONNECT</td>
+</tr>
+
+<tr>
+<td class="bordered">9</td>
+<td class="bordered">P2.7</td>
+<td class="bordered">DIO 23</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">DIO 23</td>
+<td class="bordered">P2.7</td>
+<td class="bordered">26</td>
+<td class="bordered">ch23</td>
+<td class="bordered">9</td>
+<td class="bordered">dut23</td>
+</tr>
+
+<tr>
+<td class="bordered">10</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">25</td>
+<td class="bordered">GND</td>
+<td class="bordered">10</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">11</td>
+<td class="bordered">P2.5</td>
+<td class="bordered">DIO 21</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">DIO 21</td>
+<td class="bordered">P2.5</td>
+<td class="bordered">24</td>
+<td class="bordered">ch21</td>
+<td class="bordered">11</td>
+<td class="bordered">dut21</td>
+</tr>
+
+<tr>
+<td class="bordered">12</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">23</td>
+<td class="bordered">GND</td>
+<td class="bordered">12</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">13</td>
+<td class="bordered">P2.3</td>
+<td class="bordered">DIO 19</td>
+<td class="bordered">DIO 19</td>
+<td class="bordered">DIO 19</td>
+<td class="bordered">P2.3</td>
+<td class="bordered">22</td>
+<td class="bordered">ch19</td>
+<td class="bordered">13</td>
+<td class="bordered">dut19</td>
+</tr>
+
+<tr>
+<td class="bordered">14</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">21</td>
+<td class="bordered">GND</td>
+<td class="bordered">14</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">15</td>
+<td class="bordered">P2.1</td>
+<td class="bordered">DIO 17</td>
+<td class="bordered">DIO 17</td>
+<td class="bordered">DIO 17</td>
+<td class="bordered">P2.1</td>
+<td class="bordered">20</td>
+<td class="bordered">ch17</td>
+<td class="bordered">15</td>
+<td class="bordered">dut17</td>
+</tr>
+
+<tr>
+<td class="bordered">16</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">19</td>
+<td class="bordered">GND</td>
+<td class="bordered">16</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">17</td>
+<td class="bordered">P1.7</td>
+<td class="bordered">DIO 15</td>
+<td class="bordered">DIO 15</td>
+<td class="bordered">DIO 15</td>
+<td class="bordered">P1.7</td>
+<td class="bordered">18</td>
+<td class="bordered">ch15</td>
+<td class="bordered">17</td>
+<td class="bordered">dut15</td>
+</tr>
+
+<tr>
+<td class="bordered">18</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">17</td>
+<td class="bordered">GND</td>
+<td class="bordered">18</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">19</td>
+<td class="bordered">P1.5</td>
+<td class="bordered">DIO 13</td>
+<td class="bordered">DIO 13</td>
+<td class="bordered">DIO 13</td>
+<td class="bordered">P1.5</td>
+<td class="bordered">16</td>
+<td class="bordered">ch13</td>
+<td class="bordered">19</td>
+<td class="bordered">dut13</td>
+</tr>
+
+<tr>
+<td class="bordered">20</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">15</td>
+<td class="bordered">GND</td>
+<td class="bordered">20</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">21</td>
+<td class="bordered">P1.3</td>
+<td class="bordered">DIO 11</td>
+<td class="bordered">DIO 11</td>
+<td class="bordered">DIO 11</td>
+<td class="bordered">P1.3</td>
+<td class="bordered">14</td>
+<td class="bordered">ch11</td>
+<td class="bordered">21</td>
+<td class="bordered">dut11</td>
+</tr>
+
+<tr>
+<td class="bordered">22</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">13</td>
+<td class="bordered">GND</td>
+<td class="bordered">22</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">23</td>
+<td class="bordered">P1.1</td>
+<td class="bordered">DIO 9</td>
+<td class="bordered">DIO 9</td>
+<td class="bordered">DIO 9</td>
+<td class="bordered">P1.1</td>
+<td class="bordered">12</td>
+<td class="bordered">ch9</td>
+<td class="bordered">23</td>
+<td class="bordered">dut9</td>
+</tr>
+
+<tr>
+<td class="bordered">24</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">11</td>
+<td class="bordered">GND</td>
+<td class="bordered">24</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">25</td>
+<td class="bordered">P0.7</td>
+<td class="bordered">DIO 7</td>
+<td class="bordered">DIO 7</td>
+<td class="bordered">DIO 7</td>
+<td class="bordered">P0.7</td>
+<td class="bordered">10</td>
+<td class="bordered">ch7</td>
+<td class="bordered">25</td>
+<td class="bordered">dut7</td>
+</tr>
+
+<tr>
+<td class="bordered">26</td>
+<td class="bordered">PFI 1</td>
+<td class="bordered">PFI 1</td>
+<td class="bordered">PFI 1</td>
+<td class="bordered">PFI 1</td>
+<td class="bordered">PFI 1</td>
+<td class="bordered">9</td>
+<td class="bordered">ctrl1</td>
+<td class="bordered">26</td>
+<td class="bordered">dutctrl1</td>
+</tr>
+
+<tr>
+<td class="bordered">27</td>
+<td class="bordered">P0.5</td>
+<td class="bordered">DIO 5</td>
+<td class="bordered">DIO 5</td>
+<td class="bordered">DIO 5</td>
+<td class="bordered">P0.5</td>
+<td class="bordered">8</td>
+<td class="bordered">ch5</td>
+<td class="bordered">27</td>
+<td class="bordered">dut5</td>
+</tr>
+
+<tr>
+<td class="bordered">28</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">X</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">28</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">29</td>
+<td class="bordered">P0.3</td>
+<td class="bordered">DIO 3</td>
+<td class="bordered">DIO 3</td>
+<td class="bordered">DIO 3</td>
+<td class="bordered">P0.3</td>
+<td class="bordered">6</td>
+<td class="bordered">ch3</td>
+<td class="bordered">29</td>
+<td class="bordered">dut3</td>
+</tr>
+
+<tr>
+<td class="bordered">30</td>
+<td class="bordered">PFI 3</td>
+<td class="bordered">PFI 3</td>
+<td class="bordered">PFI 3</td>
+<td class="bordered">PFI 3</td>
+<td class="bordered">GND</td>
+<td class="bordered">5</td>
+<td class="bordered">ctrl3</td>
+<td class="bordered">30</td>
+<td class="bordered">ctrl3</td>
+</tr>
+
+<tr>
+<td class="bordered">31</td>
+<td class="bordered">P0.1</td>
+<td class="bordered">DIO 1</td>
+<td class="bordered">DIO 1</td>
+<td class="bordered">DIO 1</td>
+<td class="bordered">P0.1</td>
+<td class="bordered">4</td>
+<td class="bordered">ch1</td>
+<td class="bordered">31</td>
+<td class="bordered">dut1</td>
+</tr>
+
+<tr>
+<td class="bordered">32</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">3</td>
+<td class="bordered">GND</td>
+<td class="bordered">32</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">33</td>
+<td class="bordered">PFI 4</td>
+<td class="bordered">DDC CLK OUT</td>
+<td class="bordered">DDC CLK OUT</td>
+<td class="bordered">PFI 4/DDC CLK OUT</td>
+<td class="bordered">CLOCK OUT</td>
+<td class="bordered">2</td>
+<td class="bordered">ctrl4</td>
+<td class="bordered">33</td>
+<td class="bordered">dutctrl4</td>
+</tr>
+
+<tr>
+<td class="bordered">34</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">1</td>
+<td class="bordered">GND</td>
+<td class="bordered">34</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">35</td>
+<td class="bordered">P3.6</td>
+<td class="bordered">DIO 30</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">PFI 30</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">68</td>
+<td class="bordered">ch30</td>
+<td class="bordered">35</td>
+<td class="bordered">dut30</td>
+</tr>
+
+<tr>
+<td class="bordered">36</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">67</td>
+<td class="bordered">GND</td>
+<td class="bordered">36</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">37</td>
+<td class="bordered">P3.4</td>
+<td class="bordered">DIO 28</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">PFI 28</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">66</td>
+<td class="bordered">ch28</td>
+<td class="bordered">37</td>
+<td class="bordered">dut28</td>
+</tr>
+
+<tr>
+<td class="bordered">38</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">65</td>
+<td class="bordered">GND</td>
+<td class="bordered">38</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">39</td>
+<td class="bordered">P3.2</td>
+<td class="bordered">DIO 26</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">PFI 26</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">64</td>
+<td class="bordered">ch26</td>
+<td class="bordered">39</td>
+<td class="bordered">dut26</td>
+</tr>
+
+<tr>
+<td class="bordered">40</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">63</td>
+<td class="bordered">GND</td>
+<td class="bordered">40</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">41</td>
+<td class="bordered">P3.0</td>
+<td class="bordered">DIO 24</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">PFI 24</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">62</td>
+<td class="bordered">ch24</td>
+<td class="bordered">41</td>
+<td class="bordered">dut24</td>
+</tr>
+
+<tr>
+<td class="bordered">42</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">61</td>
+<td class="bordered">GND</td>
+<td class="bordered">42</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">43</td>
+<td class="bordered">P2.6</td>
+<td class="bordered">DIO 22</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">DIO 22</td>
+<td class="bordered">P2.6</td>
+<td class="bordered">60</td>
+<td class="bordered">ch22</td>
+<td class="bordered">43</td>
+<td class="bordered">dut22</td>
+</tr>
+
+<tr>
+<td class="bordered">44</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">59</td>
+<td class="bordered">GND</td>
+<td class="bordered">44</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">45</td>
+<td class="bordered">P2.4</td>
+<td class="bordered">DIO 20</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">DIO 20</td>
+<td class="bordered">P2.4</td>
+<td class="bordered">58</td>
+<td class="bordered">ch20</td>
+<td class="bordered">45</td>
+<td class="bordered">dut20</td>
+</tr>
+
+<tr>
+<td class="bordered">46</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">57</td>
+<td class="bordered">GND</td>
+<td class="bordered">46</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">47</td>
+<td class="bordered">P2.2</td>
+<td class="bordered">DIO 18</td>
+<td class="bordered">DIO 18</td>
+<td class="bordered">DIO 18</td>
+<td class="bordered">P2.2</td>
+<td class="bordered">56</td>
+<td class="bordered">ch18</td>
+<td class="bordered">47</td>
+<td class="bordered">dut18</td>
+</tr>
+
+<tr>
+<td class="bordered">48</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">55</td>
+<td class="bordered">GND</td>
+<td class="bordered">48</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">49</td>
+<td class="bordered">P2.0</td>
+<td class="bordered">DIO 16</td>
+<td class="bordered">DIO 16</td>
+<td class="bordered">DIO 16</td>
+<td class="bordered">P2.0</td>
+<td class="bordered">54</td>
+<td class="bordered">ch16</td>
+<td class="bordered">49</td>
+<td class="bordered">dut16</td>
+</tr>
+
+<tr>
+<td class="bordered">50</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">53</td>
+<td class="bordered">GND</td>
+<td class="bordered">50</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">51</td>
+<td class="bordered">P1.6</td>
+<td class="bordered">DIO 14</td>
+<td class="bordered">DIO 14</td>
+<td class="bordered">DIO 14</td>
+<td class="bordered">P1.6</td>
+<td class="bordered">52</td>
+<td class="bordered">ch14</td>
+<td class="bordered">51</td>
+<td class="bordered">dut14</td>
+</tr>
+
+<tr>
+<td class="bordered">52</td>
+<td class="bordered">PFI 0</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">51</td>
+<td class="bordered">ctrl0</td>
+<td class="bordered">52</td>
+<td class="bordered">dutctrl0</td>
+</tr>
+
+<tr>
+<td class="bordered">53</td>
+<td class="bordered">P1.4</td>
+<td class="bordered">DIO 12</td>
+<td class="bordered">DIO 12</td>
+<td class="bordered">DIO 12</td>
+<td class="bordered">P1.4</td>
+<td class="bordered">50</td>
+<td class="bordered">ch12</td>
+<td class="bordered">53</td>
+<td class="bordered">dut12</td>
+</tr>
+
+<tr>
+<td class="bordered">54</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">49</td>
+<td class="bordered">GND</td>
+<td class="bordered">54</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">55</td>
+<td class="bordered">P1.2</td>
+<td class="bordered">DIO 10</td>
+<td class="bordered">DIO 10</td>
+<td class="bordered">DIO 10</td>
+<td class="bordered">P1.2</td>
+<td class="bordered">48</td>
+<td class="bordered">ch10</td>
+<td class="bordered">55</td>
+<td class="bordered">dut10</td>
+</tr>
+
+<tr>
+<td class="bordered">56</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">47</td>
+<td class="bordered">GND</td>
+<td class="bordered">56</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">57</td>
+<td class="bordered">P1.0</td>
+<td class="bordered">DIO 8</td>
+<td class="bordered">DIO 8</td>
+<td class="bordered">DIO 8</td>
+<td class="bordered">P1.0</td>
+<td class="bordered">46</td>
+<td class="bordered">ch8</td>
+<td class="bordered">57</td>
+<td class="bordered">dut8</td>
+</tr>
+
+<tr>
+<td class="bordered">58</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">45</td>
+<td class="bordered">GND</td>
+<td class="bordered">58</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">59</td>
+<td class="bordered">P0.6</td>
+<td class="bordered">DIO 6</td>
+<td class="bordered">DIO 6</td>
+<td class="bordered">DIO 6</td>
+<td class="bordered">P0.6</td>
+<td class="bordered">44</td>
+<td class="bordered">ch6</td>
+<td class="bordered">59</td>
+<td class="bordered">dut6</td>
+</tr>
+
+<tr>
+<td class="bordered">60</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">RESERVED</td>
+<td class="bordered">NO CONNECT</td>
+<td class="bordered">43</td>
+<td class="bordered">Res0</td>
+<td class="bordered">60</td>
+<td class="bordered">Res0</td>
+</tr>
+
+<tr>
+<td class="bordered">61</td>
+<td class="bordered">P0.4</td>
+<td class="bordered">DIO 4</td>
+<td class="bordered">DIO 4</td>
+<td class="bordered">DIO 4</td>
+<td class="bordered">P0.4</td>
+<td class="bordered">42</td>
+<td class="bordered">ch4</td>
+<td class="bordered">61</td>
+<td class="bordered">dut4</td>
+</tr>
+
+<tr>
+<td class="bordered">62</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">41</td>
+<td class="bordered">GND</td>
+<td class="bordered">62</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">63</td>
+<td class="bordered">P0.2</td>
+<td class="bordered">DIO 2</td>
+<td class="bordered">DIO 2</td>
+<td class="bordered">DIO 2</td>
+<td class="bordered">P0.2</td>
+<td class="bordered">40</td>
+<td class="bordered">ch2</td>
+<td class="bordered">63</td>
+<td class="bordered">dut2</td>
+</tr>
+
+<tr>
+<td class="bordered">64</td>
+<td class="bordered">PFI 2</td>
+<td class="bordered">PFI 2</td>
+<td class="bordered">PFI 2</td>
+<td class="bordered">PFI 2</td>
+<td class="bordered">PFI 2</td>
+<td class="bordered">39</td>
+<td class="bordered">ctrl2</td>
+<td class="bordered">64</td>
+<td class="bordered">ctrl2</td>
+</tr>
+
+<tr>
+<td class="bordered">65</td>
+<td class="bordered">P0.0</td>
+<td class="bordered">DIO 0</td>
+<td class="bordered">DIO 0</td>
+<td class="bordered">DIO 0</td>
+<td class="bordered">P0.0</td>
+<td class="bordered">38</td>
+<td class="bordered">ch0</td>
+<td class="bordered">65</td>
+<td class="bordered">dut0</td>
+</tr>
+
+<tr>
+<td class="bordered">66</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">37</td>
+<td class="bordered">GND</td>
+<td class="bordered">66</td>
+<td class="bordered">GND</td>
+</tr>
+
+<tr>
+<td class="bordered">67</td>
+<td class="bordered">PFI 5</td>
+<td class="bordered">STROBE</td>
+<td class="bordered">STROBE</td>
+<td class="bordered">PFI 5/STROBE</td>
+<td class="bordered">GLOBAL CLOCK 0</td>
+<td class="bordered">36</td>
+<td class="bordered">ctrl5</td>
+<td class="bordered">67</td>
+<td class="bordered">dutctrl5</td>
+</tr>
+
+<tr>
+<td class="bordered">68</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">GND</td>
+<td class="bordered">35</td>
+<td class="bordered">GND</td>
+<td class="bordered">68</td>
+<td class="bordered">GND</td>
+</tr>
+</table>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</html>

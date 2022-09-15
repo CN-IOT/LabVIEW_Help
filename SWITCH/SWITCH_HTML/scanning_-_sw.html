@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0102)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scanning_-_sw.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./scanning_-_sw_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./scanning_-_sw_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./scanning_-_sw_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./scanning_-_sw_files/extra.css">
+
+
+<title>Writing a Software Trigger Scanning Program</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./scanning_-_sw_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+ <h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">编写软件触发扫描程序</font></font></h1>
+ 
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">要编写软件触发扫描程序，请完成以下步骤：</font></font></p>
+
+<ol><li><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Initialize_With_Topology.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用niSwitch Initialize With Topology</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 或</font></font><A href="switchcref.chm::/c_nisw_initwithtopology.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_InitWithTopology</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数</font><font style="VERTICAL-ALIGN: inherit">设置开关模块的  拓扑。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用</font><A href="switchviref.chm::/niSwitch_Configure_Scan_Trigger.html"><font style="VERTICAL-ALIGN: inherit">niSwitch 配置扫描触发</font></a><font style="VERTICAL-ALIGN: inherit">VI 或</font><A href="switchcref.chm::/c_nisw_configscantrigger.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">niSwitch_ConfigureScanTrigger</font></span></a><font style="VERTICAL-ALIGN: inherit">函数将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触发输入</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">( </font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">triggerInput</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> ) 参数设置为</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">软件触发</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font><A href="switchviref.chm::/niSwitch_Configure_Scan_Trigger.html"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"></font><A href="switchcref.chm::/c_nisw_configscantrigger.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span></a><font style="VERTICAL-ALIGN: inherit"></font>
+<li><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Set_Continuous_Scan.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用niSwitch Set Continuous Scan</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 或</font></font><A href="switchcref.chm::/c_nisw_setcontinuousscan.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_SetContinuousScan</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数设置</font><font style="VERTICAL-ALIGN: inherit">开关在扫描列表中循环的次数，一次或无限次。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用</font></font><A href="switchviref.chm::/niSwitch_Configure_Scan_List.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 配置扫描列表</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">VI 或</font></font><A href="switchcref.chm::/c_nisw_configscanlist.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_ConfigureScanList</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数设置连接列表。</font><font style="VERTICAL-ALIGN: inherit">有关语法信息，请参阅</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用</font></font><A href="switchviref.chm::/niSwitch_Initiate_Scan.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initiate Scan</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 或</font></font><A href="switchcref.chm::/c_nisw_initiatescan.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_InitiateScan</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数启动扫描。</font><font style="VERTICAL-ALIGN: inherit">扫描列表中的第一个条目被执行，并且交换机等待软件触发来执行列表中的后续条目。</font></font> 
+<li><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Send_Software_Trigger.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通过调用niSwitch Send Software Trigger</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 和</font></font><A href="switchcref.chm::/c_nisw_sendsoftwaretrigger.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_SendSoftwareTrigger</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数</font><font style="VERTICAL-ALIGN: inherit">执行扫描列表中的每组连接。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用</font></font><A href="switchviref.chm::/niSwitch_Abort_Scan.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Abort Scan</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 或</font></font><A href="switchcref.chm::/c_nisw_abortscan.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_AbortScan</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数终止扫描操作。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Close.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用niSwitch Close</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 或</font></font><A href="switchcref.chm::/c_nisw_close.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_close</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数</font><font style="VERTICAL-ALIGN: inherit">释放资源。</font></font></li></ol>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">有关基本软件扫描应用程序的说明，请参阅</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/examples.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 软件扫描</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例。</font></font></p>
+
+  <table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./scanning_-_sw_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;某些设备可能不支持扫描。</font><font style="VERTICAL-ALIGN: inherit">有关支持的功能的更多信息，请参阅您的设备手册。</font></font></td>
+</tr>
+</tbody></table>
+
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./scanning_-_sw_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fscanning_-_sw.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fscanning_-_sw.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./scanning_-_sw_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

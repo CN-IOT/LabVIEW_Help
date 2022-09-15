@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI/PXIe-2593 Independent Topology</TITLE>
+
+</head>
+<body bgcolor="#ffffff">
+
+
+ <h1>NI PXI/PXIe-2593 Independent Topology</h1>
+ 
+ <P class="Body" >The NI PXI/PXIe-2593 (NI&#160;2593) supports the independent topology, allowing you to utilize its full routing capabilities. Possible configurations include <a href="1193_3x1_mux.html">3&#0215;1 multiplexers</a> and <a href="2593_switch_cloud.html">dimensionally flexible sparse matrices</a>.  </P>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Control the individual relays with the <a href="switchviref.chm::/niSwitch_Relay_Control.html">niSwitch Relay Control</a> VI or the <a href="switchCRef.chm::/c_nisw_relaycontrol.html"><span class="Monospace">niSwitch_RelayControl</span></a> function (refer to the NI&#160;2593 <a href="2593_hw_diagram.html">hardware diagram</a> for relay names). For example, to connect CH2 to COM0 on the NI&#160;2593, call the niSwitch Relay Control VI or the <span class="Monospace">niSwitch_RelayControl</span> function with <strong>relay action </strong>set to <strong>Relay Closed</strong> and <strong>relay name</strong> set to <span class="Monospace">KA0</span>. Repeat the call to the niSwitch Relay Control VI or the <span class="Monospace">niSwitch_RelayControl</span> function to close KB1 then KC0.</p>
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI&#160;2593, use the channel names in the <a href="scan_list.html">scan list</a>. A typical scan list entry could be <span class="Monospace">ch2-&gt;com0;</SPAN>. This entry routes the signal connected to CH2 to COM0.</P>
+
+<h2>Valid Internal Channels</h2>
+
+<p class="Body">To determine the internal channel names, combine the names of all relays adjacent to a channel, in alphabetical order, and remove the K's. For example, the channel connecting KA0 and KB0 is called A0B0. </p>
+
+<p class="Body">For example, to connect CH0 to COM0 using internal channel names, you need to call the following:</p>
+
+
+<p class="Indent1"><span class="Monospace">niSwitch_Connect (exampleSession, ch0, a0b0);<br>
+niSwitch_Connect (exampleSession, a0b0, b0b1c0);<br>
+niSwitch_Connect (exampleSession, b0b1c0, c0c1c2c3d0d1);<br>
+niSwitch_Connect (exampleSession, c0c1c2c3d0d1, com0);</span></p>
+
+<p class="Anchor"><img src="loc_eps_2593-indep.gif"></p>
+
+
+ <p class="Body"> The following is a list of the valid internal channel names:</p>
+ 
+<table class="Bordered"> 
+
+<tr>
+<td class="Bordered" align="center">a0b0</td>
+<td class="Bordered" align="center">b0b1</td>
+<td class="Bordered" align="center">c0c1</td>
+<td class="Bordered" align="center">ch4</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a10b10</td>
+<td class="Bordered" align="center">b0b1c0</td>
+<td class="Bordered" align="center">c0c1c2c3d0d1</td>
+<td class="Bordered" align="center">ch5</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a11b11</td>
+<td class="Bordered" align="center">b10b11</td>
+<td class="Bordered" align="center">c2c3</td>
+<td class="Bordered" align="center">ch6</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a12b12</td>
+<td class="Bordered" align="center">b10b11c5</td>
+<td class="Bordered" align="center">c4c5</td>
+<td class="Bordered" align="center">ch7</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a13b13</td>
+<td class="Bordered" align="center">b12b13</td>
+<td class="Bordered" align="center">c4c5c6c7d4d5</td>
+<td class="Bordered" align="center">ch8</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a14b14</td>
+<td class="Bordered" align="center">b12b13c6</td>
+<td class="Bordered" align="center">c6c7</td>
+<td class="Bordered" align="center">ch9</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a15b15</td>
+<td class="Bordered" align="center">b14b15</td>
+<td class="Bordered" align="center">ch0</td>
+<td class="Bordered" align="center">com0</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a1b1</td>
+<td class="Bordered" align="center">b14b15c7</td>
+<td class="Bordered" align="center">ch10</td>
+<td class="Bordered" align="center">com1</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a2b2</td>
+<td class="Bordered" align="center">b2b3</td>
+<td class="Bordered" align="center">ch11</td>
+<td class="Bordered" align="center">d0d1</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a3b3</td>
+<td class="Bordered" align="center">b2b3c1</td>
+<td class="Bordered" align="center">ch12</td>
+<td class="Bordered" align="center">d1d2</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a4b4</td>
+<td class="Bordered" align="center">b4b5</td>
+<td class="Bordered" align="center">ch13</td>
+<td class="Bordered" align="center">d2d3</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a5b5</td>
+<td class="Bordered" align="center">b4b5c2</td>
+<td class="Bordered" align="center">ch14</td>
+<td class="Bordered" align="center">d2d3d4</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a6b6</td>
+<td class="Bordered" align="center">b6b7</td>
+<td class="Bordered" align="center">ch15</td>
+<td class="Bordered" align="center">d4d5</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a7b7</td>
+<td class="Bordered" align="center">b6b7c3</td>
+<td class="Bordered" align="center">ch1</td>
+<td class="Bordered" rowspan=3></td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a8b8</td>
+<td class="Bordered" align="center">b8b9</td>
+<td class="Bordered" align="center">ch2</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">a9b9</td>
+<td class="Bordered" align="center">b8b9c4</td>
+<td class="Bordered" align="center">ch3</td>
+</tr>
+</table>
+
+ 
+ 
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

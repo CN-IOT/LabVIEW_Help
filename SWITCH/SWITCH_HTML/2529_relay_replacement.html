@@ -1,0 +1,564 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI/PXIe-2529 Relay Replacement</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2529 Relay Replacement</h1>
+<p class="Body">The NI PXI/PXIe-2529 uses electromechanical armature relays.</p>
+
+<p class="Body">Refer to the following table for information about ordering replacement relays.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part </th>
+</tr>
+<tr>
+<td class="Bordered">Aromat (NAiS)</td>
+<td class="Bordered">AGQ210A4H</td>
+</tr>
+</table>
+
+<p class="Body">Complete the following sets of steps to disassemble your module, replace a failed relay, and reassemble your module.</p>
+<h2><a name="disassemble">Disassemble the Module</a></h2><br>
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to your PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to your module from electrostatic discharge.</td></tr></table></li>
+<li>Locate the relay you want to replace. 
+<ol><li>Determine the channel name for the relay using the Bank Connection Diagram for your topology.</li>
+<li>Match the channel name to its corresponding relay name using the following tables. 
+<h3>Daughterboard Relay Locations (Top View)</h3>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Channel<br>Name</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Channel<br>Name</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Channel<br>Name</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Channel<br>Name</th>
+<th class="Bordered">Relay<br>Name</th>
+</tr>
+<tr>
+<td class="Bordered">B0ROC0</td>
+<td class="Bordered">K72</td>
+<td class="Bordered">B0R1C0</td>
+<td class="Bordered">K80</td>
+<td class="Bordered">B0R2CO</td>
+<td class="Bordered">K88</td>
+<td class="Bordered">B0R3C0</td>
+<td class="Bordered">K96</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC1</td>
+<td class="Bordered">K71</td>
+<td class="Bordered">B0R1C1</td>
+<td class="Bordered">K79</td>
+<td class="Bordered">B0R2C1</td>
+<td class="Bordered">K87</td>
+<td class="Bordered">B0R3C1</td>
+<td class="Bordered">K95</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC2</td>
+<td class="Bordered">K70</td>
+<td class="Bordered">B0R1C2</td>
+<td class="Bordered">K78</td>
+<td class="Bordered">B0R2C2</td>
+<td class="Bordered">K86</td>
+<td class="Bordered">B0R3C2</td>
+<td class="Bordered">K94</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC3</td>
+<td class="Bordered">K69</td>
+<td class="Bordered">B0R1C3</td>
+<td class="Bordered">K77</td>
+<td class="Bordered">B0R2C3</td>
+<td class="Bordered">K85</td>
+<td class="Bordered">B0R3C3</td>
+<td class="Bordered">K93</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC4</td>
+<td class="Bordered">K1</td>
+<td class="Bordered">B0R1C4</td>
+<td class="Bordered">K9</td>
+<td class="Bordered">B0R2C4</td>
+<td class="Bordered">K17</td>
+<td class="Bordered">B0R3C4</td>
+<td class="Bordered">K25</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC5</td>
+<td class="Bordered">K2</td>
+<td class="Bordered">B0R1C5</td>
+<td class="Bordered">K10</td>
+<td class="Bordered">B0R2C5</td>
+<td class="Bordered">K18</td>
+<td class="Bordered">B0R3C5</td>
+<td class="Bordered">K26</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC6</td>
+<td class="Bordered">K3</td>
+<td class="Bordered">B0R1C6</td>
+<td class="Bordered">K11</td>
+<td class="Bordered">B0R2C6</td>
+<td class="Bordered">K19</td>
+<td class="Bordered">B0R3C6</td>
+<td class="Bordered">K27</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC7</td>
+<td class="Bordered">K4</td>
+<td class="Bordered">B0R1C7</td>
+<td class="Bordered">K12</td>
+<td class="Bordered">B0R2C7</td>
+<td class="Bordered">K20</td>
+<td class="Bordered">B0R3C7</td>
+<td class="Bordered">K28</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC8</td>
+<td class="Bordered">K68</td>
+<td class="Bordered">B0R1C8</td>
+<td class="Bordered">K76</td>
+<td class="Bordered">B0R2C8</td>
+<td class="Bordered">K84</td>
+<td class="Bordered">B0R3C8</td>
+<td class="Bordered">K92</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC9</td>
+<td class="Bordered">K67</td>
+<td class="Bordered">B0R1C9</td>
+<td class="Bordered">K75</td>
+<td class="Bordered">B0R2C9</td>
+<td class="Bordered">K83</td>
+<td class="Bordered">B0R3C9</td>
+<td class="Bordered">K91</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC10</td>
+<td class="Bordered">K66</td>
+<td class="Bordered">B0R1C10</td>
+<td class="Bordered">K74</td>
+<td class="Bordered">B0R2C10</td>
+<td class="Bordered">K82</td>
+<td class="Bordered">B0R3C10</td>
+<td class="Bordered">K90</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC11</td>
+<td class="Bordered">K65</td>
+<td class="Bordered">B0R1C11</td>
+<td class="Bordered">K73</td>
+<td class="Bordered">B0R2C11</td>
+<td class="Bordered">K81</td>
+<td class="Bordered">B0R3C11</td>
+<td class="Bordered">K89</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC12</td>
+<td class="Bordered">K5</td>
+<td class="Bordered">B0R1C12</td>
+<td class="Bordered">K13</td>
+<td class="Bordered">B0R2C12</td>
+<td class="Bordered">K21</td>
+<td class="Bordered">B0R3C12</td>
+<td class="Bordered">K29</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC13</td>
+<td class="Bordered">K6</td>
+<td class="Bordered">B0R1C13</td>
+<td class="Bordered">K14</td>
+<td class="Bordered">B0R2C13</td>
+<td class="Bordered">K22</td>
+<td class="Bordered">B0R3C13</td>
+<td class="Bordered">K30</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC14</td>
+<td class="Bordered">K7</td>
+<td class="Bordered">B0R1C14</td>
+<td class="Bordered">K15</td>
+<td class="Bordered">B0R2C14</td>
+<td class="Bordered">K23</td>
+<td class="Bordered">B0R3C14</td>
+<td class="Bordered">K31</td>
+</tr>
+<tr>
+<td class="Bordered">B0ROC15</td>
+<td class="Bordered">K8</td>
+<td class="Bordered">B0R1C15</td>
+<td class="Bordered">K16</td>
+<td class="Bordered">B0R2C15</td>
+<td class="Bordered">K24</td>
+<td class="Bordered">B0R3C15</td>
+<td class="Bordered">K32</td>
+</tr>
+</table>
+
+<h3>Daughterboard Relay Locations (Bottom View)</h3>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Channel<br>Name</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Channel<br>Name</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Channel<br>Name</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Channel<br>Name</th>
+<th class="Bordered">Relay<br>Name</th>
+</tr>
+<tr>
+<td class="Bordered">B1ROC0</td>
+<td class="Bordered">K104</td>
+<td class="Bordered">B1R1C0</td>
+<td class="Bordered">K112</td>
+<td class="Bordered">B1R2CO</td>
+<td class="Bordered">K120</td>
+<td class="Bordered">B1R3C0</td>
+<td class="Bordered">K128</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC1</td>
+<td class="Bordered">K103</td>
+<td class="Bordered">B1R1C1</td>
+<td class="Bordered">K111</td>
+<td class="Bordered">B1R2C1</td>
+<td class="Bordered">K119</td>
+<td class="Bordered">B1R3C1</td>
+<td class="Bordered">K127</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC2</td>
+<td class="Bordered">K102</td>
+<td class="Bordered">B1R1C2</td>
+<td class="Bordered">K110</td>
+<td class="Bordered">B1R2C2</td>
+<td class="Bordered">K118</td>
+<td class="Bordered">B1R3C2</td>
+<td class="Bordered">K126</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC3</td>
+<td class="Bordered">K101</td>
+<td class="Bordered">B1R1C3</td>
+<td class="Bordered">K109</td>
+<td class="Bordered">B1R2C3</td>
+<td class="Bordered">K117</td>
+<td class="Bordered">B1R3C3</td>
+<td class="Bordered">K125</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC4</td>
+<td class="Bordered">K33</td>
+<td class="Bordered">B1R1C4</td>
+<td class="Bordered">K41</td>
+<td class="Bordered">B1R2C4</td>
+<td class="Bordered">K49</td>
+<td class="Bordered">B1R3C4</td>
+<td class="Bordered">K57</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC5</td>
+<td class="Bordered">K34</td>
+<td class="Bordered">B1R1C5</td>
+<td class="Bordered">K42</td>
+<td class="Bordered">B1R2C5</td>
+<td class="Bordered">K50</td>
+<td class="Bordered">B1R3C5</td>
+<td class="Bordered">K58</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC6</td>
+<td class="Bordered">K35</td>
+<td class="Bordered">B1R1C6</td>
+<td class="Bordered">K43</td>
+<td class="Bordered">B1R2C6</td>
+<td class="Bordered">K51</td>
+<td class="Bordered">B1R3C6</td>
+<td class="Bordered">K59</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC7</td>
+<td class="Bordered">K36</td>
+<td class="Bordered">B1R1C7</td>
+<td class="Bordered">K44</td>
+<td class="Bordered">B1R2C7</td>
+<td class="Bordered">K52</td>
+<td class="Bordered">B1R3C7</td>
+<td class="Bordered">K60</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC8</td>
+<td class="Bordered">K100</td>
+<td class="Bordered">B1R1C8</td>
+<td class="Bordered">K108</td>
+<td class="Bordered">B1R2C8</td>
+<td class="Bordered">K116</td>
+<td class="Bordered">B1R3C8</td>
+<td class="Bordered">K124</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC9</td>
+<td class="Bordered">K99</td>
+<td class="Bordered">B1R1C9</td>
+<td class="Bordered">K107</td>
+<td class="Bordered">B1R2C9</td>
+<td class="Bordered">K115</td>
+<td class="Bordered">B1R3C9</td>
+<td class="Bordered">K123</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC10</td>
+<td class="Bordered">K98</td>
+<td class="Bordered">B1R1C10</td>
+<td class="Bordered">K106</td>
+<td class="Bordered">B1R2C10</td>
+<td class="Bordered">K114</td>
+<td class="Bordered">B1R3C10</td>
+<td class="Bordered">K122</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC11</td>
+<td class="Bordered">K97</td>
+<td class="Bordered">B1R1C11</td>
+<td class="Bordered">K105</td>
+<td class="Bordered">B1R2C11</td>
+<td class="Bordered">K113</td>
+<td class="Bordered">B1R3C11</td>
+<td class="Bordered">K121</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC12</td>
+<td class="Bordered">K37</td>
+<td class="Bordered">B1R1C12</td>
+<td class="Bordered">K45</td>
+<td class="Bordered">B1R2C12</td>
+<td class="Bordered">K53</td>
+<td class="Bordered">B1R3C12</td>
+<td class="Bordered">K61</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC13</td>
+<td class="Bordered">K38</td>
+<td class="Bordered">B1R1C13</td>
+<td class="Bordered">K46</td>
+<td class="Bordered">B1R2C13</td>
+<td class="Bordered">K54</td>
+<td class="Bordered">B1R3C13</td>
+<td class="Bordered">K62</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC14</td>
+<td class="Bordered">K39</td>
+<td class="Bordered">B1R1C14</td>
+<td class="Bordered">K47</td>
+<td class="Bordered">B1R2C14</td>
+<td class="Bordered">K55</td>
+<td class="Bordered">B1R3C14</td>
+<td class="Bordered">K63</td>
+</tr>
+<tr>
+<td class="Bordered">B1ROC15</td>
+<td class="Bordered">K40</td>
+<td class="Bordered">B1R1C15</td>
+<td class="Bordered">K48</td>
+<td class="Bordered">B1R2C15</td>
+<td class="Bordered">K56</td>
+<td class="Bordered">B1R3C15</td>
+<td class="Bordered">K64</td>
+</tr>
+</table>
+</li>
+<li>Use the relay name to locate the relay on the daughterboard.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Relay names are printed on the PCB.
+</td></tr></table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Older versions of this module might have plastic lead covers that you must remove. The module retains full specifications even if these covers are not reinstalled. </td>
+</tr>
+</table>
+</li>
+</ol>
+</li>
+<li>Remove the four screws and two&nbsp;lead covers (if present) that secure the daughterboard to the switch assembly.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame"><img src="noloc_2529_disassemble.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Screws</td>
+</tr>
+
+
+
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">2</td>
+	<td class="description">Lead Covers (if present)</td>
+	</tr>
+	</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+
+
+<li>To gain access the bottom of the daughterboard, disconnect the PCB&nbsp;interconnect cable by lifting the PCB&nbsp;cable latch on the J1&nbsp;connector.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame"><img src="loc_eps_2532_pxi_back_plane_connect.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">PCB Interconnect Cable</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">PCB Cable Latch</td>
+</tr>
+
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">J1 Connector</td>
+	</tr>
+	</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+<li>Locate the assembly and serial number labels on the board with the relay you want to replace. White labels indicate the board was assembled using lead solder (Sn 63 Pb 37). Green labels indicate the board was assembled using lead-free solder (Sn 96.5 Ag 3.0 Cu 0.5). Lead-free assemblies have assembly numbers ending in L. The different label types are shown in the following figure.
+<p class="Anchor"><img src="loc_eps_lead_free_labels.gif"></p>
+</li>
+</ol>
+
+<h2><a name="replace">Replace the Relay</a></h2>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies, and lead solder for relay replacement on lead assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this condition. This rework can prevent the same unit from being reworked later on a lead-free solder station, because it could contaminate the station.</span></td>
+</tr>
+</table>
+
+<p class="Body">Make sure you have the following items:</p>
+<ul>
+<li>Temperature-regulated soldering iron set to 316 &#0176;C (600 &#0176;F) for lead solder rework or 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>63/37 Tin/Lead solder (flux core) for lead solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Solder wick</li>
+<li>Fine pick</li>
+<li>Isopropyl alcohol</li>
+<li>Cotton swabs</li>
+</ul>
+
+<p class="Body">If you have a surface mount rework station, replace the relay as you would any other surface mount part. Otherwise, complete the following steps to replace the relay:</p>
+
+<ol>
+<li>Use the soldering iron and solder wick to remove as much solder from the relay pads as possible. Do not leave the soldering iron on any lead for more than 5 seconds. <table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;If it is necessary to reapply the soldering iron to the pad, allow the connection to cool completely before reapplying the soldering iron.</td></tr></table></li>
+<li>Apply heat to the pads one at a time, and use the pick to gently pry the relay pins from the pads. Make sure that the solder is molten before prying.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Using excessive force on a soldered pad can result in lifting the PCB trace and ruining the board.</span></td></tr></table></li>
+<li>Remove the relay.</li>
+<li>Clean the pads with isopropyl alcohol and cotton swabs.</li>
+<li>Place the new relay on the PCB pads and solder.</li>
+<li>Remove the excess flux with isopropyl alcohol and cotton swabs.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do <em>not</em> use flux remover to clean the board after relay replacement.</span>
+</td></tr></table>
+</li>
+</ol>
+
+
+<h2>Reassemble the Module</h2><br>
+<p class="Body">
+Complete the <a href="#disassemble">Disassemble the Module</a> steps in reverse order to reassemble your module.<br><br>
+</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td><strong>Tip</strong>&nbsp;&nbsp;In NI-SWITCH 3.1 or later, you can use the Switch Soft Front Panel  to reset the relay count after you have replaced a failed relay. Refer to the <em>Switch Soft Front Panel Help</em> for more information.</td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+<script src="pdf.js" type="text/javascript"></script>
+<script src="web.js" type="text/javascript"></script>
+<title>Thermocouple Measurement</title>
+</head>
+<body bgcolor="#ffffff">
+
+  
+<h1>Thermocouple Measurement</h1>
+<p class="Body">The NI PXI/PXIe-2527 (NI&#160;2527) and the NI TB-2627 can measure thermocouples. </p> 
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td>
+<strong>Tip</strong>&nbsp;&nbsp;NI software can convert a thermocouple voltage to the thermocouple temperature. For example code, visit <a href="javascript:WWW(WWW_Examples)"><span class="Monospace">ni.com/examples</span></a> and enter <span class="Monospace-Bold">2527</span> in the Search field.</td></tr></table>
+
+<p class="Body">
+When measuring thermocouples, be sure to account for error in the measurements. The total error in thermocouple measurement is the sum of the system error (determined by the thermal EMF of the NI&#160;2527 and the CJC temperature of the NI TB-2627) and the thermocouple error (determined by the type of thermocouple used).</p>
+
+<h2>Determining the System Error</h2>
+<p class="Body">
+To determine the system error for the NI&#160;2527/TB-2627, first calculate the thermal EMF error of the NI&#160;2527 using the following equation.</p>
+
+<table class="borderless">
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="center"><em>E<sub>EMF</sub></em> &#61; [<em>(T<sub>&#43;1</sub></em> &#8211; <em>T</em>)&nbsp;/&nbsp;(<em>V<sub>&#43;1</sub></em> &#8211; <em>V</em>)] &#215;  <em>V<sub>EMF</sub></em></td>
+<td class="Borderless" align="left">(1)</td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"><em>where</em></td>
+<td class="Borderless" align="left"><em>E<sub>EMF</sub></em> represents the thermal EMF error of the NI&#160;2527</td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>T</em> is the temperature being measured, in degrees Celsius</td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>T<sub>&#43;1</sub></em> is (<em>T</em> &#43; 1 &#176;C)</td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>V</em> is the voltage that corresponds to <em>T</em></td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>V<sub>&#43;1</sub></em> is the voltage that corresponds to <em>T<sub>&#43;1</sub></em></td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>V<sub>EMF</sub></em> represents the thermal EMF of the NI&#160;2527</td>
+<td class="Borderless" align="center"></td>
+</tr>
+</table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Notes</strong>&nbsp;&nbsp;In thermocouple reference tables, <em>T</em> and <em>T<sub>&#43;1</sub></em> are known values used to calculate the slope of the thermocouple Temperature <em>vs.</em> Voltage graph. Refer to a thermocouple reference table to determine the values of <em>V</em> and <em>V<sub>&#43;1</sub></em> that correspond to <em>T</em> and <em>T<sub>&#43;1</sub></em>, respectively. <br><br>
+Refer to the <em>NI PXI/PXIe-2527 Specifications</em> to determine the thermal EMF value of the NI&#160;2527. For optimal thermocouple measurement performance (<em>V<sub>EMF</sub></em> &#61; 2.5 &nbsp;&#181;V), power down the latching relays of the NI&#160;2527. For more information about powering down latching relays, refer to the <a href="switchpropref.chm::/pniSwitch_PowerDownLatchingRelaysAfterDebounce.html">Power Down Latching Relays After Debounce</a> property in NI-SWITCH or the Power Down Latching Relays After Settling property in NI-DAQmx.
+</td></tr></table>
+
+<p class="Body"> 
+After you have determined the thermal EMF error using Equation 1, calculate the system error using the following equation.</p>
+
+<table class="borderless">
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="center"><em>E<sub>S</sub></em> &#61; <em>E<sub>EMF</sub></em> &#43; <em>E<sub>CJC</sub></em></td>
+<td class="Borderless" align="left">(2)</td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"><em>where</em></td>
+<td class="Borderless" align="left"><em>E<sub>S</sub></em> represents the system error of the NI&#160;2527/TB-2627</td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>E<sub>EMF</sub></em> represents the error due to thermal EMF of the NI&#160;2527</td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>E<sub>CJC</sub></em> represents the error due to CJC temperature sensor of the NI TB-2627</td>
+<td class="Borderless" align="center"></td>
+</tr>
+</table>
+
+
+<h3><a name="example">Example</a></h3>
+
+
+<p class="Body">Measuring a K-type thermocouple at 200 &#176;C with a CJC temperature of 25&nbsp;&#176;C, the system error of the NI&#160;2527/TB-2627 is calculated in the following example.</p>
+<p class="Body">Assuming typical thermal EMF (2.5 &#181;V), first calculate the error due to thermal EMF using Equation 1.</p>
+
+
+<table class="borderless">
+<tr>
+<td class="Borderless" align="center"><em>E<sub>EMF</sub></em></td>
+<td class="Borderless" align="center">&#61;</td>
+<td class="Borderless" align="left">[(201&nbsp;&#176;C &#8211; 200&nbsp;&#176;C)/(8.178&nbsp;&#181;V &#8211; 8.138&nbsp;&#181;V)] &#215; 0.0025&nbsp;&#181;V</td>
+</tr>
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="center">&#61;</td>
+<td class="Borderless" align="left">0.063&nbsp;&#176;C</td>
+</tr>
+</table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;In this example, the values of <em>V</em> and <em>V<sub>&#43;1</sub></em> are found in the thermocouple reference tables of Omega Engineering’s <em>The Temperature Handbook</em>. Vol. 29. Stamford, CT: Omega Engineering Inc, 1995.
+</td></tr></table>
+
+<p class="Body">To determine the system error, add the error due to thermal EMF to the error due to the CJC temperature sensor using Equation 2.</p>
+<table class="borderless">
+<tr>
+<td class="Borderless" align="center"><em>E<sub>S</sub></em></td>
+<td class="Borderless" align="center">&#61;</td>
+<td class="Borderless" align="left">0.063&nbsp;&#176;C &#43; 0.5&nbsp;&#176;C</td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="center">&#61;</td>
+<td class="Borderless" align="left">0.563&nbsp;&#176;C</td>
+</tr>
+</table>
+
+<h2>Determining the Thermocouple Error</h2>
+<p class="Body">Independent of the NI&#160;2527/TB-2627 system, thermocouple error is the greater of the following values: &#177;&nbsp;a temperature range or &#177;&nbsp;a percent of the measurement. </p>
+<p class="Body">In the example, a standard grade K-type thermocouple is used to measure 200&nbsp;&#176;C. <em>The Temperature Handbook</em> lists the error for a standard grade K-type thermocouple as &#177;2.2&nbsp;&#176;C or &#177;0.75&#37; of the measurement temperature. Because &#177;0.75&#37; of 200&nbsp;&#176;C (&#177;1.5&nbsp;&#176;C) is less than &#177;2.2&nbsp;&#176;C, the error of a standard grade K-type thermocouple is &#177;2.2&nbsp;&#176;C. </p>
+
+
+
+<h2>Determining the Total Error</h2>
+<p class="Body">The total error in thermocouple measurement is the sum of the system error and the thermocouple error. Use the following equation to determine the total error in thermocouple measurement.</p>
+<table class="borderless">
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="center"><em>E<sub>T</sub></em> &#61; <em>E<sub>S</sub></em> &#43; <em>E<sub>Th</sub></em></td>
+<td class="Borderless" align="left">(3)</td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"><em>where</em></td>
+<td class="Borderless" align="left"><em>E<sub>T</sub></em> represents the total error in thermocouple measurement</td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>E<sub>S</sub></em> represents the system error</td>
+<td class="Borderless" align="center"></td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="left"><em>E<sub>Th</sub></em> represents the thermocouple error</td>
+<td class="Borderless" align="center"></td>
+</tr>
+</table>
+<p class="Body">To determine the total error in thermocouple measurement in the <a href="#example">example</a>, add the thermocouple error to the system error using Equation 3, as illustrated in the following calculation.</p>
+
+<table class="borderless">
+<tr>
+<td class="Borderless" align="center"><em>E<sub>T</sub></em></td>
+<td class="Borderless" align="center">&#61;</td>
+<td class="Borderless" align="left">0.56&nbsp;&#176;C &#43; 2.2&nbsp;&#176;C</td>
+</tr>
+
+<tr>
+<td class="Borderless" align="center"></td>
+<td class="Borderless" align="center">&#61;</td>
+<td class="Borderless" align="left">2.76&nbsp;&#176;C</td>
+</tr>
+</table>
+<p class="Body">Assuming typical thermal EMF, the total error in thermocouple measurement at 200 &#176;C for the NI&#160;2527/TB-2627 with a K-type thermocouple is &#177;2.76&nbsp;&#176;C.</p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</html>

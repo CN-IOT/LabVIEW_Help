@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI/PXIe-2593 Dual 4&#0215;1 Terminated Multiplexer Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2593 Dual 4&#0215;1 Terminated Multiplexer Topology</h1>
+
+<p class="Body">The following figure represents the NI PXI/PXIe-2593 (NI&#160;2593) dual 4&#0215;1 terminated <a href="multiplexer.html">multiplexer</a> topology. </p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2593-dual-4x1-terminated-si.gif"> </td>
+</tr>
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+</table>
+
+<p class="Body">The following figure shows the reset position of the NI&#160;2593 in the dual 4&#0215;1 terminated <a href="multiplexer.html">multiplexer</a> topology.</p>
+
+<p class="Anchor"><img src="loc_eps_2593-dual-4x1-terminated.gif"></p>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">For proper termination, connect an external terminator, such as the NI 50 &Omega; MCX terminator (778831-01), to every odd channel. Any input channel not connected to the COM is routed back to its associated termination channel.</p>
+
+<p class="Body">The NI&#160;2593 in this topology contains two banks of four input channels connected to a common channel.  These input channels are the even channels from channel 0 to channel 14. The two common channels are referred to as com0 and com1. You can only connect to the common channel that is in the same bank. The banks are organized as follows: </p>
+
+<table class="Bordered"><tr><th class="Bordered">Input Channels</th> <th class="Bordered">Common Channel</th></tr>
+
+<tr><td class="Bordered">ch0, ch2, ch4, ch6,</td> <td class="Bordered" align="center">com0</td> </tr>
+
+<tr><td class="Bordered">ch8, ch10, ch12, ch14</td><td class="Bordered" align="center">com1</td></tr> 
+
+</table>
+
+<p class="Body">For example, you can connect ch6 to com0; however, you cannot connect ch6 to com1 in this topology. </p>
+
+<p class="Body">You can connect the channels of the NI&#160;2593 using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function. For example, to connect channel 14 to common 1, call  the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function with the <strong>channel 1</strong> parameter set to <span class="Monospace">ch14</span> and the <strong>channel&nbsp;2</strong> parameter set to <span class="Monospace">com1</span>.</p>
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI&#160;2593, a typical scan list entry could be <span class="Monospace">ch2-&gt;com0;</SPAN>. This disconnects ch2 from its termination and route it to com0.</P>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

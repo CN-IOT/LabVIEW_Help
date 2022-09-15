@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0103)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/armature_relay.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./armature_relay_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./armature_relay_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./armature_relay_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./armature_relay_files/extra.css">
+
+
+<title>Armature Relays</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./armature_relay_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+ <h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">电枢继电器</font></font></h1>
+ <p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">电枢继电器是一种由线圈、电枢机构和触点组成的机电继电器。</font><font style="VERTICAL-ALIGN: inherit">当线圈通电时，感应磁场移动电枢。</font><font style="VERTICAL-ALIGN: inherit">这种运动打开或关闭触点。</font><font style="VERTICAL-ALIGN: inherit">如果您的开关模块使用电枢继电器，请考虑影响继电器寿命的因素。</font><font style="VERTICAL-ALIGN: inherit">下图表示电枢继电器。</font></font></p>
+
+<p class="Anchor"><IMG src="./armature_relay_files/loc_eps_electromatch.gif"></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">有两种类型的电枢继电器，锁存和非锁存。</font></font></p>
+
+<h2><a name="nonlatching"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">非锁定</font></font></a></h2>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">非闭锁继电器的初始位置为常闭 (NC)。</font><font style="VERTICAL-ALIGN: inherit">该位置由弹簧或永磁体的力保持，而没有电流流动。</font><font style="VERTICAL-ALIGN: inherit">当电流流过线圈时，常开 (NO) 触点由磁场力维持。</font><font style="VERTICAL-ALIGN: inherit">当电流停止时，继电器恢复到其初始 NC 位置。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">当断电时开关必须返回到已知状态时，非闭锁电枢继电器在控制应用中非常有用。</font><font style="VERTICAL-ALIGN: inherit">下图显示了非锁定继电器的示例。</font></font></p>
+
+<p class="Anchor"><IMG src="./armature_relay_files/loc_eps_nonlatch.gif"></p>
+
+<h2><a name="latching"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">闩锁</font></font></a></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">一个自锁继电器可以有一个或两个线圈。</font><font style="VERTICAL-ALIGN: inherit">闭锁继电器没有默认位置，当驱动电流停止流动时，它保持在最后一个位置。</font><font style="VERTICAL-ALIGN: inherit">虽然继电器本身可能处于锁定状态，但它们在模块中的复位位置取决于控制电路和软件（NI-SWITCH 在初始化和复位期间会复位所有模块上的所有继电器）。</font><font style="VERTICAL-ALIGN: inherit">闭锁继电器在必须限制功耗和耗散的应用中很有用，因为一旦启动，继电器就不需要电流来保持其位置。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在单线圈锁存中，电流的方向决定了继电器的位置。</font><font style="VERTICAL-ALIGN: inherit">在双线圈锁存中，电流流过的线圈决定了电枢的位置。</font><font style="VERTICAL-ALIGN: inherit">下图显示了一个单线圈自锁继电器。</font></font></p>
+<p class="Body"><IMG src="./armature_relay_files/loc_eps_latchlcoil.gif"></p>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图显示了一个两线圈锁存继电器。</font></font></p>
+<p class="Body"><IMG src="./armature_relay_files/loc_eps_latchzcoil.gif"></p>
+
+<br>
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关话题</font></font></h3>
+<p><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/electromechanical_relay.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">机电继电器</font></font></a></p>
+<a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/relay_life.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">继电器寿命</font></font></a>
+ 
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./armature_relay_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Farmature_relay.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Farmature_relay.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./armature_relay_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

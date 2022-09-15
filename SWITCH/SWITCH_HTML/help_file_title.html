@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0104)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/help_file_title.html -->
+<html><head>
+<title>NI Switches Help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./help_file_title_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./help_file_title_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./help_file_title_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./help_file_title_files/extra.css">
+
+<script src="./help_file_title_files/pdf.js.&#19979;&#36733;" type="text/javascript"></script>
+<script src="./help_file_title_files/web.js.&#19979;&#36733;" type="text/javascript"></script>
+
+<title _msthash="149916" _msttexthash="12319606">NI &#24320;&#20851; &#24110;&#21161;</title>
+</head>
+<body bgcolor="#ffffff">
+
+
+<p class="Anchor">
+<IMG src="./help_file_title_files/nieagle.gif">
+</p>
+
+<h1 _msttexthash="12319606" _msthash="135720">NI 开关 帮助</h1>
+<p class="Body" _msttexthash="15763176" _msthash="122200">二月 2019， 375472K-01</p>
+
+
+<p class="Body" _msttexthash="2294816914" _msthash="122317">本 帮助 文件 包含 使用 NI 开关 产品 和 NI- SWITCH 仪器 驱动 程序 所需 的 基本 和 高级 概念。除了 特定于 设备 的 信息 外， 本 帮助 文件 还 包含 使用 LabVIEW、 LabWindows™/ CVI™、 微软 可视 C++ 和 微软 基本 视 维 程序 创建 应用 程序 的 <a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/tutorial.html" _istranslated="1">入门</a> 步骤， 并 包括 <a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/LV_titlepg.html" _istranslated="1">LabVIEW</a> 和 <A href="switchcref.chm::/cRef_title.html"  _istranslated="1">C/ CVI/VB</A> 编 程 参考。</p> 
+
+<p class="Body" _msttexthash="221700973" _msthash="122434">有关 使用 NI 开关 API 对 NI 开关 产品 进行 编 程 的 信息， 请 参考 <em _istranslated="1">NI 帮助</em>。</p>
+
+<p class="Body" _msttexthash="148414383" _msthash="122551">有关此帮助文件的详细信息，请参阅下列主题：</p>
+
+<p class="Body"><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/related_documentation.html" _msttexthash="11454937" _msthash="122668">相关文档</a></p>
+<p class="Body"><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/glossary.html" _msttexthash="10225215" _msthash="122785">词汇表</a></p>
+<p class="Body"><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/important_information.html" _msttexthash="11139323" _msthash="122902">法律声明</a></p>
+<p class="Body"><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/tech_support_resources.html" _msttexthash="5851157" _msthash="136240">NI 服务</a></p>
+<p class="Body" _msttexthash="99644298" _msthash="136370">要对NI文档发表评论，请参阅<A href="javascript:WWW(WWW_Feedback)"  _istranslated="1">NI网站</A>。</p>
+<p class="Body" _msttexthash="114619115" _msthash="136500">© 2003–2019 美国国家仪器公司。保留所有权利。</p>
+<p _msttexthash="366036788" _msthash="136630">   有关 NI 版权、专利、商标、 保修、产品 警告 和 出口 合规 <span class="Monospace" _istranslated="1">的 信息， 请参阅 &lt; 国家 仪器&gt;\_Legal 信息</span> 目录。</p>
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./help_file_title_files/feedback.png"  _mstalt="12038481">&nbsp;&nbsp;<font _msttexthash="167016317" _msthash="136890" _mstmutation="1"><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fhelp_file_title.html')"  _istranslated="1" _mstmutation="1">提交</A>有关此主题的反馈。<br _istranslated="1" _mstmutation="1"><br _istranslated="1" _mstmutation="1"><IMG alt=联系技术支持 src="./help_file_title_files/support.png"  _istranslated="1" _mstalt="20359183" _mstmutation="1">请访问 <A href="javascript:WWW('http://www.ni.com/support')"  _istranslated="1" _mstmutation="1">ni.com/support</A> 以获取技术支持。</font></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

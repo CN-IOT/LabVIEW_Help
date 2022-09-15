@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+<script src="pdf.js" type="text/javascript"></script>
+<script src="web.js" type="text/javascript"></script>
+<TITLE>NI PXI/PXIe-2532/2532B Matrix Expansion</TITLE>
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2532/2532B Matrix Expansion</h1>
+
+<P class="Body">You can expand the matrices of the NI PXI/PXIe-2532/2532B (NI&#160;2532/2532B) by increasing the number of columns in the matrix.</p>
+
+<P class="Body">To expand the number of columns, use the terminal block row connection headers to connect the rows on adjacent terminal blocks. The following table lists the available terminal blocks and matrix configurations that support column expansion.</p>
+
+
+<table class="Bordered"><tr><th>Terminal Block</th> <th class="Bordered">Configuration<br>(Row x Column)</th></tr>
+<tr>
+		<td class="Bordered" align="left">NI TB-2640/2640B</td>
+		<td class="Bordered" align="center">1-wire 4&#215;128</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2641/2641B</td>
+		<td class="Bordered" align="center">1-wire 8&#215;64</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2642/2642B</td>
+		<td class="Bordered" align="center">1-wire 16&#215;32</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2643/2643B</td>
+		<td class="Bordered" align="center">1-wire Dual 4&#215;64</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2643/2643B</td>
+		<td class="Bordered" align="center">2-wire 4&#215;64</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2644/2644B</td>
+		<td class="Bordered" align="center">1-wire Dual 8&#215;32</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2644/2644B</td>
+		<td class="Bordered" align="center">2-wire 8&#215;32</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2645B</td>
+		<td class="Bordered" align="center">1-wire Dual 16&#215;16</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2645B</td>
+		<td class="Bordered" align="center">2-wire 16&#215;16</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2646B</td>
+		<td class="Bordered" align="center">1- wire Quad 4&#215;32</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="left">NI TB-2646B</td>
+		<td class="Bordered" align="center">2-wire Dual 4&#215;32</td>
+	</tr>
+</table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The NI TB-2645 does not support column expansion.
+</td>
+</tr>
+</table>
+
+<h2>Column Expansion on the NI&#160;2532/2532B</h2>
+
+<p class="Body">Most terminal blocks feature row connection headers that enable you to join rows on two adjacent terminal blocks to expand the number of columns in a matrix. These terminal blocks include two row connection header sets with identical pinouts. The NI TB-2646B includes two row connection header sets with differing pinouts. Refer to the <em>NI Switches Help</em> and the <em>NI TB-2646B Installation Instructions</em> for row connection header pinouts. </p>
+
+
+<h3>Terminal Blocks with Two Identical Row Connection Headers</h3>
+<p class="Body">The column expansion procedure is the same for all of the terminal block modules with two identical row connection headers.  This includes the NI TB-2640/2641/2642/2643/2644 and NI TB-2640B/2641B/2642B/2643B/2644B/2645B.</p>  
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The NI TB-2645B requires two row ribbon cables for matrix expansion.</td>
+</tr>
+</table>
+
+<p class="Body">Complete the following steps to expand the number of columns of a matrix using a NI TB-2640/2641/2642/2643/2644.</p>
+<ol>
+<li>Connect one end of the ribbon cable to either row connection header on one of the terminal blocks.</li>
+<li>Connect the other end of the ribbon cable to either row connection header on the other terminal block.</li>
+</ol>
+
+<p class="Body">The following figure illustrates how to use ribbon cables to connect rows on multiple NI TB-2640 modules and expand the number of columns. </p>
+
+<p class="Anchor"><img src="loc_eps_2640_expanding_columns.gif"></p>
+
+<p class="Body">The same procedure is used on NI TB-2640/2641/2642/2643/2644 terminal blocks by using the appropriate row ribbon cable header as specified in the following table.</p>
+
+<table class="Bordered">
+	<tr>
+		<th class="Bordered">Terminal Block Module</th>
+		<th class="Bordered">Row Connection Header 1</th>
+		<th class="Bordered">Row Connection Header 2</th>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2640</td>
+		<td class="Bordered">J3</td>
+		<td class="Bordered">J4</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2641</td>
+		<td class="Bordered">J2</td>
+		<td class="Bordered">J3</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2642</td>
+		<td class="Bordered">J2</td>
+		<td class="Bordered">J3</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2643</td>
+		<td class="Bordered">J3</td>
+		<td class="Bordered">J4</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2644</td>
+		<td class="Bordered">J2</td>
+		<td class="Bordered">J3</td>
+	</tr>
+</table>
+
+<p class="Body">Complete the following steps to expand the number of columns of a matrix using a NI TB-2640B/2641B/2642B/2643B/2644B/2645B.</p>
+<ol>
+<li>Connect one end of the ribbon cable to either row connection header on one of the terminal blocks.</li>
+<li>Connect the other end of the ribbon cable to either row connection header on the other terminal block.</li></ol>
+
+<p class="Body">The following figure illustrates how to use ribbon cables to connect rows on multiple NI TB-2640B modules and expand the number of columns. </p>
+
+<p class="Anchor"><img src="loc_eps_264xb_expanding_columns.gif"></p>
+
+<p class="Body">The same procedure is used on NI TB-2640B/2641B/2642B/2643B/2644B/2645B terminal blocks by using the appropriate row ribbon cable header as specified in the following table.</p>
+
+<table class="Bordered">
+	<tr>
+		<th class="Bordered">Terminal Block Module</th>
+	<th class="Bordered">Row Connection Header 1</th>
+		<th class="Bordered">Row Connection Header 2</th></tr>
+	<tr>
+		<td class="Bordered">NI TB-2640B</td>
+		<td class="Bordered">J4</td>
+		<td class="Bordered">J5</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2641B</td>
+		<td class="Bordered">J4</td>
+		<td class="Bordered">J5</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2642B</td>
+		<td class="Bordered">J8</td>
+		<td class="Bordered">J9</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2643B</td>
+		<td class="Bordered">J4</td>
+		<td class="Bordered">J5</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2644B</td>
+		<td class="Bordered">J4</td>
+		<td class="Bordered">J5</td>
+	</tr>
+	<tr>
+		<td class="Bordered">NI TB-2645B</td>
+		<td class="Bordered">Cable 1 - J4<br> Cable 2 - J6</td>
+		<td class="Bordered">Cable 1 - J5<br> Cable 2 - J7</td>
+	</tr>
+	</table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;For the NI TB-2645B, do not connect a row ribbon cable from a Cable 1 header to a Cable 2 header.</td>
+</tr>
+</table>
+
+<h3>Terminal Blocks with a Row Connection Headers with Modified Pinout</h3>
+<p class="Body">The NI TB-2646B has a second row connection header with a modified pinout that is not identical to the first row connection header.  Column expansion can only be achieved by connecting a row ribbon cable from the row connection header of one terminal block to the same row connection header of an adjacent terminal block.  Refer to the <em>NI TB-2646B Installation Instructions</em> for row connection header pinouts.</p>
+
+<p class="Body">Complete the following steps to expand the number of columns of a matrix using a NI TB-2646B.</p>
+<ol>
+<li>Connect one end of the ribbon cable to either row connection header 1 or row connection header 2 on one of the NI TB-2646B terminal blocks.</li>
+<li>Connect the other end of the ribbon cable to the same row connection header on another NI TB-2646B terminal block.</li>
+</ol>
+
+
+<p class="Body">The same procedure is used on NI TB-2646B terminal blocks by using the appropriate row ribbon cable header as specified in the following table.</p>
+
+<table class="Bordered">
+	<tr>
+		<th class="Bordered">Terminal Block Module</th>
+		<th class="Bordered">Row Connection Header 1</th>
+		<th class="Bordered">Row Connection Header 2</th>
+	</tr>
+		<tr>
+		<td class="Bordered">NI TB-2646B</td>
+		<td class="Bordered">J4</td>
+		<td class="Bordered">J9</td>
+	</tr>
+</table>
+
+
+
+ 
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

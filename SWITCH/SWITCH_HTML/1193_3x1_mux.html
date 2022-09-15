@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0101)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/1193_3x1_mux.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script src="./1193_3x1_mux_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./1193_3x1_mux_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./1193_3x1_mux_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./1193_3x1_mux_files/extra.css">
+
+
+<title>NI PXI/PXIe-2593 3×1 Multiplexers</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./1193_3x1_mux_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+
+<h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NI PXI/PXIe-2593 3×1 &#22810;&#36335;&#22797;&#29992;&#22120;</font></font></h1>
+
+<p class="Body"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NI PXI/PXIe-2593 &#21487;&#37197;&#32622;&#20026; 3×1 &#22810;&#36335;&#22797;&#29992;&#22120;&#12290;</font><font style="vertical-align: inherit;">&#26377;&#20851;&#37197;&#32622;&#35828;&#26126;&#65292;&#35831;&#21442;&#38405;&#20197;&#19979;&#25991;&#26412;&#12289;&#34920;&#26684;&#21644;&#22270;&#24418;&#65292;&#24182;&#20351;&#29992;&#20197;&#19979;&#38142;&#25509;&#20102;&#35299;&#27492;&#37197;&#32622;&#30340;&#29305;&#23450;&#20110;&#27169;&#22359;&#30340;&#23454;&#29616;&#12290;</font></font></p>
+
+<p class="Body"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#27599;&#32452;&#22235;&#20010;&#36890;&#36947;&#65288;0:3&#12289;4:7&#12289;8:11 &#31561;&#65289;&#21487;&#20197;&#37197;&#32622;&#20026;&#29420;&#31435;&#30340;&#12289;&#26080;&#31471;&#25509;&#30340; 3×1</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/multiplexer.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#22810;&#36335;&#22797;&#29992;&#22120;</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#12290;</font><font style="vertical-align: inherit;">&#36873;&#25321;&#19968;&#20010;&#36890;&#36947;&#20316;&#20026;“&#20844;&#20849;”&#36890;&#36947;&#65292;&#24182;&#23558;&#20854;&#36335;&#30001;&#21040;&#20854;&#20182;&#19977;&#20010;&#36890;&#36947;&#12290;</font></font></p> 
+
+<p class="Body"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#20363;&#22914;&#65292;&#36873;&#25321; CH0 &#20316;&#20026; 3×1 &#20844;&#20849;&#31471;&#65292;&#20351;&#29992;&#19979;&#34920;&#21644;&#22270;&#20013;&#25551;&#36848;&#30340;&#21629;&#20196;&#36873;&#39033;&#23558; CH1&#12289;CH2 &#21644; CH3 &#36335;&#30001;&#21040;&#23427;&#12290;</font></font></p>
+
+<table class="Bordered"><tbody><tr><th class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#36335;&#32447;</font></font></th>	<th class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#36830;&#25509;/&#26029;&#24320;&#21628;&#21483;&#36830;&#25509;&#21015;&#34920;</font></font></th>	<th class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#29420;&#31435;&#32487;&#30005;&#22120;&#25511;&#21046;</font></font></th></tr>
+
+<tr><td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CH0-&gt; CH1</font></font></td>	<td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CH0-&gt;A0B0, A0B0-&gt;B0B1, B0B1-&gt;A1B1, A1B1-&gt;CH1</font></font></td>	<td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#20851;&#38381; KA0, KA1 &#25171;&#24320; KB0, KB1</font></font></td></tr>
+
+
+<tr><td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CH0-&gt; CH2</font></font></td>	<td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CH0-&gt;A0B0, A0B0-&gt;B0B1C0, B0B1C0-&gt;C0C1, C0C1-&gt;B2B3C1, B2B3C1-&gt;A2B2, A2B2-&gt;CH2</font></font></td>	<td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#20851;&#38381; KA0&#12289;KB0&#12289;KA2&#12289;KB2</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#25171;&#24320; KB1*&#12289;KB3*&#12289;KC0&#12289;KC1</font></font></td></tr>
+
+
+<tr><td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CH0-&gt; CH3</font></font></td>	<td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CH0-&gt;A0B0, A0B0-&gt;B0B1C0, B0B1C0-&gt;C0C1, C0C1-&gt;B2B3C1, B2B3C1-&gt;A3B3, A3B3-&gt;CH3</font></font></td>	<td class="Bordered"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#20851;&#38381; KA0&#12289;KB0&#12289;KA3&#12289;KB3
+</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#25171;&#24320; KB1*&#12289;KB2* KC0&#12289;KC1</font></font></td></tr></tbody></table>
+
+
+<table class="Borderless">
+<tbody><tr>
+
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+*&#23558;&#26410;&#20351;&#29992;&#30340;&#32487;&#30005;&#22120;&#20174;&#20449;&#21495;&#36335;&#24452;&#20013;&#31227;&#24320;&#65292;&#20197;&#25552;&#39640;&#39640;&#39057;&#24615;&#33021;&#12290;</font></font></td></tr></tbody></table>
+
+
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#35831;&#21442;&#38405;&#19979;&#22270;&#65292;&#20102;&#35299;&#22312; NI PXI/PXIe-2593 &#19978;&#20351;&#29992; CH0-CH3 &#30340; 3×1 &#37197;&#32622;&#31034;&#20363;&#12290;</font></font></p>
+
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><img src="./1193_3x1_mux_files/loc_eps_1193_3x1_ch0-ch1.gif"> </td>
+</tr>
+<tr>
+<td class="frame" align="center"><img src="./1193_3x1_mux_files/loc_eps_1193_3x1_ch0-ch2.gif"> </td>
+</tr>
+<tr>
+<td class="frame" align="center"><img src="./1193_3x1_mux_files/loc_eps_1193_3x1_ch0-ch3.gif"> </td>
+</tr>
+</tbody></table>
+
+<p class="Body"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NI PXI/PXIe-2593 &#21487;&#20197;&#20351;&#29992;&#20854; 16 &#20010;&#36890;&#36947;&#37197;&#32622;&#20026;&#22235;&#36335; 3×1 &#22810;&#36335;&#22797;&#29992;&#22120;&#12290;</font><font style="vertical-align: inherit;">COM &#31471;&#23376;&#26410;&#20351;&#29992;&#12290;</font></font></p>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script><hr><p class="body"><img src="./1193_3x1_mux_files/feedback.png" alt="&#25552;&#20132;&#21453;&#39304;">&nbsp;&nbsp;<a href="javascript:WWW(&#39;http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2F1193_3x1_mux.html&#39;)"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#25552;&#20132;&#26377;&#20851;&#27492;&#20027;&#39064;&#30340;</font><a href="javascript:WWW(&#39;http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2F1193_3x1_mux.html&#39;)"><font style="vertical-align: inherit;">&#21453;&#39304;&#12290;</font></a></font><br><br><img src="./1193_3x1_mux_files/support.png" alt="&#32852;&#31995;&#25216;&#26415;&#25903;&#25345;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&nbsp;&nbsp;&#35775;&#38382;</font></font><a href="javascript:WWW(&#39;http://www.ni.com/support&#39;)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ni.com/support</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">&#20197;&#33719;&#24471;&#25216;&#26415;&#25903;&#25345;&#12290;</font></font></p><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./1193_3x1_mux_files/translate_24dp.png" width="20" height="20" alt="Google &#32763;&#35793;"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">&#21407;&#25991;</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">&#25552;&#20379;&#26356;&#22909;&#30340;&#32763;&#35793;&#24314;&#35758;</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div>
+
+
+<div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>

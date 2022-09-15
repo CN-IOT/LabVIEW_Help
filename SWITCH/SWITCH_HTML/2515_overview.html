@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI/PXIe-2515</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<H1>NI PXI/PXIe-2515</H1>
+<P class="Body" >The NI&#160;PXI/PXIe-2515 (NI&#160;2515) is a <a href="multiplexer.html">multiplexer</a> switch module for the PXI or PXI Express platform that enables connectivity by routing high-speed digital I/O (DIO) signals between a device under test (DUT) and a supported NI high-speed DIO device or parametric measurement devices. Refer to the <a href="2515_independent.html#PinAssociations">NI&#160;2515 Pin Associations</a> table for a list of supported NI&#160;high-speed DIO devices.</p>
+
+<p class="Body">The NI&#160;2515 uses <a href="reed_relays.html">reed relays</a>. A number of factors can affect the life expectancy of reed relays.  Refer to <a href="reed_relay_protection.html">Reed Relay Protection</a> for information about protecting the reed relays on the NI&#160;2515.</p>
+
+<p class="Body">For certain applications, you may need to increase the default <a href="settling_time.html">settling time</a>. Refer to <a href="extra_settling_time.html">Adding Additional Settling Time</a> for more information about when the additional time is needed.</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Switching inductive loads (for example, motors and solenoids) can produce high-voltage transients in excess of the module's rated voltage. Without additional protection, these transients can interfere with module operation and impact relay life. For more information about transient suppression, refer to <a href="inductive_load.html">Protecting NI Switch Products when Switching Inductive Loads</a>.</td>
+</tr>
+</table>
+
+
+<h2>Operation Modes</h2>
+
+<p class="Body">The following table lists the supported <a href="topology.html">topology</a> of the NI&#160;2515 and possible <a href="flow_config.html">operation modes</a>.</p>
+
+
+<table class="Bordered">
+<tr>
+<th class="Bordered">Topology</th>
+<th class="Bordered">Software Name</th> 
+<th class="Bordered">Immediate</th>	
+<th class="Bordered">Scanning</th>
+</tr>
+
+<tr>
+<td class="Bordered"><a href="2515_independent.html">Independent</a></td>
+<td class="Bordered">2515/Independent<br>(NISWITCH_TOPOLOGY_2515_INDEPENDENT)</td>	
+<td class="Bordered" align=center><img src="check.gif"></td>	
+<td class="Bordered" align=center><img src="check.gif"></td>
+</tr>
+
+</table>
+<h2>Related Information</h2>
+
+<ul>
+<li><a href="SWITCH.chm::/integration_system_consider.html">Integration and System Considerations</a></li>
+</ul>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

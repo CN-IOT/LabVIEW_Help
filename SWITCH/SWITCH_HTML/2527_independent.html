@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+ <link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+ <title>NI PXI/PXIe-2527 Independent Topology</title>
+</head>
+<body bgcolor="#ffffff">
+ 
+  
+<h1>NI PXI/PXIe-2527 Independent Topology</h1>
+
+<p class="Body">When using the NI PXI/PXIe-2527 (NI&#160;2527) in the independent topology, connect 
+the signals using the NI TB-2627 terminal block. Select this topology to utilize the full routing capabilities of the NI&#160;2527.</p>
+
+<p class="Anchor"><img src="loc_eps_2527_independent.gif"></p>
+
+<h2>Making a Connection</h2>
+<p class="Body">With the independent topology, you can let NI-SWITCH determine the path between two specified channels by setting the intermediate channels as reserved for routing and using the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function, or you can control individual relays using the <a href="switchviref.chm::/niSwitch_Relay_Control.html">niSwitch Relay Control</a> VI or the <a href="switchCRef.chm::/c_nisw_relaycontrol.html"><span class="Monospace">niSwitch_RelayControl</span></a> function.</p>
+
+<h2>Pinout</h2>
+<p class="Body">The following figure and table identify the pins for the NI&#160;2527 in the independent topology.</p>
+
+<p class="Anchor"><img src="noloc_2527_pinout.gif"></p>
+
+<br><br>
+
+<table class="bordered">
+<tr>
+<th class="Bordered" rowspan="2">Software Name</th>
+<th class="Bordered" colspan="2">Pin Number</th>
+<th class="Bordered" rowspan="2">Software Name</th>
+<th class="Bordered" colspan="2">Pin Number</th>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">&#43;</td>
+<td class="Bordered" align="center">&#8211;</td>
+<td class="Bordered" align="center">&#43;</td>
+<td class="Bordered" align="center">&#8211;</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch0</td>
+<td class="Bordered" align="center">A1</td>
+<td class="Bordered" align="center">B1</td>
+<td class="Bordered" align="center">ch17</td>
+<td class="Bordered" align="center">D10</td>
+<td class="Bordered" align="center">C10</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch1</td>
+<td class="Bordered" align="center">D1</td>
+<td class="Bordered" align="center">C1</td>
+<td class="Bordered" align="center">ch18</td>
+<td class="Bordered" align="center">A11</td>
+<td class="Bordered" align="center">B11</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch2</td>
+<td class="Bordered" align="center">A2</td>
+<td class="Bordered" align="center">B2</td>
+<td class="Bordered" align="center">ch19</td>
+<td class="Bordered" align="center">D11</td>
+<td class="Bordered" align="center">C11</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch3</td>
+<td class="Bordered" align="center">D2</td>
+<td class="Bordered" align="center">C2</td>
+<td class="Bordered" align="center">ch20</td>
+<td class="Bordered" align="center">A12</td>
+<td class="Bordered" align="center">B12</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch4</td>
+<td class="Bordered" align="center">A3</td>
+<td class="Bordered" align="center">B3</td>
+<td class="Bordered" align="center">ch21</td>
+<td class="Bordered" align="center">D12</td>
+<td class="Bordered" align="center">C12</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch5</td>
+<td class="Bordered" align="center">D3</td>
+<td class="Bordered" align="center">C3</td>
+<td class="Bordered" align="center">ch22</td>
+<td class="Bordered" align="center">A13</td>
+<td class="Bordered" align="center">B13</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch6</td>
+<td class="Bordered" align="center">A4</td>
+<td class="Bordered" align="center">B4</td>
+<td class="Bordered" align="center">ch23</td>
+<td class="Bordered" align="center">D13</td>
+<td class="Bordered" align="center">C13</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch7</td>
+<td class="Bordered" align="center">D4</td>
+<td class="Bordered" align="center">C4</td>
+<td class="Bordered" align="center">ch24</td>
+<td class="Bordered" align="center">A14</td>
+<td class="Bordered" align="center">B14</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch8</td>
+<td class="Bordered" align="center">A5</td>
+<td class="Bordered" align="center">B5</td>
+<td class="Bordered" align="center">ch25</td>
+<td class="Bordered" align="center">D14</td>
+<td class="Bordered" align="center">C14</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch9</td>
+<td class="Bordered" align="center">D5</td>
+<td class="Bordered" align="center">C5</td>
+<td class="Bordered" align="center">ch26</td>
+<td class="Bordered" align="center">A15</td>
+<td class="Bordered" align="center">B15</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch10</td>
+<td class="Bordered" align="center">A6</td>
+<td class="Bordered" align="center">B6</td>
+<td class="Bordered" align="center">ch27</td>
+<td class="Bordered" align="center">D15</td>
+<td class="Bordered" align="center">C15</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch11</td>
+<td class="Bordered" align="center">D6</td>
+<td class="Bordered" align="center">C6</td>
+<td class="Bordered" align="center">ch28</td>
+<td class="Bordered" align="center">A16</td>
+<td class="Bordered" align="center">B16</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch12</td>
+<td class="Bordered" align="center">A7</td>
+<td class="Bordered" align="center">B7</td>
+<td class="Bordered" align="center">ch29</td>
+<td class="Bordered" align="center">D16</td>
+<td class="Bordered" align="center">C16</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch13</td>
+<td class="Bordered" align="center">D7</td>
+<td class="Bordered" align="center">C7</td>
+<td class="Bordered" align="center">ch30</td>
+<td class="Bordered" align="center">A17</td>
+<td class="Bordered" align="center">B17</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch14</td>
+<td class="Bordered" align="center">A8</td>
+<td class="Bordered" align="center">B8</td>
+<td class="Bordered" align="center">ch31</td>
+<td class="Bordered" align="center">D17</td>
+<td class="Bordered" align="center">C17</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch15</td>
+<td class="Bordered" align="center">D8</td>
+<td class="Bordered" align="center">C8</td>
+<td class="Bordered" align="center">com0</td>
+<td class="Bordered" align="center">A9</td>
+<td class="Bordered" align="center">B9</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch16</td>
+<td class="Bordered" align="center">A10</td>
+<td class="Bordered" align="center">B10</td>
+<td class="Bordered" align="center">com1</td>
+<td class="Bordered" align="center">A18</td>
+<td class="Bordered" align="center">B18</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">cjtemp</td>
+<td class="Bordered" align="center">A25</td>
+<td class="Bordered" align="center">D25</td>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</tr>
+
+</table>
+
+<p class="Body"> The following is a list of the valid internal channel names:</p>
+<table class="Bordered">
+
+
+<tr>
+<td class="Bordered" align="center">pcom0</td>
+<td class="Bordered" align="center">pcom1</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">1wref0</td>
+<td class="Bordered" align="center">1wref1</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">cjtemp</td>
+<td class="Bordered" align="center">icom0</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">pcom1plus</td>
+<td class="Bordered" align="center">pcom1minus</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">icom0plus</td>
+<td class="Bordered" align="center">icom0minus</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">pcom0plus</td>
+<td class="Bordered" align="center">pcom0minus</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">com1plus</td>
+<td class="Bordered" align="center">com1minus</td>
+</tr>
+
+</table>
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</html>

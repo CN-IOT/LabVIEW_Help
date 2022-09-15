@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0113)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/characteristic_impedance.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./characteristic_impedance_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./characteristic_impedance_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./characteristic_impedance_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./characteristic_impedance_files/extra.css">
+
+
+<title>Characteristic Impedance</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./characteristic_impedance_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+ <h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">特性阻抗</font></font></h1>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">特性阻抗是一个传输线参数，它决定了传播信号如何在线路中传输或反射。</font><font style="VERTICAL-ALIGN: inherit">以下等式和图形表示特性阻抗的组成部分。</font></font></p>
+
+<table class="Borderless"><tbody><tr><td><br><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Z </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">0</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> =</font></font></td><td><IMG src="./characteristic_impedance_files/noloc_char_imp.gif"></td></tr></tbody></table>
+
+<p class="Indent1"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在哪里</font></font></p>
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Z </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">0</font></font></sub></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是特性阻抗</font></font></p>
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">L</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是每长度的电感</font></font></p>
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">C</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是单位长度的电容</font></font></p>
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">R</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是单位长度的电阻</font></font></p>
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">G</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是单位长度的电导率</font></font></p>
+<p class="Indent2"><IMG src="./characteristic_impedance_files/omegal.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是频率（弧度/秒）</font></font></p>
+
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果系统中有传输线，其特征阻抗还必须与源和负载匹配，以实现最大功率传输。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在理想的无损传输线中，没有串联电阻或介电损耗，如下式所示：</font></font></p>
+<table class="Borderless"><tbody><tr><td><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">R = 0 </font></font><br><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">G = 0</font></font></td><td><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">=&gt;</font></font></td><td><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Z </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">0</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> =</font></font></td><td><IMG src="./characteristic_impedance_files/noloc_char_imp2.gif"></td><td><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">（频率无关）</font></font></td></tr></tbody></table>
+
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图为电气系统图</font></font></p>
+
+<p class="Indent1"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在哪里</font></font></p>
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Z </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">s</font></font></sub></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是源阻抗</font></font></p>
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Z </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">0</font></font></sub></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是传输线的特性阻抗</font></font></p>
+<p class="Indent2"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Z </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">L</font></font></sub></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是负载阻抗</font></font></p>
+
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./characteristic_impedance_files/noloc_characteristic_impedance_c.gif"></td>
+</tr>
+</tbody></table>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图是传输线的电气表示，显示了影响特性阻抗的组件。</font></font></p>
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./characteristic_impedance_files/noloc_characteristic_impedance_d.gif"></td>
+</tr>
+</tbody></table>
+
+
+
+
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">当两者具有相同的阻抗时，最大功率从源传输到负载。</font><font style="VERTICAL-ALIGN: inherit">这显示在下图中，显示了在各种负载阻抗下传输的电压、电流和功率。</font><font style="VERTICAL-ALIGN: inherit">该图假定没有传输线损耗和 50 欧姆的源阻抗。</font></font></p> 
+
+
+
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./characteristic_impedance_files/loc_eps_load_impedance.gif"></td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./characteristic_impedance_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fcharacteristic_impedance.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fcharacteristic_impedance.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./characteristic_impedance_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

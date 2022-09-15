@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2571 Triggering</TITLE>
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2571 Triggering</h1>
+
+<p class="Body">The 2571 can send and receive triggers using <a href="synchronousg.html">synchronous</a> and <a href="handshakingg.html">handshaking</a> modes. This module can recognize trigger pulse widths less than 150 ns by <a href="fast_pxi_triggering.html">disabling digital filtering</a>.</p>
+
+<h2>Trigger Input</h2>		
+
+<p class="Body">The following table lists valid trigger inputs for the measurement complete path on the NI PXI-2571.</p>
+
+<table class="Bordered"><tr><th class="Bordered">Trigger Input</th><th class="Bordered">Terminal Name</th><th class="Bordered">Hardware Terminal Used</th></tr>
+
+<tr><td class="Bordered">Immediate</td><td class="Bordered">Immediate<br>(NISWITCH_VAL_IMMEDIATE)</td><td class="Bordered">N/A</td></tr>
+
+<tr><td class="Bordered">TTL0</td><td class="Bordered">TTL0<br>(<span class="Monospace">NISWITCH_VAL_TTL0</span>)</td><td class="Bordered">PXI trigger line 0</td></tr>	
+<tr><td class="Bordered">TTL1</td><td class="Bordered">TTL1<br>(<span class="Monospace">NISWITCH_VAL_TTL1</span>)</td><td class="Bordered">PXI trigger line 1</td></tr>
+<tr><td class="Bordered">TTL2</td><td class="Bordered">TTL2<br>(<span class="Monospace">NISWITCH_VAL_TTL2</span>)</td><td class="Bordered">PXI trigger line 2</td></tr>
+<tr><td class="Bordered">TTL3</td><td class="Bordered">TTL3<br>(<span class="Monospace">NISWITCH_VAL_TTL3</span>)</td><td class="Bordered">PXI trigger line 3</td></tr>
+<tr><td class="Bordered">TTL4</td><td class="Bordered">TTL4<br>(<span class="Monospace">NISWITCH_VAL_TTL4</span>)</td><td class="Bordered">PXI trigger line 4</td></tr>
+<tr><td class="Bordered">TTL5</td><td class="Bordered">TTL5<br>(<span class="Monospace">NISWITCH_VAL_TTL5</span>)</td><td class="Bordered">PXI trigger line 5</td></tr>
+<tr><td class="Bordered">TTL6</td><td class="Bordered">TTL6<br>(<span class="Monospace">NISWITCH_VAL_TTL6</span>)</td><td class="Bordered">PXI trigger line 6</td></tr>
+<tr><td class="Bordered">TTL7</td><td class="Bordered">TTL7<br>(<span class="Monospace">NISWITCH_VAL_TTL7</span>)</td><td class="Bordered">PXI trigger line 7</td></tr>
+
+<tr><td class="Bordered">Software Trigger</td><td class="Bordered"><a href="switchviref.chm::/niSwitch_Send_Software_Trigger.html">niSwitch Send Software Trigger</a>&nbsp;VI or <a href="switchCRef.chm::/c_nisw_sendsoftwaretrigger.html"><span class="Monospace">niSwitch_SendSoftwareTrigger</span></a>&nbsp;function</td><td class="Bordered">N/A</td></tr>
+
+</table>
+
+<h2>Scan Advanced Output Terminals</h2>
+
+<p class="Body">The following table lists valid scan advanced output terminals for the NI PXI-2571.</p>
+
+<table class="Bordered"><tr><th class="Bordered">Scan Advanced Output</th><th class="Bordered">Terminal Name</th><th class="Bordered">Hardware Terminal Used</th></tr>
+
+<tr><td class="Bordered">None</td><td class="Bordered">None<br>(NISWITCH_VAL_NONE)</td><td class="Bordered">N/A</td></tr>
+
+<tr><td class="Bordered">TTL0</td><td class="Bordered">TTL0<br>(<span class="Monospace">NISWITCH_VAL_TTL0</span>)</td><td class="Bordered">PXI trigger line 0</td></tr>	
+<tr><td class="Bordered">TTL1</td><td class="Bordered">TTL1<br>(<span class="Monospace">NISWITCH_VAL_TTL1</span>)</td><td class="Bordered">PXI trigger line 1</td></tr>
+<tr><td class="Bordered">TTL2</td><td class="Bordered">TTL2<br>(<span class="Monospace">NISWITCH_VAL_TTL2</span>)</td><td class="Bordered">PXI trigger line 2</td></tr>
+<tr><td class="Bordered">TTL3</td><td class="Bordered">TTL3<br>(<span class="Monospace">NISWITCH_VAL_TTL3</span>)</td><td class="Bordered">PXI trigger line 3</td></tr>
+<tr><td class="Bordered">TTL4</td><td class="Bordered">TTL4<br>(<span class="Monospace">NISWITCH_VAL_TTL4</span>)</td><td class="Bordered">PXI trigger line 4</td></tr>
+<tr><td class="Bordered">TTL5</td><td class="Bordered">TTL5<br>(<span class="Monospace">NISWITCH_VAL_TTL5</span>)</td><td class="Bordered">PXI trigger line 5</td></tr>
+<tr><td class="Bordered">TTL6</td><td class="Bordered">TTL6<br>(<span class="Monospace">NISWITCH_VAL_TTL6</span>)</td><td class="Bordered">PXI trigger line 6</td></tr>
+<tr><td class="Bordered">TTL7</td><td class="Bordered">TTL7<br>(<span class="Monospace">NISWITCH_VAL_TTL7</span>)</td><td class="Bordered">PXI trigger line 7</td></tr>
+</table>
+
+<p class="Body">Refer to the <a href="switchviref.chm::/niSwitch_Configure_Scan_Trigger.html">niSwitch Configure Scan Trigger</a> VI or the <a href="switchCRef.chm::/c_nisw_configscantrigger.html"><span class="Monospace">niSwitch_ConfigureScanTrigger</span></a> function for description of the trigger input signals and scan advanced output signals. </p>
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

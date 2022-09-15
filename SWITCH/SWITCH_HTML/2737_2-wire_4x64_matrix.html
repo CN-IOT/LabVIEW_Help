@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXIe-2737 2-Wire 4&#0215;64 Matrix Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXIe-2737 2-Wire 4&#0215;64 Matrix Topology</h1>
+
+<p class="Body">The following figure represents the <span class="nobreak">NI PXIe-2737 (NI 2737)</span> in the 2-wire 4&#0215;64 matrix topology.</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2737_hw_diagram.gif"> </td>
+</tr>
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+</table>
+
+<h2>Making a Connection</h2>
+
+  <p class="Body"> The NI&#160;2737 is a 4&#0215;64 matrix. In this topology you can connect any row to any column. In software, R0 refers to the R0+ and R0&#8211; pair. All other channels follow a similar naming scheme.</p>
+
+<p class="Body">You can connect the channels of the NI&#160;2737 using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function. For example, to connect row 1 to column 1, call  the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function with the <strong>channel 1</strong> parameter set to <span class="Monospace">r1</span> and the <strong>channel&nbsp;2</strong> parameter set to <span class="Monospace">c1</span>, or vice versa.</p>
+<H2><a name="pinout">Pinout</a></H2>
+ <P class="Body" >The following figure identifies the pins for the NI&#160;2737.</P>
+<p class="Anchor"><img src="loc_eps_2737_pinout.gif"></p>
+
+
+ 
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI-2571 Relay Replacement</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2571 Relay Replacement</h1>
+<p class="Body">The NI PXI-2571 uses electromechanical armature relays.</p>
+
+<p class="Body">Refer to the following table for information about ordering replacement relays.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">AXICOM (Tyco Electronics)</td>
+<td class="Bordered">IM42PNS (7-1462039-8)</td>
+</tr>
+</table>
+
+<br><br>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Kit</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">National Instruments (10 relays)</td>
+<td class="Bordered">781678-01</td>
+</tr>
+</table>
+
+<p class="Body">Complete the following steps to disassemble your module and replace a failed relay.</p>
+
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to your PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to your module from electrostatic discharge.</td></tr></table></li>
+<li>Locate the relay you want to replace. Relay names are labeled on the back of module. The following table maps the relay names to the channel names.
+<br><br>
+
+<table class="Bordered">
+<tr><th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+<th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+<th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+<th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+</tr>
+<TR>
+<td class="Bordered" align="center">CH0</TD>
+<td class="Bordered" align="center">K0</TD>
+<td class="Bordered" align="center">CH20</TD>
+<td class="Bordered" align="center">K20</TD>
+<td class="Bordered" align="center">CH40</TD>
+<td class="Bordered" align="center">K40</TD>
+<td class="Bordered" align="center">CH60</TD>
+<td class="Bordered" align="center">K60</TD>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH1</TD>
+<td class="Bordered" align="center">K1</TD>
+<td class="Bordered" align="center">CH21</TD>
+<td class="Bordered" align="center">K21</TD>
+<td class="Bordered" align="center">CH41</TD>
+<td class="Bordered" align="center">K41</TD>
+<td class="Bordered" align="center">CH61</TD>
+<td class="Bordered" align="center">K61</TD>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH2</TD>
+<td class="Bordered" align="center">K2</TD>
+<td class="Bordered" align="center">CH22</TD>
+<td class="Bordered" align="center">K22</TD>
+<td class="Bordered" align="center">CH42</TD>
+<td class="Bordered" align="center">K42</TD>
+<td class="Bordered" align="center">CH62</TD>
+<td class="Bordered" align="center">K62</TD>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH3</TD>
+<td class="Bordered" align="center">K3</TD>
+<td class="Bordered" align="center">CH23</TD>
+<td class="Bordered" align="center">K23</TD>
+<td class="Bordered" align="center">CH43</TD>
+<td class="Bordered" align="center">K43</TD>
+<td class="Bordered" align="center">CH63</TD>
+<td class="Bordered" align="center">K63</TD>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH4</TD>
+<td class="Bordered" align="center">K4</TD>
+<td class="Bordered" align="center">CH24</TD>
+<td class="Bordered" align="center">K24</TD>
+<td class="Bordered" align="center">CH44</TD>
+<td class="Bordered" align="center">K44</TD>
+<td class="Bordered" align="center">CH64</TD>
+<td class="Bordered" align="center">K64</TD>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH5</TD>
+<td class="Bordered" align="center">K5</TD>
+<td class="Bordered" align="center">CH25</TD>
+<td class="Bordered" align="center">K25</TD>
+<td class="Bordered" align="center">CH45</TD>
+<td class="Bordered" align="center">K45</TD>
+<td class="Bordered" align="center">CH65</TD>
+<td class="Bordered" align="center">K65</TD>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH6</TD>
+<td class="Bordered" align="center">K6</TD>
+<td class="Bordered" align="center">CH26</TD>
+<td class="Bordered" align="center">K26</TD>
+<td class="Bordered" align="center">CH46</TD>
+<td class="Bordered" align="center">K46</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH7</TD>
+<td class="Bordered" align="center">K7</TD>
+<td class="Bordered" align="center">CH27</TD>
+<td class="Bordered" align="center">K27</TD>
+<td class="Bordered" align="center">CH47</TD>
+<td class="Bordered" align="center">K47</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH8</TD>
+<td class="Bordered" align="center">K8</TD>
+<td class="Bordered" align="center">CH28</TD>
+<td class="Bordered" align="center">K28</TD>
+<td class="Bordered" align="center">CH48</TD>
+<td class="Bordered" align="center">K48</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH9</TD>
+<td class="Bordered" align="center">K9</TD>
+<td class="Bordered" align="center">CH29</TD>
+<td class="Bordered" align="center">K29</TD>
+<td class="Bordered" align="center">CH49</TD>
+<td class="Bordered" align="center">K49</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH10</TD>
+<td class="Bordered" align="center">K10</TD>
+<td class="Bordered" align="center">CH30</TD>
+<td class="Bordered" align="center">K30</TD>
+<td class="Bordered" align="center">CH50</TD>
+<td class="Bordered" align="center">K50</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH11</TD>
+<td class="Bordered" align="center">K11</TD>
+<td class="Bordered" align="center">CH31</TD>
+<td class="Bordered" align="center">K31</TD>
+<td class="Bordered" align="center">CH51</TD>
+<td class="Bordered" align="center">K51</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH12</TD>
+<td class="Bordered" align="center">K12</TD>
+<td class="Bordered" align="center">CH32</TD>
+<td class="Bordered" align="center">K32</TD>
+<td class="Bordered" align="center">CH52</TD>
+<td class="Bordered" align="center">K52</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH13</TD>
+<td class="Bordered" align="center">K13</TD>
+<td class="Bordered" align="center">CH33</TD>
+<td class="Bordered" align="center">K33</TD>
+<td class="Bordered" align="center">CH53</TD>
+<td class="Bordered" align="center">K53</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH14</TD>
+<td class="Bordered" align="center">K14</TD>
+<td class="Bordered" align="center">CH34</TD>
+<td class="Bordered" align="center">K34</TD>
+<td class="Bordered" align="center">CH54</TD>
+<td class="Bordered" align="center">K54</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH15</TD>
+<td class="Bordered" align="center">K15</TD>
+<td class="Bordered" align="center">CH35</TD>
+<td class="Bordered" align="center">K35</TD>
+<td class="Bordered" align="center">CH55</TD>
+<td class="Bordered" align="center">K55</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH16</TD>
+<td class="Bordered" align="center">K16</TD>
+<td class="Bordered" align="center">CH36</TD>
+<td class="Bordered" align="center">K36</TD>
+<td class="Bordered" align="center">CH56</TD>
+<td class="Bordered" align="center">K56</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH17</TD>
+<td class="Bordered" align="center">K17</TD>
+<td class="Bordered" align="center">CH37</TD>
+<td class="Bordered" align="center">K37</TD>
+<td class="Bordered" align="center">CH57</TD>
+<td class="Bordered" align="center">K57</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH18</TD>
+<td class="Bordered" align="center">K18</TD>
+<td class="Bordered" align="center">CH38</TD>
+<td class="Bordered" align="center">K38</TD>
+<td class="Bordered" align="center">CH58</TD>
+<td class="Bordered" align="center">K58</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+<TR>
+<td class="Bordered" align="center">CH19</TD>
+<td class="Bordered" align="center">K19</TD>
+<td class="Bordered" align="center">CH39</TD>
+<td class="Bordered" align="center">K39</TD>
+<td class="Bordered" align="center">CH59</TD>
+<td class="Bordered" align="center">K59</TD>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+</TABLE>
+</li>
+
+
+<li><a name="replace">Replace the Relay</a>
+<p class="Body">The NI&#160;PXI-2571 uses lead-free assemblies.</p>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies and using lead solder for relay replacement on lead assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this condition. This rework can prevent the same unit from being reworked later on a lead-free solder station, because it could contaminate the station.</span></td>
+</tr>
+</table>
+<ol class="List-abc">
+<li><p class="Body">Make sure you have the following items:</p>
+<ul>
+<li>Temperature-regulated soldering iron set to 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Solder wick</li>
+<li>Fine pick</li>
+<li>Isopropyl alcohol</li>
+<li>Cotton swabs</li>
+</ul>
+</li>
+
+<li><p class="Body">Replace the relay as you would any other through-hole part.</p></li>
+</ol>
+</li>
+</ol>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td><strong>Tip</strong>&nbsp;&nbsp;In NI-SWITCH 3.1 or later, you can use the Switch Soft Front Panel  to reset the relay count after you have replaced a failed relay. Refer to the <em>Switch Soft Front Panel Help</em> for more information about resettling relay count.</td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI/PXIe-2575 2-Wire 95&#0215;1 Multiplexer Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2575 2-Wire 95&#0215;1 Multiplexer Topology</h1>
+
+<p class="Body">The following figure represents the NI PXI/PXIe-2575 (NI&#160;2575) in the 2-wire 95&#215;1 multiplexer topology.</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2575_2-wire_95x1_mux.gif"> </td>
+</tr>
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+</table>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">You can control the channels using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function.</p>
+
+<p class="Body">For example, to close the relay of channel 1, call <span class="Monospace">niSwitch_Connect(vi, &quot;ch1&quot;, &quot;com&quot;)</span>. To open the relay of channel 1, call <span class="Monospace">niSwitch_Disconnect(vi, &quot;ch1&quot;, &quot;com&quot;)</span>.
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI&#160;2575, a typical <a href="scan_list.html">scan list</a> entry could be <span class="Monospace">ch1-&gt;com;</SPAN>. This entry closes the relay between CH1 and COM.</P>
+
+  <h2>Pinout</h2>
+   <p class="Body">
+     The following figure identifies the pins for the NI&#160;2575 in the
+     2-wire 95&#215;1 multiplexer topology.
+   </p>
+<p class="Anchor"><img src="noloc_2575_2-wire_95x1_pinout.gif"></p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

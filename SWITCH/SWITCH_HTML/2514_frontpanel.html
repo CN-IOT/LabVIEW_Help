@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<title>NI PXI/PXIe-2514 Front Panel</title>
+</head>
+<body>
+<h1>NI PXI/PXIe-2514 Front Panel</h1>
+
+<p class="Body">The following figure illustrates the NI&nbsp;PXI/PXIe-2514 front panel.</p> 
+
+
+<p class="Anchor"><img src="noloc_2514_frontpanel.gif"></p>
+
+<table class="Bordered">
+<tr><th class ="Bordered" colspan ="2">Item</th><th class ="Bordered">Description</th></tr>
+
+<tr><td class="Bordered">A</td><td class="Bordered">Module Status Indicator</td><td class="Bordered">LED</td></tr>
+								 
+<tr><td class="Bordered">B</td><td class="Bordered">DUT0 Status Indicator</td><td class="Bordered">LED</td></tr>
+								 
+<tr><td class="Bordered">C</td><td class="Bordered">DUT1 Status Indicator</td><td class="Bordered">LED</td></tr>
+
+<tr><td class="Bordered">D</td><td class="Bordered">DUT2 Status Indicator</td><td class="Bordered">LED</td></tr>
+
+<tr><td class="Bordered">E</td><td class="Bordered">DUT3 Status Indicator</td><td class="Bordered">LED</td></tr>
+
+<tr><td class="Bordered">F</td><td class="Bordered">DUT4 Status Indicator</td><td class="Bordered">LED</td></tr>
+
+<tr><td class="Bordered">G</td><td class="Bordered">DUT5 Status Indicator</td><td class="Bordered">LED</td></tr>
+
+<tr><td class="Bordered">H</td><td class="Bordered">DUT6 Status Indicator</td><td class="Bordered">LED</td></tr>
+
+</table>
+
+<h2>Status Indicators</h2>
+
+<p class="Body">Status indicators on the front panel of the NI&nbsp;PXI/PXIe-2514 provide feedback about device operation.</p>
+
+<p class="Body">Use the following table to determine the state of the module using the status indicator.</p>
+
+
+<table class="Bordered">
+<tr>
+<th class="Bordered">Status Indicator</th>
+<th class="Bordered">Auxiliary Power Input State</th>
+</tr>
+<tr>
+<td class="Bordered">Green</td>
+<td class="Bordered">OK, no channel errors present.</td>
+</tr>
+<tr>
+<td class="Bordered">Red</td>
+<td class="Bordered">Error detected on one or more channels.</td>
+</tr>
+</table>
+
+<p class="Body">Use the following table to determine the state of DUT<em>n</em> channel using a status indicator.</p>
+
+<table class="Bordered">
+<tr>
+<th class="Bordered">Status Indicator</th>
+<th class="Bordered">Channel Output State</th>
+</tr>
+<tr>
+<td class="Bordered">(Off)</td>
+<td class="Bordered">Open</td>
+</tr>
+<tr>
+<td class="Bordered">Green</td>
+<td class="Bordered">Pass-through channel closed (CH<em>n</em> to DUT<em>n</em>)</td>
+</tr>
+<tr>
+<td class="Bordered">Blink Amber Once</td>
+<td class="Bordered">DUT<em>n</em> connected to fault bus A</td>
+</tr>
+<tr>
+<td class="Bordered">Blink Amber Twice</td>
+<td class="Bordered">DUT<em>n</em> connected to fault bus B</td>
+</tr>
+<tr>
+<td class="Bordered">Solid Amber</td>
+<td class="Bordered">Any combination of multiple DUT<em>n</em> paths closed (CH<em>n</em>,BusA, BusB)</td>
+</tr>
+<tr>
+<td class="Bordered">Blink Red Once<sup>*</sup></td>
+<td class="Bordered">Overtemperature error detected on DUT<em>n</em></td>
+</tr>
+<tr>
+<td class="Bordered">Solid Red<sup>**</sup></td>
+<td class="Bordered">Overcurrent error detected on DUT<em>n</em></td>
+</tr>
+<tr>
+<td class="Bordered" colspan="2">*Overcurrent condition does not exist at the time the overtemperature condition was detected.<br>
+**Overtemperature condition might or might not exist.</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</html>

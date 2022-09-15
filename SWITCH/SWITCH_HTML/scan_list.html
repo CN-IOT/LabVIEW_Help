@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0098)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./scan_list_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./scan_list_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./scan_list_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./scan_list_files/extra.css">
+
+
+<title>Scan Lists</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./scan_list_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+ <h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表</font></font></h1>
+ 
+ <p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表是由通道名称和字符组成的字符串，用于定义扫描的连接、断开连接、</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scanning_overview.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触发</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和定时。</font></font></p>
+ 
+ 
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表字符</font></font></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下表显示了使用 NI-SWITCH 进行编程时可在扫描列表中使用的字符。</font></font></p>
+
+<table class="Bordered">
+<tbody><tr>
+<th class="Bordered"><span class="nobreak"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">人物）</font></font></span></th>
+<th class="bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">定义</font></font></th>
+</tr>
+<tr><td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">-&gt;</font></font></td>
+<td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">用于连接操作（</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">channel1-&gt;channel2</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">）。</font><font style="VERTICAL-ALIGN: inherit">例如，字符串</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0-&gt;com0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将 CH0 连接到 COM0。</font></font></td>
+</tr>
+<tr><td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">~</font></font></td><td class="Bordered"><a name="disconnect"></a><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在断开连接操作 ( ~channel1-&gt;channel2</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> )</font><font style="VERTICAL-ALIGN: inherit">中与 '-&gt;' 一起使用。</font><font style="VERTICAL-ALIGN: inherit">仅在</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html#modes"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">无操作</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模式下有效。</font><font style="VERTICAL-ALIGN: inherit">例如，</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">~ch0-&gt;com0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">表示断开 CH0 和 COM0。</font></font></td></tr>
+<tr><td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">;</font></font></td><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">等待去抖，发送扫描高级输出信号</font></font><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">*</font></font></sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，然后等待触发输入</font></font></td></tr>
+<tr><td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&amp;</font></font></td><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">分离连接和/或断开操作。</font><font style="VERTICAL-ALIGN: inherit">例如，字符串</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0-&gt;com0 &amp; ch9-&gt;com1</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">表示将 CH0 连接到 COM0，将 CH9 连接到 COM1（无特定顺序且延迟最小）。</font></font></td></tr>
+<tr><td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&amp;&amp;</font></font></td><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">等待去抖动。</font><font style="VERTICAL-ALIGN: inherit">例如，</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0-&gt;com0 &amp;&amp; ch9-&gt;com1</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">表示将 CH0 连接到 COM0，等待继电器</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/settling_time.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">稳定</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，然后将 CH9 连接到 COM1。</font></font></td></tr>
+<tr><td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">：</font></font></td><td class="Bordered"><a name="chrange"></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">用于通道范围（</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">channelX:Y</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，其中</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">X</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Y</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是整数）。</font><font style="VERTICAL-ALIGN: inherit">包含通道范围的文本表示多个</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html#entries"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表条目</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">例如，字符串</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0:7-&gt;com0；</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代表八个扫描列表条目。</font><font style="VERTICAL-ALIGN: inherit">使用通道范围的连接操作后必须出现分号。</font></font></td></tr>
+<tr><td class="Bordered" colspan="2"><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">*只有在每个</font></font></sup><font style="VERTICAL-ALIGN: inherit"></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html#entries"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表条目</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">中连接了继电器时，开关才会发送扫描高级输出信号</font><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">例如，在</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html#modes"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">无动作</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模式下，如果您仅断开扫描列表条目中的继电器，则交换机不会发送扫描高级输出信号。</font><font style="VERTICAL-ALIGN: inherit">扫描列表条目</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch1-&gt;com1 &amp; ~ch0-&gt;com0; </font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将导致交换机发送扫描高级输出信号，但扫描列表条目</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">~ch0-&gt;com0；</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">不会。</font><font style="VERTICAL-ALIGN: inherit">当</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list_multiple.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">多模块扫描列表</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在一行中包含多个分号时（例如，</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0-&gt;com0;;;;</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">），交换机仅针对系列中的第一个分号发送扫描高级输出信号。</font></font></td></tr>
+</tbody></table>
+<br><br>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./scan_list_files/tip.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提示</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;NI-SWITCH 忽略空白和换行。</font><font style="VERTICAL-ALIGN: inherit">使用这些来格式化冗长的扫描列表的外观。</font></font></td></tr></tbody></table>
+ 
+<h2><a name="entries"></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表条目</font></font></h2>
+ 
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表条目是由分号 (;) 分隔的文本。</font><font style="VERTICAL-ALIGN: inherit">扫描列表由一个或多个扫描列表条目组成。</font><font style="VERTICAL-ALIGN: inherit">例如，以下扫描列表包含两个扫描列表条目：</font></font></p>
+
+  <p class="Body"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0-&gt;com0; </font><font style="VERTICAL-ALIGN: inherit">ch1-&gt;com0;</font></font></span></p>
+ 
+<h2><a name="modes"></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描模式</font></font></h2>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描模式影响驱动程序如何解释扫描列表。</font><font style="VERTICAL-ALIGN: inherit">典型的扫描应用程序使用 Break Before Make 扫描模式。</font></font></p>
+
+<table class="Bordered"><tbody><tr><th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模式</font></font></th><th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述</font></font></th></tr>
+<tr><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">先断后成（默认）</font></font></td><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在执行当前扫描列表条目之前，</font><font style="VERTICAL-ALIGN: inherit">来自前一个</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html#entries"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表条目的连接会自动断开。</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">断开连接操作，例如</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">~channel1-&gt;channel2</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，在此模式下无效。</font></font></td></tr>
+
+<tr><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">无动作</font></font></td><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接保持连接，直到通过断开操作显式断开连接。</font></font></td></tr>
+<tr><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">先断后续</font></font></td><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">目前不支持。</font></font></td></tr>
+</tbody></table>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表示例</font></font></h2>
+
+<h4><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例 1</font></font></h4>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描模式：无动作</font></font><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+扫描列表：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0-&gt;com0；</font><font style="VERTICAL-ALIGN: inherit">~ch0-&gt;com0 &amp;&amp; ch1-&gt;com0; </font><font style="VERTICAL-ALIGN: inherit">~ch1-&gt;com0 &amp;&amp;</font></font></span></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">意义：</font></font></p>
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将 ch0 连接到 com0。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">等待去抖，发送扫描高级信号，然后等待触发输入。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">从 com0 断开 ch0 并等待去抖动。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将 ch1 连接到 com0。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">等待去抖，发送扫描高级信号，然后等待触发输入。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">从 com0 断开 ch1 并等待去抖动。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果扫描设置为</font></font><A href="switchviref.chm::/niSwitch_Set_Continuous_Scan.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连续</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，返回步骤1；</font><font style="VERTICAL-ALIGN: inherit">否则，结束扫描。</font></font></li></ol>
+
+
+<h4><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例 2</font></font></h4>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描模式：Break Before Make</font></font><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0-&gt;com0；</font><font style="VERTICAL-ALIGN: inherit">ch1-&gt;com0;</font></font></span></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">意义：</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">此示例中的扫描列表等效于示例 1 中的扫描列表。请注意，</font><font style="VERTICAL-ALIGN: inherit">不再需要示例 1 中的</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html#disconnect"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">断开连接操作。</font></font></a><font style="VERTICAL-ALIGN: inherit"></font></p>
+
+
+<h4><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例 3</font></font></h4>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描模式：Break Before Make</font></font><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+扫描列表：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0:1-&gt;com0；</font></font></span></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">意义：</font></font></p>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">此扫描列表等效于示例 1 和示例 2。此扫描列表使用</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/scan_list.html#chrange"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通道范围</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">来减少击键。</font></font></p>
+
+
+ 
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./scan_list_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fscan_list.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fscan_list.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./scan_list_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

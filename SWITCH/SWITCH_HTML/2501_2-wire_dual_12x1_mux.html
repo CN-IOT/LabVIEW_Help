@@ -1,0 +1,484 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0114)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/2501_2-wire_dual_12x1_mux.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./2501_2-wire_dual_12x1_mux_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./2501_2-wire_dual_12x1_mux_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./2501_2-wire_dual_12x1_mux_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./2501_2-wire_dual_12x1_mux_files/extra.css">
+
+<script src="./2501_2-wire_dual_12x1_mux_files/pdf.js.&#19979;&#36733;" type="text/javascript"></script>
+<title>2-Wire Dual 12x1 Multiplexer Topology</title>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./2501_2-wire_dual_12x1_mux_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI PXI-2501/2503 2线双12×1多路复用器拓扑</font></font></h1>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">当使用 NI PXI-2501/2503 作为</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/xwire.html#2wire"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">2 线</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">双 12×1</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/multiplexer.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">多路复用器</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">时，请使用 NI TB-2605 接线端子连接您的信号。</font><font style="VERTICAL-ALIGN: inherit">在此拓扑中，您​​可以连接到</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/2503_cjc.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">冷端传感器通道</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以进行冷端补偿。</font><font style="VERTICAL-ALIGN: inherit">下图是该模式下 NI PXI-2501/2503 的示意图。</font></font></p>
+
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./2501_2-wire_dual_12x1_mux_files/noloc_pxi-2501_03-2wire-dual-12x1.gif"> </td>
+</tr>
+</tbody></table>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">建立连接</font></font></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">此拓扑中的 NI PXI-2501/2503 包含两组 12 个 2 线输入通道，连接到一个公共 2 线通道。</font><font style="VERTICAL-ALIGN: inherit">这些输入通道称为 ch&lt;0..23&gt;，两个公共通道称为 com0 和 com2。</font><font style="VERTICAL-ALIGN: inherit">您只能连接到同一组中的公共通道。</font><font style="VERTICAL-ALIGN: inherit">银行的组织如下：</font></font></p>
+
+<table class="Bordered">
+<tbody><tr><th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">输入通道</font></font></th> <th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">公共通道</font></font></th></tr>
+
+<tr><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0、ch1、ch2、ch3、ch4、ch5、ch6、ch7、ch8、ch9、ch10、ch11、cjtemp</font></font></td> <td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">com0</font></font></td> </tr>
+
+<tr><td class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch12、ch13、ch14、ch15、ch16、ch17、ch18、ch19、ch20、ch21、ch22、ch23</font></font></td><td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">com2</font></font></td></tr> 
+</tbody></table>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">例如，可以将ch5连接到com0；</font><font style="VERTICAL-ALIGN: inherit">但是，您不能在此拓扑中将 ch5 连接到 com2。</font><font style="VERTICAL-ALIGN: inherit">当连接 ch5 的信号时，您可以将它们连接到 CH5+ 和 CH5–，分别用于信号的 HI 和 LO。</font><font style="VERTICAL-ALIGN: inherit">对于 com0，分别连接到 COM0+ 和 COM0– 用于信号的 HI 和 LO。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">请注意，在第一个库中，您可以将 cjtemp 连接到 com0。</font><font style="VERTICAL-ALIGN: inherit">这会将 com0 连接到 NI TB-2605 接线端子上的温度传感器。</font><font style="VERTICAL-ALIGN: inherit">有关详细信息，请参阅</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/2503_cjc.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">冷端传感器通道</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/flow_config.html#scanning"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">期间，示例扫描列表条目是</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch2-&gt;com0；</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">. </font><font style="VERTICAL-ALIGN: inherit">此条目将连接到 CH2+ 的信号路由到 COM0+，并将来自 CH2– 的信号路由到 COM0–。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在使用</font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">ch2+</font></span><font style="VERTICAL-ALIGN: inherit">和</font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">com0</font></span><font style="VERTICAL-ALIGN: inherit">调用</font><A href="switchviref.chm::/niSwitch_Connect_Channels.html"><font style="VERTICAL-ALIGN: inherit">niSwitch Connect Channels</font></a><font style="VERTICAL-ALIGN: inherit"> VI 或</font><A href="switchcref.chm::/c_nisw_connect.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">niSwitch_Connect</font></span></a><font style="VERTICAL-ALIGN: inherit">函数的</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/flow_config.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">即时操作</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">期间，连接到 CH2+ 的信号被路由到 COM0+，连接到 CH2– 的信号被路由到 COM0–。</font><font style="VERTICAL-ALIGN: inherit">要将信号路由到 AB0，请使用 niSwitch Connect Channels VI 或</font><font style="VERTICAL-ALIGN: inherit">带有</font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">com0</font></span><font style="VERTICAL-ALIGN: inherit">和</font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">ab0的</font></span><span class="Monospace"><font style="VERTICAL-ALIGN: inherit">niSwitch_Connect</font></span><font style="VERTICAL-ALIGN: inherit">函数。</font></font><A href="switchviref.chm::/niSwitch_Connect_Channels.html"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"></font><A href="switchcref.chm::/c_nisw_connect.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span></a><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"></font></span><font style="VERTICAL-ALIGN: inherit"></font></p>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">引脚排列</font></font></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图和表格标识了 2 线双 12×1 多路复用器拓扑中 NI PXI-2501/2503 的引脚。</font></font></p>
+
+<p class="Anchor"><IMG src="./2501_2-wire_dual_12x1_mux_files/loc_eps_2501_2503_2_wire_dual_pinout.gif"></p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./2501_2-wire_dual_12x1_mux_files/caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;不要连接到 RESERVED 引脚。</font></font></span></td></tr></tbody></table>
+
+<table class="Bordered">
+<tbody><tr>
+<th class="Bordered" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">软件名称</font></font></th>
+<th class="Bordered" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">极性</font></font></th>
+<th class="Bordered" colspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">硬件名称</font></font></th>
+</tr><tr>
+<th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI PXI-2501/2503</font></font><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+连接器引脚编号</font></font></th>
+<th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI TB-2605</font></font><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+终端名称</font></font></th>
+</tr>	
+<tr>
+
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch0</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">67</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH0+</font></font></td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">33</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH0–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch1</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">66</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH1+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">32</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH1–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch2</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">65</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH2+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">31</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH2–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch3</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">64</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH3+</font></font></td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">30</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH3–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch4</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">63</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH4+</font></font></td>
+	</tr>
+	<tr>
+		
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">29</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH4–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch5</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">62</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH5+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">28</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH5–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch6</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">59</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH6+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">25</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH6–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch7</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">58</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH7+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">24</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH7–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch8</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">57</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH8+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">23</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH8–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch9</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">55</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH9+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">21</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH9–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch10</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">54</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH10+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">20</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH10–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch11</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">53</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH11+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">19</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH11–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch12</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">50</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH12+</font></font></td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">16</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH12–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch13</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">49</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH13+</font></font></td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">15</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH13–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">第 14 章</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">48</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH14+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">14</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH14–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">第 15 章</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">47</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH15+</font></font></td>
+	</tr>
+	<tr>
+		
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">13</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH15–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">第 16 章</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">46</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH16+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">12</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH16–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">第 17 章</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">45</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH17+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">11</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH17–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">第 18 章</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">40</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH18+</font></font></td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">6</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH18–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch19</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">39</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH19+</font></font></td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">5</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH19–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch20</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">38</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH20+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">4</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH20–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch21</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">37</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH21+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">3</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH21–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch22</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">36</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH22+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">2</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH22–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ch23</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">35</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH23+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">1</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CH23–</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">com0</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">61</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">COM0+</font></font></td>
+	</tr>
+
+<tr>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">27</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">COM0–</font></font></td>
+	</tr>
+		<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">com2</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">44</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">COM2+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">10</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">COM2–</font></font></td>
+	</tr>
+	
+	<tr>
+		<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ab0</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">52</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">AB0+</font></font></td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">18</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">AB0–</font></font></td>
+	</tr>
+	<tr>
+	<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ab1</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">51</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">AB1+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">17</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">AB1–</font></font></td>
+	</tr>
+	<tr>
+	<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">无连接</font></font><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">1</font></font></sup></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">60</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">COM1+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">26</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">COM1–</font></font></td>
+	</tr>
+	
+	<tr>
+	<td class="Bordered" align="center" rowspan="2"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">无连接</font></font><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">1</font></font></sup></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">+</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">43</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">COM3+</font></font></td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">–</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">9</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">COM3–</font></font></td>
+	</tr>
+	
+	<tr><td class="bordered" align="left" colspan="4"><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">1</font></font></sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">此拓扑中未使用		
+</font></font></td></tr>
+</tbody></table>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">其他引脚参考</font></font></h3>
+
+<table class="Bordered">
+<tbody><tr>
+<th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI PXI-2501/2503</font></font><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接器引脚编号	
+</font></font></th>
+<th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">信号名称
+</font></font></th>
+</tr>
+<tr>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">7, 56</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">接地</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">41</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触发</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">42</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">SCANADV</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">8</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">RESERVED</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">68</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CJS+</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">34</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">CJS-</font></font></td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">22</font></font></td>
+		<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">1wireREF</font></font></td>
+	</tr>
+</tbody></table>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./2501_2-wire_dual_12x1_mux_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2F2501_2-wire_dual_12x1_mux.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2F2501_2-wire_dual_12x1_mux.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./2501_2-wire_dual_12x1_mux_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

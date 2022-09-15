@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2501 Amplifier</TITLE>
+
+</head>
+<body bgcolor="#ffffff">
+
+
+
+<h1>NI PXI-2501 Amplifier</h1>
+<p class="Body">The NI PXI-2501 has an amplifier with a gain of 1. This amplifier can be switched in-line before the COM0 signal and the AB0 signal. The amplifier helps decrease the settling time of the FET switch. The high-impedance amplifier isolates the <a href="fets.html">FET</a> from the resistance, capacitance, and inductance in the external wiring. This isolation decreases the resistance/capacitance time constant seen by the FET, which improves settling time. When the amplifier is used, the switch module becomes directional, where CH<em>x</em> is for signal inputs and COM0 or AB0 are for signal outputs. </p>
+
+<p class="Body">The amplifier has an offset that can be calibrated for more accurate measurements. The calibration data can be stored into and retrieved from the EEPROM on the module.</p>
+<p class="Body">The NI&nbsp;PXI-2501 also has an amplifier in the CJS0+ to COM0+ signal path. This amplifier in the cold-junction sensor signal path is used to improve settling time performance. It prevents the impedance of the cold-junction sensor from increasing the settling time when switching the CJS channel. As a result, when scanning thermocouples, the settling time for the cold-junction sensor channel should be about the same as for the channels with the thermocouples.</p>
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>
+

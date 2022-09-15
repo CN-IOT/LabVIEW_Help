@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI/PXIe-2529 2-Wire Dual 4&#0215;16 Matrix Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2529 2-Wire Dual 4&#0215;16 Matrix Topology</h1>
+
+<p class="Body">The following figure represents the NI PXI/PXIe-2529 (NI&#160;2529) in the <a href="xwire.html#2wire">2-wire</a> dual 4&#0215;16 <a href="matrix.html">matrix</a> topology.</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2529-dual-4x16.gif"> </td>
+</tr>
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+</table>
+
+<h2>Making a Connection</h2>
+
+  <p class="Body"> The NI&#160;2529 in this topology creates two banks of 4&#0215;16 matrices. You can only connect rows and columns to rows and columns in the same bank. For more information about how to use the NI&#160;2529 in a dual 4&#0215;16 matrix configuration, visit <span class="Monospace">ni.com/info</span> and enter the info code, <span class="Monospace">exudrg</span>.</p>
+
+
+<p class="Body">You can connect the channels of the NI&#160;2529 using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function. For example, to connect bank 0 row 1 to bank 0 column 1, call  the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function with the <strong>channel 1</strong> parameter set to <span class="Monospace">b0r1</span> and the <strong>channel&nbsp;2</strong> parameter set to <span class="Monospace">b0c1</span>.</p>
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI&#160;2529 in dual 4&#0215;16 matrix topology, a typical <a href="scan_list.html">scan list</a> entry could be <span class="Monospace">b0r1-&gt;b0c1;</SPAN>. This entry routes the signal connected to bank 0 row 1 to bank 0 column 1.</P>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;You can, for example, connect b0r1 to b0c0; however, you cannot connect b0r1 directly to b1c1 in this topology. When connecting signals to b0r1, you would connect them to B0R1+ and B0R1&#8211; in the terminal block. When connecting signals to b0c0, you would connect them to B0C0+ and B0C0&#8211; in the terminal block.</td></tr></table>
+
+<h2>Bank Connection Diagram</h2>
+
+<p class="Anchor"><img src="loc_eps_2529_4x16_dual_bank.gif"></p>
+
+
+ <H2>Pinout</H2>
+ <P class="Body" >The following figure identifies the pins for the NI&#160;2529.</P>
+<p class="Anchor"><img src="loc_eps_2529_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins or to NO CONNECT pins. Keep low-voltage pins isolated from row and column channels when high voltage is present.</span></td></tr></table>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

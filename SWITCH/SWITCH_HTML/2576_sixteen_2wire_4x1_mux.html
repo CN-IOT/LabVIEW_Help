@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+   
+   <link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript">
+</script>
+   <title>NI PXI-2576 2-Wire Sixteen 4&#0215;1 Multiplexer Topology</title>
+  </head>
+<body bgcolor="#ffffff">
+  
+   <h1>NI PXI-2576 2-Wire Sixteen 4&#0215;1 Multiplexer Topology</h1>
+   
+<p class="Body">The following figure represents the NI PXI-2576 in the <a href="xwire.html#2wire">2-wire</a> sixteen 4&#0215;1 <a href="multiplexer.html">multiplexer</a> topology. </p>
+
+<p class="Anchor"><img src="noloc_2576_2-wire_sixteen_4x1_mux.gif"></p>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">When using the NI PXI-2576 as a 2-wire sixteen 4&#0215;1 multiplexer, the positive leads of the first bank (ch0&#043; through ch3&#043;) route to com0&#043;, and the negative leads of the first bank (ch0&#8211; through ch3&#8211;) route to com0&#8211;. The pair com0&#043; and com0&#8211; is addressed collectively as com0 in software. All other banks follow a similar routing scheme.</p>
+
+<p class="Body">Both the scanning command, <span class="Monospace">ch2-&gt;com0;</span>, and the immediate operation,  <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function   with parameters <span class="Monospace">ch2</span> and <span class="Monospace">com0</span>, result in the following connections:</p>
+<p class="Body">signal connected to ch2&#043; is routed to com0&#043;</p>
+<p class="Body">signal connected to ch2&#8211; is routed to com0&#8211;</p>
+
+<h2>Pinout</h2>
+<p class="Body">The following figure identifies the pins for the NI&nbsp;PXI-2576 in the 2-wire sixteen 4&#0215;1 multiplexer topology.</p>
+
+<p class="Anchor"><img src="noloc_2576_pinout.gif"></p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</html>
+

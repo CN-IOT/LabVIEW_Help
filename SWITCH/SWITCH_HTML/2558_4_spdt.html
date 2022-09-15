@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2558 Quad SPDT Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2558 Quad SPDT Topology</h1>
+
+<p class="Body">The following figure represents the NI PXI-2558 in the quad SPDT <a href="general_purpose.html">general-purpose</a> topology.</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2548_4_SPDT.gif"> </td>
+</tr>
+
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+
+</table>
+<h2>Making a Connection</h2>
+
+<p class="Body">Call the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function to connect channels in this topology. If applicable, you must call the <a href="switchviref.chm::/niSwitch_Disconnect_Channels.html">niSwitch Disconnect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_disconnect.html"><span class="Monospace">niSwitch_Disconnect</span></a> function to disconnect an existing connection <em>before</em> you call the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function. </p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The niSwitch Disconnect Channels VI or the <span class="Monospace">niSwitch_Disconnect</span> function does <em>not</em> operate the relay until the next niSwitch Connect Channels VI or the next <span class="Monospace">niSwitch_Connect</span> function is executed. Thus, one channel is always connected to each common channel. If you have reset the module or called the <a href="switchviref.chm::/niSwitch_Disconnect_All_Channels.html">niSwitch Disconnect All Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_disconnectall.html"><span class="Monospace">niSwitch_DisconnectAll</span></a> function, you do not need to disconnect the default channel (NC<em>x</em>) from COM<em>x</em> upon initial connection.</td></tr></table>
+
+<p class="Body">The following sequence of tasks illustrates the VI/function calls necessary to make consecutive connections&#8212;one between NO&nbsp;1 and COM1 and the other between NC&nbsp;1 and COM1:</p>
+<ol><li>Call the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function with parameters <span class="Monospace">no1</span> and <span class="Monospace">com1</span>. </li>
+<li>Call the niSwitch Disconnect Channels VI or the <span class="Monospace">niSwitch_Disconnect</span> function with parameters <span class="Monospace">no1</span> and <span class="Monospace">com1</span>. </li>
+<li>Call the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function with parameters <span class="Monospace">nc1</span> and <span class="Monospace">com1</span>.</li>
+</ol>
+
+
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI PXI-2558, a typical <a href="scan_list.html">scan list</a> entry might be <span class="Monospace">no1-&gt;com1;</SPAN>. This entry routes the signal connected to NO&nbsp;1 to COM&nbsp;1.</P>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

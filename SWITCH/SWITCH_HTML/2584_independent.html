@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2584 Independent Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2584 Independent Topology</h1>
+
+<p class="Body">Use the independent topology to utilize the full routing capabilities of the NI&nbsp;PXI-2584.  For example, when measuring stacked signals, use the independent topology to configure the NI&nbsp;PXI-2584 as an <a href="2584_2-wire_11x1_inter_mux.html">interleaved multiplexer</a>.  </p>
+
+
+
+<p class="Body">The following figure represents the NI&nbsp;PXI-2584 in the independent topology.</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2584_1-wire_dual_6x1_mux.gif"> </td>
+</tr>
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+</table>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Both the scanning command, <span class="Monospace">ch2-&gt;com0;</span>, and the immediate operation, <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function  with parameters <span class="Monospace">ch2</span> and <span class="Monospace">com0</span>, result in the following connection:</p>
+<p class="Body">signal connected to CH2 is routed to COM0</p>
+
+ <h2>Pinout</h2>
+   <p class="Body">
+     The following figure identifies the pins for the NI&nbsp;PXI-2584 in the independent topology.
+   </p>
+<p class="Anchor"><img src="noloc_2584_pinout.gif"></p>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI 2833 Multicard Topologies</TITLE>
+<script src="linking.js" type="text/javascript"></script>
+<script src="variables.js" type="text/javascript"></script>
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI 2833 Multicard Topologies</h1>
+
+<p class="body">The following table lists possible topologies for an NI&#160;2833 NI&#160;SwitchBlock device. Refer to <a href="SwitchBlock_configured_topology.html">Initializing with Topology for NI&#160;SwitchBlock Devices</a> for information about using the Configured Topology and NISWITCH_TOPOLOGY_CONFIGURED_TOPOLOGY software names.</p>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;You <em>must</em> connect pin 96 (INTERLOCK ENABLE) to pin 48 (GND) with a 500 &#8486; resistor (500 &#8486; &#177;20&#37;, 1/10 W minimum) to allow connection to the analog bus. Refer to the <a href="SwitchBlock_safety_interlock.html">NI&#160;SwitchBlock Safety Interlock</a> topic for additional information about this safety feature.</td>
+</tr>
+</table>
+<br>
+<table class="Bordered"><tr><th class="bordered">Number of<br>NI&#160;2833 Cards</th><th class="Bordered">Topology</th><th class="Bordered">Software Name</th><th class="Bordered">Immediate</th>	<th class="Bordered">Scanning</th></tr>
+
+<tr><td class="bordered" align=center>1</td><td class="Bordered"><a href="2833_2-wire_4x71_matrix.html">2-Wire 4&#215;71 Matrix</a></td><td class="Bordered">Configured Topology<br>(NISWITCH_TOPOLOGY_CONFIGURED_TOPOLOGY)</td><td class="Bordered" align=center><img src="check.gif"></td><td class="Bordered" align=center>&#8212;</td></tr>
+<tr><td class="bordered" align=center>2</td><td class="Bordered">2-Wire 4&#215;142 Matrix</td><td class="Bordered">Configured Topology<br>(NISWITCH_TOPOLOGY_CONFIGURED_TOPOLOGY)</td><td class="Bordered" align=center><img src="check.gif"></td><td class="Bordered" align=center>&#8212;</td></tr>
+<tr><td class="bordered" align=center>3</td><td class="Bordered">2-Wire 4&#215;213 Matrix</td><td class="Bordered">Configured Topology<br>(NISWITCH_TOPOLOGY_CONFIGURED_TOPOLOGY)</td><td class="Bordered" align=center><img src="check.gif"></td><td class="Bordered" align=center>&#8212;</td></tr>
+
+</table>
+
+<p class="body">Refer to the <a href="multicard_devices.html">NI&#160;SwitchBlock Device Reference</a> for information about creating multicard devices.</p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

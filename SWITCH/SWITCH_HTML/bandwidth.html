@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0098)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/bandwidth.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./bandwidth_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./bandwidth_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./bandwidth_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./bandwidth_files/extra.css">
+
+
+<title>Bandwidth and Insertion Loss</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./bandwidth_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+ <h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">带宽和插入损耗</font></font></h1>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">信号带宽是开关的有用信号频率范围。</font><font style="VERTICAL-ALIGN: inherit">NI 开关模块被指定用于低至 DC 的频率，因此带宽被指定为最大推荐信号频率。</font><font style="VERTICAL-ALIGN: inherit">在许多情况下，带宽是开关可以保持 &lt;3 dB</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/bandwidth.html#insertionloss"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">插入损耗</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的最高信号频率。</font><font style="VERTICAL-ALIGN: inherit">一些射频模块基于反射 ( </font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/vswr.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">VSWR</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> ) 而不是插入损耗来指定带宽。</font></font></p>
+
+<h2><a name="insertionloss"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">插入损耗</font></font></a></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">当高频信号穿过开关模块时，它会因串联电阻、介电吸收和阻抗失配的反射而衰减。</font><font style="VERTICAL-ALIGN: inherit">这种衰减称为插入损耗。</font><font style="VERTICAL-ALIGN: inherit">开关模块输出端剩余的信号量表示为与输入信号的比值，以分贝 (dB) 为单位：</font></font></p>
+
+<p class="Indent1"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">发射信号 (dB) = 10 log(P </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">out</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> /P </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">in</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> )</font></font></em></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">其中P </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">out</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是输出功率电平，P </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">in</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是输入功率电平。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">这个比率也可以用信号电压来表示：</font></font></p>
+
+<p class="Indent1"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">发射信号 (dB) = 20 log(V </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">out</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> /V </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">in</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> )</font></font></em></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">由于开关衰减信号，输出幅度小于输入幅度，传输信号比始终&lt;0 dB。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">按照惯例，</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">插入损耗</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是输入信号与输出信号的比率，以分贝 (dB) 为单位：</font></font></p>
+
+<p class="Indent1"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">插入损耗 (dB) = 10 log(P </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">in</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> /P </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">out</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> ) = -10 log(P </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">out</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> /P </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">in</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> )</font></font></em></p>
+
+<p class="Indent1"><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">插入损耗 (dB) = 20 log(V </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">in</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> /V </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">out</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> ) = -20 log(V </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">out</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> /V </font></font><sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">in</font></font></sub><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> )</font></font></em></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">输出幅度小于输入幅度，因此插入损耗&gt;0 dB。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">串联电阻、介电损耗和失配反射的影响因素与频率有关，通常会导致插入损耗随信号频率上升。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图分别说明了单端和差分测量。</font></font></p>
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./bandwidth_files/noloc_sngl_end_tst.gif"></td>
+</tr>
+</tbody></table>
+
+<p class="Body"></p>
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./bandwidth_files/noloc_diff_tst.gif"></td>
+</tr>
+</tbody></table>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">带宽和方波</font></font></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果信号是纯正弦信号，则可以直接应用开关模块的带宽/插入损耗额定值。</font><font style="VERTICAL-ALIGN: inherit">对于具有多个频率成分的信号，例如方波，可能难以应用该等级。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">方波可以使用自然谐波级数来表示，其中仅使用奇次谐波。</font><font style="VERTICAL-ALIGN: inherit">构成理想方波的频率分量是无限的。</font></font></p>
+
+<p class="Indent1"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">方波 (t) = (4/ </font></font><IMG src="./bandwidth_files/pi.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">)[sin </font></font><IMG src="./bandwidth_files/omegal.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">t + (1/3)sin 3 </font></font><IMG src="./bandwidth_files/omegal.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">t + (1/5)sin 5 </font></font><IMG src="./bandwidth_files/omegal.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">t + …]</font></font></p>		
+<p class="Indent1"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">哪里</font></font><IMG src="./bandwidth_files/omegal.gif"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是每秒弧度的频率</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">方波的基频可能低于额定带宽。</font><font style="VERTICAL-ALIGN: inherit">但是，超过额定值的谐波可能会因</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/bandwidth.html#insertionloss"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">插入损耗</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的增加而衰减。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">例如，考虑一个 2 V 峰峰值方波。</font><font style="VERTICAL-ALIGN: inherit">方波可以近似为多个谐波正弦波的总和。</font><font style="VERTICAL-ALIGN: inherit">下图中显示了三个谐波：基频（或一次谐波）、5 次谐波和 13</font></font><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">次</font></font></sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">谐波。</font></font></p> 
+
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./bandwidth_files/loc_eps_square_wave_with_edits.gif"></td>
+</tr>
+</tbody></table>
+ 
+<p class="Body">If the frequency content of a square wave is <em>known</em>, the required switch bandwidth can be determined based on the highest harmonic to be passed with minimal distortion. </p>
+
+<p class="Body">If the frequency content is <em>unknown</em>, the –3 dB point can be approximated using the rise time of the harmonic to be preserved.
+The rise time is related to the –3 dB point bandwidth by the following approximation:</p>
+
+<p class="Indent1"><em>3 dB bandwidth (Hz) ≈ 0.35/τ<sub>r</sub></em></p>
+
+<p class="Indent1">where <em>τ</em> is the <a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/rise_time.html">rise time</a> from 10% to 90% of the signal amplitude.</p>
+
+<p class="Body">The following figure shows this approximation applied to the fifth harmonic of the square wave from the previous example:</p>
+<table class="figure">
+<tbody><tr>
+<td class="frame" align="center"><IMG src="./bandwidth_files/loc_eps_fifth_harmonic_rise_time.gif"></td>
+</tr>
+</tbody></table>
+<p class="Indent1">where <em>τ</em> = 
+  0.0515 s</p>
+<p class="Indent1">3 dB bandwidth = 6.79 Hz </p>
+<p class="Body">To preserve the <a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/rise_time.html">rise time</a> of the signal, a switch with an <a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/bandwidth.html#insertionloss">insertion loss</a> of 3 dB at 6.79 Hz minimum should be chosen. </p>
+
+<p class="Body">For a square wave, once the fifth or seventh harmonic is reached, the change in the rise time is minimal. In the previous example, a switch with an insertion loss of 3 dB at 7 Hz will be sufficient to pass as a 1 Hz square wave. </p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./bandwidth_files/tip.gif"></td>
+<td>
+<strong>Tip</strong>&nbsp;&nbsp;For square wave signals, select a switch with a –3 dB point at a frequency seven times the fundamental frequency of the square wave. If less attenuation is desired, the –3 dB point should be a higher frequency.</td></tr></tbody></table>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt="Submit Feedback" src="./bandwidth_files/feedback.png" >&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fbandwidth.html')">Submit feedback</a> on this topic.<br><br><IMG alt="Contact Technical Support" src="./bandwidth_files/support.png" >&nbsp;&nbsp;Visit <A href="javascript:WWW('http://www.ni.com/support')">ni.com/support</a> for technical support.</p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

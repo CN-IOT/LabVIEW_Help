@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0092)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/fiu.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./fiu_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./fiu_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./fiu_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./fiu_files/extra.css">
+
+
+<title>Fault Insertion Units</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./fiu_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+ <h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">故障插入单元</font></font></h1>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">故障插入单元 (FIU) 旨在在自动化测试设备（例如硬件在环 (HIL) 仿真系统）和被测设备 (DUT) 之间插入故障条件。</font><font style="VERTICAL-ALIGN: inherit">下图表示如何在完整的测试系统中使用 FIU。</font></font></p>
+
+<p class="Anchor"><IMG src="./fiu_files/loc_eps_fiu_basics.gif"></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为了插入故障条件，内部继电器被配置为创建短路连接和开路。</font></font></p>  
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">自动化测试应用程序通常使用以下故障条件：</font></font></p>
+<ul>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/fiu.html#open_circuit"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">开路</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/fiu.html#gnd_power"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">对地短路或对电源短路</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/fiu.html#pin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">引脚对引脚短路</font></font></a></li>
+</ul>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">具有可切换故障总线输入的 FIU 可用于创建额外的故障条件，例如</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/fiu.html#pin_short_load"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通过负载的引脚对引脚短路</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+
+<h2><a name="open"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">无故障运行</font></font></a></h2>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 FIU 的无故障设置中，测试设备通过 FIU 模块直接连接到 DUT 信号线。</font><font style="VERTICAL-ALIGN: inherit">下图显示了无故障操作。</font></font></p>
+
+<p class="Anchor"><IMG src="./fiu_files/noloc_fiu_connect.gif"></p>
+
+<h2><a name="open_circuit"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">开路故障</font></font></a></h2>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在开路或中断故障中，测试应用程序和 DUT 之间的信号线保持开路，以确定 DUT 在信号中断后的行为。</font><font style="VERTICAL-ALIGN: inherit">下图显示了开路或中断故障。</font></font></p>
+<p class="Anchor"><IMG src="./fiu_files/noloc_fiu_interrupt.gif"></p>
+
+<h2><a name="gnd_power"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">对地短路或对电源短路</font></font></a></h2>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为了模拟接地或电源短路，信号线从外部故障线或故障总线连接到 DUT。</font><font style="VERTICAL-ALIGN: inherit">故障总线可以配置为模拟电源线或系统接地。</font><font style="VERTICAL-ALIGN: inherit">下图表示对地短路和对电源短路。</font></font></p>
+<p class="Anchor"><IMG src="./fiu_files/noloc_fiu_short_gnd_power.gif"></p>
+
+<h2><a name="pin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">引脚对引脚短路</font></font></a></h2>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在引脚对引脚短路中，DUT 信号线连接到一条或多条附加 DUT 信号线。</font><font style="VERTICAL-ALIGN: inherit">下图显示了引脚对引脚短路。</font></font></p>
+<p class="Anchor"><IMG src="./fiu_files/loc_eps_fiu_pin2pin.gif"></p>
+
+<h2><a name="pin_short_load"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用 NI PXI-2510 通过负载的引脚对引脚短路示例</font></font></a></h2>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI PXI-2510 有两条故障总线。</font><font style="VERTICAL-ALIGN: inherit">每条故障总线都有四个可切换输入，用于在电池电压 (Vbatt)、接地 (GND) 和其他故障电压电位等多种故障条件中进行选择。</font><font style="VERTICAL-ALIGN: inherit">每个故障总线的不可切换输入用于使用数字万用表监控故障总线。</font><font style="VERTICAL-ALIGN: inherit">可切换故障总线输入允许另一种故障情况：通过负载的引脚对引脚短路。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以下示例显示了使用 NI PXI-2510 通过负载的引脚对引脚短路：</font></font></p>
+
+<p class="Anchor"><IMG src="./fiu_files/loc_eps_2510_pin_short_load.gif"></p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./fiu_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Ffiu.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Ffiu.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./fiu_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

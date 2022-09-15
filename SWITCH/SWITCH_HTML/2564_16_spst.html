@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2564 16-SPST Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2564 16-SPST Topology</h1>
+
+<p class="Body">The following figure represents the NI PXI-2564 in the 16-SPST topology.</p>
+
+<p class="Anchor"><img src="noloc_2564_16_spst.gif"></p>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">You can control the channels using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function.</p>
+
+<p class="Body">For example, to close the relay of channel 2, call <span class="Monospace">niSwitch_Connect(vi, &quot;ch2&quot;, &quot;com2&quot;)</span>. To open the relay of channel 2, call <span class="Monospace">niSwitch_Disconnect(vi, &quot;ch2&quot;, &quot;com2&quot;)</span>.
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI&nbsp;PXI-2564, a typical <a href="scan_list.html">scan list</a> entry could be <span class="Monospace">ch2-&gt;com2;</SPAN>. This entry closes the relay between CH2 and COM2.</P>
+
+
+ <h2>Pinout</h2>
+   <p class="Body">
+     The following figure identifies the pins for the NI&nbsp;PXI-2564 in the
+     16-SPST topology.
+   </p>
+
+   
+<p class="Anchor"><img src="noloc_2564_pinout.gif"></p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

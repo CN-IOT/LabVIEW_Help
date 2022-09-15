@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0123)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_analog_bus_reservation.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./SwitchBlock_analog_bus_reservation_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./SwitchBlock_analog_bus_reservation_files/variables.js.&#19979;&#36733;"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./SwitchBlock_analog_bus_reservation_files/minimal.css">
+<script src="./SwitchBlock_analog_bus_reservation_files/pdf.js.&#19979;&#36733;" type="text/javascript"></script>
+<script src="./SwitchBlock_analog_bus_reservation_files/web.js.&#19979;&#36733;" type="text/javascript"></script>
+<title>Using the Analog Bus on an NI SwitchBlock Carrier</title>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./SwitchBlock_analog_bus_reservation_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 NI SwitchBlock 载波上使用模拟总线</font></font></h1>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">有关 NI SwitchBlock 载体上的模拟总线以及如何使用它的信息，请参阅以下部分。</font></font></p>
+
+<h2><a name="basics"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">基本</font></font></a></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">每个载体都有一个模拟总线，您可以使用它在构成多卡设备的卡之间、同一载体中的设备之间、或在安装</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_multicarrier_expansion.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI 2806 扩展桥接</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">器时不同载体中的设备之间建立连接。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 设备包含用于连接到载体上的模拟总线的模拟总线通道。</font><font style="VERTICAL-ALIGN: inherit">要将卡上的一行连接到载体上的模拟总线，请将该行连接到设备上相同编号的模拟总线通道。</font></font></p>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_analog_bus_reservation_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;载波模拟总线不是软件中的通道。</font><font style="VERTICAL-ALIGN: inherit">要将您的设备连接到模拟总线，请将一行连接到模拟总线通道。</font></font></td>
+</tr>
+</tbody></table>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_analog_bus_reservation_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;1-wire 卡上的模拟总线通道连接到模拟总线上的一条线路，而 2-wire 卡上的模拟总线通道连接到模拟总线上的两条线路。</font></font></td>
+</tr>
+</tbody></table>
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">因为一个运营商中的所有卡共享模拟总线，所以多个设备不能同时连接到同一条模拟总线，除非它们都是相同的线模式，并且您允许多个设备使用</font></font><A href="switchpropref.chm::/pniSwitch_AnalogBusSharingEnable.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模拟总线共享启用</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接到相同的模拟总线属性或</font></font><A href="switchcref.chm::/c_nisw_attr_analogbussharingenable.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NISWITCH_ATTR_ANALOG_BUS_SHARING_ENABLE</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性。</font></font></p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./SwitchBlock_analog_bus_reservation_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;启用和禁用模拟总线共享可防止用户在使用</font></font><A href="switch.chm::/immediate.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">即时VI/函数时无意中连接到相同的模拟总线线路，但在使用</font></font></a><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Relay_Control.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 继电器控制</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">VI 或</font></font><A href="switchcref.chm::/c_nisw_relaycontrol.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch_RelayControl</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">函数</font><font style="VERTICAL-ALIGN: inherit">直接操作继电器时不会提供额外的保护</font><font style="VERTICAL-ALIGN: inherit">. </font><font style="VERTICAL-ALIGN: inherit">当多个 NI SwitchBlock 设备连接到模拟总线时，NI 不建议直接操作继电器。
+</font></font></td></tr></tbody></table>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在多卡设备中的卡之间连接信号</font></font></h2>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">您可以使用模拟总线通道在组成多卡设备的卡之间路由信号。</font><font style="VERTICAL-ALIGN: inherit">下图说明了在由两张卡组成的多卡设备中连接通道</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c43</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的信号连接。</font></font></p>
+
+
+<p class="Anchor"><IMG src="./SwitchBlock_analog_bus_reservation_files/loc_eps_SwitchBlock_ab.gif"></p>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">完成以下步骤以连接同一设备中的卡之间的信号：</font></font></p>
+
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">确定要连接的通道。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将步骤 1 中选择的通道之间的所有通道设置为保留用于路由，包括模拟总线通道。</font></font><br>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_analog_bus_reservation_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;您可以将通道设置为保留用于路由，仅当它尚未使用且其</font></font><A href="switchpropref.chm::/pniSwitch_AnalogBusSharingEnable.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模拟总线共享启用</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性设置为 FALSE 时。</font></font></td>
+</tr>
+</tbody></table>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通过路由信号所需的任何通道连接在步骤 1 中选择的通道。</font><font style="VERTICAL-ALIGN: inherit">请参阅上图，了解在由两个 NI 2810 卡组成的设备中将</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接到</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c43</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的路由示例。</font></font></li>
+</ol>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在设备之间连接信号</font></font></h2>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">您可以使用模拟总线以相同的接线模式在多个 NI SwitchBlock 设备之间路由信号，无论这些设备安装在同一机层中还是安装在由 NI 2806 扩展桥连接的不同机层中。</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">下图显示了将安装在一个机层中的多卡设备中的通道c44</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接到</font><font style="VERTICAL-ALIGN: inherit">安装在通过 NI 2806 扩展桥连接的相邻机层中的单卡设备中的</font><font style="VERTICAL-ALIGN: inherit">通道</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c0的信号连接。</font></font></span><font style="VERTICAL-ALIGN: inherit"></font></p>
+
+
+<p class="Anchor"><IMG src="./SwitchBlock_analog_bus_reservation_files/loc_eps_SwitchBlock_ab_multicarrier.gif"></p>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">完成以下步骤以在多个设备之间连接信号：</font></font></p>
+
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">验证设备是否具有相同的有线模式。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果您要连接的设备位于不同的托架中，请确认</font><font style="VERTICAL-ALIGN: inherit">已安装</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_multicarrier_expansion.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI 2806 扩展桥。</font></font></a><font style="VERTICAL-ALIGN: inherit"></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">确定要在每个设备上将信号连接到</font><font style="VERTICAL-ALIGN: inherit">哪些模拟总线通道，例如</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ab0 。</font></font></span><font style="VERTICAL-ALIGN: inherit"></font>
+<li><font style="VERTICAL-ALIGN: inherit"></font><A href="switchpropref.chm::/pniSwitch_AnalogBusSharingEnable.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用模拟总线共享启用</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性或</font></font><A href="switchcref.chm::/c_nisw_attr_analogbussharingenable.html"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NISWITCH_ATTR_ANALOG_BUS_SHARING_ENABLE</font></font></span></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性启用每个设备上的模拟总线通道以在设备之间共享</font><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">请参阅本主题的</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_analog_bus_reservation.html#basics"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">基础</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">部分以确定每个设备上的哪个模拟总线通道对应于您要共享的模拟总线线路。</font></font><br>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_analog_bus_reservation_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;只有在相应的模拟总线线路尚未使用时，才能共享模拟总线通道。</font><font style="VERTICAL-ALIGN: inherit">1 线设备上的模拟总线通道每个都连接到一条模拟总线，而 2 线设备上的模拟总线通道每个都连接到两条线。</font></font></td>
+</tr>
+</tbody></table>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">预留用于将步骤 3 中选择的通道连接到将共享模拟总线线路的模拟总线通道所需的任何通道。</font></font><br>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./SwitchBlock_analog_bus_reservation_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;共享模拟总线的通道不能保留用于路由，已保留用于路由的通道不能共享模拟总线。</font></font></td>
+</tr>
+</tbody></table>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">对于每个设备，将步骤 3 中选择的通道连接到模拟总线通道，该通道将通过步骤 4 中选择的任何通道共享模拟总线线路。例如，将</font><font style="VERTICAL-ALIGN: inherit">设备 1 上的</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c44连接到设备 2 上的</font></font></span><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，如图所示在上图中，您需要</font><font style="VERTICAL-ALIGN: inherit">在设备 1 上的</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c44</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ab2之间以及设备 2 上的</font></font></span><font style="VERTICAL-ALIGN: inherit"></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c0</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ab2</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">之间路由信号。</font></font></li>
+</ol>
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关信息：</font></font></h2>
+<ul><li><A href="switchpropref.chm::/pniSwitch_AnalogBusSharingEnable.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模拟总线共享启用属性</font></font></a>
+<li><A href="switchcref.chm::/c_nisw_attr_analogbussharingenable.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模拟总线共享启用属性</font></font></a>
+<li><A href="switchpropref.chm::/cniSwitch.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 属性</font></font></a></li></ul>
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./SwitchBlock_analog_bus_reservation_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2FSwitchBlock_analog_bus_reservation.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2FSwitchBlock_analog_bus_reservation.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./SwitchBlock_analog_bus_reservation_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

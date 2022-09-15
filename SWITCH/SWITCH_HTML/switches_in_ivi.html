@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0104)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/switches_in_ivi.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./switches_in_ivi_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./switches_in_ivi_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./switches_in_ivi_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./switches_in_ivi_files/extra.css">
+
+
+<title>Using NI Switches in IVI</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./switches_in_ivi_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 IVI 中使用 NI 开关</font></font></h1> 
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">创建 IVI 逻辑名称和相应的驱动程序会话以在 IVI 中使用 National Instruments 交换机模块。</font><font style="VERTICAL-ALIGN: inherit">完成以下步骤以创建 IVI 逻辑和相应的驱动程序会话。</font></font></p>
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">打开测量和自动化资源管理器 (MAX)。</font></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 MAX 配置树中</font><font style="VERTICAL-ALIGN: inherit">展开</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">IVI Drivers 。</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">创建一个新的驱动程序会话。
+	</font></font><ol>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">右键单击</font><font style="VERTICAL-ALIGN: inherit">配置树中的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Driver Sessions ，然后选择</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Create New (case-sensitive)</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">配置面板在配置窗口中打开。</font></font>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">完成以下步骤以配置新的驱动程序会话。
+		</font></font><ol>
+		<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">选择</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Software</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">选项卡，然后从 Software Module 列表框中</font><font style="VERTICAL-ALIGN: inherit">选择</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 。</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font>
+		<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">选择</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">硬件</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">选项卡，然后从硬件资产列表框中选择要使用的交换机模块。
+		</font></font><table class="Borderless">
+		<tbody><tr>
+		<td class="Icon"><IMG src="./switches_in_ivi_files/note.gif"></td>
+		<td>
+		<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;要创建新的硬件资产，请单击硬件资产列表框右侧的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">新建</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></td></tr></tbody></table>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">选择</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">General</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">选项卡，然后</font><font style="VERTICAL-ALIGN: inherit">从 Simulate With 列表框中选择</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Don't Simulate 。</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 Driver Setup 文本框中，输入要使用的交换机模块的驱动程序设置字符串。</font><font style="VERTICAL-ALIGN: inherit">有关驱动程序设置字符串的详细信息，</font><font style="VERTICAL-ALIGN: inherit">请参阅</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">确定驱动程序设置字符串。</font></font></em><font style="VERTICAL-ALIGN: inherit"></font></li>
+
+	</ol>
+</li></ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">创建一个新的逻辑名称。
+	</font></font><ol>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">右键单击</font><font style="VERTICAL-ALIGN: inherit">配置树中的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">逻辑名称，然后选择</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">新建（区分大小写）</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">配置面板在配置窗口中打开。</font></font>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">要配置新的逻辑名称，请从</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Driver Session</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">列表框中选择您在步骤 3 中创建的驱动程序会话。
+	</font></font><table class="Borderless">
+	<tbody><tr>
+	<td class="Icon"><IMG src="./switches_in_ivi_files/note.gif"></td>
+	<td>
+	<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;要查看您选择的驱动程序会话的属性，请单击</font><strong><font style="VERTICAL-ALIGN: inherit">驱动程序会话</font></strong><font style="VERTICAL-ALIGN: inherit">列表框右侧的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">转到</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font><strong><font style="VERTICAL-ALIGN: inherit"></font></strong><font style="VERTICAL-ALIGN: inherit"></font></td></tr></tbody></table>
+	</li>
+	</ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">要保存 IVI 配置，请单击</font><font style="VERTICAL-ALIGN: inherit">配置视图顶部的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">保存 IVI 配置。</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果您决定不保存更改，请单击</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">恢复</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以恢复到以前的配置。</font></font></li>
+</ol>
+
+
+<h2><a name="string"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">确定驱动程序设置字符串</font></font></a></h2>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">完成以下步骤以确定交换机模块的驱动程序设置字符串。</font></font></p>
+
+<ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">确定拓扑名称。
+	</font></font><ol>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">打开 NI Switches 帮助文件。</font></font>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">选择</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">内容</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">选项卡。</font></font>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">展开</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Devices</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">手册，然后选择您要使用的开关模块。</font><font style="VERTICAL-ALIGN: inherit">开关模块的设备概览显示在帮助窗口中。</font></font>
+	<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在设备概述中，操作模式表列出了每个支持的拓扑的拓扑和软件名称。</font><font style="VERTICAL-ALIGN: inherit">拓扑名称是表中列出的第一个软件名称，而</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">不是</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">括号中的常量名称。</font><font style="VERTICAL-ALIGN: inherit">例如，如果您想在 48x1 Mux 模式下使用 NI PXI-2501，拓扑名称为“2501/1-Wire 48x1 Mux”</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">而不是</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">“ </font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NISWITCH_TOPOLOGY_2501_1_WIRE_48X1_MUX</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> ”。
+	</font></font></li>
+	</ol>
+<li><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用拓扑名称，确定驱动程序设置字符串。
+	</font></font><ul class="List-Diamond">
+	<li><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI-DAQmx 设备</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">— 驱动设置字符串是</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">topology: </font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&lt;topology name&gt;</font></font></em></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">例如，如果您在 48x1 Mux 模式下使用 NI PXI-2501，驱动设置字符串为</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">topology:2501/1-Wire 48x1 Mux</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></li>
+
+	</ul> 
+</li>
+</ol>
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./switches_in_ivi_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fswitches_in_ivi.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fswitches_in_ivi.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./switches_in_ivi_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

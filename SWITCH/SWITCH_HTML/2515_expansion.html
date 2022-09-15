@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+<script src="pdf.js" type="text/javascript"></script>
+<script src="web.js" type="text/javascript"></script>
+<TITLE>NI PXI/PXIe-2515 Analog Channel Expansion</TITLE>
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2515 Analog Channel Expansion</h1>
+
+<P class="Body">You can expand the number of analog channels beyond two with additional NI&#160;PXI/PXIe-2515 (NI&#160;2515) modules. Each additional NI&#160;2515 module provides two additional analog channels. The number of digital lines does not change when you add analog channels.</p>
+
+<h2>Analog Channel Expansion on the NI&#160;2515</h2>
+
+<p class="Body">Complete the following steps to expand the number of analog channels.</p>
+<ol>
+<li>Connect the first NI&#160;2515 to the NI&#160;PXI-654x or 655x HSDIO module as described in <a href="2515_intended_use.html">NI PXI/PXIe-2515 Intended Use</a>. </li>
+<li>For each additional NI&#160;2515 module, connect the &quot;IO NI 2515&quot; side of an additional SCH68-C68-D5 cable to the &quot;HSDIO&quot; connector of an additional module.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;You must use the SCH68-C68-D5 cable. The pinouts are different from other SCH68 cables.</td>
+</tr>
+</table></li>
+<li>Connect the other end of the SCH68-C68-D5 cable to the &quot;DUT&quot; connector of the previous module.</li>
+</ol>
+
+<p class="Anchor"><img src="loc_eps_2515_expansion.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp; HSDIO signal quality is incrementally reduced by each additional NI&#160;2515 module. 
+</td></tr></table>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

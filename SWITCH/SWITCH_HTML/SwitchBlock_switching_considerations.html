@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0125)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_switching_considerations.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./SwitchBlock_switching_considerations_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./SwitchBlock_switching_considerations_files/variables.js.&#19979;&#36733;"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./SwitchBlock_switching_considerations_files/minimal.css">
+<script src="./SwitchBlock_switching_considerations_files/pdf.js.&#19979;&#36733;" type="text/javascript"></script>
+<script src="./SwitchBlock_switching_considerations_files/web.js.&#19979;&#36733;" type="text/javascript"></script>
+ <script src="./SwitchBlock_switching_considerations_files/linking.js.&#19979;&#36733;" type="text/javascript"></script>
+<script src="./SwitchBlock_switching_considerations_files/variables.js.&#19979;&#36733;" type="text/javascript"></script>
+<title>NI SwitchBlock Switching Considerations</title>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./SwitchBlock_switching_considerations_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 切换注意事项</font></font></h1>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 是一个高密度、可定制和可扩展的系统，可在 PXI/PXI Express 机箱中运行，由一个 NI SwitchBlock 载体组成，该载体包含可互连的 NI SwitchBlock 卡。</font><font style="VERTICAL-ALIGN: inherit">多张卡可以在软件中组合作为一个设备运行，从而可以定制设备拓扑以满足测试需求。</font></font></p>
+
+<p class="body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">由于六个 NI SwitchBlock 卡可以安装在四个 PXI 模块占用的空间中，因此与 PXI 开关模块相比，NI SwitchBlock 每个 PXI 插槽的开关密度更高。</font><font style="VERTICAL-ALIGN: inherit">集成的模拟总线背板可在载体中的卡之间实现清晰的信号路由。</font><font style="VERTICAL-ALIGN: inherit">安装 NI 2806 扩展桥可以在多个载波之间连接模拟总线。</font></font></p>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 基础知识</font></font></h2>
+<ul>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_carrier.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">用于 NI SwitchBlock 的 NI PXI-2800 载体</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_cards.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 卡和设备</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_safety_interlock.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">安全联锁</font></font></a></li>
+</ul>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置和配置 NI SwitchBlock</font></font></h2>
+<ul>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_consid_install.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">安装 NI SwitchBlock</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_multicarrier_expansion.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扩展多个 NI SwitchBlock 载波</font></font></a>
+<li><A href="javascript:CHMLink(L_chmName, 'simulation.html')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 MAX 中模拟 NI SwitchBlock</font></font></a>
+<li><A href="javascript:CHMLink(L_chmName, 'Configuring_system.html')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 MAX 中配置 NI SwitchBlock</font></font></a>
+<li><A href="javascript:CHMLink(L_chmName, 'remove_device.html')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 MAX 中移除 NI SwitchBlock 载体或设备</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/multicard_devices.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 设备参考</font></font></a></li>
+</ul>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 编程注意事项</font></font></h2>
+<ul>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_configured_topology.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用 NI SwitchBlock 设备的拓扑进行初始化</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_analog_bus_reservation.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 NI SwitchBlock 载波上使用模拟总线</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_power_budget.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">功率限制</font></font></a></li>
+</ul>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 维护</font></font></h2>
+<ul>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_replace_fuse.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">更换 NI SwitchBlock Carrier 上的保险丝</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_relay_self_test.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">综合继电器测试</font></font></a></li>
+</ul>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在 NI-SWITCH 和 NI-DAQmx 中编程 NI SwitchBlock</font></font></h2>
+<ul><li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_programming_overview.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 概述</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_programming_carrier_bus.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 载波和模拟总线</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_programming_configuration.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI SwitchBlock 的系统配置选项</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_programming_routing_signals_one.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在一个 NI SwitchBlock 设备中路由信号</font></font></a>
+<li><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/SwitchBlock_programming_routing_signals_multi.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在多个 NI SwitchBlock 设备之间路由信号</font></font></a></li></ul>
+
+  
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./SwitchBlock_switching_considerations_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2FSwitchBlock_switching_considerations.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2FSwitchBlock_switching_considerations.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./SwitchBlock_switching_considerations_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

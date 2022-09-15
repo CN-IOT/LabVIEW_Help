@@ -1,0 +1,501 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI-2530B Relay Replacement</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2530B Relay Replacement</h1>
+<p class="Body">The NI PXI-2530B uses reed relays.</p>
+
+<p class="Body">Refer to the following table for information about ordering replacement relays.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part </th>
+</tr>
+<tr>
+<td class="Bordered">Coto</td>
+<td class="Bordered">9012-05-11</td>
+</tr>
+</table>
+
+<p class="Body">Complete the following steps to replace a failed relay.</p>
+
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to your PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to your switch module from electrostatic discharge.</td></tr></table></li>
+
+<li>Locate the relay you want to replace. Relay names are labeled on the back of module. The following table maps the relay names to the reference designator.
+<BR><BR>
+<table class="Bordered">
+<tr><th class="Bordered">Relay <br>Name</th>
+<th class="Bordered">Reference <br>Designator</th>
+<th class="Bordered">Relay <br>Name</th>
+<th class="Bordered">Reference <br>Designator</th>
+<th class="Bordered">Relay <br>Name</th>
+<th class="Bordered">Reference <br>Designator</th>
+</tr>
+<TR>
+<td class="Bordered" align="center">k0</td>
+<td class="Bordered" align="center">K16</td>
+<td class="Bordered" align="center">k50</td>
+<td class="Bordered" align="center">K126</td>
+<td class="Bordered" align="center">k100</td>
+<td class="Bordered" align="center">K101</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k1</td>
+<td class="Bordered" align="center">K15</td>
+<td class="Bordered" align="center">k51</td>
+<td class="Bordered" align="center">K116</td>
+<td class="Bordered" align="center">k101</td>
+<td class="Bordered" align="center">K108</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k2</td>
+<td class="Bordered" align="center">K14</td>
+<td class="Bordered" align="center">k52</td>
+<td class="Bordered" align="center">K115</td>
+<td class="Bordered" align="center">k102</td>
+<td class="Bordered" align="center">K104</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k3</td>
+<td class="Bordered" align="center">K13</td>
+<td class="Bordered" align="center">k53</td>
+<td class="Bordered" align="center">K113</td>
+<td class="Bordered" align="center">k103</td>
+<td class="Bordered" align="center">K107</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k4</td>
+<td class="Bordered" align="center">K12</td>
+<td class="Bordered" align="center">k54</td>
+<td class="Bordered" align="center">K114</td>
+<td class="Bordered" align="center">k104</td>
+<td class="Bordered" align="center">K103</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k5</td>
+<td class="Bordered" align="center">K11</td>
+<td class="Bordered" align="center">k55</td>
+<td class="Bordered" align="center">K125</td>
+<td class="Bordered" align="center">k105</td>
+<td class="Bordered" align="center">K106</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k6</td>
+<td class="Bordered" align="center">K10</td>
+<td class="Bordered" align="center">k56</td>
+<td class="Bordered" align="center">K124</td>
+<td class="Bordered" align="center">k106</td>
+<td class="Bordered" align="center">K94</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k7</td>
+<td class="Bordered" align="center">K9</td>
+<td class="Bordered" align="center">k57</td>
+<td class="Bordered" align="center">K123</td>
+<td class="Bordered" align="center">k107</td>
+<td class="Bordered" align="center">K105</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k8</td>
+<td class="Bordered" align="center">K8</td>
+<td class="Bordered" align="center">k58</td>
+<td class="Bordered" align="center">K122</td>
+<td class="Bordered" align="center">k108</td>
+<td class="Bordered" align="center">K93</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k9</td>
+<td class="Bordered" align="center">K7</td>
+<td class="Bordered" align="center">k59</td>
+<td class="Bordered" align="center">K121</td>
+<td class="Bordered" align="center">k109</td>
+<td class="Bordered" align="center">K95</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k10</td>
+<td class="Bordered" align="center">K6</td>
+<td class="Bordered" align="center">k60</td>
+<td class="Bordered" align="center">K120</td>
+<td class="Bordered" align="center">k110</td>
+<td class="Bordered" align="center">K102</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k11</td>
+<td class="Bordered" align="center">K5</td>
+<td class="Bordered" align="center">k61</td>
+<td class="Bordered" align="center">K119</td>
+<td class="Bordered" align="center">k111</td>
+<td class="Bordered" align="center">K96</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k12</td>
+<td class="Bordered" align="center">K4</td>
+<td class="Bordered" align="center">k62</td>
+<td class="Bordered" align="center">K118</td>
+<td class="Bordered" align="center">k112</td>
+<td class="Bordered" align="center">K146</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k13</td>
+<td class="Bordered" align="center">K3</td>
+<td class="Bordered" align="center">k63</td>
+<td class="Bordered" align="center">K112</td>
+<td class="Bordered" align="center">k113</td>
+<td class="Bordered" align="center">K144</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k14</td>
+<td class="Bordered" align="center">K2</td>
+<td class="Bordered" align="center">k64</td>
+<td class="Bordered" align="center">K25</td>
+<td class="Bordered" align="center">k114</td>
+<td class="Bordered" align="center">K145</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k15</td>
+<td class="Bordered" align="center">K1</td>
+<td class="Bordered" align="center">k65</td>
+<td class="Bordered" align="center">K32</td>
+<td class="Bordered" align="center">k115</td>
+<td class="Bordered" align="center">K143</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k16</td>
+<td class="Bordered" align="center">K69</td>
+<td class="Bordered" align="center">k66</td>
+<td class="Bordered" align="center">K24</td>
+<td class="Bordered" align="center">k116</td>
+<td class="Bordered" align="center">K133</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k17</td>
+<td class="Bordered" align="center">K68</td>
+<td class="Bordered" align="center">k67</td>
+<td class="Bordered" align="center">K33</td>
+<td class="Bordered" align="center">k117</td>
+<td class="Bordered" align="center">K131</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k18</td>
+<td class="Bordered" align="center">K71</td>
+<td class="Bordered" align="center">k68</td>
+<td class="Bordered" align="center">K23</td>
+<td class="Bordered" align="center">k118</td>
+<td class="Bordered" align="center">K132</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k19</td>
+<td class="Bordered" align="center">K70</td>
+<td class="Bordered" align="center">k69</td>
+<td class="Bordered" align="center">K31</td>
+<td class="Bordered" align="center">k119</td>
+<td class="Bordered" align="center">K142</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k20</td>
+<td class="Bordered" align="center">K67</td>
+<td class="Bordered" align="center">k70</td>
+<td class="Bordered" align="center">K22</td>
+<td class="Bordered" align="center">k120</td>
+<td class="Bordered" align="center">K141</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k21</td>
+<td class="Bordered" align="center">K66</td>
+<td class="Bordered" align="center">k71</td>
+<td class="Bordered" align="center">K30</td>
+<td class="Bordered" align="center">k121</td>
+<td class="Bordered" align="center">K140</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k22</td>
+<td class="Bordered" align="center">K65</td>
+<td class="Bordered" align="center">k72</td>
+<td class="Bordered" align="center">K21</td>
+<td class="Bordered" align="center">k122</td>
+<td class="Bordered" align="center">K139</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k23</td>
+<td class="Bordered" align="center">K64</td>
+<td class="Bordered" align="center">k73</td>
+<td class="Bordered" align="center">K29</td>
+<td class="Bordered" align="center">k123</td>
+<td class="Bordered" align="center">K138</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k24</td>
+<td class="Bordered" align="center">K63</td>
+<td class="Bordered" align="center">k74</td>
+<td class="Bordered" align="center">K20</td>
+<td class="Bordered" align="center">k124</td>
+<td class="Bordered" align="center">K137</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k25</td>
+<td class="Bordered" align="center">K62</td>
+<td class="Bordered" align="center">k75</td>
+<td class="Bordered" align="center">K28</td>
+<td class="Bordered" align="center">k125</td>
+<td class="Bordered" align="center">K136</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k26</td>
+<td class="Bordered" align="center">K56</td>
+<td class="Bordered" align="center">k76</td>
+<td class="Bordered" align="center">K19</td>
+<td class="Bordered" align="center">k126</td>
+<td class="Bordered" align="center">K135</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k27</td>
+<td class="Bordered" align="center">K57</td>
+<td class="Bordered" align="center">k77</td>
+<td class="Bordered" align="center">K27</td>
+<td class="Bordered" align="center">k127</td>
+<td class="Bordered" align="center">K134</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k28</td>
+<td class="Bordered" align="center">K60</td>
+<td class="Bordered" align="center">k78</td>
+<td class="Bordered" align="center">K18</td>
+<td class="Bordered" align="center">kbc01</td>
+<td class="Bordered" align="center">K55</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k29</td>
+<td class="Bordered" align="center">K61</td>
+<td class="Bordered" align="center">k79</td>
+<td class="Bordered" align="center">K26</td>
+<td class="Bordered" align="center">kbc02</td>
+<td class="Bordered" align="center">K73</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k30</td>
+<td class="Bordered" align="center">K58</td>
+<td class="Bordered" align="center">k80</td>
+<td class="Bordered" align="center">K51</td>
+<td class="Bordered" align="center">kbc04</td>
+<td class="Bordered" align="center">K17</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k31</td>
+<td class="Bordered" align="center">K59</td>
+<td class="Bordered" align="center">k81</td>
+<td class="Bordered" align="center">K49</td>
+<td class="Bordered" align="center">kbc13</td>
+<td class="Bordered" align="center">K128</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k32</td>
+<td class="Bordered" align="center">K82</td>
+<td class="Bordered" align="center">k82</td>
+<td class="Bordered" align="center">K52</td>
+<td class="Bordered" align="center">kbc15</td>
+<td class="Bordered" align="center">K34</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k33</td>
+<td class="Bordered" align="center">K81</td>
+<td class="Bordered" align="center">k83</td>
+<td class="Bordered" align="center">K50</td>
+<td class="Bordered" align="center">kbc23</td>
+<td class="Bordered" align="center">K111</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k34</td>
+<td class="Bordered" align="center">K83</td>
+<td class="Bordered" align="center">k84</td>
+<td class="Bordered" align="center">K38</td>
+<td class="Bordered" align="center">kbc45</td>
+<td class="Bordered" align="center">K36</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k35</td>
+<td class="Bordered" align="center">K85</td>
+<td class="Bordered" align="center">k85</td>
+<td class="Bordered" align="center">K48</td>
+<td class="Bordered" align="center">kbc46</td>
+<td class="Bordered" align="center">K92</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k36</td>
+<td class="Bordered" align="center">K84</td>
+<td class="Bordered" align="center">k86</td>
+<td class="Bordered" align="center">K37</td>
+<td class="Bordered" align="center">kbc57</td>
+<td class="Bordered" align="center">K90</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k37</td>
+<td class="Bordered" align="center">K89</td>
+<td class="Bordered" align="center">k87</td>
+<td class="Bordered" align="center">K47</td>
+<td class="Bordered" align="center">kbc67</td>
+<td class="Bordered" align="center">K130</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k38</td>
+<td class="Bordered" align="center">K88</td>
+<td class="Bordered" align="center">k88</td>
+<td class="Bordered" align="center">K39</td>
+<td class="Bordered" align="center">kcom1</td>
+<td class="Bordered" align="center">K54</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k39</td>
+<td class="Bordered" align="center">K87</td>
+<td class="Bordered" align="center">k89</td>
+<td class="Bordered" align="center">K42</td>
+<td class="Bordered" align="center">kcom3</td>
+<td class="Bordered" align="center">K110</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k40</td>
+<td class="Bordered" align="center">K86</td>
+<td class="Bordered" align="center">k90</td>
+<td class="Bordered" align="center">K40</td>
+<td class="Bordered" align="center">kcom5</td>
+<td class="Bordered" align="center">K35</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k41</td>
+<td class="Bordered" align="center">K74</td>
+<td class="Bordered" align="center">k91</td>
+<td class="Bordered" align="center">K41</td>
+<td class="Bordered" align="center">kcom7</td>
+<td class="Bordered" align="center">K129</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k42</td>
+<td class="Bordered" align="center">K75</td>
+<td class="Bordered" align="center">k92</td>
+<td class="Bordered" align="center">K43</td>
+<td class="Bordered" align="center">kref01</td>
+<td class="Bordered" align="center">K53</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k43</td>
+<td class="Bordered" align="center">K79</td>
+<td class="Bordered" align="center">k93</td>
+<td class="Bordered" align="center">K45</td>
+<td class="Bordered" align="center">kref23</td>
+<td class="Bordered" align="center">K109</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k44</td>
+<td class="Bordered" align="center">K78</td>
+<td class="Bordered" align="center">k94</td>
+<td class="Bordered" align="center">K44</td>
+<td class="Bordered" align="center">kref45</td>
+<td class="Bordered" align="center">K72</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k45</td>
+<td class="Bordered" align="center">K77</td>
+<td class="Bordered" align="center">k95</td>
+<td class="Bordered" align="center">K46</td>
+<td class="Bordered" align="center">kref67</td>
+<td class="Bordered" align="center">K91</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k46</td>
+<td class="Bordered" align="center">K76</td>
+<td class="Bordered" align="center">k96</td>
+<td class="Bordered" align="center">K100</td>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k47</td>
+<td class="Bordered" align="center">K80</td>
+<td class="Bordered" align="center">k97</td>
+<td class="Bordered" align="center">K99</td>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k48</td>
+<td class="Bordered" align="center">K127</td>
+<td class="Bordered" align="center">k98</td>
+<td class="Bordered" align="center">K98</td>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</tr>
+<TR>
+<td class="Bordered" align="center">k49</td>
+<td class="Bordered" align="center">K117</td>
+<td class="Bordered" align="center">k99</td>
+<td class="Bordered" align="center">K97</td>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered" align="center">&#8212;</td>
+</TR>
+
+</TABLE>
+</li>
+
+
+<li>Replace the relay.
+<p class="Body">The NI&#160;PXI-2530B uses lead-free assemblies.</p>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies and using lead solder for relay replacement on lead assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this condition. This rework can prevent the same unit from being reworked later on a lead-free solder station, because it could contaminate the station.</span></td>
+</tr>
+</table>
+<ol class="List-abc">
+<li>Make sure you have the following items:
+<ul>
+<li>Temperature-regulated soldering iron set to 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Solder wick</li>
+<li>Isopropyl alcohol</li>
+<li>Cotton swabs</li>
+</ul>
+</li>
+
+<li>Replace the relay as you would any other through-hole part.
+</ol>
+</li>
+</ol>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td><strong>Tip</strong>&nbsp;&nbsp;In NI-SWITCH 3.1 or later, you can use the Switch Soft Front Panel  to reset the relay count after you have replaced a failed relay. Refer to the <em>Switch Soft Front Panel Help</em> for more information.</td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

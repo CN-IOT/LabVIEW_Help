@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI-2722</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+ <H1>NI PXI-2722</h1>
+ <P class="Body" >The NI PXI-2722 is a programmable resistor module for the PXI platform. The NI PXI-2722 is composed of reed relays in parallel with discrete resistors.  The NI PXI-2722 has five channels that can nominally switch from 0 to 16,383 &Omega; in 0.25 &Omega; steps.</P>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI has created a set of reference VIs that you can use to specify a desired resistance value to output or RTD temperature to simulate. Using the reference VIs is the simplest way to interact with the NI PXI-2722 programmable resistor module.  It is also possible to program using direct calls in NI-SWITCH, NI-DAQmx, NI Switch Executive, or an IVI switch driver. For more information, including a detailed overview of the NI PXI-2722 architecture, please visit <span class="Monospace">ni.com/info</span> and enter the Info Code <span class="Monospace">272xOverview</span>.</td>
+</tr>
+</table> 
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Switching inductive loads, such as motors and solenoids, can produce high-voltage transients in excess of the module's rated voltage. Without additional protection, these transients can interfere with module operation and impact relay life. For more information about transient suppression, refer to <a href="inductive_load.html">Protecting NI Switch Products when Switching Inductive Loads</a>.</td>
+</tr>
+</table>
+
+
+<h2>Operation Modes</h2>
+
+<p class="Body">The following table lists the supported topology of the NI PXI-2722 and possible <a href="flow_config.html">operation modes</a>.</p>
+
+<table class="Bordered"><tr><th class="Bordered">Topology</th><th class="Bordered">Software Name</th><th class="Bordered">Immediate</th>	<th class="Bordered">Scanning</th></tr>
+
+<tr><td class="Bordered"><a href="2722_independent.html">Five 16-bit channels</a></td><td class="Bordered">2722/Independent<br>(NISWITCH_TOPOLOGY_2722_INDEPENDENT)</td><td class="Bordered" align=center><img src="check.gif"></td><td class="Bordered" align=center><img src="check.gif"></td></tr>
+
+</table>
+<h2>Related Information</h2>
+
+<ul>
+<li><a href="SWITCH.chm::/integration_system_consider.html">Integration and System Considerations</a></li>
+</ul>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body></HTML>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+ <title>NI PXI-2530/2530B 4-Wire Dual 16&#0215;1 Multiplexer Topology</title>
+</head>
+<body bgcolor="#ffffff">
+ 
+ 
+<h1>NI PXI-2530/2530B 4-Wire Dual 16&#0215;1 Multiplexer Topology</h1>
+ 
+  <p class="Body"> Use the NI TB-2630/2630B terminal block with the NI PXI-2530/2530B as a <a href="xwire.html#4wire">4-wire</a> dual 16&#0215;1 <a href="multiplexer.html">multiplexer</a>. In this topology, the positive &quot;A&quot; leads of the first bank (CH0A&#043; through CH15A&#043;) route to COM0A&#043;. The negative &quot;A&quot; leads of the first bank (CH0A&#8211; through CH15B&#8211;) route to COM0A&#8211;. The positive &quot;B&quot; leads of the first bank (CH0B&#043; through CH15B&#043;) route to COM0B&#043;. The negative &quot;B&quot; leads of the first bank (CH0B&#8211; through CH15B&#8211;) route to COM0B-. COM0A&#043;, COM0A&#8211;, COM0B&#043;, and COM0B&#8211; are addressed collectively as com0 in software. The other bank follows a similar routing scheme.</p>
+
+<p class="Body">The following figure represents the NI PXI-2530/2530B in the 4-wire dual 16&#0215;1 multiplexer topology.</p>
+
+<p class="Anchor"><img src="noloc_2530-4-wire-dual-16x1.gif"></p>
+
+<h2>Making a Connection</h2>
+  
+<p class="Body">Both the scanning command, <span class="Monospace">ch2-&gt;com0;</span>, and the immediate operation,  <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function   with parameters <span class="Monospace">ch2</span> and <span class="Monospace">com0</span>, result in the following connections:</p>
+<p class="Body">signal connected to CH2A&#043; is routed to COM0A&#043;</p>
+<p class="Body">signal connected to CH2A&#8211; is routed to COM0A&#8211;</p>
+<p class="Body">signal connected to CH2B&#043; is routed to COM0B&#043;</p>
+<p class="Body">signal connected to CH2B&#8211; is routed to COM0B&#8211;</p>
+
+<h2>Signal Connections</h2>
+<p class="Body">Refer to the <a href="2530_signal_connections.html">NI PXI-2530 Signal Connections</a> section for the NI PXI-2530 front connector pinout and NI TB-2630 terminal mapping. Refer to the <a href="2530b_signal_connections.html">NI PXI-2530B Signal Connections</a> section for the NI PXI-2530B front connector pinout and NI TB-2630B terminal mapping.</p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</html>

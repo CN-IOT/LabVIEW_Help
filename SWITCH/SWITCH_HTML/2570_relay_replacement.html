@@ -1,0 +1,476 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI-2570 Relay Replacement</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2570 Relay Replacement</h1>
+<p class="Body">The NI PXI-2570 uses electromechanical armature relays. This topic provides relay replacement instructions for through-hole and surface-mount relays depending on the revision of your module assembly:</p>
+<ul>
+<li><a href="#through_hole">NI PXI-2570 Through-Hole Relay Replacement</a></li>
+<li><a href="#surface_mount">NI PXI-2570 Surface-Mount Relay Replacement</a></li>
+</ul>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td><strong>Tip</strong>&nbsp;&nbsp;In NI-SWITCH 3.1 or later, you can use the Switch Soft Front Panel  to reset the relay count after you have replaced a failed relay. Refer to the <em>Switch Soft Front Panel Help</em> for more information.</td></tr></table>
+
+<h2><a name="through_hole">NI PXI-2570 Through-Hole Relay Replacement</a></h2>
+<p class="Body">The NI PXI-2570 uses electromechanical armature relays.</p>
+
+<p class="Body">Refer to the following table for information about ordering replacement relays.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">AXICOM (Tyco Electronics)</td>
+<td class="Bordered">IM42PNS (7-1462039-8)</td>
+</tr>
+</table>
+
+<br><br>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Kit</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">National Instruments (10 relays)</td>
+<td class="Bordered">781678-01</td>
+</tr>
+</table>
+
+<p class="Body">Complete the following steps to replace a failed relay.</p>
+
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to your PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to your module from electrostatic discharge.</td></tr></table></li>
+<li>Locate the relay you want to replace. Relay names are labeled on the back of module. The following table maps the relay names to the channel names.
+
+<table class="Bordered">
+<tr><th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+<th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+</tr>
+<TR>
+<td class="Bordered">CH0</TD>
+<td class="Bordered">K0</TD>
+<td class="Bordered">CH20</TD>
+<td class="Bordered">K20</TD>
+</TR>
+<TR>
+<td class="Bordered">CH1</TD>
+<td class="Bordered">K1</TD>
+<td class="Bordered">CH21</TD>
+<td class="Bordered">K21</TD>
+</TR>
+<TR>
+<td class="Bordered">CH2</TD>
+<td class="Bordered">K2</TD>
+<td class="Bordered">CH22</TD>
+<td class="Bordered">K22</TD>
+</TR>
+<TR>
+<td class="Bordered">CH3</TD>
+<td class="Bordered">K3</TD>
+<td class="Bordered">CH23</TD>
+<td class="Bordered">K23</TD>
+</TR>
+<TR>
+<td class="Bordered">CH4</TD>
+<td class="Bordered">K4</TD>
+<td class="Bordered">CH24</TD>
+<td class="Bordered">K24</TD>
+</TR>
+<TR>
+<td class="Bordered">CH5</TD>
+<td class="Bordered">K5</TD>
+<td class="Bordered">CH25</TD>
+<td class="Bordered">K25</TD>
+</TR>
+<TR>
+<td class="Bordered">CH6</TD>
+<td class="Bordered">K6</TD>
+<td class="Bordered">CH26</TD>
+<td class="Bordered">K26</TD>
+</TR>
+<TR>
+<td class="Bordered">CH7</TD>
+<td class="Bordered">K7</TD>
+<td class="Bordered">CH27</TD>
+<td class="Bordered">K27</TD>
+</TR>
+<TR>
+<td class="Bordered">CH8</TD>
+<td class="Bordered">K8</TD>
+<td class="Bordered">CH28</TD>
+<td class="Bordered">K28</TD>
+</TR>
+<TR>
+<td class="Bordered">CH9</TD>
+<td class="Bordered">K9</TD>
+<td class="Bordered">CH29</TD>
+<td class="Bordered">K29</TD>
+</TR>
+<TR>
+<td class="Bordered">CH10</TD>
+<td class="Bordered">K10</TD>
+<td class="Bordered">CH30</TD>
+<td class="Bordered">K30</TD>
+</TR>
+<TR>
+<td class="Bordered">CH11</TD>
+<td class="Bordered">K11</TD>
+<td class="Bordered">CH31</TD>
+<td class="Bordered">K31</TD>
+</TR>
+<TR>
+<td class="Bordered">CH12</TD>
+<td class="Bordered">K12</TD>
+<td class="Bordered">CH32</TD>
+<td class="Bordered">K32</TD>
+</TR>
+<TR>
+<td class="Bordered">CH13</TD>
+<td class="Bordered">K13</TD>
+<td class="Bordered">CH33</TD>
+<td class="Bordered">K33</TD>
+</TR>
+<TR>
+<td class="Bordered">CH14</TD>
+<td class="Bordered">K14</TD>
+<td class="Bordered">CH34</TD>
+<td class="Bordered">K34</TD>
+</TR>
+<TR>
+<td class="Bordered">CH15</TD>
+<td class="Bordered">K15</TD>
+<td class="Bordered">CH35</TD>
+<td class="Bordered">K35</TD>
+</TR>
+<TR>
+<td class="Bordered">CH16</TD>
+<td class="Bordered">K16</TD>
+<td class="Bordered">CH36</TD>
+<td class="Bordered">K36</TD>
+</TR>
+<TR>
+<td class="Bordered">CH17</TD>
+<td class="Bordered">K17</TD>
+<td class="Bordered">CH37</TD>
+<td class="Bordered">K37</TD>
+</TR>
+<TR>
+<td class="Bordered">CH18</TD>
+<td class="Bordered">K18</TD>
+<td class="Bordered">CH38</TD>
+<td class="Bordered">K38</TD>
+</TR>
+<TR>
+<td class="Bordered">CH19</TD>
+<td class="Bordered">K19</TD>
+<td class="Bordered">CH39</TD>
+<td class="Bordered">K39</TD>
+</TR>
+</TABLE>
+</li>
+
+<li>Locate the assembly and serial number labels on the board with the relay you want to replace. White labels indicate the board was assembled using lead solder (Sn 63 Pb 37). Green labels indicate the board was assembled using lead-free solder (Sn 96.5 Ag 3.0 Cu 0.5). Lead-free assemblies have assembly numbers ending in L.
+<p class="Anchor"><img src="loc_eps_lead_free_labels.gif"></p>
+</li>
+
+<li>Replace the relay.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies, and lead solder for relay replacement on lead assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this. This can prevent the same unit from being reworked later on a lead-free solder station, which could contaminate the station.</span></td>
+</tr>
+</table>
+<ol class="List-abc">
+<li><p class="Body">Make sure you have the following:</p>
+<ul>
+<li>Temperature-regulated soldering iron set to 316 &#0176;C (600 &#0176;F) for lead solder rework or 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>63/37 Tin/Lead solder (flux core) for lead solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Solder wick</li>
+<li>Fine pick</li>
+<li>Isopropyl alcohol</li>
+<li>Cotton swabs</li>
+</ul>
+</li>
+
+<li><p class="Body">Replace the relay as you would any other through-hole part.</p></li>
+</ol>
+</li>
+</ol>
+
+<h2><a name="surface_mount">NI PXI-2570 Surface-Mount Relay Replacement</a></h2>
+
+<p class="Body">Refer to the following table for information about ordering replacement relays.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">AXICOM (Tyco Electronics)</td>
+<td class="Bordered">IM42GR (3-1462037-1)</td>
+</tr>
+</table>
+
+<br><br>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Kit</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">National Instruments (10 relays)</td>
+<td class="Bordered">779356-01</td>
+</tr>
+</table>
+
+<p class="Body">Complete the following sets of steps to replace a failed relay.</p>
+
+
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to your PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to your module from electrostatic discharge.</td></tr></table></li>
+<li>Locate the relay you want to replace. Refer to the following figure and table for relay locations.
+<br><br>
+<p class="Anchor"><img src="noloc_base_relays.gif"></p>
+<br><br>
+<table class="Bordered">
+<tr><th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+<th class="Bordered">Channel <br>Name</th>
+<th class="Bordered">Relay <br>Name</th>
+</tr>
+<tr>
+<td class="Bordered">CH0</td>
+<td class="Bordered">K0</td>
+<td class="Bordered">CH20</td>
+<td class="Bordered">K20</td>
+</tr>
+<tr>
+<td class="Bordered">CH1</td>
+<td class="Bordered">K1</td>
+<td class="Bordered">CH21</td>
+<td class="Bordered">K21</td>
+</tr>
+<tr>
+<td class="Bordered">CH2</td>
+<td class="Bordered">K2</td>
+<td class="Bordered">CH22</td>
+<td class="Bordered">K22</td>
+</tr>
+<tr>
+<td class="Bordered">CH3</td>
+<td class="Bordered">K3</td>
+<td class="Bordered">CH23</td>
+<td class="Bordered">K23</td>
+</tr>
+<tr>
+<td class="Bordered">CH4</td>
+<td class="Bordered">K4</td>
+<td class="Bordered">CH24</td>
+<td class="Bordered">K24</td>
+</tr>
+<tr>
+<td class="Bordered">CH5</td>
+<td class="Bordered">K5</td>
+<td class="Bordered">CH25</td>
+<td class="Bordered">K25</td>
+</tr>
+<tr>
+<td class="Bordered">CH6</td>
+<td class="Bordered">K6</td>
+<td class="Bordered">CH26</td>
+<td class="Bordered">K26</td>
+</tr>
+<tr>
+<td class="Bordered">CH7</td>
+<td class="Bordered">K7</td>
+<td class="Bordered">CH27</td>
+<td class="Bordered">K27</td>
+</tr>
+<tr>
+<td class="Bordered">CH8</td>
+<td class="Bordered">K8</td>
+<td class="Bordered">CH28</td>
+<td class="Bordered">K28</td>
+</tr>
+<tr>
+<td class="Bordered">CH9</td>
+<td class="Bordered">K9</td>
+<td class="Bordered">CH29</td>
+<td class="Bordered">K29</td>
+</tr>
+<tr>
+<td class="Bordered">CH10</td>
+<td class="Bordered">K10</td>
+<td class="Bordered">CH30</td>
+<td class="Bordered">K30</td>
+</tr>
+<tr>
+<td class="Bordered">CH11</td>
+<td class="Bordered">K11</td>
+<td class="Bordered">CH31</td>
+<td class="Bordered">K31</td>
+</tr>
+<tr>
+<td class="Bordered">CH12</td>
+<td class="Bordered">K12</td>
+<td class="Bordered">CH32</td>
+<td class="Bordered">K32</td>
+</tr>
+<tr>
+<td class="Bordered">CH13</td>
+<td class="Bordered">K13</td>
+<td class="Bordered">CH33</td>
+<td class="Bordered">K33</td>
+</tr>
+<tr>
+<td class="Bordered">CH14</td>
+<td class="Bordered">K14</td>
+<td class="Bordered">CH34</td>
+<td class="Bordered">K34</td>
+</tr>
+<tr>
+<td class="Bordered">CH15</td>
+<td class="Bordered">K15</td>
+<td class="Bordered">CH35</td>
+<td class="Bordered">K35</td>
+</tr><tr>
+<td class="Bordered">CH16</td>
+<td class="Bordered">K16</td>
+<td class="Bordered">CH36</td>
+<td class="Bordered">K36</td>
+</tr><tr>
+<td class="Bordered">CH17</td>
+<td class="Bordered">K17</td>
+<td class="Bordered">CH37</td>
+<td class="Bordered">K37</td>
+</tr><tr>
+<td class="Bordered">CH18</td>
+<td class="Bordered">K18</td>
+<td class="Bordered">CH38</td>
+<td class="Bordered">K38</td>
+</tr><tr>
+<td class="Bordered">CH19</td>
+<td class="Bordered">K19</td>
+<td class="Bordered">CH39</td>
+<td class="Bordered">K39</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Older versions of this module might have adhesive plastic lead covers that you must remove. The module retains full specifications even if these covers are not reinstalled.</td>
+</tr>
+</table>
+</li>
+
+
+<li>Locate the assembly and serial number labels on the board with the relay you want to replace. White labels indicate the board was assembled using lead solder (Sn 63 Pb 37). Green labels indicate the board was assembled using lead-free solder (Sn 96.5 Ag 3.0 Cu 0.5). Lead-free assemblies have assembly numbers ending in L. The different label types are shown in the following figure.
+<p class="Anchor"><img src="loc_eps_lead_free_labels.gif"></p>
+</li>
+<li>Replace the relay.
+</li>
+</ol>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies, and lead solder for relay replacement on lead assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this condition. This rework can prevent the same unit from being reworked later on a lead-free solder station, because it could contaminate the station.</span></td>
+</tr>
+</table>
+
+<p class="Body">Make sure you have the following items:</p>
+<ul>
+<li>Temperature-regulated soldering iron set to 316 &#0176;C (600 &#0176;F) for lead solder rework or 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>63/37 Tin/Lead solder (flux core) for lead solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Solder wick</li>
+<li>Fine pick</li>
+<li>Isopropyl alcohol</li>
+<li>Cotton swabs</li>
+</ul>
+
+<p class="Body">If you have a surface mount rework station, replace the relay as you would any other surface mount part. Otherwise, complete the following steps to replace the relay:</p>
+<ol class="List-abc">
+<li>Use the soldering iron and solder wick to remove as much solder from the relay pads as possible. Do not leave the soldering iron on any lead for more than 5 seconds. <table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;If it is necessary to reapply the soldering iron to the pad, allow the connection to cool completely before reapplying the soldering iron.</td></tr></table></li>
+<li>Apply heat to the pads one at a time, and use the pick to gently pry the relay pins from the pads. Make sure that the solder is molten before prying.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Using excessive force on a soldered pad can result in lifting the PCB trace and ruining the board.</span></td></tr></table></li>
+<li>Remove the relay.</li>
+<li>Clean the pads with isopropyl alcohol and cotton swabs.</li>
+<li>Place the new relay on the PCB pads and solder.</li>
+<li>Remove the excess flux with isopropyl alcohol and cotton swabs.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do <em>not</em> use flux remover to clean the board after relay replacement.</span>
+</td></tr></table></li>
+</ol>
+
+
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

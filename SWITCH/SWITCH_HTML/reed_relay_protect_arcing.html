@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0114)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/reed_relay_protect_arcing.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./reed_relay_protect_arcing_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./reed_relay_protect_arcing_files/variables.js.&#19979;&#36733;"></script>
+
+<link rel="STYLESHEET" type="text/css" href="./reed_relay_protect_arcing_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./reed_relay_protect_arcing_files/extra.css">
+
+
+<title>Arcing</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./reed_relay_protect_arcing_files/translateelement.css"></head>
+
+
+<body bgcolor="#ffffff">
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">电弧放电</font></font></h1>
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">每个开关系统都有一定量的电感。</font><font style="VERTICAL-ALIGN: inherit">当继电器通过电感打开电路时，继电器触点上会产生电弧，有时会造成严重损坏。</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/reed_relays.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">簧片继电器</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">开关的小质量</font><font style="VERTICAL-ALIGN: inherit">使得簧片在电弧放电期间更容易受到损坏。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">弹跳时，第一个瞬时闭合启动电流流过继电器。</font><font style="VERTICAL-ALIGN: inherit">当触点打开时，会形成可以熔化部分触点表面的电弧。</font><font style="VERTICAL-ALIGN: inherit">如果触点最终稳定在闭合位置并在重新打开之前凝固时仍然熔化，则会形成微焊缝，从而永久关闭继电器。</font><font style="VERTICAL-ALIGN: inherit">当电流停止流过线圈时，簧片的弹簧力可能不足以破坏该焊缝。</font><font style="VERTICAL-ALIGN: inherit">这种接触焊接构成继电器</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/relay_life.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的寿命终止</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">下面的图顺序说明了继电器弹跳、电弧和焊接闭合。</font></font></p>
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">继电器关闭。</font><font style="VERTICAL-ALIGN: inherit">电流流动。</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_arcing_files/noloc_reed_protection_5a.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">继电器反弹。</font><font style="VERTICAL-ALIGN: inherit">电弧熔化触点。</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_arcing_files/loc_eps_reed_protection_5b.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">继电器关闭。</font><font style="VERTICAL-ALIGN: inherit">触点仍然熔化。</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_arcing_files/noloc_reed_protection_5c.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触点焊接闭合；</font><font style="VERTICAL-ALIGN: inherit">弹簧力无法断开焊接。</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_arcing_files/noloc_reed_protection_5d.gif"></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果您通过已经关闭的继电器发送大电流，也可以焊接触点。</font><font style="VERTICAL-ALIGN: inherit">非零接触电阻会升温并导致上述相同的焊接现象。</font><font style="VERTICAL-ALIGN: inherit">下面的序列图显示了大电流焊接继电器闭合。</font></font></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">继电器关闭</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_arcing_files/noloc_reed_protection_6a.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">大电流熔化触点</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_arcing_files/noloc_reed_protection_6b.gif"></p>
+
+<h3><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触点焊接闭合；</font><font style="VERTICAL-ALIGN: inherit">弹簧力无法断开焊接。</font></font></h3>
+<p class="Anchor"><IMG src="./reed_relay_protect_arcing_files/noloc_reed_protection_6c.gif"></p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./reed_relay_protect_arcing_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Freed_relay_protect_arcing.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Freed_relay_protect_arcing.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./reed_relay_protect_arcing_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

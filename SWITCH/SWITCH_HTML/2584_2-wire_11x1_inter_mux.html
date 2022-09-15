@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2584 Interleaved Multiplexer (User-Implemented)</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2584 Interleaved Multiplexer (User-Implemented)</h1>
+
+<p class="Body">You can use the NI&nbsp;PXI-2584 independent topology to create a 2-wire 11&#0215;1 multiplexer. The independent topology interleaves the two multiplexer banks of the NI&nbsp;PXI-2584 to create one interleaved multiplexer. Interleaved multiplexing is useful for measuring stacked signals such as battery stacks where each channel shares a connection with the channels before and after it. By sharing connections you can nearly double the channel count while still maintaining 2-wire (differential) measurements.</p> 
+
+<p class="Body">A representation of an interleaved multiplexer is shown in the following figure. The channels of the interleaved multiplexer are shown on the left of the figure.</p>
+
+<p class="Anchor"><img src="noloc_2584_inter_ext.gif"></p>
+
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Signals connected to odd channels are measured in reverse polarity. 
+</td></tr></table>
+
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;In multiple module operations, a <em>straddled channel</em>&#8212;an additional channel composed of the last channel of the first device (ch11) and the first channel of the second device (ch0)&#8212;is created between the two devices.  </td></tr></table>
+
+<p class="Body">Use the <a href="2584_independent.html">Independent</a> topology for both scanning and immediate operation of the NI&nbsp;PXI-2584 when using it as a 2-wire 11&#0215;1 interleaved multiplexer.</p>
+
+<h2><a name="single_module_scanning">Single Module Scanning</a></h2>
+
+<p class="Body">In <a href="scanning_single_mod.html">single module scanning</a>, to measure signals as shown in the preceding figure, complete the following steps:</p>
+<ol>
+<li>Close CH0, and CH6. The DMM measures the signal between CH0 and CH6.</li>
+<li>Open CH0, and close CH1 (CH6 remains closed). The DMM measures the signal between CH1 and CH6, in reverse polarity.</li>
+<li>Open CH6, and close CH7 (CH1 remains closed). The DMM measures the signal between CH1 and CH7.</li>
+<li>Open CH1, and close CH2 (CH7 remains closed). The DMM measures the signal between CH2 and CH7, in reverse polarity.</li>
+<li>Continue this pattern for the rest of the channels.</li>
+<li>Open CH10, and close CH11 (CH5 remains closed). The DMM measures the signal between CH5 and CH11.</li>
+</ol>
+<p class="Body">Refer to the following example for scan list syntax.</p>
+
+<p class="Indent1">/Dev1/ch0-&gt;com0&nbsp;&amp;&nbsp;ch6-&gt;com1; &#0126;ch0-&gt;com0&nbsp;&amp;&amp;&nbsp;ch1-&gt;com0; &#0126;ch6-&gt;com1&nbsp;&amp;&amp;&nbsp;ch7-&gt;com1;<strong>...</strong>&#0126;ch10-&gt;com1&nbsp;&amp;&amp;&nbsp;ch11-&gt;com1;&nbsp;&#0126;ch5-&gt;com0&nbsp;&amp;&nbsp;&#0126;ch11-&gt;com1&nbsp;&amp;&amp;</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;When calling the <a href="switchviref.chm::/niSwitch_Configure_Scan_List.html">niSwitch Configure Scan List</a> VI or the <a href="switchCRef.chm::/c_nisw_configscanlist.html"><span class="Monospace">niSwitch_ConfigureScanList</span></a> function, select <strong>No Action</strong> for the <strong>scan mode</strong> parameter. 
+</td></tr></table>
+
+<p class="Body">Refer to the NI-SWITCH or the NI-DAQmx <a href="examples.html">programming example</a> for more information about 
+single module scanning with the NI&nbsp;PXI-2584.</p>
+
+<h2>Multiple Module Scanning</h2>
+
+<p class="Body">In <a href="scanning_multiple_mod.html">multiple module scanning</a>, 
+to measure signals on multiple devices, including the straddled channel signal, as shown in the following figure, complete the following steps:</p>
+
+<p class="Anchor"><img src="loc_eps_2584_multi_dev.gif"></p>
+
+<ol>
+<li>Follow the steps in <a href="#single_module_scanning">single module scanning</a> to measure the signals on the first device.</li>
+<li>Open CH5 on Dev1, and close CH0 on Dev2 (CH11 on Dev1 remains closed). The DMM measures the signal between CH11 on Dev1 and CH0 on Dev2 in reverse polarity.</li>
+<li>Open CH11 on Dev1, and close CH6 on Dev2 (CH0 on Dev2 remains closed) The DMM measures the signal between CH0 on Dev2 and CH6 on Dev2.</li>
+<li>Open CH0 on Dev2, and close CH1 on Dev2 (CH6 on Dev2 remains closed) The DMM measures the signal between CH1 on Dev2 and CH6 on Dev2 in reverse polarity.</li>
+<li>Open CH6 on Dev2, and close CH7 on Dev2 (CH1 on Dev2 remains closed) The DMM measures the signal between CH2 on Dev2 and CH7 on Dev2.</li>
+<li>Continue this pattern for the rest of the channels.</li>
+<li>Open CH10 on Dev2, and close CH11 on Dev2 (CH5 on Dev2 remains closed). The DMM measures the signal between CH5 on Dev2 and CH11 on Dev2.</li>
+</ol>
+
+<p class="Body">Refer to the following example for scan list syntax.</p>
+
+<p class="Indent1">/Dev1/ch0-&gt;com0&nbsp;&amp;&nbsp;ch6-&gt;com1; &#0126;ch0-&gt;com0&nbsp;&amp;&amp;&nbsp;ch1-&gt;com0;<strong>...</strong>&#0126;ch5-&gt;com0&nbsp;&amp;&amp;&nbsp;
+/Dev2/ch0-&gt;com0;&nbsp;/Dev1/&#0126;ch11-&gt;com1&nbsp;&amp;&amp;&nbsp;/Dev2/ch6-&gt;com1; &#0126;ch0-&gt;com0&nbsp;&amp;&amp;&nbsp;ch1-&gt;com0;<strong>...</strong>&#0126;ch10-&gt;com1&nbsp;&amp;&amp;&nbsp;ch11-&gt;com1;&nbsp;&#0126;ch5-&gt;com0&nbsp;&amp;&nbsp;&#0126;ch11-&gt;com1&nbsp;&amp;&amp;</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;
+
+When calling the <a href="switchviref.chm::/niSwitch_Configure_Scan_List.html">niSwitch Configure Scan List</a> VI or the <a href="switchCRef.chm::/c_nisw_configscanlist.html"><span class="Monospace">niSwitch_ConfigureScanList</span></a> function, select <strong>No Action</strong> for the <strong>scan mode</strong> parameter. 
+</td></tr></table>
+
+
+
+<p class="Body">Multiple module scanning with the NI&nbsp;PXI-2584 is supported <em>only</em> in  NI-DAQmx.  Refer to the  NI-DAQmx <a href="examples.html">programming example</a> for more information about multiple module scanning with the NI&nbsp;PXI-2584.</p>
+
+<h2>Pinout</h2>
+<p class="Body">The following figure and table identify the pins for the NI&nbsp;PXI-2584 when used as a 2-wire 11&#0215;1 interleaved multiplexer. </p>
+<p class="Anchor"><img src="noloc_2584_pinout.gif"></p>
+<br><br>
+
+<table class="bordered">
+<tr>
+<th class="Bordered" rowspan="2">Interleaved Channel</th>
+<th class="Bordered" colspan="2">Pin Name</th>
+</tr>
+
+<tr>
+<th class="Bordered" align="center">&#43;</th>
+<th class="Bordered" align="center">&#8211;</th>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch0</td>
+<td class="Bordered" align="center">CH0</td>
+<td class="Bordered" align="center">CH6</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch1</td>
+<td class="Bordered" align="center">CH6</td>
+<td class="Bordered" align="center">CH1</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch2</td>
+<td class="Bordered" align="center">CH1</td>
+<td class="Bordered" align="center">CH7</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch3</td>
+<td class="Bordered" align="center">CH7</td>
+<td class="Bordered" align="center">CH2</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch4</td>
+<td class="Bordered" align="center">CH2</td>
+<td class="Bordered" align="center">CH8</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch5</td>
+<td class="Bordered" align="center">CH8</td>
+<td class="Bordered" align="center">CH3</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch6</td>
+<td class="Bordered" align="center">CH3</td>
+<td class="Bordered" align="center">CH9</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch7</td>
+<td class="Bordered" align="center">CH9</td>
+<td class="Bordered" align="center">CH4</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch8</td>
+<td class="Bordered" align="center">CH4</td>
+<td class="Bordered" align="center">CH10</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch9</td>
+<td class="Bordered" align="center">CH10</td>
+<td class="Bordered" align="center">CH5</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch10</td>
+<td class="Bordered" align="center">CH5</td>
+<td class="Bordered" align="center">CH11</td>
+</tr>
+
+</table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

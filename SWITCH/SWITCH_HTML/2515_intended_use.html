@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+<script src="web.js" type="text/javascript"></script>
+
+<TITLE>NI PXI/PXIe-2515 Intended Use</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2515 Intended Use</h1>
+
+<p class="Body"></p> 
+
+<p class="Body">The two analog buses of the NI&#160;PXI/PXIe-2515 (NI&#160;2515) are intended to facilitate connectivity in performing DC parametric measurements. The analog buses of the NI&#160;2515 are not intended for high-bandwidth analog measurements (for example, rise time and skew). Refer to the following sections for more information about the intended use of the NI&#160;2515.</p>
+
+<ul>
+<li><a href="#IntendedUse">NI&#160;2515 Intended Use</a></li>
+<li><a href="#Connections">NI&#160;2515 Signal Connections</a></li>
+</ul>
+
+<h2><a name="IntendedUse">NI&#160;2515 Intended Use</a></h2>
+
+<p class="Body">You can connect the NI&#160;2515 to one supported NI high-speed DIO device and up to two other instruments. Refer to <a href="2515_expansion.html">NI PXI/PXIe-2515 Analog Channel Expansion</a> if your system requires the connection of more than two other instruments. The NI&#160;2515 is intended for use with any supported single-ended NI high-speed DIO device (for example, the NI&#160;654<em>x</em> or the NI&#160;655<em>x</em>), and it is not intended for use with a low-voltage differential signaling (LVDS) NI high-speed DIO device (for example, the NI&#160;656<em>x</em>). Refer to the following figure and the <a href="#Connections">NI 2515 Signal Connections</a> table for an example of the intended use of the NI&#160;2515 in a system.</p>
+
+
+<p class="Anchor"><a name="IntendedUseDiagram"><img src="loc_eps_2515_Use_Case.gif"></a></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp; Slot placement of the modules within the chassis varies depending on the slot compatibility of your system.
+</td></tr></table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends placing your supported NI&#160;high-speed DIO device in the chassis slot
+immediately to the left of the NI&#160;2515. Use caution when inserting or removing a device immediately
+to the left of the NI&#160;2515 when the NI&#160;SHC68-C68-D5 cable is connected to the NI&#160;2515, as the cable
+connector may overlap slightly into the space of that slot.</td>
+</tr>
+</table>
+
+<h2><a name="Connections">NI&#160;2515 Signal Connections</a></h2>
+
+<p class="Body">Refer to the following table to select accessories that connect the NI&#160;2515 to your system.</p>
+
+<table class="Bordered">
+<tr>
+<th class="bordered">Connection Indicated in <a href="#IntendedUseDiagram">Intended Use Diagram</a></th>
+<th class="Bordered">Cable Connection</th>
+<th class="Bordered">Recommended Accessories</th>
+<th class="Bordered">Notes</th>
+</tr>
+
+<tr>
+<td class="bordered" align="center">A</td>
+<td class="Bordered">VHDCI connector on supported NI high-speed DIO device to left VHDCI connector on NI&#160;2515</td>
+<td class="Bordered">NI SHC68-C68-D5 0.5m Shielded Single-Ended Cable for High-Speed Digital Signal Insertion Switch</td>
+<td class="Bordered"><table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Use only the NI&#160;SHC68-C68-D5 cable to connect the supported NI&#160;high-speed DIO device
+to the NI&#160;2515. The cable translates the pinout of the supported NI&#160;high-speed DIO device to the
+HSDIO connector on the NI&#160;2515 so that the pinout of the DUT connector on the NI&#160;2515 matches
+that of the supported NI&#160;high-speed DIO device.</span></td>
+</tr>
+</table></td>
+</tr>
+
+<tr>
+<td class="bordered" align="center">B and C</td>
+<td class="Bordered">BNC connectors on NI&#160;2515 to parametric measurement devices</td>
+<td class="Bordered" align="center">&#8212;</td>
+<td class="Bordered">There is not a designated cable to connect the BNC connectors on the NI&#160;2515 to parametric measurement devices. Select a cable that fits the connectivity needs of your system.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The outer shields of both analog bus channels (B and C in the diagram)  are connected to chassis ground. Therefore, the negative lead of any analog bus channel must be at chassis ground.</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td class="bordered" align="center">D</td>
+<td class="Bordered">Right VHDCI connector on NI&#160;2515 to DUT</td>
+<td class="Bordered"><p>You have the following options:</p>
+<ul>
+<li>NI&#160;CB-2162 connector block and NI&#160;SHC68-C68-D4 Shielded Single-Ended Cable for High-Speed Digital Devices</li>
+<li>NI&#160;SMB-2163 breakout box and NI&#160;SHC68-C68-D4 Shielded Single-Ended Cable for High-Speed Digital Devices</li>
+<li>NI&#160;SHC68-H1X38 Shielded Single-Ended Flying-Lead Cable</li>
+</ul></td>
+<td class="Bordered">Refer to <a href="javascript:WWW(WWW_Manuals)">ni.com/manuals</a> for information on the use of these signal connection options.
+</td>
+</tr>
+</table>
+
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

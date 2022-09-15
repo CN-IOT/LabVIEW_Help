@@ -1,0 +1,685 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="generator" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</head>
+<body>
+   <OBJECT type="text/site properties">
+     <param name="Window Styles" value="0x0225">
+     <param name="comment" value="title:Online Help">
+     <param name="comment" value="base:index.htm">
+   </OBJECT>
+   <UL>
+      <LI><OBJECT type="text/sitemap">
+            <param name="Name" value="NI Switches Help">
+            <param name="Local" value="help_file_title.html">
+          </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Related Documentation">
+               <param name="Local" value="related_documentation.html">
+             </OBJECT>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Fundamentals">
+               <param name="Local" value="fundamentals.html">
+             </OBJECT>
+         <UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Relay Forms">
+                  <param name="Local" value="relay_forms.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Relay Types">
+                  <param name="Local" value="relay_types.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Electromechanical Relays">
+                     <param name="Local" value="electromechanical_relay.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Armature Relays">
+                        <param name="Local" value="armature_relay.html">
+                      </OBJECT>
+                  <UL>
+                     <LI><OBJECT type="text/sitemap">
+                           <param name="Name" value="Transfer Switches">
+                           <param name="Local" value="transfer_switches.html">
+                         </OBJECT>
+                  </UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Reed Relays">
+                        <param name="Local" value="reed_relays.html">
+                      </OBJECT>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Solid-State Relays (SSR)">
+                     <param name="Local" value="ssr.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="FET Switches">
+                     <param name="Local" value="fets.html">
+                   </OBJECT>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Topologies">
+                  <param name="Local" value="topology.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="General-Purpose">
+                     <param name="Local" value="general_purpose.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Multiplexer">
+                     <param name="Local" value="multiplexer.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Matrix">
+                     <param name="Local" value="matrix.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Transfer Switches (Topology)">
+                     <param name="Local" value="transfer_topologies.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Fault Insertion Units">
+                     <param name="Local" value="fiu.html">
+                   </OBJECT>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="N-Wire Switching Modes">
+                  <param name="Local" value="xwire.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="General Switching Considerations">
+                  <param name="Local" value="considerations.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Contact Resistance">
+                     <param name="Local" value="contact_resistance.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Relay Life">
+                     <param name="Local" value="relay_life.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Path Resistance">
+                     <param name="Local" value="path_resistance.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Thermal EMF and Offset Voltage">
+                     <param name="Local" value="thermal_voltages.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Relay Operation">
+                     <param name="Local" value="relay_operation.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Cycle Process">
+                        <param name="Local" value="cycle_process.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Settling Time">
+                        <param name="Local" value="settling_time.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Relay Count">
+                        <param name="Local" value="relay_count.html">
+                      </OBJECT>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Switching Inductive Loads">
+                     <param name="Local" value="switching_inductive.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Switching Capacitive Loads">
+                     <param name="Local" value="switching_capacitive_loads.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Switching Capacity">
+                     <param name="Local" value="switching_capacity.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Switching Voltage">
+                        <param name="Local" value="switching_voltage.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Switching Current">
+                        <param name="Local" value="switching_current.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Switching Power">
+                        <param name="Local" value="switching_power.html">
+                      </OBJECT>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Reed Relay Protection">
+                     <param name="Local" value="reed_relay_protection.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Bounce">
+                        <param name="Local" value="reed_relay_protect_bounce.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Arcing">
+                        <param name="Local" value="reed_relay_protect_arcing.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Inrush Current">
+                        <param name="Local" value="reed_relay_protect_inrush.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Board Layout and Topology">
+                        <param name="Local" value="reed_relay_protect_board.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Example System">
+                        <param name="Local" value="reed_relay_protection_ex.html">
+                      </OBJECT>
+               </UL>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="NI SwitchBlock Switching Considerations">
+                  <param name="Local" value="SwitchBlock_switching_considerations.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="NI SwitchBlock Basics">
+                     <param name="Local" value="SwitchBlock_consid_basics.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="NI PXI-2800 Carrier for the NI SwitchBlock">
+                        <param name="Local" value="SwitchBlock_carrier.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="NI SwitchBlock Cards and Devices">
+                        <param name="Local" value="SwitchBlock_cards.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Safety Interlock">
+                        <param name="Local" value="SwitchBlock_safety_interlock.html">
+                      </OBJECT>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Setting Up and Configuring the NI SwitchBlock">
+                     <param name="Local" value="SwitchBlock_consid_install_and_config.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Installing the NI SwitchBlock">
+                        <param name="Local" value="SwitchBlock_consid_install.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="NI SwitchBlock Device Reference">
+                        <param name="Local" value="multicard_devices.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Expanding Multiple NI SwitchBlock Carriers">
+                        <param name="Local" value="SwitchBlock_multicarrier_expansion.html">
+                      </OBJECT>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="NI SwitchBlock Programming Considerations">
+                     <param name="Local" value="SwitchBlock_consid_programming.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Initializing with Topology for NI SwitchBlock Devices">
+                        <param name="Local" value="SwitchBlock_configured_topology.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Using the Analog Bus on an NI SwitchBlock Carrier">
+                        <param name="Local" value="SwitchBlock_analog_bus_reservation.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Power Limits">
+                        <param name="Local" value="SwitchBlock_power_budget.html">
+                      </OBJECT>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="NI SwitchBlock Maintenance">
+                     <param name="Local" value="SwitchBlock_consid_maintenance.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Replacing a Fuse on the NI SwitchBlock Carrier">
+                        <param name="Local" value="SwitchBlock_replace_fuse.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Integrated Relay Test">
+                        <param name="Local" value="SwitchBlock_relay_self_test.html">
+                      </OBJECT>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Troubleshooting">
+                     <param name="Local" value="SwitchBlock_troubleshooting.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Programming the NI SwitchBlock in NI-SWITCH and NI-DAQmx">
+                     <param name="Local" value="SwitchBlock_programming.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="NI SwitchBlock Overview">
+                        <param name="Local" value="SwitchBlock_programming_overview.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="The NI SwitchBlock Carrier and the Analog Bus">
+                        <param name="Local" value="SwitchBlock_programming_carrier_bus.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="System Configuration Options for the NI SwitchBlock">
+                        <param name="Local" value="SwitchBlock_programming_configuration.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Routing Signals Within One NI SwitchBlock Device">
+                        <param name="Local" value="SwitchBlock_programming_routing_signals_one.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Routing Signals Between Multiple NI SwitchBlock Devices">
+                        <param name="Local" value="SwitchBlock_programming_routing_signals_multi.html">
+                      </OBJECT>
+               </UL>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="RF Switching Considerations">
+                  <param name="Local" value="rf.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Characteristic Impedance">
+                     <param name="Local" value="characteristic_impedance.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Rise Time">
+                     <param name="Local" value="rise_time.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Bandwidth and Insertion Loss">
+                     <param name="Local" value="bandwidth.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Voltage Standing Wave Ratio (VSWR)">
+                     <param name="Local" value="vswr.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Crosstalk">
+                     <param name="Local" value="crosstalk.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Isolation">
+                     <param name="Local" value="isolation.html">
+                   </OBJECT>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Scanning">
+                  <param name="Local" value="scanning_fundamentals.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Software Trigger Scanning">
+                     <param name="Local" value="software_trigger_scanning.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Synchronous Scanning">
+                     <param name="Local" value="synchronousg.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Handshaking">
+                     <param name="Local" value="handshakingg.html">
+                   </OBJECT>
+            </UL>
+         </UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Getting Started">
+               <param name="Local" value="Getting_Started.html">
+             </OBJECT>
+         <UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Creating an Application with NI-SWITCH">
+                  <param name="Local" value="tutorial.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Using NI-SWITCH in LabVIEW">
+                     <param name="Local" value="niswitch_lv70.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Considerations for using the LabVIEW Real-Time Module">
+                        <param name="Local" value="labview_rt.html">
+                      </OBJECT>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Using NI-SWITCH in LabWindows/CVI">
+                     <param name="Local" value="niswitch_cvi.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Using NI-SWITCH in Visual C/C++">
+                     <param name="Local" value="niswitch_c.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Using NI-SWITCH in Visual Basic">
+                     <param name="Local" value="niswitch_vb.html">
+                   </OBJECT>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="NI-SWITCH Examples">
+                  <param name="Local" value="Driver_Examples.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Operating System Support">
+                  <param name="Local" value="supportedOS.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Using NI Switches in IVI">
+                  <param name="Local" value="switches_in_ivi.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Configuring Hardware in MAX">
+                  <param name="Local" value="MI_RF_Switch_MAX_Top.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Configuring a PXI/PXIe Switch">
+                     <param name="Local" value="MI_RF_config_pxi.html">
+                   </OBJECT>
+            </UL>
+            <OBJECT type="text/sitemap">
+              <param name="Merge" value="switchconfig.chm::/switchconfig.hhc">
+            </OBJECT>
+         </UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Devices">
+               <param name="Local" value="devices.html">
+             </OBJECT>
+         <UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="NI PXI/PXIe-2527">
+                  <param name="Local" value="2527_functional_overview.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Hardware Diagram">
+                     <param name="Local" value="2527_hw_diagram.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="1-Wire 64x1 Multiplexer Topology">
+                     <param name="Local" value="2527_1-wire_64x1_mux.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="1-Wire Dual 32x1 Multiplexer Topology">
+                     <param name="Local" value="2527_dual_1-wire_32x1_mux.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="2-Wire 32x1 Multiplexer Topology">
+                     <param name="Local" value="2527_2-wire_32x1_mux.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="2-wire Dual 16x1 Multiplexer Topology">
+                     <param name="Local" value="2527_dual_2-wire_16x1_mux.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="4-Wire 16x1 Multiplexer Topology">
+                     <param name="Local" value="2527_4-wire_16x1_mux.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Independent Topology">
+                     <param name="Local" value="2527_independent.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Thermocouple Measurement">
+                     <param name="Local" value="2527_thermocouple.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Triggering">
+                     <param name="Local" value="2527_triggering.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Relay Replacement">
+                     <param name="Local" value="2527_relay_replacement.html">
+                   </OBJECT>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="NI PXI-2567">
+                  <param name="Local" value="2567_functional_overview.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Hardware Diagram">
+                     <param name="Local" value="2567_hw_diagram.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Independent Topology">
+                     <param name="Local" value="2567_independent.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Available 5 V and 12 V Sources">
+                     <param name="Local" value="2567_available_sources.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Triggering">
+                     <param name="Local" value="2567_triggering.html">
+                   </OBJECT>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="NI PXIe-2739">
+                  <param name="Local" value="2739_overview.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Front Panel">
+                     <param name="Local" value="2739_FrontPanel.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Hardware Diagram">
+                     <param name="Local" value="2739_hw_diagram.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="2-Wire 16x16 Matrix Topology">
+                     <param name="Local" value="2739_2-wire_16x16_matrix.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Relay Replacement">
+                     <param name="Local" value="2739_relay_replacement.html">
+                   </OBJECT>
+            </UL>
+         </UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Integration and System Considerations">
+               <param name="Local" value="integration_system_consider.html">
+             </OBJECT>
+         <UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Environment">
+                  <param name="Local" value="environment.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="PXI/PXIe Chassis Recommendations">
+                  <param name="Local" value="pxi_chassis_rec.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="PXI Express Compatibility">
+                  <param name="Local" value="pxi_e.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Protecting NI Switch Products when Switching Inductive Loads">
+                  <param name="Local" value="inductive_load.html">
+                </OBJECT>
+         </UL>
+      </UL>
+      <OBJECT type="text/sitemap">
+        <param name="Merge" value="niswitchsfp.chm::/niswitchsfp.hhc">
+      </OBJECT>
+      <OBJECT type="text/sitemap">
+        <param name="Merge" value="switchhealthcenter.chm::/switchhealthcenter.hhc">
+      </OBJECT>
+      <UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Programming with NI-SWITCH">
+               <param name="Local" value="programming.html">
+             </OBJECT>
+         <UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Programming Flow">
+                  <param name="Local" value="flow_basic.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Initialization">
+                     <param name="Local" value="flow_init.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Operation Modes">
+                     <param name="Local" value="flow_config.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Close">
+                     <param name="Local" value="flow_close.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Setting and Checking Properties and Attributes">
+                     <param name="Local" value="attrs.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Setting Properties and Attributes Before Reading Them">
+                     <param name="Local" value="setting_before_reading_attributes.html">
+                   </OBJECT>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Features">
+                  <param name="Local" value="features.html">
+                </OBJECT>
+            <UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Scanning">
+                     <param name="Local" value="scanning_overview.html">
+                   </OBJECT>
+               <UL>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Writing a Software Trigger Scanning Program">
+                        <param name="Local" value="scanning_-_sw.html">
+                      </OBJECT>
+                  <LI><OBJECT type="text/sitemap">
+                        <param name="Name" value="Scanning NI Switches with NI Digital Multimeters">
+                        <param name="Local" value="scanningg.html">
+                      </OBJECT>
+                  <UL>
+                     <LI><OBJECT type="text/sitemap">
+                           <param name="Name" value="Single Module Scanning">
+                           <param name="Local" value="scanning_single_mod.html">
+                         </OBJECT>
+                     <UL>
+                        <LI><OBJECT type="text/sitemap">
+                              <param name="Name" value="Scan Lists">
+                              <param name="Local" value="scan_list.html">
+                            </OBJECT>
+                        <LI><OBJECT type="text/sitemap">
+                              <param name="Name" value="Synchronous">
+                              <param name="Local" value="synchronousg_single.html">
+                            </OBJECT>
+                        <LI><OBJECT type="text/sitemap">
+                              <param name="Name" value="Handshaking">
+                              <param name="Local" value="handshakingg_single.html">
+                            </OBJECT>
+                     </UL>
+                     <LI><OBJECT type="text/sitemap">
+                           <param name="Name" value="Multiple Module Scanning">
+                           <param name="Local" value="scanning_multiple_mod.html">
+                         </OBJECT>
+                     <UL>
+                        <LI><OBJECT type="text/sitemap">
+                              <param name="Name" value="Multiple Module Scan Lists">
+                              <param name="Local" value="scan_list_multiple.html">
+                            </OBJECT>
+                        <LI><OBJECT type="text/sitemap">
+                              <param name="Name" value="Synchronous">
+                              <param name="Local" value="synchronousg_multiple.html">
+                            </OBJECT>
+                        <LI><OBJECT type="text/sitemap">
+                              <param name="Name" value="Handshaking">
+                              <param name="Local" value="handshakingg_multiple.html">
+                            </OBJECT>
+                     </UL>
+                  </UL>
+               </UL>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Adding Additional Settling Time">
+                     <param name="Local" value="extra_settling_time.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Connection and Disconnection List Syntax">
+                     <param name="Local" value="connection_disconnection_list.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Disabling Digital Filtering">
+                     <param name="Local" value="fast_pxi_triggering.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Immediate Operations">
+                     <param name="Local" value="immediate.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Setting Source and Configuration Channels">
+                     <param name="Local" value="configchannels.html">
+                   </OBJECT>
+               <LI><OBJECT type="text/sitemap">
+                     <param name="Name" value="Simulating a Switch">
+                     <param name="Local" value="simulate.html">
+                   </OBJECT>
+            </UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Examples">
+                  <param name="Local" value="examples.html">
+                </OBJECT>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="NI-SWITCH LabVIEW Reference">
+                  <param name="Local" value="LV_titlepg.html">
+                </OBJECT>
+            <OBJECT type="text/sitemap">
+              <param name="Merge" value="switchVIRef.chm::/switchVIRef.hhc">
+            </OBJECT>
+            <OBJECT type="text/sitemap">
+              <param name="Merge" value="switchPropRef.chm::/switchPropRef.hhc">
+            </OBJECT>
+         </UL>
+         <OBJECT type="text/sitemap">
+           <param name="Merge" value="switchCRef.chm::/switchCRef.hhc">
+         </OBJECT>
+         <UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="NI-SWITCH .NET Class Library Reference">
+                  <param name="Local" value="NET_Reference.html">
+                </OBJECT>
+            <OBJECT type="text/sitemap">
+              <param name="Merge" value="NINETSwitchFx40.chm::/NINETSwitchFx40.hhc">
+            </OBJECT>
+            <OBJECT type="text/sitemap">
+              <param name="Merge" value="NINETSwitchFx45Ref.chm::/NINETSwitchFx45Ref.hhc">
+            </OBJECT>
+         </UL>
+         <OBJECT type="text/sitemap">
+           <param name="Merge" value="niModInst.chm::/niModInst.hhc">
+         </OBJECT>
+         <UL>
+            <LI><OBJECT type="text/sitemap">
+                  <param name="Name" value="Error and Status Codes">
+                  <param name="Local" value="error_codes.html">
+                </OBJECT>
+         </UL>
+         <LI><OBJECT type="text/sitemap">
+               <param name="Name" value="Glossary">
+               <param name="Local" value="glossary.html">
+             </OBJECT>
+      </UL>
+   </UL>
+</BODY>
+</HTML>

@@ -1,0 +1,628 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+   
+   <link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript">
+</script>
+   <title>NI PXIe-2524 1-Wire Quad 32&#0215;1 Multiplexer Topology</title>
+  </head>
+<body bgcolor="#ffffff">
+  
+   <h1>NI PXIe-2524 1-Wire Quad 32&#0215;1 Multiplexer Topology</h1>
+   
+<p class="Body">The following figure represents the NI PXIe-2524 (NI 2524) in the <a href="xwire.html#2wire">1-wire</a> quad 32&#0215;1 <a href="multiplexer.html">multiplexer</a> topology. </p>
+
+<p class="Anchor"><img src="noloc_2524-quad-32x1-mux.gif"></p>
+
+
+<h2>Making a Connection</h2>
+
+<p class="Body">When using the NI 2524 quad 32&#0215;1, all channels in a given bank route to the corresponding com. You can control the channels using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function.</p>
+
+<p class="Body">For example, to connect channel 1 to com0, call <span class="Monospace">niSwitch_Connect(vi, &quot;ch1&quot;, &quot;com0&quot;)</span>. To disconnect channel 1 from com0, call <span class="Monospace">niSwitch_Disconnect(vi, &quot;ch1&quot;, &quot;com0&quot;)</span>.
+
+<h2>Pinout</h2>
+<p class="Body">The following figure identifies the pins for the NI&nbsp;2524 in the 1-wire quad 32&#0215;1 multiplexer topology.</p>
+
+<p class="Anchor"><img src="loc_eps_2524_pinout.gif"></p>
+
+<p class="Body">The following table lists channel pairings and relay assignments for the NI&nbsp;2524 in the 1-wire quad 32&#0215;1 multiplexer topology.</p>
+
+<table class="Bordered">
+<tr>
+<th class="Bordered" colspan="2">1-Wire Quad 32&#0215;1 Channel Name</td>
+<th class="Bordered">Relay Name</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH0</td>
+<td class="Bordered">CH4</td>
+<td class="Bordered">kb0s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH0</td>
+<td class="Bordered">CH4</td>
+<td class="Bordered">kb0s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH1</td>
+<td class="Bordered">CH5</td>
+<td class="Bordered">kb0s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH2</td>
+<td class="Bordered">CH6</td>
+<td class="Bordered">kb0s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH3</td>
+<td class="Bordered">CH7</td>
+<td class="Bordered">kb0s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH8</td>
+<td class="Bordered">CH12</td>
+<td class="Bordered">kb1s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH9</td>
+<td class="Bordered">CH13</td>
+<td class="Bordered">kb1s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH10</td>
+<td class="Bordered">CH14</td>
+<td class="Bordered">kb1s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH11</td>
+<td class="Bordered">CH15</td>
+<td class="Bordered">kb1s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH16</td>
+<td class="Bordered">CH20</td>
+<td class="Bordered">kb2s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH17</td>
+<td class="Bordered">CH21</td>
+<td class="Bordered">kb2s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH18</td>
+<td class="Bordered">CH22</td>
+<td class="Bordered">kb2s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH19</td>
+<td class="Bordered">CH23</td>
+<td class="Bordered">kb2s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH24</td>
+<td class="Bordered">CH28</td>
+<td class="Bordered">kb3s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH25</td>
+<td class="Bordered">CH29</td>
+<td class="Bordered">kb3s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH26</td>
+<td class="Bordered">CH30</td>
+<td class="Bordered">kb3s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH27</td>
+<td class="Bordered">CH31</td>
+<td class="Bordered">kb3s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH32</td>
+<td class="Bordered">CH36</td>
+<td class="Bordered">kb4s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH33</td>
+<td class="Bordered">CH37</td>
+<td class="Bordered">kb4s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH34</td>
+<td class="Bordered">CH38</td>
+<td class="Bordered">kb4s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH35</td>
+<td class="Bordered">CH39</td>
+<td class="Bordered">kb4s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH40</td>
+<td class="Bordered">CH44</td>
+<td class="Bordered">kb5s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH41</td>
+<td class="Bordered">CH45</td>
+<td class="Bordered">kb5s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH42</td>
+<td class="Bordered">CH46</td>
+<td class="Bordered">kb5s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH43</td>
+<td class="Bordered">CH47</td>
+<td class="Bordered">kb5s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH48</td>
+<td class="Bordered">CH52</td>
+<td class="Bordered">kb6s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH49</td>
+<td class="Bordered">CH53</td>
+<td class="Bordered">kb6s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH50</td>
+<td class="Bordered">CH54</td>
+<td class="Bordered">kb6s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH51</td>
+<td class="Bordered">CH55</td>
+<td class="Bordered">kb6s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH56</td>
+<td class="Bordered">CH60</td>
+<td class="Bordered">kb7s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH57</td>
+<td class="Bordered">CH61</td>
+<td class="Bordered">kb7s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH58</td>
+<td class="Bordered">CH62</td>
+<td class="Bordered">kb7s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH59</td>
+<td class="Bordered">CH63</td>
+<td class="Bordered">kb7s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH64</td>
+<td class="Bordered">CH68</td>
+<td class="Bordered">kb8s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH65</td>
+<td class="Bordered">CH69</td>
+<td class="Bordered">kb8s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH66</td>
+<td class="Bordered">CH70</td>
+<td class="Bordered">kb8s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH67</td>
+<td class="Bordered">CH71</td>
+<td class="Bordered">kb8s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH72</td>
+<td class="Bordered">CH76</td>
+<td class="Bordered">kb9s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH73</td>
+<td class="Bordered">CH77</td>
+<td class="Bordered">kb9s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH74</td>
+<td class="Bordered">CH78</td>
+<td class="Bordered">kb9s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH75</td>
+<td class="Bordered">CH79</td>
+<td class="Bordered">kb9s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH80</td>
+<td class="Bordered">CH84</td>
+<td class="Bordered">kb10s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH81</td>
+<td class="Bordered">CH85</td>
+<td class="Bordered">kb10s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH82</td>
+<td class="Bordered">CH86</td>
+<td class="Bordered">kb10s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH83</td>
+<td class="Bordered">CH87</td>
+<td class="Bordered">kb10s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH88</td>
+<td class="Bordered">CH92</td>
+<td class="Bordered">kb11s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH89</td>
+<td class="Bordered">CH93</td>
+<td class="Bordered">kb11s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH90</td>
+<td class="Bordered">CH94</td>
+<td class="Bordered">kb11s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH91</td>
+<td class="Bordered">CH95</td>
+<td class="Bordered">kb11s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH96</td>
+<td class="Bordered">CH100</td>
+<td class="Bordered">kb12s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH97</td>
+<td class="Bordered">CH101</td>
+<td class="Bordered">kb12s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH98</td>
+<td class="Bordered">CH102</td>
+<td class="Bordered">kb12s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH99</td>
+<td class="Bordered">CH103</td>
+<td class="Bordered">kb12s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH104</td>
+<td class="Bordered">CH108</td>
+<td class="Bordered">kb13s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH105</td>
+<td class="Bordered">CH109</td>
+<td class="Bordered">kb13s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH106</td>
+<td class="Bordered">CH110</td>
+<td class="Bordered">kb13s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH107</td>
+<td class="Bordered">CH111</td>
+<td class="Bordered">kb13s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH112</td>
+<td class="Bordered">CH116</td>
+<td class="Bordered">kb14s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH113</td>
+<td class="Bordered">CH117</td>
+<td class="Bordered">kb14s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH114</td>
+<td class="Bordered">CH118</td>
+<td class="Bordered">kb14s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH115</td>
+<td class="Bordered">CH119</td>
+<td class="Bordered">kb14s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH120</td>
+<td class="Bordered">CH124</td>
+<td class="Bordered">kb15s1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH121</td>
+<td class="Bordered">CH125</td>
+<td class="Bordered">kb15s2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH122</td>
+<td class="Bordered">CH126</td>
+<td class="Bordered">kb15s3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH123</td>
+<td class="Bordered">CH127</td>
+<td class="Bordered">kb15s4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH123</td>
+<td class="Bordered">CH127</td>
+<td class="Bordered">kb15s4</td>
+</tr>
+
+<tr>
+<td class="Bordered" colspan="2" rowspan="11">COM 0</td>
+<td class="Bordered">kb0com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb0com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc01</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb1com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb1com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc02</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb2com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb2com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc23</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb3com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb3com2</td>
+</tr>
+
+<tr>
+<td class="Bordered" colspan="2" rowspan="11">COM 4</td>
+<td class="Bordered">kb4com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb4com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc45</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb5com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb5com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc46</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb6com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb6com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc67</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb7com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb7com2</td>
+</tr>
+
+<tr>
+<td class="Bordered" colspan="2" rowspan="11">COM 8</td>
+<td class="Bordered">kb8com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb8com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc89</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb9com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb9com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc810</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb10com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb10com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc1011</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb11com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb11com2</td>
+</tr>
+
+<tr>
+<td class="Bordered" colspan="2" rowspan="11">COM 12</td>
+<td class="Bordered">kb12com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb12com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc1213</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb13com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb13com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc1214</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb14com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb14com2</td>
+</tr>
+
+<tr>
+<td class="Bordered">kbc1415</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb15com1</td>
+</tr>
+
+<tr>
+<td class="Bordered">kb15com2</td>
+</tr>
+
+</table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</html>
+
+

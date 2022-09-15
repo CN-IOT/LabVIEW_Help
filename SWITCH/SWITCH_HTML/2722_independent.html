@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI-2722 Independent Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2722 Independent Topology</H1>
+
+<p class="Body">The following figure represents the NI PXI-2722 in the independent topology.</p>
+
+<p class="Anchor"><img src="loc_2722_hw_diagram.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Bank connect relays allow adjacent banks or channels to connect together internally. For example, you can connect two or more adjacent channels together to create a potentiometer, a voltage divider, or a multi-segment resistor chain.</td>
+</tr>
+</table>
+
+<h2>Making a Connection</h2>
+
+Each 16-bit channel is composed of two adjacent 8-bit banks on the NI PXI-2722. For example, ch0 is composed of banks 0 and 1 and ch1 is composed of banks 2 and 3. NI has created a set of reference VIs that will programmatically open and close relays based on a user-specified resistance value or RTD temperature to simulate. To access these reference VIs, visit <span class="Monospace">ni.com/info</span> and enter the Info Code <span class="Monospace">272xOverview</span>.  NI recommends using this set of reference VIs for the easiest programming experience. If not using these reference VIs, NI recommends using the low-level relay control VIs or functions instead of the connect channel VIs or functions. The DAQmx Relay API supports closing multiple relays in a single driver call, which is faster than the channel API.
+
+<p class="Body">When a bank relay is closed, the corresponding resistor is placed in parallel with the low resistance of the relay, which nominally equates to a zero &Omega; shunt. Closing any of the 8 bank relays in a given bank decreases the resistance of that bank. </p>
+
+<p class="Body">For example, the following procedure uses the NI-SWITCH Relay API to short across the largest resistor in bank 0 and join bank 0 and bank 1 in series.</p>
+
+<ol><li>Close <span class="Monospace">b0r7</span> by calling the <a href="switchviref.chm::/niSwitch_Relay_Control.html">niSwitch Relay Control VI</a> with the inputs of <span class="Monospace">b0r7</span> and <span class="Monospace">close</span>.</li>
+	
+<li>Close <span class="Monospace">bc01</span> by calling the <a href="switchviref.chm::/niSwitch_Relay_Control.html">niSwitch Relay Control VI</a> with the inputs of <span class="Monospace">bc01</span> and <span class="Monospace">close</span>.</li></ol>
+	
+<p class="Body">You can perform the same operation using the NI-SWITCH Channel API, as shown below.</p>
+
+<ol><li>Connect <span class="Monospace">b0</span>-&gt;<span class="Monospace">b0r7</span> by calling <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels VI</a> with the inputs of <span class="Monospace">b0</span> and <span class="Monospace">b0r7</span>.</li>
+
+<li>Connect <span class="Monospace">b0</span>-&gt;<span class="Monospace">b1</span> by calling <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels VI</a> with the inputs of <span class="Monospace">b0</span> and <span class="Monospace">b1</span>.</li></ol>
+
+<p class="Body">Each bank is initially in a high impedance (open) state across the bank terminals.  To enable the desired output channel you must first connect the bank relay, <span class="Monospace">bN</span>. </p>
+
+<p class="Body">Each bank includes a shunt relay that completely bypasses the bank's string of 8 series relays. Closing the shunt relay <span class="Monospace">bN</span>-&gt;<span class="Monospace">bNshunt</span>, for example, <span class="Monospace">b0</span>-&gt;<span class="Monospace">b0shunt</span> or low-level <span class="Monospace">kb0shunt</span>, results in a low resistance across the bank, 0 &Omega; nominally. This allows the NI PXI-2722 module to pass signals with minimal attenuation. On 16-bit modules (NI&nbsp;PXI-2722 and NI&nbsp;PXIe-2727), closing the upper bank's shunt relay reduces the resistance when outputting values less than 64 &Omega;. </p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;It is not necessary to close all 8 bank relays and the shunt relay. Configuring multiple banks this way can exceed the power budget of the NI PXI-2722. </td>
+</tr>
+</table>
+
+<p class="Body">The 4-pin front panel test connector can connect to any adjacent pair of even-odd banks, allowing resistance measurements, or voltage measurements, across those two banks, for example <span class="Monospace">b0</span> to <span class="Monospace">b1</span>, <span class="Monospace">b2</span> to <span class="Monospace">b3</span>, <span class="Monospace">b4</span> to <span class="Monospace">b5</span>. On 16-bit NI 272x modules, this allows channel resistance measurements using a DMM with  Offset Compensated Ohms (such as the NI PXI-4070, NI PXI-4071, or NI PXI-4072). To connect a pair of banks to the test leads, close the appropriate test relays using the command <span class="Monospace">testN</span>-&gt;<span class="Monospace">testout</span>. For example, to measure the resistance across banks 0 and 1, call <span class="Monospace">test0</span>-&gt;<span class="Monospace">testout</span> and <span class="Monospace">test1</span>-&gt;<span class="Monospace">testout</span>. For banks 2 and 3, call <span class="Monospace">test1</span>-&gt;<span class="Monospace">testout</span> and <span class="Monospace">test2</span>-&gt;<span class="Monospace">testout</span>. Refer to the device's hardware diagram for valid test relay connections.  </p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Closing multiple pairs of test relays introduces low impedance paths between banks.  NI recommends disconnecting the 37-pin DSUB connector if these low impedance paths would damage your device under test or cause the current specifications of the NI PXIe-2727 to be exceeded.</td>
+</tr>
+</table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Each channel on the NI PXI-2722 exhibits an "open" when initialized, reset, and first powered on. The <a href="switchviref.chm::/niSwitch_Reset.html">niSwitch Reset</a> and <a href="switchviref.chm::/niSwitch_Disconnect_All_Channels.html">niSwitch Disconnect All Channels</a> VIs or <a href="switchCRef.chm::/c_nisw_reset.html">niSwitch_reset</a> and <a href="switchCRef.chm::/c_nisw_disconnectall.html">niSwitch_DisconnectAll</a> functions will disconnect all relays, resulting in an open circuit on each channel.<br><br>
+
+</td>
+</tr>
+</table>
+
+<h2><a name="pinout">Pinout</a></H2>
+<P class="Body" >The following figure identifies the pins for the NI PXI-2722.</P>
+
+<p class="Anchor"><img src="loc_eps_2722_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Do not connect to "No Connect" pins.</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,481 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI-2501/2503 4-Wire 12&#0215;1 Multiplexer Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2501/2503 4-Wire 12&#0215;1 Multiplexer Topology</h1>
+
+<p class="Body">When using the NI PXI-2501/2503 as a <a href="xwire.html#4wire">4-wire</a> 12&#0215;1 <a href="multiplexer.html">multiplexer</a>, connect your signals using the NI TB-2605 terminal block. The following figure is a representation of the NI&nbsp;PXI-2501/2503 in this mode.</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2501_03-4wire-12x1.gif"> </td>
+</tr>
+
+</table>
+
+<p class="Body">4-wire mode is usually used in 4-wire resistance measurements. One pair of wires supplies the excitation current while the other pair makes the voltage measurement. In 4-wire mode, connect your excitation or source leads to CH<em>x</em>A+ and CH<em>x</em>A-, and connect your measurement or sensing leads to CH<em>x</em>B+ and CH<em>x</em>B-, as shown in the following figure:</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="loc_eps_2501_03-4wire-12x1-with-dmm.gif"> </td>
+</tr>
+
+</table>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The previous figure shows the DMM connected to the analog bus (AB) of the switch module. Instead of routing signals to the AB, you can connect COM0A+ and COM0A- to the excitation terminals and COM0B+ and COM0B- to the sense terminals of the DMM.</td></tr></table>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Both the scanning command, <span class="Monospace">ch2-&gt;com0;</span>, and the <a href="flow_config.html">immediate operation</a>,  <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function with parameters <span class="Monospace">ch2</span> and <span class="Monospace">com0</span>, result in the following connections:</p>
+<p class="Body">signal connected to CH2A&#043; is routed to COM0A&#043;</p>
+<p class="Body">signal connected to CH2A&#8211; is routed to COM0A&#8211;</p>
+<p class="Body">signal connected to CH2B&#043; is routed to COM0B&#043;</p>
+<p class="Body">signal connected to CH2B&#8211; is routed to COM0B&#8211;</p>
+
+<h2>Pinout</h2>
+
+<p class="Body">The following figure identifies the pins for the NI&nbsp;PXI-2501/2503
+in the 4-wire 12&#0215;1 multiplexer topology.</p>
+
+<p class="Anchor"><img src="loc_eps_2501_2503_4_wire_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins.</span></td></tr></table>
+<table class="Bordered">
+<tr>
+<th class="Bordered" rowspan="2">Software Name</th>
+<th class="Bordered" rowspan="2">Polarity</th>
+<th class="Bordered" colspan="2">Hardware Name</th>
+</tr><tr>
+<th class="Bordered">NI PXI-2501/2503<br/>
+Connector Pin Number</th>
+<th class="Bordered">NI TB-2605<br/>
+Terminal Name</th>
+</tr>	
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch0</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">67</td>
+		<td class="Bordered" align="center">CH0A+</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">33</td>
+		<td class="Bordered" align="center">CH0A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">50</td>
+		<td class="Bordered" align="center">CH0B+</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">16</td>
+		<td class="Bordered" align="center">CH0B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch1</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">66</td>
+		<td class="Bordered" align="center">CH1A+</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">32</td>
+		<td class="Bordered" align="center">CH1A-</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">49</td>
+		<td class="Bordered" align="center">CH1B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">15</td>
+		<td class="Bordered" align="center">CH1B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch2</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">65</td>
+		<td class="Bordered" align="center">CH2A+</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">31</td>
+		<td class="Bordered" align="center">CH2A-</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">48</td>
+		<td class="Bordered" align="center">CH2B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">14</td>
+		<td class="Bordered" align="center">CH2B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch3</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">64</td>
+		<td class="Bordered" align="center">CH3A+</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">30</td>
+		<td class="Bordered" align="center">CH3A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">47</td>
+		<td class="Bordered" align="center">CH3B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">13</td>
+		<td class="Bordered" align="center">CH3B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch4</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">63</td>
+		<td class="Bordered" align="center">CH4A+</td>
+	</tr>
+	<tr>
+		
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">29</td>
+		<td class="Bordered" align="center">CH4A-</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">46</td>
+		<td class="Bordered" align="center">CH4B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">12</td>
+		<td class="Bordered" align="center">CH4B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch5</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">62</td>
+		<td class="Bordered" align="center">CH5A+</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">28</td>
+		<td class="Bordered" align="center">CH5A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">45</td>
+		<td class="Bordered" align="center">CH5B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">11</td>
+		<td class="Bordered" align="center">CH5B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch6</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">59</td>
+		<td class="Bordered" align="center">CH6A+</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">25</td>
+		<td class="Bordered" align="center">CH6A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">40</td>
+		<td class="Bordered" align="center">CH6B+</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">6</td>
+		<td class="Bordered" align="center">CH6B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch7</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">58</td>
+		<td class="Bordered" align="center">CH7A+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">24</td>
+		<td class="Bordered" align="center">CH7A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">39</td>
+		<td class="Bordered" align="center">CH7B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">5</td>
+		<td class="Bordered" align="center">CH7B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch8</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">57</td>
+		<td class="Bordered" align="center">CH8A+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">23</td>
+		<td class="Bordered" align="center">CH8A-</td>
+	</tr>
+	<tr>
+	
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">38</td>
+		<td class="Bordered" align="center">CH8B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">4</td>
+		<td class="Bordered" align="center">CH8B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch9</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">55</td>
+		<td class="Bordered" align="center">CH9A+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">21</td>
+		<td class="Bordered" align="center">CH9A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">37</td>
+		<td class="Bordered" align="center">CH9B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">3</td>
+		<td class="Bordered" align="center">CH9B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch10</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">54</td>
+		<td class="Bordered" align="center">CH10A+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">20</td>
+		<td class="Bordered" align="center">CH10A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">36</td>
+		<td class="Bordered" align="center">CH10B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">2</td>
+		<td class="Bordered" align="center">CH10B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ch11</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">53</td>
+		<td class="Bordered" align="center">CH11A+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">19</td>
+		<td class="Bordered" align="center">CH11A-</td>
+	</tr>
+	<tr>
+		
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">35</td>
+		<td class="Bordered" align="center">CH11B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">1</td>
+		<td class="Bordered" align="center">CH11B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">com0</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">61</td>
+		<td class="Bordered" align="center">COM0A+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">27</td>
+		<td class="Bordered" align="center">COM0A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">44</td>
+		<td class="Bordered" align="center">COM0B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">10</td>
+		<td class="Bordered" align="center">COM0B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">No Connect<sup>1</sup></td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">60</td>
+		<td class="Bordered" align="center">COM1A+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">26</td>
+		<td class="Bordered" align="center">COM1A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">43</td>
+		<td class="Bordered" align="center">COM1B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">9</td>
+		<td class="Bordered" align="center">COM1B-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center" rowspan="4">ab0</td>
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">52</td>
+		<td class="Bordered" align="center">AB0A+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">18</td>
+		<td class="Bordered" align="center">AB0A-</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">+</td>
+		<td class="Bordered" align="center">51</td>
+		<td class="Bordered" align="center">AB0B+</td>
+	</tr>
+	<tr>
+
+		<td class="Bordered" align="center">-</td>
+		<td class="Bordered" align="center">17</td>
+		<td class="Bordered" align="center">AB0B-</td>
+	</tr>
+	<tr><td class="bordered" align="left" colspan="4"><sup>1</sup> Not used in this topology		
+</td></tr>
+</table>
+
+<br/>
+<table class="Bordered">
+<tr>
+<th class="Bordered">NI PXI-2501/2503 <br/>Connector Pin Number	
+</th>
+<th class="Bordered">Signal name
+</th>
+</tr>
+<tr>
+		<td class="Bordered" align="center">7, 56</td>
+		<td class="Bordered" align="center">GND</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">41</td>
+		<td class="Bordered" align="center">TRIG IN</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">42</td>
+		<td class="Bordered" align="center">SCANADV</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">8</td>
+		<td class="Bordered" align="center">RESERVED</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">68</td>
+		<td class="Bordered" align="center">CJS+</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">34</td>
+		<td class="Bordered" align="center">CJS-</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">22</td>
+		<td class="Bordered" align="center">1wireREF</td>
+	</tr>
+</table>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

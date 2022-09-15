@@ -1,0 +1,906 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI 2833 Relay Replacement</TITLE>
+ <script src="linking.js" type="text/javascript"></script>
+<script src="variables.js" type="text/javascript"></script>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI 2833 Relay Replacement</h1>
+<p class="Body">The NI&#160;2833A/B (NI&#160;2833) uses electromechanical relays.</p>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The NI&#160;2833 uses a custom lead length to meet safety standards. Trim leads according to rework instructions or use one of the custom relays from the relay kit.</td>
+</tr>
+</table>
+
+<p class="Body">Refer to the following tables for information about ordering replacement relays.</p>
+
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay</th>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">Matrix</td>
+<td class="Bordered">Tyco Electronics</td>
+<td class="Bordered">7-1462039-8</td>
+</tr>
+<tr>
+<td class="Bordered">Safety (Reference Designators K10, K20, K30, and K40)</td>
+<td class="Bordered">Tyco Electronics</td>
+<td class="Bordered">5-1462039-8</td>
+</tr>
+</table>
+<br><br>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Kit</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">National Instruments (10 matrix relays)</td>
+<td class="Bordered">781678-01</td>
+</tr>
+<tr>
+<td class="Bordered">National Instruments (10 safety relays)</td>
+<td class="Bordered">781089-10</td>
+</tr>
+</table>
+
+<p class="Body">Complete the following sets of steps to locate and replace a failed relay on an NI&#160;SwitchBlock card.</p>
+<h2><a name="locate">Locate the Relay</a></h2><br>
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to the PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to the card from electrostatic discharge.</td></tr></table></li>
+<li>Locate the relay you want to replace. Refer to the following figures and table for relay locations.
+
+<p class="Anchor"><h4>NI 2833 PCB1 Relay Map</h4>
+<p class="Anchor"><img src="noloc_2833_pcb1_relay_map.gif"></p>
+<br><br>
+<p class="Anchor"><h4>NI 2833 PCB2 Relay Map</h4>
+<p class="Anchor"><img src="noloc_2833_pcb2_relay_map.gif"></p>
+<br><br>
+
+<p class="Body">The relay names in the following table correspond to a single-card device. Refer to the <a href="multicard_devices.html">NI&#160;SwitchBlock Device Reference</a> for information about relay naming for multicard devices.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+</tr>	
+	<tr>
+		<td class="Bordered" align="center">kcard1ab0</td>
+		<td class="Bordered" align="center">K9</td>
+		<td class="Bordered" align="center">kcard1r0c68</td>
+		<td class="Bordered" align="center">K343</td>
+		<td class="Bordered" align="center">kcard1r1c69</td>
+		<td class="Bordered" align="center">K314</td>
+		<td class="Bordered" align="center">kcard1r2c70</td>
+		<td class="Bordered" align="center">K304</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1ab1</td>
+		<td class="Bordered" align="center">K29</td>
+		<td class="Bordered" align="center">kcard1r0c69</td>
+		<td class="Bordered" align="center">K334</td>
+		<td class="Bordered" align="center">kcard1r1c70</td>
+		<td class="Bordered" align="center">K324</td>
+		<td class="Bordered" align="center">kcard1r3c0</td>
+		<td class="Bordered" align="center">K264</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1ab2</td>
+		<td class="Bordered" align="center">K49</td>
+		<td class="Bordered" align="center">kcard1r0c70</td>
+		<td class="Bordered" align="center">K344</td>
+		<td class="Bordered" align="center">kcard1r2c0</td>
+		<td class="Bordered" align="center">K243</td>
+		<td class="Bordered" align="center">kcard1r3c1</td>
+		<td class="Bordered" align="center">K253</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1ab3</td>
+		<td class="Bordered" align="center">K50</td>
+		<td class="Bordered" align="center">kcard1r1c0</td>
+		<td class="Bordered" align="center">K232</td>
+		<td class="Bordered" align="center">kcard1r2c1</td>
+		<td class="Bordered" align="center">K254</td>
+		<td class="Bordered" align="center">kcard1r3c2</td>
+		<td class="Bordered" align="center">K263</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c0</td>
+		<td class="Bordered" align="center">K210</td>
+		<td class="Bordered" align="center">kcard1r1c1</td>
+		<td class="Bordered" align="center">K220</td>
+		<td class="Bordered" align="center">kcard1r2c2</td>
+		<td class="Bordered" align="center">K242</td>
+		<td class="Bordered" align="center">kcard1r3c3</td>
+		<td class="Bordered" align="center">K262</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c1</td>
+		<td class="Bordered" align="center">K221</td>
+		<td class="Bordered" align="center">kcard1r1c2</td>
+		<td class="Bordered" align="center">K231</td>
+		<td class="Bordered" align="center">kcard1r2c3</td>
+		<td class="Bordered" align="center">K241</td>
+		<td class="Bordered" align="center">kcard1r3c4</td>
+		<td class="Bordered" align="center">K251</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c2</td>
+		<td class="Bordered" align="center">K209</td>
+		<td class="Bordered" align="center">kcard1r1c3</td>
+		<td class="Bordered" align="center">K230</td>
+		<td class="Bordered" align="center">kcard1r2c4</td>
+		<td class="Bordered" align="center">K252</td>
+		<td class="Bordered" align="center">kcard1r3c5</td>
+		<td class="Bordered" align="center">K261</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c3</td>
+		<td class="Bordered" align="center">K208</td>
+		<td class="Bordered" align="center">kcard1r1c4</td>
+		<td class="Bordered" align="center">K218</td>
+		<td class="Bordered" align="center">kcard1r2c5</td>
+		<td class="Bordered" align="center">K240</td>
+		<td class="Bordered" align="center">kcard1r3c6</td>
+		<td class="Bordered" align="center">K260</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c4</td>
+		<td class="Bordered" align="center">K219</td>
+		<td class="Bordered" align="center">kcard1r1c5</td>
+		<td class="Bordered" align="center">K229</td>
+		<td class="Bordered" align="center">kcard1r2c6</td>
+		<td class="Bordered" align="center">K239</td>
+		<td class="Bordered" align="center">kcard1r3c7</td>
+		<td class="Bordered" align="center">K51</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c5</td>
+		<td class="Bordered" align="center">K207</td>
+		<td class="Bordered" align="center">kcard1r1c6</td>
+		<td class="Bordered" align="center">K228</td>
+		<td class="Bordered" align="center">kcard1r2c7</td>
+		<td class="Bordered" align="center">K31</td>
+		<td class="Bordered" align="center">kcard1r3c8</td>
+		<td class="Bordered" align="center">K61</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c6</td>
+		<td class="Bordered" align="center">K206</td>
+		<td class="Bordered" align="center">kcard1r1c7</td>
+		<td class="Bordered" align="center">K11</td>
+		<td class="Bordered" align="center">kcard1r2c8</td>
+		<td class="Bordered" align="center">K41</td>
+		<td class="Bordered" align="center">kcard1r3c9</td>
+		<td class="Bordered" align="center">K249</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c7</td>
+		<td class="Bordered" align="center">K1</td>
+		<td class="Bordered" align="center">kcard1r1c8</td>
+		<td class="Bordered" align="center">K21</td>
+		<td class="Bordered" align="center">kcard1r2c9</td>
+		<td class="Bordered" align="center">K250</td>
+		<td class="Bordered" align="center">kcard1r3c10</td>
+		<td class="Bordered" align="center">K42</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c8</td>
+		<td class="Bordered" align="center">K2</td>
+		<td class="Bordered" align="center">kcard1r1c9</td>
+		<td class="Bordered" align="center">K227</td>
+		<td class="Bordered" align="center">kcard1r2c10</td>
+		<td class="Bordered" align="center">K22</td>
+		<td class="Bordered" align="center">kcard1r3c11</td>
+		<td class="Bordered" align="center">K52</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c9</td>
+		<td class="Bordered" align="center">K217</td>
+		<td class="Bordered" align="center">kcard1r1c10</td>
+		<td class="Bordered" align="center">K3</td>
+		<td class="Bordered" align="center">kcard1r2c11</td>
+		<td class="Bordered" align="center">K32</td>
+		<td class="Bordered" align="center">kcard1r3c12</td>
+		<td class="Bordered" align="center">K43</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c10</td>
+		<td class="Bordered" align="center">K4</td>
+		<td class="Bordered" align="center">kcard1r1c11</td>
+		<td class="Bordered" align="center">K12</td>
+		<td class="Bordered" align="center">kcard1r2c12</td>
+		<td class="Bordered" align="center">K23</td>
+		<td class="Bordered" align="center">kcard1r3c13</td>
+		<td class="Bordered" align="center">K53</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c11</td>
+		<td class="Bordered" align="center">K13</td>
+		<td class="Bordered" align="center">kcard1r1c12</td>
+		<td class="Bordered" align="center">K24</td>
+		<td class="Bordered" align="center">kcard1r2c13</td>
+		<td class="Bordered" align="center">K33</td>
+		<td class="Bordered" align="center">kcard1r3c14</td>
+		<td class="Bordered" align="center">K44</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c12</td>
+		<td class="Bordered" align="center">K5</td>
+		<td class="Bordered" align="center">kcard1r1c13</td>
+		<td class="Bordered" align="center">K34</td>
+		<td class="Bordered" align="center">kcard1r2c14</td>
+		<td class="Bordered" align="center">K45</td>
+		<td class="Bordered" align="center">kcard1r3c15</td>
+		<td class="Bordered" align="center">K54</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c13</td>
+		<td class="Bordered" align="center">K14</td>
+		<td class="Bordered" align="center">kcard1r1c14</td>
+		<td class="Bordered" align="center">K25</td>
+		<td class="Bordered" align="center">kcard1r2c15</td>
+		<td class="Bordered" align="center">K55</td>
+		<td class="Bordered" align="center">kcard1r3c16</td>
+		<td class="Bordered" align="center">K46</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c14</td>
+		<td class="Bordered" align="center">K6</td>
+		<td class="Bordered" align="center">kcard1r1c15</td>
+		<td class="Bordered" align="center">K35</td>
+		<td class="Bordered" align="center">kcard1r2c16</td>
+		<td class="Bordered" align="center">K26</td>
+		<td class="Bordered" align="center">kcard1r3c17</td>
+		<td class="Bordered" align="center">K36</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c15</td>
+		<td class="Bordered" align="center">K15</td>
+		<td class="Bordered" align="center">kcard1r1c16</td>
+		<td class="Bordered" align="center">K27</td>
+		<td class="Bordered" align="center">kcard1r2c17</td>
+		<td class="Bordered" align="center">K16</td>
+		<td class="Bordered" align="center">kcard1r3c18</td>
+		<td class="Bordered" align="center">K47</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c16</td>
+		<td class="Bordered" align="center">K7</td>
+		<td class="Bordered" align="center">kcard1r1c17</td>
+		<td class="Bordered" align="center">K37</td>
+		<td class="Bordered" align="center">kcard1r2c18</td>
+		<td class="Bordered" align="center">K48</td>
+		<td class="Bordered" align="center">kcard1r3c19</td>
+		<td class="Bordered" align="center">K57</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c17</td>
+		<td class="Bordered" align="center">K17</td>
+		<td class="Bordered" align="center">kcard1r1c18</td>
+		<td class="Bordered" align="center">K28</td>
+		<td class="Bordered" align="center">kcard1r2c19</td>
+		<td class="Bordered" align="center">K58</td>
+		<td class="Bordered" align="center">kcard1r3c20</td>
+		<td class="Bordered" align="center">K60</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c18</td>
+		<td class="Bordered" align="center">K8</td>
+		<td class="Bordered" align="center">kcard1r1c19</td>
+		<td class="Bordered" align="center">K38</td>
+		<td class="Bordered" align="center">kcard1r2c20</td>
+		<td class="Bordered" align="center">K59</td>
+		<td class="Bordered" align="center">kcard1r3c21</td>
+		<td class="Bordered" align="center">K71</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c19</td>
+		<td class="Bordered" align="center">K18</td>
+		<td class="Bordered" align="center">kcard1r1c20</td>
+		<td class="Bordered" align="center">K39</td>
+		<td class="Bordered" align="center">kcard1r2c21</td>
+		<td class="Bordered" align="center">K82</td>
+		<td class="Bordered" align="center">kcard1r3c22</td>
+		<td class="Bordered" align="center">K70</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c20</td>
+		<td class="Bordered" align="center">K19</td>
+		<td class="Bordered" align="center">kcard1r1c21</td>
+		<td class="Bordered" align="center">K136</td>
+		<td class="Bordered" align="center">kcard1r2c22</td>
+		<td class="Bordered" align="center">K92</td>
+		<td class="Bordered" align="center">kcard1r3c23</td>
+		<td class="Bordered" align="center">K81</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c21</td>
+		<td class="Bordered" align="center">K137</td>
+		<td class="Bordered" align="center">kcard1r1c22</td>
+		<td class="Bordered" align="center">K114</td>
+		<td class="Bordered" align="center">kcard1r2c23</td>
+		<td class="Bordered" align="center">K103</td>
+		<td class="Bordered" align="center">kcard1r3c24</td>
+		<td class="Bordered" align="center">K69</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c22</td>
+		<td class="Bordered" align="center">K148</td>
+		<td class="Bordered" align="center">kcard1r1c23</td>
+		<td class="Bordered" align="center">K125</td>
+		<td class="Bordered" align="center">kcard1r2c24</td>
+		<td class="Bordered" align="center">K91</td>
+		<td class="Bordered" align="center">kcard1r3c25</td>
+		<td class="Bordered" align="center">K80</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c23</td>
+		<td class="Bordered" align="center">K147</td>
+		<td class="Bordered" align="center">kcard1r1c24</td>
+		<td class="Bordered" align="center">K113</td>
+		<td class="Bordered" align="center">kcard1r2c25</td>
+		<td class="Bordered" align="center">K102</td>
+		<td class="Bordered" align="center">kcard1r3c26</td>
+		<td class="Bordered" align="center">K68</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c24</td>
+		<td class="Bordered" align="center">K135</td>
+		<td class="Bordered" align="center">kcard1r1c25</td>
+		<td class="Bordered" align="center">K124</td>
+		<td class="Bordered" align="center">kcard1r2c26</td>
+		<td class="Bordered" align="center">K90</td>
+		<td class="Bordered" align="center">kcard1r3c27</td>
+		<td class="Bordered" align="center">K79</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c25</td>
+		<td class="Bordered" align="center">K146</td>
+		<td class="Bordered" align="center">kcard1r1c26</td>
+		<td class="Bordered" align="center">K112</td>
+		<td class="Bordered" align="center">kcard1r2c27</td>
+		<td class="Bordered" align="center">K101</td>
+		<td class="Bordered" align="center">kcard1r3c28</td>
+		<td class="Bordered" align="center">K67</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c26</td>
+		<td class="Bordered" align="center">K134</td>
+		<td class="Bordered" align="center">kcard1r1c27</td>
+		<td class="Bordered" align="center">K123</td>
+		<td class="Bordered" align="center">kcard1r2c28</td>
+		<td class="Bordered" align="center">K89</td>
+		<td class="Bordered" align="center">kcard1r3c29</td>
+		<td class="Bordered" align="center">K78</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c27</td>
+		<td class="Bordered" align="center">K145</td>
+		<td class="Bordered" align="center">kcard1r1c28</td>
+		<td class="Bordered" align="center">K111</td>
+		<td class="Bordered" align="center">kcard1r2c29</td>
+		<td class="Bordered" align="center">K100</td>
+		<td class="Bordered" align="center">kcard1r3c30</td>
+		<td class="Bordered" align="center">K56</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c28</td>
+		<td class="Bordered" align="center">K133</td>
+		<td class="Bordered" align="center">kcard1r1c29</td>
+		<td class="Bordered" align="center">K122</td>
+		<td class="Bordered" align="center">kcard1r2c30</td>
+		<td class="Bordered" align="center">K77</td>
+		<td class="Bordered" align="center">kcard1r3c31</td>
+		<td class="Bordered" align="center">K66</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c29</td>
+		<td class="Bordered" align="center">K144</td>
+		<td class="Bordered" align="center">kcard1r1c30</td>
+		<td class="Bordered" align="center">K99</td>
+		<td class="Bordered" align="center">kcard1r2c31</td>
+		<td class="Bordered" align="center">K88</td>
+		<td class="Bordered" align="center">kcard1r3c32</td>
+		<td class="Bordered" align="center">K65</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c30</td>
+		<td class="Bordered" align="center">K121</td>
+		<td class="Bordered" align="center">kcard1r1c31</td>
+		<td class="Bordered" align="center">K110</td>
+		<td class="Bordered" align="center">kcard1r2c32</td>
+		<td class="Bordered" align="center">K87</td>
+		<td class="Bordered" align="center">kcard1r3c33</td>
+		<td class="Bordered" align="center">K76</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c31</td>
+		<td class="Bordered" align="center">K132</td>
+		<td class="Bordered" align="center">kcard1r1c32</td>
+		<td class="Bordered" align="center">K109</td>
+		<td class="Bordered" align="center">kcard1r2c33</td>
+		<td class="Bordered" align="center">K98</td>
+		<td class="Bordered" align="center">kcard1r3c34</td>
+		<td class="Bordered" align="center">K64</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c32</td>
+		<td class="Bordered" align="center">K131</td>
+		<td class="Bordered" align="center">kcard1r1c33</td>
+		<td class="Bordered" align="center">K120</td>
+		<td class="Bordered" align="center">kcard1r2c34</td>
+		<td class="Bordered" align="center">K86</td>
+		<td class="Bordered" align="center">kcard1r3c35</td>
+		<td class="Bordered" align="center">K75</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c33</td>
+		<td class="Bordered" align="center">K143</td>
+		<td class="Bordered" align="center">kcard1r1c34</td>
+		<td class="Bordered" align="center">K108</td>
+		<td class="Bordered" align="center">kcard1r2c35</td>
+		<td class="Bordered" align="center">K97</td>
+		<td class="Bordered" align="center">kcard1r3c36</td>
+		<td class="Bordered" align="center">K63</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c34</td>
+		<td class="Bordered" align="center">K130</td>
+		<td class="Bordered" align="center">kcard1r1c35</td>
+		<td class="Bordered" align="center">K119</td>
+		<td class="Bordered" align="center">kcard1r2c36</td>
+		<td class="Bordered" align="center">K85</td>
+		<td class="Bordered" align="center">kcard1r3c37</td>
+		<td class="Bordered" align="center">K74</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c35</td>
+		<td class="Bordered" align="center">K142</td>
+		<td class="Bordered" align="center">kcard1r1c36</td>
+		<td class="Bordered" align="center">K107</td>
+		<td class="Bordered" align="center">kcard1r2c37</td>
+		<td class="Bordered" align="center">K96</td>
+		<td class="Bordered" align="center">kcard1r3c38</td>
+		<td class="Bordered" align="center">K62</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c36</td>
+		<td class="Bordered" align="center">K129</td>
+		<td class="Bordered" align="center">kcard1r1c37</td>
+		<td class="Bordered" align="center">K118</td>
+		<td class="Bordered" align="center">kcard1r2c38</td>
+		<td class="Bordered" align="center">K84</td>
+		<td class="Bordered" align="center">kcard1r3c39</td>
+		<td class="Bordered" align="center">K73</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c37</td>
+		<td class="Bordered" align="center">K141</td>
+		<td class="Bordered" align="center">kcard1r1c38</td>
+		<td class="Bordered" align="center">K106</td>
+		<td class="Bordered" align="center">kcard1r2c39</td>
+		<td class="Bordered" align="center">K95</td>
+		<td class="Bordered" align="center">kcard1r3c40</td>
+		<td class="Bordered" align="center">K72</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c38</td>
+		<td class="Bordered" align="center">K128</td>
+		<td class="Bordered" align="center">kcard1r1c39</td>
+		<td class="Bordered" align="center">K117</td>
+		<td class="Bordered" align="center">kcard1r2c40</td>
+		<td class="Bordered" align="center">K105</td>
+		<td class="Bordered" align="center">kcard1r3c41</td>
+		<td class="Bordered" align="center">K83</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c39</td>
+		<td class="Bordered" align="center">K140</td>
+		<td class="Bordered" align="center">kcard1r1c40</td>
+		<td class="Bordered" align="center">K116</td>
+		<td class="Bordered" align="center">kcard1r2c41</td>
+		<td class="Bordered" align="center">K104</td>
+		<td class="Bordered" align="center">kcard1r3c42</td>
+		<td class="Bordered" align="center">K94</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c40</td>
+		<td class="Bordered" align="center">K139</td>
+		<td class="Bordered" align="center">kcard1r1c41</td>
+		<td class="Bordered" align="center">K127</td>
+		<td class="Bordered" align="center">kcard1r2c42</td>
+		<td class="Bordered" align="center">K93</td>
+		<td class="Bordered" align="center">kcard1r3c43</td>
+		<td class="Bordered" align="center">K248</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c41</td>
+		<td class="Bordered" align="center">K126</td>
+		<td class="Bordered" align="center">kcard1r1c42</td>
+		<td class="Bordered" align="center">K115</td>
+		<td class="Bordered" align="center">kcard1r2c43</td>
+		<td class="Bordered" align="center">K238</td>
+		<td class="Bordered" align="center">kcard1r3c44</td>
+		<td class="Bordered" align="center">K258</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c42</td>
+		<td class="Bordered" align="center">K138</td>
+		<td class="Bordered" align="center">kcard1r1c43</td>
+		<td class="Bordered" align="center">K215</td>
+		<td class="Bordered" align="center">kcard1r2c44</td>
+		<td class="Bordered" align="center">K237</td>
+		<td class="Bordered" align="center">kcard1r3c45</td>
+		<td class="Bordered" align="center">K257</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c43</td>
+		<td class="Bordered" align="center">K216</td>
+		<td class="Bordered" align="center">kcard1r1c44</td>
+		<td class="Bordered" align="center">K226</td>
+		<td class="Bordered" align="center">kcard1r2c45</td>
+		<td class="Bordered" align="center">K236</td>
+		<td class="Bordered" align="center">kcard1r3c46</td>
+		<td class="Bordered" align="center">K246</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c44</td>
+		<td class="Bordered" align="center">K205</td>
+		<td class="Bordered" align="center">kcard1r1c45</td>
+		<td class="Bordered" align="center">K225</td>
+		<td class="Bordered" align="center">kcard1r2c46</td>
+		<td class="Bordered" align="center">K247</td>
+		<td class="Bordered" align="center">kcard1r3c47</td>
+		<td class="Bordered" align="center">K256</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c45</td>
+		<td class="Bordered" align="center">K204</td>
+		<td class="Bordered" align="center">kcard1r1c46</td>
+		<td class="Bordered" align="center">K213</td>
+		<td class="Bordered" align="center">kcard1r2c47</td>
+		<td class="Bordered" align="center">K235</td>
+		<td class="Bordered" align="center">kcard1r3c48</td>
+		<td class="Bordered" align="center">K255</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c46</td>
+		<td class="Bordered" align="center">K214</td>
+		<td class="Bordered" align="center">kcard1r1c47</td>
+		<td class="Bordered" align="center">K224</td>
+		<td class="Bordered" align="center">kcard1r2c48</td>
+		<td class="Bordered" align="center">K234</td>
+		<td class="Bordered" align="center">kcard1r3c49</td>
+		<td class="Bordered" align="center">K265</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c47</td>
+		<td class="Bordered" align="center">K203</td>
+		<td class="Bordered" align="center">kcard1r1c48</td>
+		<td class="Bordered" align="center">K223</td>
+		<td class="Bordered" align="center">kcard1r2c49</td>
+		<td class="Bordered" align="center">K245</td>
+		<td class="Bordered" align="center">kcard1r3c50</td>
+		<td class="Bordered" align="center">K244</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c48</td>
+		<td class="Bordered" align="center">K202</td>
+		<td class="Bordered" align="center">kcard1r1c49</td>
+		<td class="Bordered" align="center">K211</td>
+		<td class="Bordered" align="center">kcard1r2c50</td>
+		<td class="Bordered" align="center">K233</td>
+		<td class="Bordered" align="center">kcard1r3c51</td>
+		<td class="Bordered" align="center">K275</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c49</td>
+		<td class="Bordered" align="center">K212</td>
+		<td class="Bordered" align="center">kcard1r1c50</td>
+		<td class="Bordered" align="center">K222</td>
+		<td class="Bordered" align="center">kcard1r2c51</td>
+		<td class="Bordered" align="center">K295</td>
+		<td class="Bordered" align="center">kcard1r3c52</td>
+		<td class="Bordered" align="center">K285</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c50</td>
+		<td class="Bordered" align="center">K201</td>
+		<td class="Bordered" align="center">kcard1r1c51</td>
+		<td class="Bordered" align="center">K315</td>
+		<td class="Bordered" align="center">kcard1r2c52</td>
+		<td class="Bordered" align="center">K305</td>
+		<td class="Bordered" align="center">kcard1r3c53</td>
+		<td class="Bordered" align="center">K266</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c51</td>
+		<td class="Bordered" align="center">K335</td>
+		<td class="Bordered" align="center">kcard1r1c52</td>
+		<td class="Bordered" align="center">K325</td>
+		<td class="Bordered" align="center">kcard1r2c53</td>
+		<td class="Bordered" align="center">K286</td>
+		<td class="Bordered" align="center">kcard1r3c54</td>
+		<td class="Bordered" align="center">K276</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c52</td>
+		<td class="Bordered" align="center">K336</td>
+		<td class="Bordered" align="center">kcard1r1c53</td>
+		<td class="Bordered" align="center">K306</td>
+		<td class="Bordered" align="center">kcard1r2c54</td>
+		<td class="Bordered" align="center">K296</td>
+		<td class="Bordered" align="center">kcard1r3c55</td>
+		<td class="Bordered" align="center">K267</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c53</td>
+		<td class="Bordered" align="center">K326</td>
+		<td class="Bordered" align="center">kcard1r1c54</td>
+		<td class="Bordered" align="center">K316</td>
+		<td class="Bordered" align="center">kcard1r2c55</td>
+		<td class="Bordered" align="center">K287</td>
+		<td class="Bordered" align="center">kcard1r3c56</td>
+		<td class="Bordered" align="center">K277</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c54</td>
+		<td class="Bordered" align="center">K337</td>
+		<td class="Bordered" align="center">kcard1r1c55</td>
+		<td class="Bordered" align="center">K307</td>
+		<td class="Bordered" align="center">kcard1r2c56</td>
+		<td class="Bordered" align="center">K297</td>
+		<td class="Bordered" align="center">kcard1r3c57</td>
+		<td class="Bordered" align="center">K268</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c55</td>
+		<td class="Bordered" align="center">K327</td>
+		<td class="Bordered" align="center">kcard1r1c56</td>
+		<td class="Bordered" align="center">K317</td>
+		<td class="Bordered" align="center">kcard1r2c57</td>
+		<td class="Bordered" align="center">K288</td>
+		<td class="Bordered" align="center">kcard1r3c58</td>
+		<td class="Bordered" align="center">K278</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c56</td>
+		<td class="Bordered" align="center">K338</td>
+		<td class="Bordered" align="center">kcard1r1c57</td>
+		<td class="Bordered" align="center">K308</td>
+		<td class="Bordered" align="center">kcard1r2c58</td>
+		<td class="Bordered" align="center">K298</td>
+		<td class="Bordered" align="center">kcard1r3c59</td>
+		<td class="Bordered" align="center">K259</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c57</td>
+		<td class="Bordered" align="center">K328</td>
+		<td class="Bordered" align="center">kcard1r1c58</td>
+		<td class="Bordered" align="center">K318</td>
+		<td class="Bordered" align="center">kcard1r2c59</td>
+		<td class="Bordered" align="center">K279</td>
+		<td class="Bordered" align="center">kcard1r3c60</td>
+		<td class="Bordered" align="center">K269</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c58</td>
+		<td class="Bordered" align="center">K339</td>
+		<td class="Bordered" align="center">kcard1r1c59</td>
+		<td class="Bordered" align="center">K299</td>
+		<td class="Bordered" align="center">kcard1r2c60</td>
+		<td class="Bordered" align="center">K289</td>
+		<td class="Bordered" align="center">kcard1r3c61</td>
+		<td class="Bordered" align="center">K270</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c59</td>
+		<td class="Bordered" align="center">K319</td>
+		<td class="Bordered" align="center">kcard1r1c60</td>
+		<td class="Bordered" align="center">K309</td>
+		<td class="Bordered" align="center">kcard1r2c61</td>
+		<td class="Bordered" align="center">K290</td>
+		<td class="Bordered" align="center">kcard1r3c62</td>
+		<td class="Bordered" align="center">K280</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c60</td>
+		<td class="Bordered" align="center">K329</td>
+		<td class="Bordered" align="center">kcard1r1c61</td>
+		<td class="Bordered" align="center">K310</td>
+		<td class="Bordered" align="center">kcard1r2c62</td>
+		<td class="Bordered" align="center">K300</td>
+		<td class="Bordered" align="center">kcard1r3c63</td>
+		<td class="Bordered" align="center">K271</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c61</td>
+		<td class="Bordered" align="center">K330</td>
+		<td class="Bordered" align="center">kcard1r1c62</td>
+		<td class="Bordered" align="center">K320</td>
+		<td class="Bordered" align="center">kcard1r2c63</td>
+		<td class="Bordered" align="center">K291</td>
+		<td class="Bordered" align="center">kcard1r3c64</td>
+		<td class="Bordered" align="center">K281</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c62</td>
+		<td class="Bordered" align="center">K340</td>
+		<td class="Bordered" align="center">kcard1r1c63</td>
+		<td class="Bordered" align="center">K311</td>
+		<td class="Bordered" align="center">kcard1r2c64</td>
+		<td class="Bordered" align="center">K301</td>
+		<td class="Bordered" align="center">kcard1r3c65</td>
+		<td class="Bordered" align="center">K272</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c63</td>
+		<td class="Bordered" align="center">K331</td>
+		<td class="Bordered" align="center">kcard1r1c64</td>
+		<td class="Bordered" align="center">K321</td>
+		<td class="Bordered" align="center">kcard1r2c65</td>
+		<td class="Bordered" align="center">K292</td>
+		<td class="Bordered" align="center">kcard1r3c66</td>
+		<td class="Bordered" align="center">K282</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c64</td>
+		<td class="Bordered" align="center">K341</td>
+		<td class="Bordered" align="center">kcard1r1c65</td>
+		<td class="Bordered" align="center">K312</td>
+		<td class="Bordered" align="center">kcard1r2c66</td>
+		<td class="Bordered" align="center">K302</td>
+		<td class="Bordered" align="center">kcard1r3c67</td>
+		<td class="Bordered" align="center">K273</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c65</td>
+		<td class="Bordered" align="center">K332</td>
+		<td class="Bordered" align="center">kcard1r1c66</td>
+		<td class="Bordered" align="center">K322</td>
+		<td class="Bordered" align="center">kcard1r2c67</td>
+		<td class="Bordered" align="center">K293</td>
+		<td class="Bordered" align="center">kcard1r3c68</td>
+		<td class="Bordered" align="center">K283</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c66</td>
+		<td class="Bordered" align="center">K342</td>
+		<td class="Bordered" align="center">kcard1r1c67</td>
+		<td class="Bordered" align="center">K313</td>
+		<td class="Bordered" align="center">kcard1r2c68</td>
+		<td class="Bordered" align="center">K303</td>
+		<td class="Bordered" align="center">kcard1r3c69</td>
+		<td class="Bordered" align="center">K274</td>
+	</tr>
+	<tr>
+		<td class="Bordered" align="center">kcard1r0c67</td>
+		<td class="Bordered" align="center">K333</td>
+		<td class="Bordered" align="center">kcard1r1c68</td>
+		<td class="Bordered" align="center">K323</td>
+		<td class="Bordered" align="center">kcard1r2c69</td>
+		<td class="Bordered" align="center">K294</td>
+		<td class="Bordered" align="center">kcard1r3c70</td>
+		<td class="Bordered" align="center">K284</td>
+	</tr>
+</table>
+
+</ol>
+<h2><a name="disassemble">Disassemble the Card</a></h2><br>
+<p class="Body">Complete the following steps to disassemble the NI 2833.</p>
+<ol>
+<li>Remove the six screws from the top of PCB1.</li>
+<li>Gently separate PCB1 and PCB2.<br><br>
+
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2833_disassembly.gif"> </td>
+</tr>
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">PCB1</td>
+</tr>
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">PCB2</td>
+</tr>
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">Screws</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+
+<h2><a name="replace">Replace the Relay</a></h2>
+<p class="Body">The NI&#160;2833 uses lead-free assemblies.</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this. This can prevent the same unit from being reworked later on a lead-free solder station, which could contaminate the station.</span></td>
+</tr>
+</table>
+
+<p class="Body">Make sure you have the following:</p>
+<ul>
+<li>Temperature-regulated soldering iron set to 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Solder wick</li>
+<li>Fine pick</li>
+<li>Isopropyl alcohol</li>
+<li>Cotton swabs</li>
+</ul>
+
+<p class="Body">Replace the relay as you would any other through-hole part. Trim the replaced relay leads to no more than 0.5 mm (0.02 inch) from the PCB.</p>
+
+<h2>Reassemble the Card</h2>
+
+<p class="Body">
+Complete the <a href="#disassemble">Disassemble the Card</a> steps in reverse order to reassemble your switch module.<br><br>
+</p>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td><strong>Tip</strong>&nbsp;&nbsp;You can use the Switch Soft Front Panel  to reset the relay count after you have replaced a failed relay. Refer to the <em>Switch Soft Front Panel Help</em> for more information.</td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

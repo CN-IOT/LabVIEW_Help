@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0118)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/SWITCH/SWITCH_HTML/connection_disconnection_list.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./connection_disconnection_list_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./connection_disconnection_list_files/variables.js.&#19979;&#36733;"></script>
+
+
+<link rel="STYLESHEET" type="text/css" href="./connection_disconnection_list_files/minimal.css">
+<link rel="STYLESHEET" type="text/css" href="./connection_disconnection_list_files/extra.css">
+
+
+<title>Connection and Disconnection List Syntax</title>
+
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./connection_disconnection_list_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接和断开列表语法</font></font></h1>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">您可以将连接列表和断开列表与</font></font><A href="switchviref.chm::/niSwitch_Connect_Channels.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Connect Channels (Multiple)</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><A href="switchviref.chm::/niSwitch_Disconnect_Channels.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Disconnect Channels (Multiple)</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">一起使用来创建一个或多个切换操作的字符串。</font><font style="VERTICAL-ALIGN: inherit">对于具有多个操作的列表，逗号分隔每个操作。</font><font style="VERTICAL-ALIGN: inherit">NI-SWITCH 验证连接和断开列表，如果返回错误则中止列表的执行。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将通道设置为</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">配置通道</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，以允许 NI-SWITCH 使用该通道创建内部路径。</font><font style="VERTICAL-ALIGN: inherit">如果两个通道之间的路径包括一个或多个通道，则中间通道应设置为配置通道。</font><font style="VERTICAL-ALIGN: inherit">如果存在多个中间通道，并且通道类型设置为配置通道，NI-SWITCH 会选择使用中间通道。</font></font></p>
+
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./connection_disconnection_list_files/note.gif"></td>
+<td>
+<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;配置通道在其他交换机 API 中也可能被称为“保留用于路由”。</font></font></td></tr></tbody></table>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">切换操作可以以两种方式之一连接和断开通道。</font><font style="VERTICAL-ALIGN: inherit">请参考下表确定切换操作。</font></font></p>
+
+<table class="bordered">
+<tbody><tr>
+<th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">切换操作</font></font></th>
+<th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">句法</font></font></th>
+<th class="Bordered"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述</font></font></th>
+</tr>
+
+<tr>
+<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">指定端点</font></font></td>
+<td class="Bordered" align="center"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">频道 1 -&gt; 频道 2</font></font></span><br></td>
+<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">NI-SWITCH 搜索端点之间的可用路径以连接或断开连接。</font><font style="VERTICAL-ALIGN: inherit">指定的两个通道必须在同一设备上，并且它们之间必须存在可用路径。</font></font><br></td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">指定显式路径</font></font></td>
+<td class="Bordered" align="center"><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">[频道1-&gt;频道2-&gt;频道3]</font></font></span><br></td>
+<td class="Bordered" align="center"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">您定义路径的端点和任何中间通道。</font></font><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">*</font></font></sup></td>
+</tr>
+<tr><td class="Bordered" colspan="3"><sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">*</font></font></sup><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">操作顺序不保证执行顺序。</font><font style="VERTICAL-ALIGN: inherit">要确保特定顺序，请使用多个连接和断开连接列表。</font></font></td></tr>
+</tbody></table>
+<br>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./connection_disconnection_list_files/tip.gif"></td>
+<td>
+<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提示</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;NI-SWITCH 忽略空白和换行。</font><font style="VERTICAL-ALIGN: inherit">使用这些来格式化冗长列表的外观。</font></font><p></p></td></tr></tbody></table>
+
+<h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">连接和断开列表示例</font></font></h2>
+
+<h4><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例 1</font></font></h4>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果要使用指定端点和显式路径的切换操作创建连接或断开列表，请用逗号分隔切换操作。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">语法：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Operation1、Operation2、Operation3</font></font></span><br></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">c0 -&gt; r0, [c1 -&gt; r2 -&gt; c5], r0 -&gt; c4</font></font></span><br>
+
+</p><h4><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例 2</font></font></h4>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果channel0、com0和AB0之间存在路径，则可以通过将com0的通道类型设置为配置通道，将channel0连接到AB0。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">语法：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通道 1 -&gt; 通道 2</font></font></span><br>
+
+</p><p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">通道 0 -&gt; AB0</font></font></span><br>
+
+</p><h4><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例 3</font></font></h4>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果要连接矩阵的第 1 列和第 5 列，并使用第 2 行完成连接，则必须在连接前将第 2 行的通道类型设置为配置通道。</font></font></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">语法：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">[channel1 -&gt; channel2 -&gt; channel3]</font></font></span><br></p>
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">示例：</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">[c1 -&gt; r2 -&gt; c5]</font></font></span><br>
+
+</p><h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关信息：</font></font></h2>
+
+<ul><li><A href="switch.chm::/scan_list.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表</font></font></a></li></ul>
+<ul><li><A href="switch.chm::/configchannels.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设置源和配置通道</font></font></a></li></ul>
+
+<script type="text/javascript">
+if(typeof(Print_Link)== 
+"function"){
+Print_Link();}
+</script><hr><p class="body"><IMG alt=提交反馈 src="./connection_disconnection_list_files/feedback.png">&nbsp;&nbsp;<A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fconnection_disconnection_list.html')"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">提交有关此主题的</font><A href="javascript:WWW('http://digital.ni.com/applications/psc.nsf/docdetails?OpenForm&amp;node=seminar_US&amp;productline=12&amp;version=4.8&amp;file=%2FC%3A%2FUsers%2FUser%2FDocuments%2FGitHub%2FLabVIEW_Help%2FLabVIEW_Help%2FSWITCH%2FSWITCH_HTML%2Fconnection_disconnection_list.html')"><font style="VERTICAL-ALIGN: inherit">反馈。</font></a></font><br><br><IMG alt=联系技术支持 src="./connection_disconnection_list_files/support.png"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;访问</font></font><A href="javascript:WWW('http://www.ni.com/support')"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ni.com/support</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以获得技术支持。</font></font></p>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

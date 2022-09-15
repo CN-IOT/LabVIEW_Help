@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI/PXIe-2529 2-Wire 8&#0215;16 Matrix Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2529 2-Wire 8&#0215;16 Matrix Topology</h1>
+
+<p class="Body">The TB-2635 terminal block creates a <a href="xwire.html#2wire">2-wire</a> 8&#0215;16 <a href="matrix.html">matrix</a> topology with the NI PXI/PXIe-2529 (NI&#160;2529). The following figure represents the NI&#160;2529 in the 2-wire 8&#0215;16 matrix topology.</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2529-8x16.gif"> </td>
+</tr>
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+</table>
+
+<h2>Making a Connection</h2>
+
+  <p class="Body"> The NI&#160;2529 combined with the NI&nbsp;TB-2635 creates an 8&#0215;16 matrix. In this topology you can connect any row to any column. When connecting signals to r1, you would connect them to R1+ and R1&#8211; in the terminal block. When connecting signals to c0, you would connect them to C0+ and C0&#8211; in the terminal block.</p>
+
+<p class="Body">You can connect the channels of the NI&#160;2529 using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function. For example, to connect row 1 to column 1, call  the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function with the <strong>channel 1</strong> parameter set to <span class="Monospace">r1</span> and the <strong>channel&nbsp;2</strong> parameter set to <span class="Monospace">c1</span>.</p>
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI&#160;2529 in 8&#0215;16 matrix topology, a typical <a href="scan_list.html">scan list</a> entry could be <span class="Monospace">r5-&gt;c1;</SPAN>. This entry routes the signal connected to row 5 to column 1.</P>
+
+<h2>Bank Connection Diagram</h2>
+
+<p class="Anchor"><img src="loc_eps_2529-8x16-4-wire-bank.gif"></p>
+
+<h2>Terminal Block Connections</h2>
+<p class="Body">The NI TB-2635 terminal block configures the NI&#160;2529 as a 2-wire 8&#0215;16 matrix.</p>
+
+
+<p class="Body">The following table lists the NI&#160;2529 pins that the NI TB-2635 terminal block shorts and the column connections created. If you do not use the NI TB-2635 terminal block, short the pins externally to achieve a 2-wire 8&#0215;16 matrix topology. Refer to the <a href="#pinout">NI&#160;2529 pinout</a> for pin locations.</p>
+<table class="Bordered">
+<tr><th class="Bordered">Connection</th><th class="Bordered">Pins</th><th class="Bordered">Connection</th><th class="Bordered">Pins</th><th class="Bordered">Connection</th><th class="Bordered">Pins</th><th class="Bordered">Connection</th><th class="Bordered">Pins</th></tr>
+
+<tr><td class="Bordered">C0+</td><td class="Bordered">B24, B14</td><td class="Bordered">C4+</td><td class="Bordered">C24,C14</td><td class="Bordered">C8+</td><td class="Bordered">B19,B9</td><td class="Bordered">C12+</td><td class="Bordered">C19,C9</td></tr>
+
+<tr><td class="Bordered">C0-</td><td class="Bordered">A24,A14</td><td class="Bordered">C4-</td><td class="Bordered">D24,D14</td><td class="Bordered">C8-</td><td class="Bordered">A19,A9</td><td class="Bordered">C12-</td><td class="Bordered">D19,D9</td></tr>
+
+<tr><td class="Bordered">C1+</td><td class="Bordered">B23,B13</td><td class="Bordered">C5+</td><td class="Bordered">C23,C13</td><td class="Bordered">C9+</td><td class="Bordered">B18,B8</td><td class="Bordered">C13+</td><td class="Bordered">C18,C8</td></tr>
+
+<tr><td class="Bordered">C1-</td><td class="Bordered">A23,A13</td><td class="Bordered">C5-</td><td class="Bordered">D23,D13</td><td class="Bordered">C9-</td><td class="Bordered">A18,A8</td><td class="Bordered">C13-</td><td class="Bordered">D18,D8</td></tr>
+
+<tr><td class="Bordered">C2+</td><td class="Bordered">B22,B12</td><td class="Bordered">C6+</td><td class="Bordered">C22,C12</td><td class="Bordered">C10+</td><td class="Bordered">B17,B7</td><td class="Bordered">C14+</td><td class="Bordered">C17,C7</td></tr>
+
+<tr><td class="Bordered">C2-</td><td class="Bordered">A22,A12</td><td class="Bordered">C6-</td><td class="Bordered">D22,D12</td><td class="Bordered">C10-</td><td class="Bordered">A17,A7</td><td class="Bordered">C14-</td><td class="Bordered">D17,D7</td></tr>
+
+<tr><td class="Bordered">C3+</td><td class="Bordered">B21,B11</td><td class="Bordered">C7+</td><td class="Bordered">C21,C11</td><td class="Bordered">C11+</td><td class="Bordered">B16,B6</td><td class="Bordered">C15+</td><td class="Bordered">C16,C6</td></tr>
+
+<tr><td class="Bordered">C3-</td><td class="Bordered">A21,A11</td><td class="Bordered">C7-</td><td class="Bordered">D21,D11</td><td class="Bordered">C11-</td><td class="Bordered">A16,A6</td><td class="Bordered">C15-</td><td class="Bordered">D16,D6</td></tr>
+</table>
+
+
+<p class="Body">The following table lists the NI&#160;2529 pins and their associated row connection.</p>
+
+<table class="Bordered">
+<tr><th class="Bordered">Connection</th><th class="Bordered">Pins</th><th class="Bordered">Connection</th><th class="Bordered">Pins</th><th class="Bordered">Connection</th><th class="Bordered">Pins</th><th class="Bordered">Connection</th><th class="Bordered">Pins</th></tr>
+
+<tr><td class="Bordered">R0+</td><td class="Bordered">B25</td><td class="Bordered">R2+</td><td class="Bordered">B20</td><td class="Bordered">R4+</td><td class="Bordered">B15</td><td class="Bordered">R6+</td><td class="Bordered">B10</td></tr>
+
+<tr><td class="Bordered">R0-</td><td class="Bordered">A25</td><td class="Bordered">R2-</td><td class="Bordered">A20</td><td class="Bordered">R4-</td><td class="Bordered">A15</td><td class="Bordered">R6-</td><td class="Bordered">A10</td></tr>
+
+<tr><td class="Bordered">R1+</td><td class="Bordered">C25</td><td class="Bordered">R3+</td><td class="Bordered">C20</td><td class="Bordered">R5+</td><td class="Bordered">C15</td><td class="Bordered">R7+</td><td class="Bordered">C10</td></tr>
+
+<tr><td class="Bordered">R1-</td><td class="Bordered">D25</td><td class="Bordered">R3-</td><td class="Bordered">D20</td><td class="Bordered">R5-</td><td class="Bordered">D15</td><td class="Bordered">R7-</td><td class="Bordered">D10</td></tr>
+</table>
+
+
+
+
+
+ <H2><a name="pinout">Pinout</a></H2>
+ <P class="Body" >The following figure identifies the pins for the NI&#160;2529.</P>
+<p class="Anchor"><img src="loc_eps_2529_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins or to NO CONNECT pins. Keep low-voltage pins isolated from row and column channels when high voltage is present.</span></td></tr></table>
+
+ 
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

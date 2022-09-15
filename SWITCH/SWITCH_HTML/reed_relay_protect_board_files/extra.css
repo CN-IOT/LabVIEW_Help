@@ -1,0 +1,5 @@
+
+table.legend { border:none; width:100%; }
+table.figure tr.callout td.number {width:10px}
+table.figure td.frame {border:1px black solid;padding:10px}
+table.layout { border:none;width:100%; }

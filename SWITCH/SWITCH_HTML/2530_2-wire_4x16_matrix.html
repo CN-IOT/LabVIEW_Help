@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI-2530/2530B 2-Wire 4&#0215;16 Matrix Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2530/2530B 2-Wire 4&#0215;16 Matrix Topology</h1>
+
+<p class="Body">Use the NI TB-2631/2631B terminal block with the NI PXI-2530/2530B as a <a href="xwire.html#2wire">2-wire</a> 4&#0215;16 <a href="matrix.html">matrix</a>.</p>
+
+<p class="Body">The following figure represents the NI PXI-2530/2530B in the 2-wire 4&#0215;16 matrix topology.</p>
+
+<p class="Anchor"><img src="noloc_2530-matrix-2-wire-4x16.gif"></p>
+
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Both the scanning command, <span class="Monospace">r2-&gt;c1;</span>, and the immediate operation,  <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function   with parameters <span class="Monospace">r2</span> and <span class="Monospace">c1</span>, result in the following connections:</p>
+<p class="Body">signal connected to R2&#043; is routed to C1&#043;</p>
+<p class="Body">signal connected to R2&#8211; is routed to C1&#8211;</p>
+
+<h2>Signal Connections</h2>
+<p class="Body">Refer to the <a href="2530_signal_connections.html">NI PXI-2530 Signal Connections</a> section for the NI PXI-2530 front connector pinout and NI TB-2631 terminal mapping. Refer to the <a href="2530b_signal_connections.html">NI PXI-2530B Signal Connections</a> section for the NI PXI-2530B front connector pinout and NI TB-2631B terminal mapping.</p>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

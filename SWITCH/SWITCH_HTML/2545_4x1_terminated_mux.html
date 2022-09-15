@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2545 Terminated 4&#0215;1 Multiplexer (SP4T) Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2545 Terminated 4&#0215;1 Multiplexer (SP4T) Topology</h1>
+<p class="Body">The following figure represents the NI PXI-2545 in the terminated 4&#0215;1 multiplexer topology.</p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2545_4x1_terminated_mux.gif"> </td>
+</tr>
+
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+
+</table>
+
+
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;The terminators on the NI PXI-2545 are rated for 1.5&nbsp;W at 25&nbsp;&#0176;C.  When operating at ambient temperatures greater than 25&nbsp;&#0176;C, a termination power derating applies.  Refer the <em>NI PXI-2545 Specifications</em> for more information about termination power derating. Terminators <em>cannot</em> withstand the full rated power of the NI PXI-2545. </span></td></tr></table>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Call the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function to connect channels in this topology. If applicable, call the <a href="switchviref.chm::/niSwitch_Disconnect_Channels.html">niSwitch Disconnect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_disconnect.html"><span class="Monospace">niSwitch_Disconnect</span></a> function to disconnect an existing connection <em>before</em> you call the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function. </p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td><strong>Note</strong>&nbsp;&nbsp; All channels are disconnected from COM when the NI PXI-2545 is in its power on state. Any input channel <em>not</em> connected to COM is connected to its associated 50 &#8486; terminator.</td></tr></table>
+
+
+<p class="Body">The following sequence of tasks illustrates the VI/function calls necessary to make consecutive connections&#8212;one between CH&nbsp;1 and COM and the other between CH&nbsp;2 and COM:</p>
+<ol><li>Call the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function with parameters <span class="Monospace">ch1</span> and <span class="Monospace">com</span>. </li>
+<li>Call the niSwitch Disconnect Channels VI or the <span class="Monospace">niSwitch_Disconnect</span> function with parameters <span class="Monospace">ch1</span> and <span class="Monospace">com</span>. </li>
+<li>Call the niSwitch Connect Channels VI or the <span class="Monospace">niSwitch_Connect</span> function with parameters <span class="Monospace">ch2</span> and <span class="Monospace">com</span>.</li>
+</ol>
+
+
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI PXI-2545, a typical <a href="scan_list.html">scan list</a> entry might be <span class="Monospace">ch1-&gt;com;</SPAN>. This entry routes the signal connected to CH&nbsp;1 to COM.</P>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

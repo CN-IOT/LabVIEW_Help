@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI/PXIe-2532/2532B 1-Wire Sixteen 2&#215;16 Matrix Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2532/2532B 1-Wire Sixteen 2&#215;16 Matrix Topology</h1>
+
+<p class="Body">The following figure represents the NI PXI/PXIe-2532/2532B (NI&#160;2532/2532B) in the <a href="xwire.html#1wire">1-wire</a> sixteen 2&#215;16 <a href="matrix.html">matrix</a> topology.</p>
+
+<p class="Anchor"><img src="noloc_2532-1-wire_sixteen_2x16.gif"></p>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Both the scanning command, <span class="Monospace">b15r0-&gt;b15c1;</span>, and the immediate operation,  <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function   with parameters <span class="Monospace">b15r0</span> and <span class="Monospace">b15c1</span>, result in the following connection:</p>
+<p class="Body">signal connected to B15R0 is routed to B15C1</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;While you can, for example, connect B0R1 to B0C0, you cannot connect B0R1 directly to B1C1 in this topology.</td></tr></table>
+
+<H2>Pinout</H2>
+<P class="Body">The following figure identifies the pins for the NI&#160;2532.</P>
+ 
+<p class="Anchor"><img src="loc_eps_2532_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins. Keep low-voltage pins isolated from row and column channels when high voltage is present.</span></td></tr></table>
+
+<P class="Body" >The following figure identifies the pins for the NI&#160;2532B.</P>
+
+<p class="Anchor"><img src="loc_eps_2532b_pinout.gif"></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif"></td>
+<td>
+<span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not connect to RESERVED pins.</span></td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

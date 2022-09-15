@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+<script src="pdf.js" type="text/javascript"></script>
+<TITLE>NI PXI-2510 Independent Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2510 Independent Topology</H1>
+
+<p class="Body">The following figure represents the NI PXI-2510 in the independent topology.</p>
+
+<p class="Anchor"><img src="noloc_2510_hw_diagram.gif"></p>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Both the scanning command, <span class="Monospace">dut1-&gt;busA;</span>, and the immediate operation,  <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function with parameters <span class="Monospace">dut1</span> and <span class="Monospace">busA</span>, result in the following connection:</p>
+<p class="Body">signal connected to DUT1 is routed to busA</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The pass-through channels (ch<em>N</em> to dut<em>N</em>) on the PXI-2510 are connected in its power on or reset state. The <a href="switchviref.chm::/niSwitch_Reset.html">niSwitch Reset</a> and <a href="switchviref.chm::/niSwitch_Disconnect_All_Channels.html">niSwitch Disconnect All Channels</a> VIs or <a href="switchCRef.chm::/c_nisw_reset.html">niSwitch_reset</a> and <a href="switchCRef.chm::/c_nisw_disconnectall.html">niSwitch_DisconnectAll</a> functions will connect the pass-through channels (ch<em>N</em> to dut<em>N</em>).<br><br>
+
+Special attention needs to be given to the behavior of the relays associated with the pass-through channels (k0...k67). These relays (k0...k67) are in their open state when the pass-through channels (ch<em>N</em> to dut<em>N</em>) are connected and vice versa. If you intend to use the <a href="switchviref.chm::/niSwitch_Relay_Control.html">niSwitch Relay Control</a> VI or <a href="switchCRef.chm::/c_nisw_relaycontrol.html">niSwitch_RelayControl</a> function to operate these relays, please note that closing relays (k0...k67) will disconnect the pass through channels (ch<em>N</em> to dut<em>N</em>).<br><br>
+
+Because the pass-through channels (ch<em>N</em> to dut<em>N</em>) are connected in its power-on or reset state, these channels may need to be disconnected during a scanning operation. In order to disconnect the channels during a scan, set the <a href="switchpropref.chm::/pniswitch_ScanMode.html">Scan Mode</a> property to <strong>None</strong>, or the <a href="switchCRef.chm::/c_nisw_attr_scan_mode.html"><span class="Monospace">NISWITCH_ATTR_SCAN_MODE</span></a> attribute to <span class="Monospace">NISWITCH_VAL_NONE</span>.
+</td>
+</tr>
+</table>
+
+<h2><a name="pinout">Pinout</a></H2>
+<P class="Body" >The following figure identifies the pins for the NI PXI-2510.</P>
+
+<p class="Anchor"><img src="loc_eps_2510_pinout.gif"></p>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

@@ -1,0 +1,1835 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI/PXIe-2532 Relay Replacement</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI/PXIe-2532 Relay Replacement</h1>
+<p class="Body">The NI PXI/PXIe-2532 uses reed relays.</p>
+
+<p class="Body">Refer to the following table for information about ordering replacement relays.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">Meder</td>
+<td class="Bordered">CRR05-1A</td>
+</tr>
+</table>
+<p class="Body">Complete the following sets of steps to disassemble your switch module, replace a failed relay, and reassemble your switch module.</p>
+<h2><a name="disassemble">Disassemble the Switch Module</a></h2>
+
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to your PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to your switch module from electrostatic discharge.</td></tr></table></li>
+<li>Locate the relay you want to replace. 
+<ol><li>Determine the relay name using the Bank Connection Diagram for your topology.</li>
+<li>Match the relay name to its corresponding reference designator and locate the relay using the following figures and tables.
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The reference designator locations for the top and bottom mezzanine boards are identical. Relays are located on both sides of each mezzanine board.</td>
+</tr>
+</table>
+
+<h3>Top-Left Notched Side of Mezzanine Boards</h3>
+<p class="body">The following figure illustrates relay locations on the side of each mezzanine board that has a notch in the top left corner.</p>
+<p class="Anchor"><img src="noloc_2531_2532_top_left_notch_relay_map.gif"></p>
+<h3>Top-Right Notched Side of Mezzanine Boards</h3>
+<p class="body">The following figure illustrates relay locations on the side of each mezzanine board that has a notch in the top right corner.</p>
+<p class="Anchor"><img src="noloc_2531_2532_top_right_notch_relay_map.gif"></p>
+
+<h3>Top Mezzanine Board Relay Locations</h3>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+</tr>
+<tr>
+<td class="Bordered">B8R0C0</td>
+<td class="Bordered">K144</td>
+<td class="Bordered">B10R0C0</td>
+<td class="Bordered">K176</td>
+<td class="Bordered">B12R0C0</td>
+<td class="Bordered">K193</td>
+<td class="Bordered">B14R0C0</td>
+<td class="Bordered">K225</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C1</td>
+<td class="Bordered">K143</td>
+<td class="Bordered">B10R0C1</td>
+<td class="Bordered">K175</td>
+<td class="Bordered">B12R0C1</td>
+<td class="Bordered">K194</td>
+<td class="Bordered">B14R0C1</td>
+<td class="Bordered">K226</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C2</td>
+<td class="Bordered">K142</td>
+<td class="Bordered">B10R0C2</td>
+<td class="Bordered">K174</td>
+<td class="Bordered">B12R0C2</td>
+<td class="Bordered">K195</td>
+<td class="Bordered">B14R0C2</td>
+<td class="Bordered">K227</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C3</td>
+<td class="Bordered">K141</td>
+<td class="Bordered">B10R0C3</td>
+<td class="Bordered">K173</td>
+<td class="Bordered">B12R0C3</td>
+<td class="Bordered">K196</td>
+<td class="Bordered">B14R0C3</td>
+<td class="Bordered">K228</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C4</td>
+<td class="Bordered">K140</td>
+<td class="Bordered">B10R0C4</td>
+<td class="Bordered">K172</td>
+<td class="Bordered">B12R0C4</td>
+<td class="Bordered">K197</td>
+<td class="Bordered">B14R0C4</td>
+<td class="Bordered">K229</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C5</td>
+<td class="Bordered">K139</td>
+<td class="Bordered">B10R0C5</td>
+<td class="Bordered">K171</td>
+<td class="Bordered">B12R0C5</td>
+<td class="Bordered">K198</td>
+<td class="Bordered">B14R0C5</td>
+<td class="Bordered">K230</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C6</td>
+<td class="Bordered">K138</td>
+<td class="Bordered">B10R0C6</td>
+<td class="Bordered">K170</td>
+<td class="Bordered">B12R0C6</td>
+<td class="Bordered">K199</td>
+<td class="Bordered">B14R0C6</td>
+<td class="Bordered">K231</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C7</td>
+<td class="Bordered">K137</td>
+<td class="Bordered">B10R0C7</td>
+<td class="Bordered">K169</td>
+<td class="Bordered">B12R0C7</td>
+<td class="Bordered">K200</td>
+<td class="Bordered">B14R0C7</td>
+<td class="Bordered">K232</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C8</td>
+<td class="Bordered">K136</td>
+<td class="Bordered">B10R0C8</td>
+<td class="Bordered">K168</td>
+<td class="Bordered">B12R0C8</td>
+<td class="Bordered">K201</td>
+<td class="Bordered">B14R0C8</td>
+<td class="Bordered">K233</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C9</td>
+<td class="Bordered">K135</td>
+<td class="Bordered">B10R0C9</td>
+<td class="Bordered">K167</td>
+<td class="Bordered">B12R0C9</td>
+<td class="Bordered">K202</td>
+<td class="Bordered">B14R0C9</td>
+<td class="Bordered">K234</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C10</td>
+<td class="Bordered">K134</td>
+<td class="Bordered">B10R0C10</td>
+<td class="Bordered">K166</td>
+<td class="Bordered">B12R0C10</td>
+<td class="Bordered">K203</td>
+<td class="Bordered">B14R0C10</td>
+<td class="Bordered">K235</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C11</td>
+<td class="Bordered">K133</td>
+<td class="Bordered">B10R0C11</td>
+<td class="Bordered">K165</td>
+<td class="Bordered">B12R0C11</td>
+<td class="Bordered">K204</td>
+<td class="Bordered">B14R0C11</td>
+<td class="Bordered">K236</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C12</td>
+<td class="Bordered">K132</td>
+<td class="Bordered">B10R0C12</td>
+<td class="Bordered">K164</td>
+<td class="Bordered">B12R0C12</td>
+<td class="Bordered">K205</td>
+<td class="Bordered">B14R0C12</td>
+<td class="Bordered">K237</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C13</td>
+<td class="Bordered">K131</td>
+<td class="Bordered">B10R0C13</td>
+<td class="Bordered">K163</td>
+<td class="Bordered">B12R0C13</td>
+<td class="Bordered">K206</td>
+<td class="Bordered">B14R0C13</td>
+<td class="Bordered">K238</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C14</td>
+<td class="Bordered">K130</td>
+<td class="Bordered">B10R0C14</td>
+<td class="Bordered">K162</td>
+<td class="Bordered">B12R0C14</td>
+<td class="Bordered">K207</td>
+<td class="Bordered">B14R0C14</td>
+<td class="Bordered">K239</td>
+</tr>
+<tr>
+<td class="Bordered">B8R0C15</td>
+<td class="Bordered">K129</td>
+<td class="Bordered">B10R0C15</td>
+<td class="Bordered">K161</td>
+<td class="Bordered">B12R0C15</td>
+<td class="Bordered">K208</td>
+<td class="Bordered">B14R0C15</td>
+<td class="Bordered">K240</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C0</td>
+<td class="Bordered">K1</td>
+<td class="Bordered">B10R1C0</td>
+<td class="Bordered">K33</td>
+<td class="Bordered">B12R1C0</td>
+<td class="Bordered">K80</td>
+<td class="Bordered">B14R1C0</td>
+<td class="Bordered">K112</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C1</td>
+<td class="Bordered">K2</td>
+<td class="Bordered">B10R1C1</td>
+<td class="Bordered">K34</td>
+<td class="Bordered">B12R1C1</td>
+<td class="Bordered">K79</td>
+<td class="Bordered">B14R1C1</td>
+<td class="Bordered">K111</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C2</td>
+<td class="Bordered">K3</td>
+<td class="Bordered">B10R1C2</td>
+<td class="Bordered">K35</td>
+<td class="Bordered">B12R1C2</td>
+<td class="Bordered">K78</td>
+<td class="Bordered">B14R1C2</td>
+<td class="Bordered">K110</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C3</td>
+<td class="Bordered">K4</td>
+<td class="Bordered">B10R1C3</td>
+<td class="Bordered">K36</td>
+<td class="Bordered">B12R1C3</td>
+<td class="Bordered">K77</td>
+<td class="Bordered">B14R1C3</td>
+<td class="Bordered">K109</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C4</td>
+<td class="Bordered">K5</td>
+<td class="Bordered">B10R1C4</td>
+<td class="Bordered">K37</td>
+<td class="Bordered">B12R1C4</td>
+<td class="Bordered">K76</td>
+<td class="Bordered">B14R1C4</td>
+<td class="Bordered">K108</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C5</td>
+<td class="Bordered">K6</td>
+<td class="Bordered">B10R1C5</td>
+<td class="Bordered">K38</td>
+<td class="Bordered">B12R1C5</td>
+<td class="Bordered">K75</td>
+<td class="Bordered">B14R1C5</td>
+<td class="Bordered">K107</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C6</td>
+<td class="Bordered">K7</td>
+<td class="Bordered">B10R1C6</td>
+<td class="Bordered">K39</td>
+<td class="Bordered">B12R1C6</td>
+<td class="Bordered">K74</td>
+<td class="Bordered">B14R1C6</td>
+<td class="Bordered">K106</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C7</td>
+<td class="Bordered">K8</td>
+<td class="Bordered">B10R1C7</td>
+<td class="Bordered">K40</td>
+<td class="Bordered">B12R1C7</td>
+<td class="Bordered">K73</td>
+<td class="Bordered">B14R1C7</td>
+<td class="Bordered">K105</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C8</td>
+<td class="Bordered">K9</td>
+<td class="Bordered">B10R1C8</td>
+<td class="Bordered">K41</td>
+<td class="Bordered">B12R1C8</td>
+<td class="Bordered">K72</td>
+<td class="Bordered">B14R1C8</td>
+<td class="Bordered">K104</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C9</td>
+<td class="Bordered">K10</td>
+<td class="Bordered">B10R1C9</td>
+<td class="Bordered">K42</td>
+<td class="Bordered">B12R1C9</td>
+<td class="Bordered">K71</td>
+<td class="Bordered">B14R1C9</td>
+<td class="Bordered">K103</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C10</td>
+<td class="Bordered">K11</td>
+<td class="Bordered">B10R1C10</td>
+<td class="Bordered">K43</td>
+<td class="Bordered">B12R1C10</td>
+<td class="Bordered">K70</td>
+<td class="Bordered">B14R1C10</td>
+<td class="Bordered">K102</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C11</td>
+<td class="Bordered">K12</td>
+<td class="Bordered">B10R1C11</td>
+<td class="Bordered">K44</td>
+<td class="Bordered">B12R1C11</td>
+<td class="Bordered">K69</td>
+<td class="Bordered">B14R1C11</td>
+<td class="Bordered">K101</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C12</td>
+<td class="Bordered">K13</td>
+<td class="Bordered">B10R1C12</td>
+<td class="Bordered">K45</td>
+<td class="Bordered">B12R1C12</td>
+<td class="Bordered">K68</td>
+<td class="Bordered">B14R1C12</td>
+<td class="Bordered">K100</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C13</td>
+<td class="Bordered">K14</td>
+<td class="Bordered">B10R1C13</td>
+<td class="Bordered">K46</td>
+<td class="Bordered">B12R1C13</td>
+<td class="Bordered">K67</td>
+<td class="Bordered">B14R1C13</td>
+<td class="Bordered">K99</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C14</td>
+<td class="Bordered">K15</td>
+<td class="Bordered">B10R1C14</td>
+<td class="Bordered">K47</td>
+<td class="Bordered">B12R1C14</td>
+<td class="Bordered">K66</td>
+<td class="Bordered">B14R1C14</td>
+<td class="Bordered">K98</td>
+</tr>
+<tr>
+<td class="Bordered">B8R1C15</td>
+<td class="Bordered">K16</td>
+<td class="Bordered">B10R1C15</td>
+<td class="Bordered">K48</td>
+<td class="Bordered">B12R1C15</td>
+<td class="Bordered">K65</td>
+<td class="Bordered">B14R1C15</td>
+<td class="Bordered">K97</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C0</td>
+<td class="Bordered">K160</td>
+<td class="Bordered">B11R0C0</td>
+<td class="Bordered">K192</td>
+<td class="Bordered">B13R0C0</td>
+<td class="Bordered">K209</td>
+<td class="Bordered">B15R0C0</td>
+<td class="Bordered">K241</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C1</td>
+<td class="Bordered">K159</td>
+<td class="Bordered">B11R0C1</td>
+<td class="Bordered">K191</td>
+<td class="Bordered">B13R0C1</td>
+<td class="Bordered">K210</td>
+<td class="Bordered">B15R0C1</td>
+<td class="Bordered">K242</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C2</td>
+<td class="Bordered">K158</td>
+<td class="Bordered">B11R0C2</td>
+<td class="Bordered">K190</td>
+<td class="Bordered">B13R0C2</td>
+<td class="Bordered">K211</td>
+<td class="Bordered">B15R0C2</td>
+<td class="Bordered">K243</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C3</td>
+<td class="Bordered">K157</td>
+<td class="Bordered">B11R0C3</td>
+<td class="Bordered">K189</td>
+<td class="Bordered">B13R0C3</td>
+<td class="Bordered">K212</td>
+<td class="Bordered">B15R0C3</td>
+<td class="Bordered">K244</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C4</td>
+<td class="Bordered">K156</td>
+<td class="Bordered">B11R0C4</td>
+<td class="Bordered">K188</td>
+<td class="Bordered">B13R0C4</td>
+<td class="Bordered">K213</td>
+<td class="Bordered">B15R0C4</td>
+<td class="Bordered">K245</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C5</td>
+<td class="Bordered">K155</td>
+<td class="Bordered">B11R0C5</td>
+<td class="Bordered">K187</td>
+<td class="Bordered">B13R0C5</td>
+<td class="Bordered">K214</td>
+<td class="Bordered">B15R0C5</td>
+<td class="Bordered">K246</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C6</td>
+<td class="Bordered">K154</td>
+<td class="Bordered">B11R0C6</td>
+<td class="Bordered">K186</td>
+<td class="Bordered">B13R0C6</td>
+<td class="Bordered">K215</td>
+<td class="Bordered">B15R0C6</td>
+<td class="Bordered">K247</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C7</td>
+<td class="Bordered">K153</td>
+<td class="Bordered">B11R0C7</td>
+<td class="Bordered">K185</td>
+<td class="Bordered">B13R0C7</td>
+<td class="Bordered">K216</td>
+<td class="Bordered">B15R0C7</td>
+<td class="Bordered">K248</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C8</td>
+<td class="Bordered">K152</td>
+<td class="Bordered">B11R0C8</td>
+<td class="Bordered">K184</td>
+<td class="Bordered">B13R0C8</td>
+<td class="Bordered">K217</td>
+<td class="Bordered">B15R0C8</td>
+<td class="Bordered">K249</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C9</td>
+<td class="Bordered">K151</td>
+<td class="Bordered">B11R0C9</td>
+<td class="Bordered">K183</td>
+<td class="Bordered">B13R0C9</td>
+<td class="Bordered">K218</td>
+<td class="Bordered">B15R0C9</td>
+<td class="Bordered">K250</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C10</td>
+<td class="Bordered">K150</td>
+<td class="Bordered">B11R0C10</td>
+<td class="Bordered">K182</td>
+<td class="Bordered">B13R0C10</td>
+<td class="Bordered">K219</td>
+<td class="Bordered">B15R0C10</td>
+<td class="Bordered">K251</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C11</td>
+<td class="Bordered">K149</td>
+<td class="Bordered">B11R0C11</td>
+<td class="Bordered">K181</td>
+<td class="Bordered">B13R0C11</td>
+<td class="Bordered">K220</td>
+<td class="Bordered">B15R0C11</td>
+<td class="Bordered">K252</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C12</td>
+<td class="Bordered">K148</td>
+<td class="Bordered">B11R0C12</td>
+<td class="Bordered">K180</td>
+<td class="Bordered">B13R0C12</td>
+<td class="Bordered">K221</td>
+<td class="Bordered">B15R0C012</td>
+<td class="Bordered">K253</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C13</td>
+<td class="Bordered">K147</td>
+<td class="Bordered">B11R0C13</td>
+<td class="Bordered">K179</td>
+<td class="Bordered">B13R0C13</td>
+<td class="Bordered">K222</td>
+<td class="Bordered">B15R0C13</td>
+<td class="Bordered">K254</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C14</td>
+<td class="Bordered">K146</td>
+<td class="Bordered">B11R0C14</td>
+<td class="Bordered">K178</td>
+<td class="Bordered">B13R0C14</td>
+<td class="Bordered">K223</td>
+<td class="Bordered">B15R0C14</td>
+<td class="Bordered">K255</td>
+</tr>
+<tr>
+<td class="Bordered">B9R0C15</td>
+<td class="Bordered">K145</td>
+<td class="Bordered">B11R0C15</td>
+<td class="Bordered">K177</td>
+<td class="Bordered">B13R0C15</td>
+<td class="Bordered">K224</td>
+<td class="Bordered">B15R0C15</td>
+<td class="Bordered">K256</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C0</td>
+<td class="Bordered">K17</td>
+<td class="Bordered">B11R1C0</td>
+<td class="Bordered">K49</td>
+<td class="Bordered">B13R1C0</td>
+<td class="Bordered">K96</td>
+<td class="Bordered">B15R1C0</td>
+<td class="Bordered">K128</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C1</td>
+<td class="Bordered">K18</td>
+<td class="Bordered">B11R1C1</td>
+<td class="Bordered">K50</td>
+<td class="Bordered">B13R1C1</td>
+<td class="Bordered">K95</td>
+<td class="Bordered">B15R1C1</td>
+<td class="Bordered">K127</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C2</td>
+<td class="Bordered">K19</td>
+<td class="Bordered">B11R1C2</td>
+<td class="Bordered">K51</td>
+<td class="Bordered">B13R1C2</td>
+<td class="Bordered">K94</td>
+<td class="Bordered">B15R1C2</td>
+<td class="Bordered">K126</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C3</td>
+<td class="Bordered">K20</td>
+<td class="Bordered">B11R1C3</td>
+<td class="Bordered">K52</td>
+<td class="Bordered">B13R1C3</td>
+<td class="Bordered">K93</td>
+<td class="Bordered">B15R1C3</td>
+<td class="Bordered">K125</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C4</td>
+<td class="Bordered">K21</td>
+<td class="Bordered">B11R1C4</td>
+<td class="Bordered">K53</td>
+<td class="Bordered">B13R1C4</td>
+<td class="Bordered">K92</td>
+<td class="Bordered">B15R1C4</td>
+<td class="Bordered">K124</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C5</td>
+<td class="Bordered">K22</td>
+<td class="Bordered">B11R1C5</td>
+<td class="Bordered">K54</td>
+<td class="Bordered">B13R1C5</td>
+<td class="Bordered">K91</td>
+<td class="Bordered">B15R1C5</td>
+<td class="Bordered">K123</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C6</td>
+<td class="Bordered">K23</td>
+<td class="Bordered">B11R1C6</td>
+<td class="Bordered">K55</td>
+<td class="Bordered">B13R1C6</td>
+<td class="Bordered">K90</td>
+<td class="Bordered">B15R1C6</td>
+<td class="Bordered">K122</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C7</td>
+<td class="Bordered">K24</td>
+<td class="Bordered">B11R1C7</td>
+<td class="Bordered">K56</td>
+<td class="Bordered">B13R1C7</td>
+<td class="Bordered">K89</td>
+<td class="Bordered">B15R1C7</td>
+<td class="Bordered">K121</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C8</td>
+<td class="Bordered">K25</td>
+<td class="Bordered">B11R1C8</td>
+<td class="Bordered">K57</td>
+<td class="Bordered">B13R1C8</td>
+<td class="Bordered">K88</td>
+<td class="Bordered">B15R1C8</td>
+<td class="Bordered">K120</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C9</td>
+<td class="Bordered">K26</td>
+<td class="Bordered">B11R1C9</td>
+<td class="Bordered">K58</td>
+<td class="Bordered">B13R1C9</td>
+<td class="Bordered">K87</td>
+<td class="Bordered">B15R1C9</td>
+<td class="Bordered">K119</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C10</td>
+<td class="Bordered">K27</td>
+<td class="Bordered">B11R1C10</td>
+<td class="Bordered">K59</td>
+<td class="Bordered">B13R1C10</td>
+<td class="Bordered">K86</td>
+<td class="Bordered">B15R1C10</td>
+<td class="Bordered">K118</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C11</td>
+<td class="Bordered">K28</td>
+<td class="Bordered">B11R1C11</td>
+<td class="Bordered">K60</td>
+<td class="Bordered">B13R1C11</td>
+<td class="Bordered">K85</td>
+<td class="Bordered">B15R1C11</td>
+<td class="Bordered">K117</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C12</td>
+<td class="Bordered">K29</td>
+<td class="Bordered">B11R1C12</td>
+<td class="Bordered">K61</td>
+<td class="Bordered">B13R1C12</td>
+<td class="Bordered">K84</td>
+<td class="Bordered">B15R1C12</td>
+<td class="Bordered">K116</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C13</td>
+<td class="Bordered">K30</td>
+<td class="Bordered">B11R1C13</td>
+<td class="Bordered">K62</td>
+<td class="Bordered">B13R1C13</td>
+<td class="Bordered">K83</td>
+<td class="Bordered">B15R1C13</td>
+<td class="Bordered">K115</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C14</td>
+<td class="Bordered">K31</td>
+<td class="Bordered">B11R1C14</td>
+<td class="Bordered">K63</td>
+<td class="Bordered">B13R1C14</td>
+<td class="Bordered">K82</td>
+<td class="Bordered">B15R1C14</td>
+<td class="Bordered">K114</td>
+</tr>
+<tr>
+<td class="Bordered">B9R1C15</td>
+<td class="Bordered">K32</td>
+<td class="Bordered">B11R1C15</td>
+<td class="Bordered">K64</td>
+<td class="Bordered">B13R1C15</td>
+<td class="Bordered">K81</td>
+<td class="Bordered">B15R1C15</td>
+<td class="Bordered">K113</td>
+</tr>
+</table>
+
+<h3>Bottom Mezzanine Board Relay Locations</h3>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+<th class="Bordered">Relay<br>Name</th>
+<th class="Bordered">Reference<br>Designator</th>
+</tr>
+<tr>
+<td class="Bordered">B0R0C0</td>
+<td class="Bordered">K144</td>
+<td class="Bordered">B2R0C0</td>
+<td class="Bordered">K176</td>
+<td class="Bordered">B4R0C0</td>
+<td class="Bordered">K193</td>
+<td class="Bordered">B6R0C0</td>
+<td class="Bordered">K225</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C1</td>
+<td class="Bordered">K143</td>
+<td class="Bordered">B2R0C1</td>
+<td class="Bordered">K175</td>
+<td class="Bordered">B4R0C1</td>
+<td class="Bordered">K194</td>
+<td class="Bordered">B6R0C1</td>
+<td class="Bordered">K226</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C2</td>
+<td class="Bordered">K142</td>
+<td class="Bordered">B2R0C2</td>
+<td class="Bordered">K174</td>
+<td class="Bordered">B4R0C2</td>
+<td class="Bordered">K195</td>
+<td class="Bordered">B6R0C2</td>
+<td class="Bordered">K227</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C3</td>
+<td class="Bordered">K141</td>
+<td class="Bordered">B2R0C3</td>
+<td class="Bordered">K173</td>
+<td class="Bordered">B4R0C3</td>
+<td class="Bordered">K196</td>
+<td class="Bordered">B6R0C3</td>
+<td class="Bordered">K228</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C4</td>
+<td class="Bordered">K140</td>
+<td class="Bordered">B2R0C4</td>
+<td class="Bordered">K172</td>
+<td class="Bordered">B4R0C4</td>
+<td class="Bordered">K197</td>
+<td class="Bordered">B6R0C4</td>
+<td class="Bordered">K229</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C5</td>
+<td class="Bordered">K139</td>
+<td class="Bordered">B2R0C5</td>
+<td class="Bordered">K171</td>
+<td class="Bordered">B4R0C5</td>
+<td class="Bordered">K198</td>
+<td class="Bordered">B6R0C5</td>
+<td class="Bordered">K230</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C6</td>
+<td class="Bordered">K138</td>
+<td class="Bordered">B2R0C6</td>
+<td class="Bordered">K170</td>
+<td class="Bordered">B4R0C6</td>
+<td class="Bordered">K199</td>
+<td class="Bordered">B6R0C6</td>
+<td class="Bordered">K231</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C7</td>
+<td class="Bordered">K137</td>
+<td class="Bordered">B2R0C7</td>
+<td class="Bordered">K169</td>
+<td class="Bordered">B4R0C7</td>
+<td class="Bordered">K200</td>
+<td class="Bordered">B6R0C7</td>
+<td class="Bordered">K232</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C8</td>
+<td class="Bordered">K136</td>
+<td class="Bordered">B2R0C8</td>
+<td class="Bordered">K168</td>
+<td class="Bordered">B4R0C8</td>
+<td class="Bordered">K201</td>
+<td class="Bordered">B6R0C8</td>
+<td class="Bordered">K233</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C9</td>
+<td class="Bordered">K135</td>
+<td class="Bordered">B2R0C9</td>
+<td class="Bordered">K167</td>
+<td class="Bordered">B4R0C9</td>
+<td class="Bordered">K202</td>
+<td class="Bordered">B6R0C9</td>
+<td class="Bordered">K234</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C10</td>
+<td class="Bordered">K134</td>
+<td class="Bordered">B2R0C10</td>
+<td class="Bordered">K166</td>
+<td class="Bordered">B4R0C10</td>
+<td class="Bordered">K203</td>
+<td class="Bordered">B6R0C10</td>
+<td class="Bordered">K235</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C11</td>
+<td class="Bordered">K133</td>
+<td class="Bordered">B2R0C11</td>
+<td class="Bordered">K165</td>
+<td class="Bordered">B4R0C11</td>
+<td class="Bordered">K204</td>
+<td class="Bordered">B6R0C11</td>
+<td class="Bordered">K236</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C12</td>
+<td class="Bordered">K132</td>
+<td class="Bordered">B2R0C12</td>
+<td class="Bordered">K164</td>
+<td class="Bordered">B4R0C12</td>
+<td class="Bordered">K205</td>
+<td class="Bordered">B6R0C12</td>
+<td class="Bordered">K237</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C13</td>
+<td class="Bordered">K131</td>
+<td class="Bordered">B2R0C13</td>
+<td class="Bordered">K163</td>
+<td class="Bordered">B4R0C13</td>
+<td class="Bordered">K206</td>
+<td class="Bordered">B6R0C13</td>
+<td class="Bordered">K238</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C14</td>
+<td class="Bordered">K130</td>
+<td class="Bordered">B2R0C14</td>
+<td class="Bordered">K162</td>
+<td class="Bordered">B4R0C14</td>
+<td class="Bordered">K207</td>
+<td class="Bordered">B6R0C14</td>
+<td class="Bordered">K239</td>
+</tr>
+<tr>
+<td class="Bordered">B0R0C15</td>
+<td class="Bordered">K129</td>
+<td class="Bordered">B2R0C15</td>
+<td class="Bordered">K161</td>
+<td class="Bordered">B4R0C15</td>
+<td class="Bordered">K208</td>
+<td class="Bordered">B6R0C15</td>
+<td class="Bordered">K240</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C0</td>
+<td class="Bordered">K1</td>
+<td class="Bordered">B2R1C0</td>
+<td class="Bordered">K33</td>
+<td class="Bordered">B4R1C0</td>
+<td class="Bordered">K80</td>
+<td class="Bordered">B6R1C0</td>
+<td class="Bordered">K112</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C1</td>
+<td class="Bordered">K2</td>
+<td class="Bordered">B2R1C1</td>
+<td class="Bordered">K34</td>
+<td class="Bordered">B4R1C1</td>
+<td class="Bordered">K79</td>
+<td class="Bordered">B6R1C1</td>
+<td class="Bordered">K111</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C2</td>
+<td class="Bordered">K3</td>
+<td class="Bordered">B2R1C2</td>
+<td class="Bordered">K35</td>
+<td class="Bordered">B4R1C2</td>
+<td class="Bordered">K78</td>
+<td class="Bordered">B6R1C3</td>
+<td class="Bordered">K110</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C3</td>
+<td class="Bordered">K4</td>
+<td class="Bordered">B2R1C3</td>
+<td class="Bordered">K36</td>
+<td class="Bordered">B4R1C3</td>
+<td class="Bordered">K77</td>
+<td class="Bordered">B6R1C3</td>
+<td class="Bordered">K109</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C4</td>
+<td class="Bordered">K5</td>
+<td class="Bordered">B2R1C4</td>
+<td class="Bordered">K37</td>
+<td class="Bordered">B4R1C4</td>
+<td class="Bordered">K76</td>
+<td class="Bordered">B6R1C4</td>
+<td class="Bordered">K108</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C5</td>
+<td class="Bordered">K6</td>
+<td class="Bordered">B2R1C5</td>
+<td class="Bordered">K38</td>
+<td class="Bordered">B4R1C5</td>
+<td class="Bordered">K75</td>
+<td class="Bordered">B6R1C5</td>
+<td class="Bordered">K107</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C6</td>
+<td class="Bordered">K7</td>
+<td class="Bordered">B2R1C6</td>
+<td class="Bordered">K39</td>
+<td class="Bordered">B4R1C6</td>
+<td class="Bordered">K74</td>
+<td class="Bordered">B6R1C6</td>
+<td class="Bordered">K106</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C7</td>
+<td class="Bordered">K8</td>
+<td class="Bordered">B2R1C7</td>
+<td class="Bordered">K40</td>
+<td class="Bordered">B4R1C7</td>
+<td class="Bordered">K73</td>
+<td class="Bordered">B6R1C7</td>
+<td class="Bordered">K105</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C8</td>
+<td class="Bordered">K9</td>
+<td class="Bordered">B2R1C8</td>
+<td class="Bordered">K41</td>
+<td class="Bordered">B4R1C8</td>
+<td class="Bordered">K72</td>
+<td class="Bordered">B6R1C8</td>
+<td class="Bordered">K104</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C9</td>
+<td class="Bordered">K10</td>
+<td class="Bordered">B2R1C9</td>
+<td class="Bordered">K42</td>
+<td class="Bordered">B4R1C9</td>
+<td class="Bordered">K71</td>
+<td class="Bordered">B6R1C9</td>
+<td class="Bordered">K103</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C10</td>
+<td class="Bordered">K11</td>
+<td class="Bordered">B2R1C10</td>
+<td class="Bordered">K43</td>
+<td class="Bordered">B4R1C10</td>
+<td class="Bordered">K70</td>
+<td class="Bordered">B6R1C10</td>
+<td class="Bordered">K102</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C11</td>
+<td class="Bordered">K12</td>
+<td class="Bordered">B2R1C11</td>
+<td class="Bordered">K44</td>
+<td class="Bordered">B4R1C11</td>
+<td class="Bordered">K69</td>
+<td class="Bordered">B6R1C11</td>
+<td class="Bordered">K101</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C12</td>
+<td class="Bordered">K13</td>
+<td class="Bordered">B2R1C12</td>
+<td class="Bordered">K45</td>
+<td class="Bordered">B4R1C12</td>
+<td class="Bordered">K68</td>
+<td class="Bordered">B6R1C12</td>
+<td class="Bordered">K100</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C13</td>
+<td class="Bordered">K14</td>
+<td class="Bordered">B2R1C13</td>
+<td class="Bordered">K46</td>
+<td class="Bordered">B4R1C13</td>
+<td class="Bordered">K67</td>
+<td class="Bordered">B6R1C13</td>
+<td class="Bordered">K99</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C14</td>
+<td class="Bordered">K15</td>
+<td class="Bordered">B2R1C14</td>
+<td class="Bordered">K47</td>
+<td class="Bordered">B4R1C14</td>
+<td class="Bordered">K66</td>
+<td class="Bordered">B6R1C14</td>
+<td class="Bordered">K98</td>
+</tr>
+<tr>
+<td class="Bordered">B0R1C15</td>
+<td class="Bordered">K16</td>
+<td class="Bordered">B2R1C15</td>
+<td class="Bordered">K48</td>
+<td class="Bordered">B4R1C15</td>
+<td class="Bordered">K65</td>
+<td class="Bordered">B6R1C15</td>
+<td class="Bordered">K97</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C0</td>
+<td class="Bordered">K160</td>
+<td class="Bordered">B3R0C0</td>
+<td class="Bordered">K192</td>
+<td class="Bordered">B5R0C0</td>
+<td class="Bordered">K209</td>
+<td class="Bordered">B7R0C0</td>
+<td class="Bordered">K241</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C1</td>
+<td class="Bordered">K159</td>
+<td class="Bordered">B3R0C1</td>
+<td class="Bordered">K191</td>
+<td class="Bordered">B5R0C1</td>
+<td class="Bordered">K210</td>
+<td class="Bordered">B7R0C1</td>
+<td class="Bordered">K242</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C2</td>
+<td class="Bordered">K158</td>
+<td class="Bordered">B3R0C2</td>
+<td class="Bordered">K190</td>
+<td class="Bordered">B5R0C2</td>
+<td class="Bordered">K211</td>
+<td class="Bordered">B7R0C2</td>
+<td class="Bordered">K243</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C3</td>
+<td class="Bordered">K157</td>
+<td class="Bordered">B3R0C3</td>
+<td class="Bordered">K189</td>
+<td class="Bordered">B5R0C3</td>
+<td class="Bordered">K212</td>
+<td class="Bordered">B7R0C3</td>
+<td class="Bordered">K244</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C4</td>
+<td class="Bordered">K156</td>
+<td class="Bordered">B3R0C4</td>
+<td class="Bordered">K188</td>
+<td class="Bordered">B5R0C4</td>
+<td class="Bordered">K213</td>
+<td class="Bordered">B7R0C4</td>
+<td class="Bordered">K245</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C5</td>
+<td class="Bordered">K155</td>
+<td class="Bordered">B3R0C5</td>
+<td class="Bordered">K187</td>
+<td class="Bordered">B5R0C5</td>
+<td class="Bordered">K214</td>
+<td class="Bordered">B7R0C5</td>
+<td class="Bordered">K246</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C6</td>
+<td class="Bordered">K154</td>
+<td class="Bordered">B3R0C6</td>
+<td class="Bordered">K186</td>
+<td class="Bordered">B5R0C6</td>
+<td class="Bordered">K215</td>
+<td class="Bordered">B7R0C6</td>
+<td class="Bordered">K247</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C7</td>
+<td class="Bordered">K153</td>
+<td class="Bordered">B3R0C7</td>
+<td class="Bordered">K185</td>
+<td class="Bordered">B5R0C7</td>
+<td class="Bordered">K216</td>
+<td class="Bordered">B7R0C7</td>
+<td class="Bordered">K248</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C8</td>
+<td class="Bordered">K152</td>
+<td class="Bordered">B3R0C8</td>
+<td class="Bordered">K184</td>
+<td class="Bordered">B5R0C8</td>
+<td class="Bordered">K217</td>
+<td class="Bordered">B7R0C8</td>
+<td class="Bordered">K249</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C9</td>
+<td class="Bordered">K151</td>
+<td class="Bordered">B3R0C9</td>
+<td class="Bordered">K183</td>
+<td class="Bordered">B5R0C9</td>
+<td class="Bordered">K218</td>
+<td class="Bordered">B7R0C9</td>
+<td class="Bordered">K250</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C10</td>
+<td class="Bordered">K150</td>
+<td class="Bordered">B3R0C10</td>
+<td class="Bordered">K182</td>
+<td class="Bordered">B5R0C10</td>
+<td class="Bordered">K219</td>
+<td class="Bordered">B7R0C10</td>
+<td class="Bordered">K251</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C11</td>
+<td class="Bordered">K149</td>
+<td class="Bordered">B3R0C11</td>
+<td class="Bordered">K181</td>
+<td class="Bordered">B5R0C11</td>
+<td class="Bordered">K220</td>
+<td class="Bordered">B7R0C11</td>
+<td class="Bordered">K252</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C12</td>
+<td class="Bordered">K148</td>
+<td class="Bordered">B3R0C12</td>
+<td class="Bordered">K180</td>
+<td class="Bordered">B5R0C12</td>
+<td class="Bordered">K221</td>
+<td class="Bordered">B7R0C12</td>
+<td class="Bordered">K253</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C13</td>
+<td class="Bordered">K147</td>
+<td class="Bordered">B3R0C13</td>
+<td class="Bordered">K179</td>
+<td class="Bordered">B5R0C13</td>
+<td class="Bordered">K222</td>
+<td class="Bordered">B7R0C13</td>
+<td class="Bordered">K254</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C14</td>
+<td class="Bordered">K146</td>
+<td class="Bordered">B3R0C14</td>
+<td class="Bordered">K178</td>
+<td class="Bordered">B5R0C14</td>
+<td class="Bordered">K223</td>
+<td class="Bordered">B7R0C14</td>
+<td class="Bordered">K255</td>
+</tr>
+<tr>
+<td class="Bordered">B1R0C15</td>
+<td class="Bordered">K145</td>
+<td class="Bordered">B3R0C15</td>
+<td class="Bordered">K177</td>
+<td class="Bordered">B5R0C15</td>
+<td class="Bordered">K224</td>
+<td class="Bordered">B7R0C15</td>
+<td class="Bordered">K256</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C0</td>
+<td class="Bordered">K17</td>
+<td class="Bordered">B3R1C0</td>
+<td class="Bordered">K49</td>
+<td class="Bordered">B5R1C0</td>
+<td class="Bordered">K96</td>
+<td class="Bordered">B7R1C0</td>
+<td class="Bordered">K128</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C1</td>
+<td class="Bordered">K18</td>
+<td class="Bordered">B3R1C1</td>
+<td class="Bordered">K50</td>
+<td class="Bordered">B5R1C1</td>
+<td class="Bordered">K95</td>
+<td class="Bordered">B7R1C1</td>
+<td class="Bordered">K127</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C2</td>
+<td class="Bordered">K19</td>
+<td class="Bordered">B3R1C2</td>
+<td class="Bordered">K51</td>
+<td class="Bordered">B5R1C2</td>
+<td class="Bordered">K94</td>
+<td class="Bordered">B7R1C2</td>
+<td class="Bordered">K126</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C3</td>
+<td class="Bordered">K20</td>
+<td class="Bordered">B3R1C3</td>
+<td class="Bordered">K52</td>
+<td class="Bordered">B5R1C3</td>
+<td class="Bordered">K93</td>
+<td class="Bordered">B7R1C3</td>
+<td class="Bordered">K125</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C4</td>
+<td class="Bordered">K21</td>
+<td class="Bordered">B3R1C4</td>
+<td class="Bordered">K53</td>
+<td class="Bordered">B5R1C4</td>
+<td class="Bordered">K92</td>
+<td class="Bordered">B7R1C4</td>
+<td class="Bordered">K124</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C5</td>
+<td class="Bordered">K22</td>
+<td class="Bordered">B3R1C5</td>
+<td class="Bordered">K54</td>
+<td class="Bordered">B5R1C5</td>
+<td class="Bordered">K91</td>
+<td class="Bordered">B7R1C5</td>
+<td class="Bordered">K123</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C6</td>
+<td class="Bordered">K23</td>
+<td class="Bordered">B3R1C6</td>
+<td class="Bordered">K55</td>
+<td class="Bordered">B5R1C6</td>
+<td class="Bordered">K90</td>
+<td class="Bordered">B7R1C6</td>
+<td class="Bordered">K122</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C7</td>
+<td class="Bordered">K24</td>
+<td class="Bordered">B3R1C7</td>
+<td class="Bordered">K56</td>
+<td class="Bordered">B5R1C7</td>
+<td class="Bordered">K89</td>
+<td class="Bordered">B7R1C7</td>
+<td class="Bordered">K121</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C8</td>
+<td class="Bordered">K25</td>
+<td class="Bordered">B3R1C8</td>
+<td class="Bordered">K57</td>
+<td class="Bordered">B5R1C8</td>
+<td class="Bordered">K88</td>
+<td class="Bordered">B7R1C8</td>
+<td class="Bordered">K120</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C9</td>
+<td class="Bordered">K26</td>
+<td class="Bordered">B3R1C9</td>
+<td class="Bordered">K58</td>
+<td class="Bordered">B5R1C9</td>
+<td class="Bordered">K87</td>
+<td class="Bordered">B7R1C9</td>
+<td class="Bordered">K119</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C10</td>
+<td class="Bordered">K27</td>
+<td class="Bordered">B3R1C10</td>
+<td class="Bordered">K59</td>
+<td class="Bordered">B5R1C10</td>
+<td class="Bordered">K86</td>
+<td class="Bordered">B7R1C10</td>
+<td class="Bordered">K118</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C11</td>
+<td class="Bordered">K28</td>
+<td class="Bordered">B3R1C11</td>
+<td class="Bordered">K60</td>
+<td class="Bordered">B5R1C11</td>
+<td class="Bordered">K85</td>
+<td class="Bordered">B7R1C11</td>
+<td class="Bordered">K117</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C12</td>
+<td class="Bordered">K29</td>
+<td class="Bordered">B3R1C12</td>
+<td class="Bordered">K61</td>
+<td class="Bordered">B5R1C12</td>
+<td class="Bordered">K84</td>
+<td class="Bordered">B7R1C12</td>
+<td class="Bordered">K116</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C13</td>
+<td class="Bordered">K30</td>
+<td class="Bordered">B3R1C13</td>
+<td class="Bordered">K62</td>
+<td class="Bordered">B5R1C13</td>
+<td class="Bordered">K83</td>
+<td class="Bordered">B7R1C13</td>
+<td class="Bordered">K115</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C14</td>
+<td class="Bordered">K31</td>
+<td class="Bordered">B3R1C14</td>
+<td class="Bordered">K63</td>
+<td class="Bordered">B5R1C14</td>
+<td class="Bordered">K82</td>
+<td class="Bordered">B7R1C14</td>
+<td class="Bordered">K114</td>
+</tr>
+<tr>
+<td class="Bordered">B1R1C15</td>
+<td class="Bordered">K32</td>
+<td class="Bordered">B3R1C15</td>
+<td class="Bordered">K64</td>
+<td class="Bordered">B5R1C15</td>
+<td class="Bordered">K81</td>
+<td class="Bordered">B7R1C15</td>
+<td class="Bordered">K113</td>
+</tr>
+</table>
+</li>
+<li>Use the reference designator to locate the relay on the mezzanine board.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Reference designators are printed on the mezzanine boards.
+</td></tr></table>
+</li>
+</ol>
+<li>Locate the assembly and serial number labels on the board with the relay you want to replace. White labels indicate the board was assembled using lead solder (Sn 63 Pb 37). Green labels indicate the board was assembled using lead-free solder (Sn 96.5 Ag 3.0 Cu 0.5). Lead-free assemblies have assembly numbers ending in L.
+<p class="Anchor"><img src="loc_eps_lead_free_labels.gif"></p></li>
+
+
+<li>Disassemble the module. Refer to <a href="#topMezzanine">Disconnecting&nbsp;the&nbsp;Top&nbsp;Mezzanine&nbsp;Board</a> if the relay you want to replace is located on the top mezzanine board. Refer to <a href="#bottomMezzanine">Disconnecting&nbsp;the&nbsp;Bottom&nbsp;Mezzanine&nbsp;Board</a> if the relay you want to replace is located on the bottom mezzanine board. Refer to both procedures if you would like to replace relays on both boards.
+</li>
+</ol>
+<br><br>
+
+<h3><a name="topMezzanine">Disconnecting the Top Mezzanine Board</a></h3>
+
+<p class="body">Complete the following steps to disconnect the top mezzanine board from the driver board.</p>
+<ol>
+<li>Remove the top mezzanine board screws.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2532_mod.gif"></td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Mezzanine Board Screws</td>
+</tr>
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Driver Board</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+
+<li>Use a plastic screwdriver to gently pry the top mezzanine board from the driver board, prying a little at each corner for an even distribution of pressure until the top mezzanine board pops loose. Retain the spacers from between the boards. 
+<br><br>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2532_separate_top_mezzanine.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Top Mezzanine Board</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Driver Board</td>
+</tr>
+
+</table>
+</td>
+
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">Plastic Screwdriver</td>
+	</tr>
+	
+	<tr class="callout">
+	<td class="number">4</td>
+	<td class="description">Spacer</td>
+	</tr>
+	</table>
+</td>
+
+</tr>
+
+
+</table>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+
+<br><br>
+
+<h4><a name="bottomMezzanine">Disconnecting the Bottom Mezzanine Board</a></h4>
+
+<p class="body">Complete the following steps to disconnect the bottom mezzanine board from the driver board.</p>
+<ol>
+<li>Remove the ejector handle assembly screw.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2532_remove_ejector_handle.gif"> </td>
+</tr>
+<tr>
+<td class="frame">
+	<table class="legend">
+	<tr>
+		<td class="column">
+		<table class="callouts">
+		<tr class="callout">
+			<td class="number">1</td>
+			<td class="description">Ejector Handle Screw</td>
+		</tr>
+		<tr class="callout">
+			<td class="number">2</td>
+			<td class="description">Ejector Handle Assembly</td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	</table>
+	</td>
+</tr>
+</table>
+</li>
+
+<li>Remove the mezzanine board screws.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2532_mod2.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Mezzanine Board Screws</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Driver Board</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+<li>Disconnect the PCB interconnect cable by lifting the PCB cable latch on the J2 connector.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="loc_eps_2532_pxi_back_plane_connect.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">J2 Connector</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">PCB Interconnect Cable</td>
+</tr>
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">PCB Cable Latch</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+
+<li>Separate the daughterboard assembly from the CMI bracket.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2532_separate_daughterboard.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">CMI Bracket</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Daughterboard Assembly</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+
+<li>Use a plastic screwdriver to gently pry the bottom mezzanine board from the driver board, prying a little at each corner for an even distribution of pressure until the bottom mezzanine board pops loose. Retain the spacers from between the boards. 
+<br><br>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2532_separate_bottom_mezzan.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Driver Board</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Bottom Mezzanine Board</td>
+</tr>
+
+</table>
+</td>
+
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">Spacer</td>
+	</tr>
+	
+	<tr class="callout">
+	<td class="number">4</td>
+	<td class="description">Plastic Screwdriver</td>
+	</tr>
+	</table>
+</td>
+
+</tr>
+
+
+</table>
+</td>
+</tr>
+</table>
+</li>
+
+</ol>
+
+<h2>Replace the Relay</h2>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies, and lead solder for relay replacement on lead assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this condition. This rework can prevent the same unit from being reworked later on a lead-free solder station, because it could contaminate the station.</span></td>
+</tr>
+</table>
+
+<p class="Body">Make sure you have the following items:</p>
+<ul>
+<li>Hot air rework station with hot air gun set to 316 &#0176;C (600 &#0176;F) for lead solder rework or 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>Temperature-regulated soldering iron set to 316 &#0176;C (600 &#0176;F) for lead solder rework or 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>63/37 Tin/Lead solder (flux core) for lead solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Fine tweezers</li>
+</ul>
+
+<p class="body">Complete the following steps to replace the relay:</p>
+
+<ol>
+<li>Apply heat with the hot air gun for 30 to 45 seconds in a circular motion around the relay, keeping the hot air gun 0.75 to 1 inch (1.91 to 2.54 cm) above the daughterboard.
+</li>
+<li>Gently lift the relay with tweezers to remove it from the PCB. If the relay does not lift easily, apply hot air in a circular motion around the relay two to three times and gently try to lift the relay again. Repeat until the solder reflows and the relay lifts easily.
+</li>
+<li>Use the soldering iron to tin the leads of the new relay.</li>
+<li>Use the soldering iron to create a uniform distribution of solder on the pads of the daughterboard PCB.</li>
+<li>Use the hot air gun to heat the PCB and the relay leads.</li>
+<li>Hold the new relay in place on the board with the tweezers while using the hot air gun to apply heat in a circular motion until the solder reflows.</li>
+</ol>
+
+<h2>Reassemble the Module</h2>
+
+<p class="body">Refer to the following procedures to reconnect the boards that you disconnected in <a href="#disassemble">Disassemble the Switch Module</a>.</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td><strong>Tip</strong>&nbsp;&nbsp;In NI-SWITCH 3.1 or later, you can use the Switch Soft Front Panel  to reset the relay count after you have replaced a failed relay. Refer to the <em>Switch Soft Front Panel Help</em> for more information.</td></tr></table>
+
+<h3>Reconnecting the Top Mezzanine Board</h3>
+
+<p class="body">Complete the following steps to reconnect the top mezzanine board to the driver board.</p>
+<ol>
+<li>Align pin holes 179 and 180 on the J4 and J5 connectors of the top mezzanine board with pins 179 and 180 of the J3 and J4 connectors on the driver board. Gently fold the mezzanine board over onto the driver board as shown in the following figure. Leave approximately 6 mm of clearance between the mezzanine board and the driver board. Do not press the boards together.
+<br>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Ensure the black surface mount J2 and J3 connectors on the mezzanine board face away from the driver board, and the notch in the corner of the mezzanine board faces the bottom front of the module.</td>
+</tr>
+</table>
+<br>
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2532_assemble_top_mezzanine.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Driver Board J4 Connector</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Driver Board J3 Connector</td>
+</tr>
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">Mezzanine Board J4 Connector</td>
+	</tr>
+	<tr class="callout">
+	<td class="number">4</td>
+	<td class="description">Mezzanine Board J5 Connector</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+<li>Replace the spacers between the driver board and top mezzanine board.</li>
+<li>Secure the top mezzanine board to the driver board using the screws from step 1.</li>
+</ol>
+
+<h3>Reconnecting the Bottom Mezzanine Board</h3>
+
+<p class="body">Complete the following steps to reconnect the bottom mezzanine board to the driver board.</p>
+<ol>
+<li>Align pin holes 179 and 180 on the J2 and J3 connectors of the bottom mezzanine board with pins 179 and 180 of the J5 and J6 connectors on the driver board. Gently fold the mezzanine board over onto the driver board as shown in the following figure. Leave approximately 6 mm of clearance between the mezzanine board and the driver board. Do not press the boards together.
+<br>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;Ensure the black surface mount J4 and J5 connectors on the mezzanine board face away from the driver board, and the notch in the corner of the mezzanine board faces the bottom front of the module.</td>
+</tr>
+</table>
+<br>
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2532_assemble_btm_mezzanine.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Mezzanine Board J2 Connector</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Mezzanine Board J3 Connector</td>
+</tr>
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">Driver Board J5 Connector</td>
+	</tr>
+	<tr class="callout">
+	<td class="number">4</td>
+	<td class="description">Driver Board J6 Connector</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+
+<li>Connect the PCB interconnect cable to the J2 connector on the bottom mezzanine board.</li>
+
+<li>Reconnect the daughterboard to the CMI bracket.</li>
+
+<li>Replace the spacers between the driver board and bottom mezzanine board.</li>
+
+<li>Secure the daughterboard assembly to the CMI bracket using the screws from step 2.</li>
+
+<li>Replace the ejector handle assembly screw from step 1.</li>
+</ol>
+
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

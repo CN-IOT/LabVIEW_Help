@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2598 Dual Transfer Switch Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2598 Dual Transfer Switch Topology</h1>
+
+<p class="Body">The following figures represents the NI PXI-2598 in the dual  <a href="transfer_switches.html">transfer switch</a> topology.</p>
+<p class="Anchor"><img src="noloc_2598_2798_hardware_diagram.gif"></p>
+ 
+<p class="Body">The following figures show the two states of each transfer switch, reset and set.</p>
+<p class="Anchor"><img src="loc_eps_2598_2798_hardware_states.gif"></p>
+
+<p class="Body"><strong>Application</strong></p>
+<p class="Body">The dual transfer switch topology of the NI PXI-2598 enables customers to insert and remove components in a high-frequency signal path. To insert the DUT, configure the transfer switch in its reset state. To remove the DUT, configure the transfer switch in its set state.</p>
+
+<h2>Making a Connection</h2>
+  
+<p class="Body">You can control the channels using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function.</p>
+
+<p class="Body">To set the transfer switch, disconnect the nc terminal from com, and connect no to com.</p>
+
+<p class="Body">For example, to set the transfer switch K0, use the following code:</p>
+
+<p class="Indent1"><span class="Monospace">niSwitch_Disconnect(vi, &quot;nc0&quot;, &quot;com0&quot;)</span></p>
+
+<p class="Indent1"><span class="Monospace">niSwitch_Connect(vi, &quot;no0&quot;, &quot;com0&quot;) </span></p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;To connect no to com you do not need to disconnect nc from com after the module has been reset or a call to the <a href="switchviref.chm::/niSwitch_Disconnect_All_Channels.html">niSwitch Disconnect All Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_disconnectall.html"><span class="Monospace">niSwitch_DisconnectAll</span></a> function has been made.</td></tr></table> 
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;<span class="Monospace">niSwitch_Disconnect(vi, &quot;nc0&quot;, &quot;com0&quot;)</span> does <em>not</em> operate the relay until <span class="Monospace">niSwitch_Connect(vi, &quot;no0&quot;, &quot;com0&quot;)</span> is executed. Similarly, <span class="Monospace">niSwitch_Disconnect(vi, &quot;no0&quot;, &quot;com0&quot;)</span> does <em>not</em> operate the relay until <span class="Monospace">niSwitch_Connect(vi, &quot;nc0&quot;, &quot;com0&quot;)</span> is executed.</td></tr></table>
+
+<p class="Body">To reset the transfer switch, disconnect the no terminal from com, and connect nc to com.</p>
+
+<p class="Body">For example, to reset the transfer switch K0, use the following code:</p>
+
+<p class="Indent1"><span class="Monospace">niSwitch_Disconnect(vi, &quot;no0&quot;, &quot;com0&quot;)</span></p>
+
+<p class="Indent1"><span class="Monospace">niSwitch_Connect(vi, &quot;nc0&quot;, &quot;com0&quot;) </span></p>
+
+<P class="Body">When <A href="flow_config.html#scanning">scanning</A> the NI PXI-2598, a typical <a href="scan_list.html">scan list</a> entry could be <span class="Monospace">nc0-&gt;com0;</SPAN>. This entry resets transfer switch K0.</P>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

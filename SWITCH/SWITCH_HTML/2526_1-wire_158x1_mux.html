@@ -1,0 +1,559 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXIe-2526 1-Wire 158&#0215;1 Multiplexer Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXIe-2526 1-Wire 158&#0215;1 Multiplexer Topology</h1>
+
+<p class="Body">The following figure represents the <span class="nobreak">NI PXIe-2526 (NI 2526)</span> in the 1-wire 158&#215;1 multiplexer topology.</p>
+
+<p class="Anchor"><img src="noloc_2526_1-wire_158x1_mux.gif"></p>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">When using the NI&#160;2526 as a 1-wire 158&#0215;1 multiplexer, all channels route to com0. You can control the channels using  the <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function.</p>
+
+<p class="Body">For example, to connect channel 1 to com0, call <span class="Monospace">niSwitch_Connect(vi, &quot;ch1&quot;, &quot;com&quot;)</span>. To disconnect channel 1 from com0, call <span class="Monospace">niSwitch_Disconnect(vi, &quot;ch1&quot;, &quot;com&quot;)</span>.
+
+<h2>Pinout</h2>
+   <p class="Body">
+     The following figure identifies the pins for the NI&#160;2526 in the
+     1-wire 158&#215;1 multiplexer topology.
+   </p>
+<p class="Anchor"><img src="loc_eps_2526_1-wire_pinout.gif"></p>
+
+   <p class="Body">
+     The following table lists the channel pairings and relay assignments for the NI&#160;2526 in the
+     1-wire 158&#215;1 multiplexer topology.
+   </p>
+
+<table class="Bordered">
+<tr>
+<th class="Bordered" colspan="2">1-Wire 158&#0215;1 Channel Name</th>
+<th class="Bordered">Relay Name</th>
+</tr>
+
+<tr>
+<td class="Bordered">CH0</td>
+<td class="Bordered">CH79</td>
+<td class="Bordered">k0</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH1</td>
+<td class="Bordered">CH80</td>
+<td class="Bordered">k1</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH2</td>
+<td class="Bordered">CH81</td>
+<td class="Bordered">k2</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH3</td>
+<td class="Bordered">CH82</td>
+<td class="Bordered">k3</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH4</td>
+<td class="Bordered">CH83</td>
+<td class="Bordered">k4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH4</td>
+<td class="Bordered">CH83</td>
+<td class="Bordered">k4</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH5</td>
+<td class="Bordered">CH84</td>
+<td class="Bordered">k5</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH6</td>
+<td class="Bordered">CH85</td>
+<td class="Bordered">k6</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH7</td>
+<td class="Bordered">CH86</td>
+<td class="Bordered">k7</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH8</td>
+<td class="Bordered">CH87</td>
+<td class="Bordered">k8</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH9</td>
+<td class="Bordered">CH88</td>
+<td class="Bordered">k9</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH10</td>
+<td class="Bordered">CH89</td>
+<td class="Bordered">k10</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH11</td>
+<td class="Bordered">CH90</td>
+<td class="Bordered">k11</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH12</td>
+<td class="Bordered">CH91</td>
+<td class="Bordered">k12</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH13</td>
+<td class="Bordered">CH92</td>
+<td class="Bordered">k13</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH14</td>
+<td class="Bordered">CH93</td>
+<td class="Bordered">k14</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH14</td>
+<td class="Bordered">CH93</td>
+<td class="Bordered">k14</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH15</td>
+<td class="Bordered">CH94</td>
+<td class="Bordered">k15</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH16</td>
+<td class="Bordered">CH95</td>
+<td class="Bordered">k16</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH17</td>
+<td class="Bordered">CH96</td>
+<td class="Bordered">k17</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH18</td>
+<td class="Bordered">CH97</td>
+<td class="Bordered">k18</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH19</td>
+<td class="Bordered">CH98</td>
+<td class="Bordered">k19</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH20</td>
+<td class="Bordered">CH99</td>
+<td class="Bordered">k20</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH20</td>
+<td class="Bordered">CH99</td>
+<td class="Bordered">k20</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH21</td>
+<td class="Bordered">CH100</td>
+<td class="Bordered">k21</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH22</td>
+<td class="Bordered">CH101</td>
+<td class="Bordered">k22</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH23</td>
+<td class="Bordered">CH102</td>
+<td class="Bordered">k23</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH24</td>
+<td class="Bordered">CH103</td>
+<td class="Bordered">k24</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH25</td>
+<td class="Bordered">CH104</td>
+<td class="Bordered">k25</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH26</td>
+<td class="Bordered">CH105</td>
+<td class="Bordered">k26</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH27</td>
+<td class="Bordered">CH106</td>
+<td class="Bordered">k27</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH28</td>
+<td class="Bordered">CH107</td>
+<td class="Bordered">k28</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH29</td>
+<td class="Bordered">CH108</td>
+<td class="Bordered">k29</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH30</td>
+<td class="Bordered">CH109</td>
+<td class="Bordered">k30</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH31</td>
+<td class="Bordered">CH110</td>
+<td class="Bordered">k31</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH32</td>
+<td class="Bordered">CH111</td>
+<td class="Bordered">k32</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH33</td>
+<td class="Bordered">CH112</td>
+<td class="Bordered">k33</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH34</td>
+<td class="Bordered">CH113</td>
+<td class="Bordered">k34</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH35</td>
+<td class="Bordered">CH114</td>
+<td class="Bordered">k35</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH36</td>
+<td class="Bordered">CH115</td>
+<td class="Bordered">k36</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH37</td>
+<td class="Bordered">CH116</td>
+<td class="Bordered">k37</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH38</td>
+<td class="Bordered">CH117</td>
+<td class="Bordered">k38</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH39</td>
+<td class="Bordered">CH118</td>
+<td class="Bordered">k39</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH40</td>
+<td class="Bordered">CH119</td>
+<td class="Bordered">k40</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH41</td>
+<td class="Bordered">CH120</td>
+<td class="Bordered">k41</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH42</td>
+<td class="Bordered">CH121</td>
+<td class="Bordered">k42</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH43</td>
+<td class="Bordered">CH122</td>
+<td class="Bordered">k43</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH44</td>
+<td class="Bordered">CH123</td>
+<td class="Bordered">k44</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH45</td>
+<td class="Bordered">CH124</td>
+<td class="Bordered">k45</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH46</td>
+<td class="Bordered">CH125</td>
+<td class="Bordered">k46</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH47</td>
+<td class="Bordered">CH126</td>
+<td class="Bordered">k47</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH48</td>
+<td class="Bordered">CH127</td>
+<td class="Bordered">k48</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH49</td>
+<td class="Bordered">CH128</td>
+<td class="Bordered">k49</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH50</td>
+<td class="Bordered">CH129</td>
+<td class="Bordered">k50</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH51</td>
+<td class="Bordered">CH130</td>
+<td class="Bordered">k51</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH52</td>
+<td class="Bordered">CH131</td>
+<td class="Bordered">k52</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH53</td>
+<td class="Bordered">CH132</td>
+<td class="Bordered">k53</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH54</td>
+<td class="Bordered">CH133</td>
+<td class="Bordered">k54</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH55</td>
+<td class="Bordered">CH134</td>
+<td class="Bordered">k55</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH56</td>
+<td class="Bordered">CH135</td>
+<td class="Bordered">k56</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH57</td>
+<td class="Bordered">CH136</td>
+<td class="Bordered">k57</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH58</td>
+<td class="Bordered">CH137</td>
+<td class="Bordered">k58</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH59</td>
+<td class="Bordered">CH138</td>
+<td class="Bordered">k59</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH60</td>
+<td class="Bordered">CH139</td>
+<td class="Bordered">k60</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH61</td>
+<td class="Bordered">CH140</td>
+<td class="Bordered">k61</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH62</td>
+<td class="Bordered">CH141</td>
+<td class="Bordered">k62</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH63</td>
+<td class="Bordered">CH142</td>
+<td class="Bordered">k63</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH64</td>
+<td class="Bordered">CH143</td>
+<td class="Bordered">k64</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH65</td>
+<td class="Bordered">CH144</td>
+<td class="Bordered">k65</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH66</td>
+<td class="Bordered">CH145</td>
+<td class="Bordered">k66</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH67</td>
+<td class="Bordered">CH146</td>
+<td class="Bordered">k67</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH68</td>
+<td class="Bordered">CH147</td>
+<td class="Bordered">k68</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH69</td>
+<td class="Bordered">CH148</td>
+<td class="Bordered">k69</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH70</td>
+<td class="Bordered">CH149</td>
+<td class="Bordered">k70</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH71</td>
+<td class="Bordered">CH150</td>
+<td class="Bordered">k71</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH72</td>
+<td class="Bordered">CH151</td>
+<td class="Bordered">k72</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH73</td>
+<td class="Bordered">CH152</td>
+<td class="Bordered">k73</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH74</td>
+<td class="Bordered">CH153</td>
+<td class="Bordered">k74</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH75</td>
+<td class="Bordered">CH154</td>
+<td class="Bordered">k75</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH76</td>
+<td class="Bordered">CH155</td>
+<td class="Bordered">k76</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH77</td>
+<td class="Bordered">CH156</td>
+<td class="Bordered">k77</td>
+</tr>
+
+<tr>
+<td class="Bordered">CH78</td>
+<td class="Bordered">CH157</td>
+<td class="Bordered">k78</td>
+</tr>
+
+<tr>
+<td class="Bordered" colspan="2" rowspan="3">COM</td>
+<td class="Bordered">kcomhi</td>
+</tr>
+
+<tr>
+<td class="Bordered">kcomlo</td>
+</tr>
+
+<tr>
+<td class="Bordered">kcomlo1w</td>
+</tr>
+
+</table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

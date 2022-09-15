@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+ <TITLE>NI PXI-2530 Relay Replacement</TITLE>
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2530 Relay Replacement</h1>
+<p class="Body">The NI PXI-2530 uses reed relays.</p>
+
+<p class="Body">Refer to the following table for information about ordering replacement relays.</p>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Manufacturer</th>
+<th class="Bordered">Part </th>
+</tr>
+<tr>
+<td class="Bordered">Meder</td>
+<td class="Bordered">MS05-1A87-75DHR</td>
+</tr>
+<tr>
+<td class="Bordered">Coto</td>
+<td class="Bordered">9097-0006</td>
+</tr>
+</table>
+<br><br>
+<table class="Bordered">
+<tr>
+<th class="Bordered">Relay Kit</th>
+<th class="Bordered">Part Number</th>
+</tr>
+<tr>
+<td class="Bordered">National Instruments (10 matrix relays)</td>
+<td class="Bordered">781450-10</td>
+</tr>
+
+</table>
+
+<p class="Body">Complete the following steps to disassemble your switch module, replace a failed relay, and reassemble your switch module.</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;The NI&#160;PXI-2530 has eight spare relays that can be used to replace broken relays. Removing these relays does not change the functionality of the module.</td>
+</tr>
+</table>
+
+<h3><a name="disassemble">Disassemble the Switch Module</a></h3><br>
+<ol>
+<li>Ground yourself using a grounding strap or a ground connected to your PXI chassis.
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif"></td>
+<td>
+<strong>Note</strong>&nbsp;&nbsp;Properly grounding yourself prevents damage to your switch module from electrostatic discharge.</td></tr></table></li>
+<li>Remove the four screws that secure the top and bottom daughterboards to the switch assembly.</li>
+<li>Remove the insulator and the plastic spacers that separate the daughterboards.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame"><img src="noloc_2530_assembly2.gif" /> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">Screws</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">Insulator</td>
+</tr>
+
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">Plastic Spacers</td>
+	</tr>
+	</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+<li>To access the daughterboards, disconnect the PCB&nbsp;interconnect cable by lifting the PCB&nbsp;cable latch on the J1&nbsp;connector.
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame"><img src="loc_eps_2532_pxi_back_plane_connect.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">PCB Interconnect Cable</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">PCB Cable Latch</td>
+</tr>
+
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">3</td>
+	<td class="description">J1 Connector</td>
+	</tr>
+	</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+<li>Carefully disconnect connectors J7 and J1 on the bottom daughterboard from connectors&nbsp;J8 and&nbsp;J1, respectively, on the top daughterboard.
+<br><br>
+
+<br><br>
+<table class="figure">
+<tr>
+<td class="frame"><img src="noloc_2530_assembly1.gif"> </td>
+</tr>
+
+<tr>
+<td class="frame">
+<table class="legend">
+<tr>
+<td class="column">
+<table class="callouts">
+<tr class="callout">
+<td class="number">1</td>
+<td class="description">J7 Connector</td>
+</tr>
+
+<tr class="callout">
+<td class="number">2</td>
+<td class="description">J1 Connector</td>
+</tr>
+
+<tr class="callout">
+<td class="number">3</td>
+<td class="description">Bottom Daughterboard</td>
+</tr>
+
+</table>
+</td>
+<td class="column">
+	<table class="callouts">
+	<tr class="callout">
+	<td class="number">4</td>
+	<td class="description">J8 Connector</td>
+	</tr>
+	
+	<tr class="callout">
+<td class="number">5</td>
+<td class="description">J1 Connector</td>
+</tr>
+
+<tr class="callout">
+<td class="number">6</td>
+<td class="description">Top Daughterboard</td>
+</tr>
+
+	</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</li>
+
+<li>Refer to the following figures to locate the relay you want to replace.
+<h4>Top Daughterboard</h4>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="loc_eps_2530_bottom_board.gif"></td>
+</tr>
+</table>
+<h4>Bottom Daughterboard</h4>
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="loc_eps_2530_top_board.gif"></td>
+</tr>
+</table>
+</li>
+<li>Locate the assembly and serial number labels on the board with the relay you want to replace. White labels indicate the board was assembled using lead solder (Sn 63 Pb 37). Green labels indicate the board was assembled using lead-free solder (Sn 96.5 Ag 3.0 Cu 0.5). Lead-free assemblies have assembly numbers ending in L. The different label types are shown in the following figure.
+<p class="Anchor"><img src="loc_eps_lead_free_labels.gif"></p>
+</li>
+</ol>
+
+<h2><a name="replace">Replace the Relay</a></h2>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="note.gif" alt="Note"></td>
+<td><strong>Note</strong>&nbsp;&nbsp;NI recommends using lead-free solder for relay replacement on lead-free assemblies, and lead solder for relay replacement on lead assemblies.</td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;Do not rework lead assemblies using a lead-free work station. Lead solder from the unit could contaminate the station.</span></td>
+</tr>
+</table>
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="caution.gif" alt="Caution"></td>
+<td><span class="Dark-Red"><strong>Caution</strong>&nbsp;&nbsp;If a lead-free assembly is reworked with lead solder, label the assembly to indicate this condition. This rework can prevent the same unit from being reworked later on a lead-free solder station, because it could contaminate the station.</span></td>
+</tr>
+</table>
+
+<p class="Body">Make sure you have the following items:</p>
+<ul>
+<li>Temperature-regulated soldering iron set to 316 &#0176;C (600 &#0176;F) for lead solder rework or 371 &#0176;C (700 &#0176;F) for lead-free solder rework</li>
+<li>63/37 Tin/Lead solder (flux core) for lead solder rework</li>
+<li>96.5/3.0/0.5 Tin/Silver/Copper solder (flux core) for lead-free solder rework</li>
+<li>Solder wick</li>
+<li>Isopropyl alcohol</li>
+<li>Cotton swabs</li>
+</ul>
+
+<p class="Body">Replace the relay as you would any other through-hole part.</p>
+<h3>Reassemble the Switch Module</h3><br>
+
+<p class="Body">
+Complete the <a href="#disassemble">Disassemble the Switch Module</a> steps in reverse order to reassemble your switch module.<br><br>
+</p>
+
+<table class="Borderless">
+<tr>
+<td class="Icon"><img src="tip.gif"></td>
+<td><strong>Tip</strong>&nbsp;&nbsp;In NI-SWITCH 3.1 or later, you can use the Switch Soft Front Panel  to reset the relay count after you have replaced a failed relay. Refer to the <em>Switch Soft Front Panel Help</em> for more information.</td></tr></table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>

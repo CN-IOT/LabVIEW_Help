@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script src="feedbacklink.js" type="text/javascript"></script>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+
+<link rel="STYLESHEET" type="text/css" href="minimal.css">
+<link rel="STYLESHEET" type="text/css" href="extra.css">
+
+
+<TITLE>NI PXI-2584 2-Wire 6&#0215;1  Multiplexer Topology</TITLE>
+</head>
+<body bgcolor="#ffffff">
+
+
+<h1>NI PXI-2584 2-Wire 6&#0215;1  Multiplexer Topology</h1>
+
+<p class="Body">The following figure represents the NI PXI-2584 in the <a href="xwire.html#2wire">2-wire</a> 6&#0215;1 <a href="multiplexer.html">multiplexer</a> topology. </p>
+
+<table class="figure">
+<tr>
+<td class="frame" align="center"><img src="noloc_2584_2-wire_6x1_mux.gif"> </td>
+</tr>
+<tr>
+<td><img src="loc_eps_legend.gif" border=0></td>
+</tr>
+</table>
+
+<h2>Making a Connection</h2>
+
+<p class="Body">Both the scanning command, <span class="Monospace">ch1-&gt;com0;</span>, and the immediate operation, <a href="switchviref.chm::/niSwitch_Connect_Channels.html">niSwitch Connect Channels</a> VI or the <a href="switchCRef.chm::/c_nisw_connect.html"><span class="Monospace">niSwitch_Connect</span></a> function  with parameters <span class="Monospace">ch1</span> and <span class="Monospace">com0</span>, result in the following connections:</p>
+<ul>
+<li>Signal connected to CH1 is routed to COM0.</li>
+<li>Signal connected to CH7 is routed to COM1.</li>
+</ul>
+
+<h2>Pinout</h2>
+<p class="Body">The following figure and table identify the pins for the NI&nbsp;PXI-2584 in the in the 2-wire 6&#0215;1  multiplexer topology. </p>
+
+<p class="Anchor"><img src="noloc_2584_pinout.gif"></p>
+<br><br>
+
+<table class="bordered">
+<tr>
+<th class="Bordered" rowspan="2">Software Name</th>
+<th class="Bordered" colspan="2">Pin Name</th>
+</tr>
+
+<tr>
+<th class="Bordered" align="center">&#43;</th>
+<th class="Bordered" align="center">&#8211;</th>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch0</td>
+<td class="Bordered" align="center">CH0</td>
+<td class="Bordered" align="center">CH6</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch1</td>
+<td class="Bordered" align="center">CH1</td>
+<td class="Bordered" align="center">CH7</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch2</td>
+<td class="Bordered" align="center">CH2</td>
+<td class="Bordered" align="center">CH8</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch3</td>
+<td class="Bordered" align="center">CH3</td>
+<td class="Bordered" align="center">CH9</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch4</td>
+<td class="Bordered" align="center">CH4</td>
+<td class="Bordered" align="center">CH10</td>
+</tr>
+
+<tr>
+<td class="Bordered" align="center">ch5</td>
+<td class="Bordered" align="center">CH5</td>
+<td class="Bordered" align="center">CH11</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+if(typeof(Print_Link)=="function") {
+Print_Link();
+}
+</script>
+</body>
+</HTML>
