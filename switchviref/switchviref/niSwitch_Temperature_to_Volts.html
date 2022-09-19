@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0123)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/niSwitch_Temperature_to_Volts.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="./niSwitch_Temperature_to_Volts_files/minimal.css"><script src="./niSwitch_Temperature_to_Volts_files/stylesheets.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Temperature_to_Volts_files/jquery-1.7.2.min.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Temperature_to_Volts_files/initPageDyn.js.&#19979;&#36733;" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/pdf.js" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/web.js" type="text/javascript"></script><script src="ms-its:glang.chm::/helpserver.js" type="text/javascript"></script><script src="./niSwitch_Temperature_to_Volts_files/variables.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Temperature_to_Volts_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Temperature_to_Volts_files/variables.js.&#19979;&#36733;"></script><script src="./niSwitch_Temperature_to_Volts_files/cssframes.js.&#19979;&#36733;" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>niSwitch Temperature to Volts</title>
+<link media="print" rel="stylesheet" type="text/css" href="./niSwitch_Temperature_to_Volts_files/print.css">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./niSwitch_Temperature_to_Volts_files/translateelement.css"></head>
+<body onload="if (typeof(initPageDyn) == 'function') {initPageDyn();}" style="OVERFLOW: hidden; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<noscript>
+</noscript>
+<div id="styleDivTitle" style="BORDER-BOTTOM: black 5px solid; PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.25em; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 温度至伏特 VI</font></font></h1>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将温度转换为热电偶电压。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">National Instruments 选择了仅对特定温度范围有效的热电偶多项式表达式（在 VI 图中给出）。</font><font style="VERTICAL-ALIGN: inherit">这些多项式来自 NIST 专着 175。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果您希望使用不同的转换公式，您可以编辑该 VI 并将您自己的公式输入到相应的公式节点中。</font></font></p>
+<p>
+			<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关话题</font></font></strong>
+		</p>
+<ul>
+			<li><A href="switchviref.chm::/niSwitch_Convert_Thermocouple_Reading.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 转换热电偶读数</font></font></a>
+			<li><A href="switchviref.chm::/niSwitch_Volts_to_Temperature.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 电压到温度</font></font></a></li>
+		</ul>
+<p class="Anchor"><IMG alt=niSwitch温度到伏特 src="./niSwitch_Temperature_to_Volts_files/niSwitch_Temperature_to_Volts.gif"></p>
+</div>
+<div id="styleDivScrolling" style="HEIGHT: 623px; OVERFLOW-Y: scroll; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<table class="Borderless">
+        <tbody><tr>
+<td><IMG alt=csgl.gif src="./niSwitch_Temperature_to_Volts_files/csgl.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">温度</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是以</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">温度单位</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">转换的温度。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=cu16.gif src="./niSwitch_Temperature_to_Volts_files/cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">ThermocoupleType</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是使用的热电偶线的类型。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=cu16.gif src="./niSwitch_Temperature_to_Volts_files/cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">温度单位</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">  是</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">​​温度</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">输入的单位。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=isgl.gif src="./niSwitch_Temperature_to_Volts_files/isgl.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">热电偶电压</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是与温度输入指定的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">温度</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相对应的热电偶电压。</font></font></p>
+</td>
+</tr>
+    </tbody></table>
+</div>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

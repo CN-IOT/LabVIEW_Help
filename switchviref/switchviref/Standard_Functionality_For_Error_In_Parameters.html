@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0140)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/Standard_Functionality_For_Error_In_Parameters.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="STYLESHEET" type="text/css" href="./Standard_Functionality_For_Error_In_Parameters_files/minimal.css">
+<script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/pdf.js" type="text/javascript"></script>
+<script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/web.js" type="text/javascript"></script>
+
+<title>Using the Standard Functionality for error in Parameters</title>
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./Standard_Functionality_For_Error_In_Parameters_files/translateelement.css"></head>
+<body bgcolor="#ffffff">
+
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">使用标准功能处理参数错误</font></font></h1>
+
+
+
+<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">许多 LabVIEW 节点（例如 VI）包含</font><font style="VERTICAL-ALIGN: inherit">可用于管理错误</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的参数中的错误。</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">这些参数通常提供相同的标准功能。</font><font style="VERTICAL-ALIGN: inherit">当一个节点表现出不同的参数功能时，例外情况会记录在该节点的参考资料中。</font><font style="VERTICAL-ALIGN: inherit">行为标准</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如下</font></font></p>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG alt=笔记 src="./Standard_Functionality_For_Error_In_Parameters_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;某些节点，例如错误处理VI，包含参数</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，该错误不提供标准功能错误，但包含</font><font style="VERTICAL-ALIGN: inherit">标准群集</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误。</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font></td>
+</tr>
+</tbody></table>
+<table class="Borderless">
+					<tbody><tr><td><IMG src="./Standard_Functionality_For_Error_In_Parameters_files/cerrcodeclst.gif"></td><td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">error in</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述在此节点运行之前发生的错误情况。</font><font style="VERTICAL-ALIGN: inherit">默认为</font></font><span class="Monospace"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">无错误</font></font></span><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">如果在此节点运行之前发生错误，则节点将</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">值传递给</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误输出</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font><font style="VERTICAL-ALIGN: inherit">只有在该节点运行之前没有发生错误时，该节点才能正常运行。</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果此节点运行时发生错误，它会正常运行并在error out</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">中设置自己的错误状态</font><font style="VERTICAL-ALIGN: inherit">。</font></font><br><br><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+
+使用</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误输入</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误输出来检查错误并通过将</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">从一个节点连接到下一个节点的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">来指定执行顺序</font><font style="VERTICAL-ALIGN: inherit">。</font></font></td></tr>
+				</tbody></table>
+			<p class="Body"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">集群中的</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">包含以下集群元素：</font></font></p>
+			
+				<table class="Borderless">
+					<tbody><tr><td><IMG src="./Standard_Functionality_For_Error_In_Parameters_files/cbool.gif"></td><td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果在此节点运行之前发生错误，则状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE (X)，或者为 FALSE（复选标记）以指示警告或在此节点运行之前未发生错误。</font><font style="VERTICAL-ALIGN: inherit">默认值为假。</font></font></td></tr>
+					<tr><td><IMG src="./Standard_Functionality_For_Error_In_Parameters_files/ci32.gif"></td><td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">code</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是错误或警告代码。</font><font style="VERTICAL-ALIGN: inherit">默认值为 0。如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE，则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为错误代码。</font><font style="VERTICAL-ALIGN: inherit">如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 FALSE，则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 0 或警告代码。</font></font></td></tr>
+					<tr><td><IMG src="./Standard_Functionality_For_Error_In_Parameters_files/cstr.gif"></td><td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">source</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">指定错误或警告的来源，在大多数情况下，它是产生错误或警告的节点的名称。</font><font style="VERTICAL-ALIGN: inherit">默认值为空字符串。</font></font></td></tr>
+				</tbody></table>
+		
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

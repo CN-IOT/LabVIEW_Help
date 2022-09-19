@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0129)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/niSwitch_Convert_Thermistor_Reading.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="./niSwitch_Convert_Thermocouple_Reading_files/minimal.css"><script src="./niSwitch_Convert_Thermocouple_Reading_files/stylesheets.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Convert_Thermocouple_Reading_files/jquery-1.7.2.min.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Convert_Thermocouple_Reading_files/initPageDyn.js.&#19979;&#36733;" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/pdf.js" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/web.js" type="text/javascript"></script><script src="ms-its:glang.chm::/helpserver.js" type="text/javascript"></script><script src="./niSwitch_Convert_Thermocouple_Reading_files/variables.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Convert_Thermocouple_Reading_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Convert_Thermocouple_Reading_files/variables.js.&#19979;&#36733;"></script><script src="./niSwitch_Convert_Thermocouple_Reading_files/cssframes.js.&#19979;&#36733;" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>niSwitch Convert Thermocouple Reading</title>
+<link media="print" rel="stylesheet" type="text/css" href="./niSwitch_Convert_Thermocouple_Reading_files/print.css">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./niSwitch_Convert_Thermocouple_Reading_files/translateelement.css"></head>
+<body onload="if (typeof(initPageDyn) == 'function') {initPageDyn();}" style="OVERFLOW: hidden; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<noscript>
+</noscript>
+<div id="styleDivTitle" style="BORDER-BOTTOM: black 5px solid; PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.25em; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 转换热敏电阻读数 VI</font></font></h1>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将热敏电阻电压转换为温度。</font></font></p>
+<p>
+			<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关话题</font></font></strong>
+		</p>
+<ul>
+			<li><A href="switch.chm::/1127_cjc.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">冷端温度传感器通道</font></font></a>
+			<li><A href="switchviref.chm::/niSwitch_Convert_Thermocouple_Reading.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 转换热电偶读数</font></font></a></li>
+		</ul>
+<p class="Anchor"><IMG alt="niSwitch 转换热敏电阻读数" src="./niSwitch_Convert_Thermocouple_Reading_files/niSwitch_Convert_Thermistor_Reading.gif" ></p>
+</div>
+<div id="styleDivScrolling" style="HEIGHT: 621px; OVERFLOW-Y: scroll; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<table class="Borderless">
+        <tbody><tr>
+<td><IMG alt=csgl.gif src="./niSwitch_Convert_Thermocouple_Reading_files/csgl.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">电压</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是从热敏电阻读取的电压。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=csgl.gif src="./niSwitch_Convert_Thermocouple_Reading_files/csgl.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">电压参考</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">(V^REF) 是您在与热敏电阻串联的已知值电阻器上施加的参考电压。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=csgl.gif src="./niSwitch_Convert_Thermocouple_Reading_files/csgl.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">励磁电流</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">(I^EX) 是施加到热敏电阻上的电流励磁。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=cu16.gif src="./niSwitch_Convert_Thermocouple_Reading_files/cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">励磁类型</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">区分了 VI 的两种操作模式。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=csgl.gif src="./niSwitch_Convert_Thermocouple_Reading_files/csgl.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">R1</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是与热敏电阻串联的电阻值，以欧姆表示。
+                  </font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=cu16.gif src="./niSwitch_Convert_Thermocouple_Reading_files/cu16.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">温度单位</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是​​ VI 输出的温度单位。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=isgl.gif src="./niSwitch_Convert_Thermocouple_Reading_files/isgl.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">温度</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是以温度单位中指定的单位表示的返回温度</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">值</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+</td>
+</tr>
+    </tbody></table>
+</div>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

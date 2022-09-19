@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0126)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/niSwitch_Reset_Interchange_Check.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="./niSwitch_Reset_Interchange_Check_files/minimal.css"><script src="./niSwitch_Reset_Interchange_Check_files/stylesheets.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Reset_Interchange_Check_files/jquery-1.7.2.min.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Reset_Interchange_Check_files/initPageDyn.js.&#19979;&#36733;" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/pdf.js" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/web.js" type="text/javascript"></script><script src="ms-its:glang.chm::/helpserver.js" type="text/javascript"></script><script src="./niSwitch_Reset_Interchange_Check_files/variables.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Reset_Interchange_Check_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Reset_Interchange_Check_files/variables.js.&#19979;&#36733;"></script><script src="./niSwitch_Reset_Interchange_Check_files/cssframes.js.&#19979;&#36733;" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>niSwitch Reset Interchange Check</title>
+<link media="print" rel="stylesheet" type="text/css" href="./niSwitch_Reset_Interchange_Check_files/print.css">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./niSwitch_Reset_Interchange_Check_files/translateelement.css"></head>
+<body onload="if (typeof(initPageDyn) == 'function') {initPageDyn();}" style="OVERFLOW: hidden; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<noscript>
+</noscript>
+<div id="styleDivTitle" style="BORDER-BOTTOM: black 5px solid; PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.25em; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 重置交换检查 VI</font></font></h1>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">配置可互换性检查算法以忽略所有先前的配置操作。</font></font></p>
+<p>
+			<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关话题</font></font></strong>
+		</p>
+<ul>
+			<li><A href="switchviref.chm::/niSwitch_Clear_Interchange_Warnings.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 清除交换警告</font></font></a>
+			<li><A href="switchviref.chm::/niSwitch_Get_Next_Interchange_Warning.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 获取下一个交换警告</font></font></a></li>
+		</ul>
+<p class="Body"><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/niSwitch_Reset_Interchange_Check.html#Details"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">细节</font></font></a> </p>
+<p class="Anchor"><IMG alt="niSwitch 重置交换检查" src="./niSwitch_Reset_Interchange_Check_files/niSwitch_Reset_Interchange_Check.gif" ></p>
+</div>
+<div id="styleDivScrolling" style="HEIGHT: 654px; OVERFLOW-Y: scroll; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<table class="Borderless">
+        <tbody><tr>
+<td><IMG alt=cio.gif src="./niSwitch_Reset_Interchange_Check_files/cio.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仪器句柄标识通过</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Initialize_With_Topology.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Topology VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">、</font></font><A href="switchviref.chm::/niSwitch_Initialize_With_Options.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Options VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">或</font></font><A href="switchviref.chm::/niSwitch_Initialize.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">建立的特定 NI-SWITCH 会话</font><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=cerrcodeclst.gif src="./niSwitch_Reset_Interchange_Check_files/cerrcodeclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">error in</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述在此节点运行之前发生的错误情况。</font><font style="VERTICAL-ALIGN: inherit">该输入提供</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/Standard_Functionality_For_Error_In_Parameters.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">了功能上的标准错误</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。 
+ </font></font></p>
+<table class="Borderless">
+			<tbody><tr>
+<td><IMG alt=cbool.gif src="./niSwitch_Reset_Interchange_Check_files/cbool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果在该 VI 运行之前发生错误，则状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE (X)，或者为 FALSE（复选标记）以指示警告或在该 VI 运行之前未发生错误。</font><font style="VERTICAL-ALIGN: inherit">默认值为假。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=ci32.gif src="./niSwitch_Reset_Interchange_Check_files/ci32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">code</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是错误或警告代码。</font><font style="VERTICAL-ALIGN: inherit">默认值为 0。如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE，则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为非零错误代码。</font><font style="VERTICAL-ALIGN: inherit">如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 FALSE，则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 0 或警告代码。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=cstr.gif src="./niSwitch_Reset_Interchange_Check_files/cstr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">source</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述了错误或警告的来源，在大多数情况下，它是产生错误或警告的 VI 的名称。</font><font style="VERTICAL-ALIGN: inherit">默认值为空字符串。</font></font></p>
+</td>
+</tr>
+		</tbody></table>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=iio.gif src="./niSwitch_Reset_Interchange_Check_files/iio.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">instrument handle out</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">标识一个特定的 NI-SWITCH 会话，该会话通过</font></font><A href="switchviref.chm::/niSwitch_Initialize_With_Topology.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Topology VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">、</font></font><A href="switchviref.chm::/niSwitch_Initialize_With_Options.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Options VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">或</font></font><A href="switchviref.chm::/niSwitch_Initialize.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize VI 建立</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，并用于所有后续的 NI-SWITCH 调用。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=ierrcodeclst.gif src="./niSwitch_Reset_Interchange_Check_files/ierrcodeclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">error out</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">包含错误信息。</font><font style="VERTICAL-ALIGN: inherit">此输出提供标准</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/Standard_Functionality_For_Error_out_Parameters.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误输出功能</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。 
+                  </font></font></p>
+<table class="Borderless">
+			<tbody><tr>
+<td><IMG alt=ibool.gif src="./niSwitch_Reset_Interchange_Check_files/ibool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果发生错误，则</font><strong><font style="VERTICAL-ALIGN: inherit">状态为 TRUE (X)，或者为 FALSE（复选标记）以指示警告或未发生错误。</font></strong></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=ii32.gif src="./niSwitch_Reset_Interchange_Check_files/ii32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">code</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是错误或警告代码。</font><font style="VERTICAL-ALIGN: inherit">如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE，
+                        则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为非零错误代码。</font><font style="VERTICAL-ALIGN: inherit">如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 FALSE，
+                        则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 0 或警告代码。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=istr.gif src="./niSwitch_Reset_Interchange_Check_files/istr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">source</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述了错误或警告的来源，在大多数情况下，它是产生错误或警告的 VI 的名称。</font></font></p>
+</td>
+</tr>
+		</tbody></table>
+</td>
+</tr>
+    </tbody></table><a name="Details"></a><h2><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">细节</font></font></h2>
+    <p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+在开发由多个测试模块组成的复杂测试系统时，设计测试模块以便它们可以按任意顺序运行通常是一个好主意。</font><font style="VERTICAL-ALIGN: inherit">为此，请确保每个测试模块完全配置其使用的每个仪器的状态。</font><font style="VERTICAL-ALIGN: inherit">如果特定测试模块未完全配置仪器的状态，则仪器状态取决于先前执行的测试模块的配置。</font><font style="VERTICAL-ALIGN: inherit">因此，如果您以不同的顺序执行测试模块，则仪器的行为以及整个测试模块可能会发生变化。</font><font style="VERTICAL-ALIGN: inherit">这种行为变化通常是特定于仪器的，并且代表了可互换性问题。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+您可以使用该 VI 来测试这种情况。</font><font style="VERTICAL-ALIGN: inherit">调用此 VI 后，特定驱动程序中的互换性检查算法将忽略所有先前的配置操作。</font><font style="VERTICAL-ALIGN: inherit">通过在测试模块的开头调用该VI，可以确定测试模块是否依赖于之前执行的测试模块的操作。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+该 VI 不会从先前记录的互换性警告列表中清除互换性警告。</font><font style="VERTICAL-ALIGN: inherit">为保证</font></font><A href="switchviref.chm::/niSwitch_Get_Next_Interchange_Warning.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Get Next Interchange Warning VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">只返回调用该 VI 后产生的互换性警告，通过重复调用</font></font><A href="switchviref.chm::/niSwitch_Get_Next_Interchange_Warning.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Get Next Interchange Warning VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">来清除互换性警告列表，直到没有互换性警告返回。</font><font style="VERTICAL-ALIGN: inherit">如果您对这些警告的内容不感兴趣，请调用</font></font><A href="switchviref.chm::/niSwitch_Clear_Interchange_Warnings.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Clear Interchange Warnings VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>  
+    </div>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

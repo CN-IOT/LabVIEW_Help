@@ -1,0 +1,248 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0125)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/niSwitch_Configure_Scan_Trigger.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="./niSwitch_Configure_Scan_Trigger_files/minimal.css"><script src="./niSwitch_Configure_Scan_Trigger_files/stylesheets.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Configure_Scan_Trigger_files/jquery-1.7.2.min.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Configure_Scan_Trigger_files/initPageDyn.js.&#19979;&#36733;" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/pdf.js" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/web.js" type="text/javascript"></script><script src="ms-its:glang.chm::/helpserver.js" type="text/javascript"></script><script src="./niSwitch_Configure_Scan_Trigger_files/variables.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Configure_Scan_Trigger_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Configure_Scan_Trigger_files/variables.js.&#19979;&#36733;"></script><script src="./niSwitch_Configure_Scan_Trigger_files/cssframes.js.&#19979;&#36733;" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>niSwitch Configure Scan Trigger</title>
+<link media="print" rel="stylesheet" type="text/css" href="./niSwitch_Configure_Scan_Trigger_files/print.css">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./niSwitch_Configure_Scan_Trigger_files/translateelement.css"></head>
+<body onload="if (typeof(initPageDyn) == 'function') {initPageDyn();}" style="OVERFLOW: hidden; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<noscript>
+</noscript>
+<div id="styleDivTitle" style="BORDER-BOTTOM: black 5px solid; PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.25em; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 配置扫描触发 VI</font></font></h1>
+<p><font style="VERTICAL-ALIGN: inherit"><A href="switchviref.chm::/niSwitch_Configure_Scan_List.html"><font style="VERTICAL-ALIGN: inherit">为使用niSwitch 配置扫描列表 VI</font></a><font style="VERTICAL-ALIGN: inherit">建立的</font></font><A href="switch.chm::/scan_list.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描列表</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">配置扫描触发器</font><font style="VERTICAL-ALIGN: inherit">。</font></font><A href="switchviref.chm::/niSwitch_Configure_Scan_List.html"><font style="VERTICAL-ALIGN: inherit"></font></a><font style="VERTICAL-ALIGN: inherit"></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">请参阅</font></font><A href="switch.chm::/devices.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设备</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">确定交换模块是否支持扫描。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">该VI设置开关预期接收输入触发的位置，以在扫描列表中前进。</font><font style="VERTICAL-ALIGN: inherit">该VI还设置完成扫描列表中的条目后生成扫描高级信号的位置。</font></font></p>
+<p>
+			<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关话题</font></font></strong>
+		</p>
+<ul>
+			<li><A href="switch.chm::/scanning_fundamentals.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描</font></font></a>
+			<li><A href="switchviref.chm::/niSwitch_Route_Trigger_Input.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触发输入</font></font></a></li>
+		</ul>
+<p class="Body"><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/niSwitch_Configure_Scan_Trigger.html#Details"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">细节</font></font></a> </p>
+<p class="Anchor"><IMG alt="niSwitch 配置扫描触发器" src="./niSwitch_Configure_Scan_Trigger_files/niSwitch_Configure_Scan_Trigger.gif" ></p>
+</div>
+<div id="styleDivScrolling" style="HEIGHT: 568px; OVERFLOW-Y: scroll; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<table class="Borderless">
+		<tbody><tr>
+<td><IMG alt=cio.gif src="./niSwitch_Configure_Scan_Trigger_files/cio.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仪器句柄标识通过</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Initialize_With_Topology.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Topology VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">、</font></font><A href="switchviref.chm::/niSwitch_Initialize_With_Options.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Options VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">或</font></font><A href="switchviref.chm::/niSwitch_Initialize.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">建立的特定 NI-SWITCH 会话</font><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+</td>
+</tr>
+		<tr>
+<td><IMG alt=cdbl.gif src="./niSwitch_Configure_Scan_Trigger_files/cdbl.gif"></td>
+<td>
+<p class="noTopMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描延迟</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">指定您希望交换机设备在创建路径后等待的最短时间，直到它在扫描高级输出通道上断言触发。</font><font style="VERTICAL-ALIGN: inherit">NI-SWITCH 使用该值来设置</font></font><A href="switchpropref.chm::/pniSwitch_ScanDelay.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描延迟</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性。</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描延迟</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是建立时间之外的</font><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+<p class="noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">默认值：0.0（秒）</font></font></p>
+</td>
+</tr>
+		<tr>
+<td><IMG alt=cenum.gif src="./niSwitch_Configure_Scan_Trigger_files/cenum.gif"></td>
+<td>
+<p class="noTopMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触发输入</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">指定您希望开关模块在扫描期间使用的触发源。</font><font style="VERTICAL-ALIGN: inherit">NI-SWITCH 使用该值来设置</font></font><A href="switchpropref.chm::/pniSwitch_TriggerInput.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">触发输入</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性。</font><font style="VERTICAL-ALIGN: inherit">默认值为外部。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">切换模块在扫描列表中遇到分号时，在指定位置等待触发。</font><font style="VERTICAL-ALIGN: inherit">当触发发生时，开关设备前进到扫描列表中的下一个条目，并等待来自</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">trigger input</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">中指定位置的触发。</font></font></p>
+<table class="Bordered">
+			<tbody><tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">立即</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(0)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">立即处理扫描列表中的下一个条目。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">外部</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(1)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在处理扫描列表中的下一个条目之前等待前连接器上的触发器。</font><font style="VERTICAL-ALIGN: inherit">与前连接器相同。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">软件触发功能</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(2)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">等待直到</font></font><A href="switchviref.chm::/niSwitch_Send_Software_Trigger.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">调用 niSwitch Send Software Trigger VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。
+                              </font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">TTLx</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> &nbsp;(3)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在处理扫描列表中的下一个条目之前，</font><font style="VERTICAL-ALIGN: inherit">等待 PXI 或 SCXI 触发线</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">x上的触发。</font></font></em><font style="VERTICAL-ALIGN: inherit"></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">后连接器</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(4)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仅对 SCXI 有效。</font><font style="VERTICAL-ALIGN: inherit">在处理扫描列表中的下一个条目之前，等待后连接器上的触发器。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">前连接器</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(5)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在处理扫描列表中的下一个条目之前等待前连接器上的触发器。</font><font style="VERTICAL-ALIGN: inherit">与外部相同。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模块后连接器 &lt;1..12&gt;</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> &nbsp;(6)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仅对 SCXI 有效。</font><font style="VERTICAL-ALIGN: inherit">在处理扫描列表中的下一个条目之前，等待插槽 &lt;1..12&gt; 的后连接器上的触发器。</font><font style="VERTICAL-ALIGN: inherit">可用作调用</font></font><A href="switchviref.chm::/niSwitch_Route_Trigger_Input.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Route Trigger Input VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的替代方法。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">模块前连接器 &lt;1..12&gt;</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> &nbsp;(7)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仅对 SCXI 有效。</font><font style="VERTICAL-ALIGN: inherit">在处理扫描列表中的下一个条目之前，等待插槽 &lt;1..12&gt; 的前连接器上的触发器。</font><font style="VERTICAL-ALIGN: inherit">可用作调用</font></font><A href="switchviref.chm::/niSwitch_Route_Trigger_Input.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Route Trigger Input VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的替代方法。</font></font></p>
+</td>
+</tr>
+		</tbody></table>
+</td>
+</tr>
+		<tr>
+<td><IMG alt=cenum.gif src="./niSwitch_Configure_Scan_Trigger_files/cenum.gif"></td>
+<td>
+<p class="noTopMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">高级扫描输出（外部）</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">指定高级扫描输出触发信号的输出端。</font><font style="VERTICAL-ALIGN: inherit">NI-SWITCH 使用该值来设置</font></font><A href="switchpropref.chm::/pniSwitch_ScanAdvancedOutput.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描高级输出</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性。</font><font style="VERTICAL-ALIGN: inherit">默认值为外部。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">交换机处理完扫描列表中的每个条目后，它会等待</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描延迟中指定的时间长度，然后在</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">扫描高级输出</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">中指定的行上触发触发器
+                              </font><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+<table class="Bordered">
+			<tbody><tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">无</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(1)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">不产生扫描高级输出触发。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">外部</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(2)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将扫描高级输出触发发送到开关模块的前连接器。</font><font style="VERTICAL-ALIGN: inherit">与前连接器相同。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">TTLx</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> &nbsp;(3)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将扫描高级输出触发发送到 PXI 或 SCXI 触发线</font></font><em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">x</font></font></em><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">PXI 星</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(4)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">在处理扫描列表中的下一个条目之前，交换机会一直等待，直到它在 PXI 星形触发总线上接收到一个触发信号。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">后连接器</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(5)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仅对 SCXI 有效。</font><font style="VERTICAL-ALIGN: inherit">将扫描高级输出触发发送到开关模块的后连接器。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">前连接器</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;(6)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">将扫描高级输出触发发送到开关模块的前连接器。</font><font style="VERTICAL-ALIGN: inherit">与外部相同。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">后连接器 &lt;1..12&gt;</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> &nbsp;(7)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仅对 SCXI 有效。</font><font style="VERTICAL-ALIGN: inherit">将扫描高级输出触发器发送到插槽 &lt;1..12&gt; 的后连接器。</font><font style="VERTICAL-ALIGN: inherit">可用作调用</font></font><A href="switchviref.chm::/niSwitch_Route_Scan_Advanced_Output.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Route Scan Advanced Output VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的替代方法。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td class="Bordered"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">前连接器 &lt;1..12&gt;</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> &nbsp;(8)</font></font></td>
+<td class="Bordered">
+<p class="noTopMargin noBottomMargin"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仅对 SCXI 有效。</font><font style="VERTICAL-ALIGN: inherit">将扫描高级输出触发发送到插槽 &lt;1..12&gt; 的前连接器。</font><font style="VERTICAL-ALIGN: inherit">可用作调用</font></font><A href="switchviref.chm::/niSwitch_Route_Scan_Advanced_Output.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Route Scan Advanced Output VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">的替代方法。</font></font></p>
+</td>
+</tr>
+		</tbody></table>
+</td>
+</tr>
+		<tr>
+<td><IMG alt=cerrcodeclst.gif src="./niSwitch_Configure_Scan_Trigger_files/cerrcodeclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">error in</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述在此节点运行之前发生的错误情况。</font><font style="VERTICAL-ALIGN: inherit">该输入提供</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/Standard_Functionality_For_Error_In_Parameters.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">了功能上的标准错误</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。 
+ </font></font></p>
+<table class="Borderless">
+			<tbody><tr>
+<td><IMG alt=cbool.gif src="./niSwitch_Configure_Scan_Trigger_files/cbool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果在该 VI 运行之前发生错误，则状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE (X)，或者为 FALSE（复选标记）以指示警告或在该 VI 运行之前未发生错误。</font><font style="VERTICAL-ALIGN: inherit">默认值为假。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=ci32.gif src="./niSwitch_Configure_Scan_Trigger_files/ci32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">code</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是错误或警告代码。</font><font style="VERTICAL-ALIGN: inherit">默认值为 0。如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE，则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为非零错误代码。</font><font style="VERTICAL-ALIGN: inherit">如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 FALSE，则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 0 或警告代码。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=cstr.gif src="./niSwitch_Configure_Scan_Trigger_files/cstr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">source</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述了错误或警告的来源，在大多数情况下，它是产生错误或警告的 VI 的名称。</font><font style="VERTICAL-ALIGN: inherit">默认值为空字符串。</font></font></p>
+</td>
+</tr>
+		</tbody></table>
+</td>
+</tr>
+		<tr>
+<td><IMG alt=iio.gif src="./niSwitch_Configure_Scan_Trigger_files/iio.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong>instrument handle out</strong> identifies a particular NI-SWITCH  session established with the <A href="switchviref.chm::/niSwitch_Initialize_With_Topology.html">niSwitch Initialize With Topology VI</a>, the <A href="switchviref.chm::/niSwitch_Initialize_With_Options.html">niSwitch Initialize With Options VI</a>, or the <A href="switchviref.chm::/niSwitch_Initialize.html">niSwitch Initialize VI</a> and used for all subsequent NI-SWITCH calls.</p>
+</td>
+</tr>
+		<tr>
+<td><IMG alt=ierrcodeclst.gif src="./niSwitch_Configure_Scan_Trigger_files/ierrcodeclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"><strong>error out</strong> contains error information. This output provides standard <a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/Standard_Functionality_For_Error_out_Parameters.html">error out functionality</a>. 
+                  </p>
+<table class="Borderless">
+			<tbody><tr>
+<td><IMG alt=ibool.gif src="./niSwitch_Configure_Scan_Trigger_files/ibool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong>status</strong> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred. </p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=ii32.gif src="./niSwitch_Configure_Scan_Trigger_files/ii32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong>code</strong> is the error or warning code. If <strong>status</strong> is TRUE,
+                        <strong>code</strong> is a non-zero error code. If <strong>status</strong> is FALSE,
+                        <strong>code</strong> is 0 or a warning code.</p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=istr.gif src="./niSwitch_Configure_Scan_Trigger_files/istr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong>source</strong> describes the origin of the error or warning and is, in most cases, the name of the VI that produced the error or warning.</p>
+</td>
+</tr>
+		</tbody></table>
+</td>
+</tr>
+	</tbody></table><a name="Details"></a><h2>Details</h2>
+		<p>For synchronous scanning, set <strong>scan advanced output</strong> to <strong>None</strong> and define <strong>trigger input</strong>. For handshaking,
+            <strong>trigger input</strong> and <strong>scan advanced output</strong> must be set.</p>
+		<p>Triggers generally originate from the SCXI or PXI trigger bus, the terminals on the front connector of the
+            switch module, or the AUX connector on the rear of the switch module (referred to as the rear connector and
+            supported by SCXI only).</p>
+		<p>When scanning a module that is not directly cabled to the trigger from its own front or rear connector,
+            use the <A href="switchviref.chm::/niSwitch_Route_Trigger_Input.html">niSwitch Route Trigger Input VI</a> and/or the <A href="switchviref.chm::/niSwitch_Route_Scan_Advanced_Output.html">niSwitch Route Scan Advanced Output VI</a> to route the triggers on the
+            cabled module to one of the backplane lines. When using these VIs to route triggers to the backplane,
+            specify the backplane trigger location when calling the <A href="switchviref.chm::/niSwitch_Configure_Scan_Trigger.html">niSwitch Configure Scan Trigger VI</a> (even if it is the
+            module cabled to the trigger source).</p>
+	</div>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

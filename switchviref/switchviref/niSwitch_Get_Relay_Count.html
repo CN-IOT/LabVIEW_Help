@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0118)file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/niSwitch_Get_Relay_Count.html -->
+<html class="translated-ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+			         var L_helpType = "STD_ENG";
+      			</script><link rel="STYLESHEET" type="text/css" href="./niSwitch_Get_Relay_Count_files/minimal.css"><script src="./niSwitch_Get_Relay_Count_files/stylesheets.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Get_Relay_Count_files/jquery-1.7.2.min.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Get_Relay_Count_files/initPageDyn.js.&#19979;&#36733;" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/pdf.js" type="text/javascript"></script><script src="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/web.js" type="text/javascript"></script><script src="ms-its:glang.chm::/helpserver.js" type="text/javascript"></script><script src="./niSwitch_Get_Relay_Count_files/variables.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Get_Relay_Count_files/feedbacklink.js.&#19979;&#36733;" type="text/javascript"></script><script src="./niSwitch_Get_Relay_Count_files/variables.js.&#19979;&#36733;"></script><script src="./niSwitch_Get_Relay_Count_files/cssframes.js.&#19979;&#36733;" type="text/javascript"></script><meta name="department" content="Engineering">
+<title>niSwitch Get Relay Count</title>
+<link media="print" rel="stylesheet" type="text/css" href="./niSwitch_Get_Relay_Count_files/print.css">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="./niSwitch_Get_Relay_Count_files/translateelement.css"></head>
+<body onload="if (typeof(initPageDyn) == 'function') {initPageDyn();}" style="OVERFLOW: hidden; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<noscript>
+</noscript>
+<div id="styleDivTitle" style="BORDER-BOTTOM: black 5px solid; PADDING-BOTTOM: 0.25em; PADDING-TOP: 0.25em; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<h1><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 获取继电器计数 VI</font></font></h1>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">返回继电器从关闭变为打开的次数。</font><font style="VERTICAL-ALIGN: inherit">继电器计数可用于跟踪继电器寿命和使用情况。</font><font style="VERTICAL-ALIGN: inherit">在该 VI 之前调用</font></font><A href="switchviref.chm::/niSwitch_Wait_For_Debounce.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Wait For Debounce</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit"> VI 以确保准确计数​​。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">请参阅</font></font><A href="switch.chm::/relay_count.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">继电器计数</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">以确定开关模块是否支持继电器计数。 
+    </font></font></p>
+<p>
+			<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">相关主题</font></font></strong>
+		</p>
+<ul>
+			<li><A href="switchviref.chm::/niSwitch_Get_Relay_Name.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch 获取继电器名称</font></font></a></li>
+		</ul>
+<p class="Anchor"><IMG alt="niSwitch 获取继电器计数" src="./niSwitch_Get_Relay_Count_files/niSwitch_Get_Relay_Count.gif" ></p>
+</div>
+<div id="styleDivScrolling" style="HEIGHT: 665px; OVERFLOW-Y: scroll; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px">
+<table class="Borderless">
+        <tbody><tr>
+<td><IMG alt=cio.gif src="./niSwitch_Get_Relay_Count_files/cio.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">仪器句柄标识通过</font></font></strong><font style="VERTICAL-ALIGN: inherit"></font><A href="switchviref.chm::/niSwitch_Initialize_With_Topology.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Topology VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">、</font></font><A href="switchviref.chm::/niSwitch_Initialize_With_Options.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Options VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">或</font></font><A href="switchviref.chm::/niSwitch_Initialize.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">建立的特定 NI-SWITCH 会话</font><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=cstr.gif src="./niSwitch_Get_Relay_Count_files/cstr.gif"></td>
+<td>
+<p class="noTopMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">继电器名称</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是要控制的继电器或一组继电器的名称。</font><font style="VERTICAL-ALIGN: inherit">您可以提供单个继电器名称或以逗号分隔的继电器名称列表来控制这些继电器。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">有效继电器名称的示例有 ch0、ab0、1wire 和 hlselect。</font></font></p>
+<p><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">
+有关开关模块的有效继电器名称列表，请参阅</font></font><A href="switch.chm::/devices.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">设备</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。</font></font></p>
+<table class="Borderless">
+<tbody><tr>
+<td class="Icon"><IMG src="./niSwitch_Get_Relay_Count_files/note.gif"></td>
+<td><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">注意</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">&nbsp;&nbsp;
+使用</font></font><A href="switchviref.chm::/niSwitch_Wait_For_Debounce.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Wait For Debounce VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">、</font></font><A href="switchviref.chm::/niSwitch_Switch_Is_Debounced.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Switch Is Debounced VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">和</font></font><A href="switchpropref.chm::/pniSwitch_IsDebounced.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">Is Debounced</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">属性来确定继电器是否已稳定。
+			</font></font></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=cerrcodeclst.gif src="./niSwitch_Get_Relay_Count_files/cerrcodeclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">error in</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述在此节点运行之前发生的错误情况。</font><font style="VERTICAL-ALIGN: inherit">该输入提供</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/Standard_Functionality_For_Error_In_Parameters.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">了功能上的标准错误</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。 
+ </font></font></p>
+<table class="Borderless">
+			<tbody><tr>
+<td><IMG alt=cbool.gif src="./niSwitch_Get_Relay_Count_files/cbool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果在该 VI 运行之前发生错误，则状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE (X)，或者为 FALSE（复选标记）以指示警告或在该 VI 运行之前未发生错误。</font><font style="VERTICAL-ALIGN: inherit">默认值为假。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=ci32.gif src="./niSwitch_Get_Relay_Count_files/ci32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">code</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是错误或警告代码。</font><font style="VERTICAL-ALIGN: inherit">默认值为 0。如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE，则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为非零错误代码。</font><font style="VERTICAL-ALIGN: inherit">如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 FALSE，则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 0 或警告代码。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=cstr.gif src="./niSwitch_Get_Relay_Count_files/cstr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">source</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述了错误或警告的来源，在大多数情况下，它是产生错误或警告的 VI 的名称。</font><font style="VERTICAL-ALIGN: inherit">默认值为空字符串。</font></font></p>
+</td>
+</tr>
+		</tbody></table>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=iio.gif src="./niSwitch_Get_Relay_Count_files/iio.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">instrument handle out</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">标识一个特定的 NI-SWITCH 会话，该会话通过</font></font><A href="switchviref.chm::/niSwitch_Initialize_With_Topology.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Topology VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">、</font></font><A href="switchviref.chm::/niSwitch_Initialize_With_Options.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize With Options VI</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">或</font></font><A href="switchviref.chm::/niSwitch_Initialize.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">niSwitch Initialize VI 建立</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">，并用于所有后续的 NI-SWITCH 调用。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=ii32.gif src="./niSwitch_Get_Relay_Count_files/ii32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">count</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是继电器周期数。</font></font></p>
+</td>
+</tr>
+        <tr>
+<td><IMG alt=ierrcodeclst.gif src="./niSwitch_Get_Relay_Count_files/ierrcodeclst.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin"><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">error out</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">包含错误信息。</font><font style="VERTICAL-ALIGN: inherit">此输出提供标准</font></font><a href="file:///C:/Users/User/Documents/GitHub/LabVIEW_Help/LabVIEW_Help/switchviref/switchviref/Standard_Functionality_For_Error_out_Parameters.html"><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">错误输出功能</font></font></a><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">。 
+                  </font></font></p>
+<table class="Borderless">
+			<tbody><tr>
+<td><IMG alt=ibool.gif src="./niSwitch_Get_Relay_Count_files/ibool.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">如果发生错误，则</font><strong><font style="VERTICAL-ALIGN: inherit">状态为 TRUE (X)，或者为 FALSE（复选标记）以指示警告或未发生错误。</font></strong></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=ii32.gif src="./niSwitch_Get_Relay_Count_files/ii32.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">code</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">是错误或警告代码。</font><font style="VERTICAL-ALIGN: inherit">如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 TRUE，
+                        则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为非零错误代码。</font><font style="VERTICAL-ALIGN: inherit">如果</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">状态</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 FALSE，
+                        则</font></font><strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">代码</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">为 0 或警告代码。</font></font></p>
+</td>
+</tr>
+			<tr>
+<td><IMG alt=istr.gif src="./niSwitch_Get_Relay_Count_files/istr.gif"></td>
+<td>
+<p class="noTopMargin noBottomMargin">
+				<strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">source</font></font></strong><font style="VERTICAL-ALIGN: inherit"><font style="VERTICAL-ALIGN: inherit">描述了错误或警告的来源，在大多数情况下，它是产生错误或警告的 VI 的名称。</font></font></p>
+</td>
+</tr>
+		</tbody></table>
+</td>
+</tr>
+    </tbody></table>
+</div>
+
+
+<div class="goog-te-spinner-pos">&nbsp;</div></body></html>

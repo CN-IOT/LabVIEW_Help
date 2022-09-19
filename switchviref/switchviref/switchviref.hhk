@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD>
+<BODY>
+<OBJECT type="text/site properties">
+	<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="VIs">
+		<param name="Local" value="">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="NI-SWITCH VIs">
+			<param name="Local" value="NI-SWITCH_pal.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Abort Scan VI">
+			<param name="Local" value="niSwitch_Abort_Scan.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Can Connect Channels VI">
+			<param name="Local" value="niSwitch_Can_Connect_Channels.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Clear Interchange Warnings VI">
+			<param name="Local" value="niSwitch_Clear_Interchange_Warnings.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Close VI">
+			<param name="Local" value="niSwitch_Close.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Commit VI">
+			<param name="Local" value="niSwitch_Commit.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Configure Scan List VI">
+			<param name="Local" value="niSwitch_Configure_Scan_List.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Configure Scan Trigger VI">
+			<param name="Local" value="niSwitch_Configure_Scan_Trigger.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Connect Channels VI">
+			<param name="Local" value="niSwitch_Connect_Channels.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Convert Thermistor Reading VI">
+			<param name="Local" value="niSwitch_Convert_Thermistor_Reading.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Convert Thermocouple Reading VI">
+			<param name="Local" value="niSwitch_Convert_Thermocouple_Reading.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Disable VI">
+			<param name="Local" value="niSwitch_Disable.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Disconnect All Channels VI">
+			<param name="Local" value="niSwitch_Disconnect_All_Channels.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Disconnect Channels VI">
+			<param name="Local" value="niSwitch_Disconnect_Channels.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Error Message VI">
+			<param name="Local" value="niSwitch_Error_Message.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Get Channel Name VI">
+			<param name="Local" value="niSwitch_Get_Channel_Name.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Get Next Coercion Record VI">
+			<param name="Local" value="niSwitch_Get_Next_Coercion_Record.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Get Next Interchange Warning VI">
+			<param name="Local" value="niSwitch_Get_Next_Interchange_Warning.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Get Path VI">
+			<param name="Local" value="niSwitch_Get_Path.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Get Relay Count VI">
+			<param name="Local" value="niSwitch_Get_Relay_Count.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Get Relay Name VI">
+			<param name="Local" value="niSwitch_Get_Relay_Name.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Get Relay Position VI">
+			<param name="Local" value="niSwitch_Get_Relay_Position.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Initialize VI">
+			<param name="Local" value="niSwitch_Initialize.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Initialize With Options VI">
+			<param name="Local" value="niSwitch_Initialize_With_Options.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Initialize With Topology VI">
+			<param name="Local" value="niSwitch_Initialize_With_Topology.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Initiate Scan VI">
+			<param name="Local" value="niSwitch_Initiate_Scan.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Property Node">
+			<param name="Local" value="niSwitch_Property_Node.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Relay Control VI">
+			<param name="Local" value="niSwitch_Relay_Control.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Reset VI">
+			<param name="Local" value="niSwitch_Reset.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Reset Interchange Check VI">
+			<param name="Local" value="niSwitch_Reset_Interchange_Check.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Reset With Defaults VI">
+			<param name="Local" value="niSwitch_Reset_With_Defaults.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Revision Query VI">
+			<param name="Local" value="niSwitch_Revision_Query.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Route Scan Advanced Output VI">
+			<param name="Local" value="niSwitch_Route_Scan_Advanced_Output.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Route Trigger Input VI">
+			<param name="Local" value="niSwitch_Route_Trigger_Input.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Self-Test VI">
+			<param name="Local" value="niSwitch_Self-Test.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Send Software Trigger VI">
+			<param name="Local" value="niSwitch_Send_Software_Trigger.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Set Continuous Scan VI">
+			<param name="Local" value="niSwitch_Set_Continuous_Scan.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Set Path VI">
+			<param name="Local" value="niSwitch_Set_Path.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Switch Is Debounced VI">
+			<param name="Local" value="niSwitch_Switch_Is_Debounced.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Switch Is Scanning VI">
+			<param name="Local" value="niSwitch_Switch_Is_Scanning.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Temperature to Volts VI">
+			<param name="Local" value="niSwitch_Temperature_to_Volts.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Volts to Temperature VI">
+			<param name="Local" value="niSwitch_Volts_to_Temperature.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Wait For Debounce VI">
+			<param name="Local" value="niSwitch_Wait_For_Debounce.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="niSwitch Wait For Scan To Complete VI">
+			<param name="Local" value="niSwitch_Wait_For_Scan_To_Complete.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Other IVI">
+			<param name="Local" value="Other_IVI_pal.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Relay VI">
+			<param name="Local" value="Relay_pal.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Scan VI">
+			<param name="Local" value="Scan_pal.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Utility VI">
+			<param name="Local" value="Utility_pal.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Using the Standard Functionality for error in Parameters">
+			<param name="Local" value="Standard_Functionality_For_Error_In_Parameters.html">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Using the Standard Functionality for error out Parameters">
+			<param name="Local" value="Standard_Functionality_For_Error_out_Parameters.html">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY>
+</HTML>
